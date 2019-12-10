@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[SCHED 204-61]" key="SCHED_PIPELINING_STATUS_631" tag="SCHEDULE" content="Option &apos;relax_ii_for_timing&apos; is enabled, will increase II to preserve clock frequency constraints."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;CarSimOnFPGA/top_level.cpp&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;CarSimOnFPGA/Wheel.cpp&apos; ..."/>
+	<Message severity="INFO" prefix="[HLS 200-10]" key="HLS_10_1312" tag="" content="Analyzing design file &apos;CarSimOnFPGA/Chassis.cpp&apos; ..."/>
+	<Message severity="ERROR" prefix="[HLS 200-70]" key="HLS_70_1454" tag="" content="Compilation errors found: In file included from CarSimOnFPGA/Chassis.cpp:1:
+CarSimOnFPGA/Chassis.cpp:28:24: error: use of undeclared identifier &apos;cos&apos;
+ float accel_x_local = cos(-orientation) * accel_x - sin(-orientation) * accel_z;
+                       ^
+CarSimOnFPGA/Chassis.cpp:28:54: error: use of undeclared identifier &apos;sin&apos;
+ float accel_x_local = cos(-orientation) * accel_x - sin(-orientation) * accel_z;
+                                                     ^
+CarSimOnFPGA/Chassis.cpp:29:24: error: use of undeclared identifier &apos;sin&apos;
+ float accel_z_local = sin(-orientation) * accel_x + cos(-orientation) * accel_z;
+                       ^
+CarSimOnFPGA/Chassis.cpp:29:54: error: use of undeclared identifier &apos;cos&apos;
+ float accel_z_local = sin(-orientation) * accel_x + cos(-orientation) * accel_z;
+                                                     ^
+CarSimOnFPGA/Chassis.cpp:34:6: error: assigning to &apos;float *&apos; from incompatible type &apos;float&apos;
+ wFL = wF + accel_z_local * mass * h / 2;
+     ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CarSimOnFPGA/Chassis.cpp:35:6: error: assigning to &apos;float *&apos; from incompatible type &apos;float&apos;
+ wFR = wF - accel_z_local * mass * h / 2;
+     ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CarSimOnFPGA/Chassis.cpp:36:6: error: assigning to &apos;float *&apos; from incompatible type &apos;float&apos;
+ wRL = wR + accel_z_local * mass * h / 2;
+     ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+CarSimOnFPGA/Chassis.cpp:37:6: error: assigning to &apos;float *&apos; from incompatible type &apos;float&apos;
+ wRR = wR - accel_z_local * mass * h / 2;
+     ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+8 errors generated."/>
+</Messages>
