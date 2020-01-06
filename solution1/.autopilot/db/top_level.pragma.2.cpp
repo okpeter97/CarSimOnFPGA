@@ -151,10 +151,11 @@ extern "C" {
 # 9 "<command line>" 2
 # 1 "<built-in>" 2
 # 1 "CarSimOnFPGA/top_level.cpp" 2
-# 1 "CarSimOnFPGA/top_level.hpp" 1
-int top_level(double in, double* out);
+# 1 "CarSimOnFPGA/top_level.h" 1
+void top_level(float en, float* pos_x, float* pos_z);
 # 2 "CarSimOnFPGA/top_level.cpp" 2
-# 1 "CarSimOnFPGA/Wheel.hpp" 1
+# 1 "CarSimOnFPGA/Car.h" 1
+# 1 "CarSimOnFPGA/Wheel.h" 1
 class Wheel
 {
 private:
@@ -164,28 +165,83 @@ private:
 public:
  Wheel();
 
+ float force_x;
+ float force_z;
+
  void update(float deltaTime,
    float torque,
    float velocity_x,
    float velocity_z,
    float load,
-   float steeringAngle,
-   float * force_x,
-   float * force_z);
+   float steeringAngle);
+};
+# 2 "CarSimOnFPGA/Car.h" 2
+# 1 "CarSimOnFPGA/Chassis.h" 1
+class Chassis
+{
+public:
+ float vel_x;
+ float vel_z;
+ float pos_x;
+ float pos_z;
+
+ float L;
+ float b;
+ float h;
+ float c;
+ float d;
+ float e;
+
+ float wFL;
+ float wFR;
+ float wRL;
+ float wRR;
+
+ float angularVel;
+ float orientation;
+
+ Chassis();
+
+ void update(float deltaTime, float force_x, float force_z, float torque);
+
+private:
+ float mass;
+ float inertia;
+
+ float angularAccel;
+
+ float accel_x;
+ float accel_z;
+};
+# 3 "CarSimOnFPGA/Car.h" 2
+
+class Car
+{
+public:
+ Car();
+
+ void update(float deltaTime, float engine_torque, float steeringAngle, float* pos_x, float* pos_z);
+
+private:
+ Chassis chassis;
+
+ Wheel frontLeft;
+ Wheel frontRight;
+ Wheel rearLeft;
+ Wheel rearRight;
+
+ float force_x;
+ float force_z;
+ float torque;
 };
 # 3 "CarSimOnFPGA/top_level.cpp" 2
 
-int top_level(float in, float* out)
+void top_level(float en, float* pos_x, float* pos_z)
 {
- Wheel wheel;
- float force_x;
- float force_z;
- wheel.update(1, 1, 5, 0, 1, 0, &force_x, &force_z);
 
- if (force_x != 0)
+ if (en)
  {
-  *out = 1;
+  Car car;
+  car.update(0.02, 100, 0, pos_x, pos_z);
  }
-
- return 0;
 }

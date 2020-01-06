@@ -1,32 +1,38 @@
-#include "Car.hpp"
+#include "Car.h"
+#include "hls_math.h"
 
 Car::Car()
 {
-	wFL = 0;
-	wFR = 0;
-	wRL = 0;
-	wRR = 0;
-
 	force_x = 0;
 	force_z = 0;
 	torque = 0;
-
-	force_x_FL = 0;
-	force_z_FL = 0;
-	force_x_FR = 0;
-	force_z_FR = 0;
-	force_x_RL = 0;
-	force_z_RL = 0;
-	force_x_RR = 0;
-	force_z_RR = 0;
 }
 
-void Car::update(float deltaTime, float engine_torque, float steeringAngle)
+void Car::update(float deltaTime, float engine_torque, float steeringAngle, float* pos_x, float* pos_z)
 {
-	chassis.update(deltaTime, force_x, force_z, torque, &wFL, &wFR, &wRL, &wRR);
+	force_x = frontLeft.force_x + frontRight.force_x + rearLeft.force_x + rearRight.force_x;
+	force_z = frontLeft.force_z + frontRight.force_z + rearLeft.force_z + rearRight.force_z;
 
-	frontLeft.update(deltaTime, torque, velocity_x, velocity_z, wFL, steeringAngle, &force_x_FL, &force_z_FL);
-	frontRight.update(deltaTime, torque, velocity_x, velocity_z, wFR, -steeringAngle, &force_x_FR, &force_z_FR);
-	rearLeft.update(deltaTime, torque, velocity_x, velocity_z, wRL, 0, &force_x_RL, &force_z_RL);
-	rearRight.update(deltaTime, torque, velocity_x, velocity_z, wRR, 0, &force_x_RR, &force_z_RR);
+	torque = chassis.b * frontLeft.force_z - frontLeft.force_x * chassis.d / 2 +
+			chassis.b * frontRight.force_z - frontRight.force_x * -chassis.d / 2 +
+			-chassis.c * rearLeft.force_z - rearLeft.force_x * chassis.e / 2 +
+			-chassis.c * rearRight.force_z - rearRight.force_x * -chassis.e / 2;
+
+	float fz = chassis.vel_z - chassis.angularVel * chassis.b;
+	float rz = chassis.vel_z + chassis.angularVel * chassis.c;
+
+	float flx = chassis.vel_x + chassis.angularVel * chassis.d / 2;
+	float rlx = chassis.vel_x + chassis.angularVel * chassis.d / 2;
+	float frx = chassis.vel_x - chassis.angularVel * chassis.e / 2;
+	float rrx = chassis.vel_x - chassis.angularVel * chassis.e / 2;
+
+	chassis.update(deltaTime, force_x, force_z, torque);
+
+	frontLeft.update(deltaTime, engine_torque, flx, fz, chassis.wFL, steeringAngle);
+	frontRight.update(deltaTime, engine_torque, frx, fz, chassis.wFR, steeringAngle);
+	rearLeft.update(deltaTime, engine_torque, rlx, rz, chassis.wRL, steeringAngle);
+	rearRight.update(deltaTime, engine_torque, rrx, rz, chassis.wRR, steeringAngle);
+
+	*pos_x = chassis.pos_x;
+	*pos_z = chassis.pos_z;
 }

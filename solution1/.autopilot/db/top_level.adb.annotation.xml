@@ -1,0 +1,12 @@
+<annotationInfo>
+<annotationInfo>
+<item  id="9" filename="CarSimOnFPGA/top_level.cpp" linenumber="7" name="bitcast_ln7" contextFuncName="top_level" moduleName="top_level" rtlName="bitcast_ln7_fu_56_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Dev\Repos"><\/item>
+<item  id="10" filename="CarSimOnFPGA/top_level.cpp" linenumber="7" name="tmp" contextFuncName="top_level" moduleName="top_level" rtlName="tmp_fu_60_p4" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Dev\Repos"><\/item>
+<item  id="11" filename="CarSimOnFPGA/top_level.cpp" linenumber="7" name="trunc_ln7" contextFuncName="top_level" moduleName="top_level" rtlName="trunc_ln7_fu_70_p1" latency="0" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Dev\Repos"><\/item>
+<item  id="12" filename="CarSimOnFPGA/top_level.cpp" linenumber="7" name="icmp_ln7" contextFuncName="top_level" moduleName="top_level" rtlName="icmp_ln7_fu_74_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="11" fileDirectory="D:\Dev\Repos"><\/item>
+<item  id="13" filename="CarSimOnFPGA/top_level.cpp" linenumber="7" name="icmp_ln7_1" contextFuncName="top_level" moduleName="top_level" rtlName="icmp_ln7_1_fu_80_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="18" fileDirectory="D:\Dev\Repos"><\/item>
+<item  id="14" filename="CarSimOnFPGA/top_level.cpp" linenumber="7" name="or_ln7" contextFuncName="top_level" moduleName="top_level" rtlName="or_ln7_fu_86_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="2" fileDirectory="D:\Dev\Repos"><\/item>
+<item  id="15" filename="CarSimOnFPGA/top_level.cpp" linenumber="7" name="tmp_1" contextFuncName="top_level" moduleName="top_level" rtlName="top_level_fcmp_32bkb_U1" latency="1" BRAM="-1" DSP="-1" FF="-1" LUT="-1" fileDirectory="D:\Dev\Repos"><\/item>
+<item  id="16" filename="CarSimOnFPGA/top_level.cpp" linenumber="7" name="and_ln7" contextFuncName="top_level" moduleName="top_level" rtlName="and_ln7_fu_90_p2" latency="0" BRAM="-1" DSP="-1" FF="0" LUT="2" fileDirectory="D:\Dev\Repos"><\/item>
+<\/annotationInfo>
+</annotationInfo>

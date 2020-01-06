@@ -1,17 +1,12 @@
-#include "top_level.hpp"
-#include "Wheel.hpp"
+#include "top_level.h"
+#include "Car.h"
 
-int top_level(float in, float* out)
+void top_level(float en, float* pos_x, float* pos_z)
 {
-	Wheel wheel;
-	float force_x;
-	float force_z;
-	wheel.update(1, 1, 5, 0, 1, 0, &force_x, &force_z);
 
-	if (force_x != 0)
+	if (en)
 	{
-		*out = 1;
+		Car car;
+		car.update(0.02, 100, 0, pos_x, pos_z);
 	}
-
-	return 0;
 }

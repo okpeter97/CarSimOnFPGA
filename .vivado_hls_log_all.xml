@@ -2,9 +2,7 @@
 <vivadoHLSLog:LogRoot xmlns:vivadoHLSLog="www.xilinx.com/vivadoHLSLog">
   <errorLogs>
     <logs>
-      <synLog>
-        <logs message="ERROR: [HLS 200-70] Compilation errors found: In file included from CarSimOnFPGA/Chassis.cpp:1:&#xD;&#xA;CarSimOnFPGA/Chassis.cpp:28:24: error: use of undeclared identifier 'cos'&#xD;&#xA; float accel_x_local = cos(-orientation) * accel_x - sin(-orientation) * accel_z;&#xD;&#xA;                       ^&#xD;&#xA;CarSimOnFPGA/Chassis.cpp:28:54: error: use of undeclared identifier 'sin'&#xD;&#xA; float accel_x_local = cos(-orientation) * accel_x - sin(-orientation) * accel_z;&#xD;&#xA;                                                     ^&#xD;&#xA;CarSimOnFPGA/Chassis.cpp:29:24: error: use of undeclared identifier 'sin'&#xD;&#xA; float accel_z_local = sin(-orientation) * accel_x + cos(-orientation) * accel_z;&#xD;&#xA;                       ^&#xD;&#xA;CarSimOnFPGA/Chassis.cpp:29:54: error: use of undeclared identifier 'cos'&#xD;&#xA; float accel_z_local = sin(-orientation) * accel_x + cos(-orientation) * accel_z;&#xD;&#xA;                                                     ^&#xD;&#xA;CarSimOnFPGA/Chassis.cpp:34:6: error: assigning to 'float *' from incompatible type 'float'&#xD;&#xA; wFL = wF + accel_z_local * mass * h / 2;&#xD;&#xA;     ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&#xD;&#xA;CarSimOnFPGA/Chassis.cpp:35:6: error: assigning to 'float *' from incompatible type 'float'&#xD;&#xA; wFR = wF - accel_z_local * mass * h / 2;&#xD;&#xA;     ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&#xD;&#xA;CarSimOnFPGA/Chassis.cpp:36:6: error: assigning to 'float *' from incompatible type 'float'&#xD;&#xA; wRL = wR + accel_z_local * mass * h / 2;&#xD;&#xA;     ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&#xD;&#xA;CarSimOnFPGA/Chassis.cpp:37:6: error: assigning to 'float *' from incompatible type 'float'&#xD;&#xA; wRR = wR - accel_z_local * mass * h / 2;&#xD;&#xA;     ^ ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~&#xD;&#xA;8 errors generated.&#xD;&#xA;Failed during preprocessing.&#xD;&#xA;    while executing&#xD;&#xA;&quot;source D:/Dev/Repos/CarSimOnFPGA/solution1/csynth.tcl&quot;&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls::main D:/Dev/Repos/CarSimOnFPGA/solution1/csynth.tcl&quot;&#xD;&#xA;    (&quot;uplevel&quot; body line 1)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;uplevel 1 hls::main {*}$args&quot;&#xD;&#xA;    (procedure &quot;hls_proc&quot; line 5)&#xD;&#xA;    invoked from within&#xD;&#xA;&quot;hls_proc $argv&quot;&#xD;&#xA;" projectName="CarSimOnFPGA" solutionName="solution1" date="2019-12-10T09:33:06.302+0200"/>
-      </synLog>
+      <synLog/>
       <simLog/>
       <mgLog/>
       <packageLog/>
@@ -13,7 +11,9 @@
   </errorLogs>
   <warningLogs>
     <logs>
-      <synLog/>
+      <synLog>
+        <logs message="WARNING: [SYNCHK 200-23] r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:425: variable-indexed range selection may cause suboptimal QoR." projectName="CarSimOnFPGA" solutionName="solution1" date="2020-01-07T01:06:48.035+0200" type="Warning"/>
+      </synLog>
       <simLog/>
       <mgLog/>
       <packageLog/>

@@ -1,0 +1,133 @@
+
+
+================================================================
+== Vivado HLS Report for 'top_level'
+================================================================
+* Date:           Tue Jan  7 01:06:53 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CarSimOnFPGA
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     6.409|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |    1|    1|    1|    1|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 2
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 5.43>
+ST_1 : Operation 3 [1/1] (0.00ns)   --->   "%en_read = call float @_ssdm_op_Read.ap_auto.float(float %en) nounwind" [CarSimOnFPGA/top_level.cpp:4]   --->   Operation 3 'read' 'en_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 4 [1/1] (0.00ns)   --->   "%bitcast_ln7 = bitcast float %en_read to i32" [CarSimOnFPGA/top_level.cpp:7]   --->   Operation 4 'bitcast' 'bitcast_ln7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 5 [1/1] (0.00ns)   --->   "%tmp = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %bitcast_ln7, i32 23, i32 30)" [CarSimOnFPGA/top_level.cpp:7]   --->   Operation 5 'partselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "%trunc_ln7 = trunc i32 %bitcast_ln7 to i23" [CarSimOnFPGA/top_level.cpp:7]   --->   Operation 6 'trunc' 'trunc_ln7' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (1.55ns)   --->   "%icmp_ln7 = icmp ne i8 %tmp, -1" [CarSimOnFPGA/top_level.cpp:7]   --->   Operation 7 'icmp' 'icmp_ln7' <Predicate = true> <Delay = 1.55> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 8 [1/1] (2.44ns)   --->   "%icmp_ln7_1 = icmp eq i23 %trunc_ln7, 0" [CarSimOnFPGA/top_level.cpp:7]   --->   Operation 8 'icmp' 'icmp_ln7_1' <Predicate = true> <Delay = 2.44> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 2.44> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 9 [2/2] (5.43ns)   --->   "%tmp_1 = fcmp oeq float %en_read, 0.000000e+00" [CarSimOnFPGA/top_level.cpp:7]   --->   Operation 9 'fcmp' 'tmp_1' <Predicate = true> <Delay = 5.43> <Core = "FCmp">   --->   Core 111 'FCmp' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 6.40>
+ST_2 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float %en) nounwind, !map !38"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %pos_x) nounwind, !map !44"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %pos_z) nounwind, !map !50"   --->   Operation 12 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @top_level_str) nounwind"   --->   Operation 13 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 14 [1/1] (0.00ns) (grouped into LUT with out node and_ln7)   --->   "%or_ln7 = or i1 %icmp_ln7_1, %icmp_ln7" [CarSimOnFPGA/top_level.cpp:7]   --->   Operation 14 'or' 'or_ln7' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 15 [1/2] (5.43ns)   --->   "%tmp_1 = fcmp oeq float %en_read, 0.000000e+00" [CarSimOnFPGA/top_level.cpp:7]   --->   Operation 15 'fcmp' 'tmp_1' <Predicate = true> <Delay = 5.43> <Core = "FCmp">   --->   Core 111 'FCmp' <Latency = 1> <II = 1> <Delay = 5.43> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 16 [1/1] (0.97ns) (out node of the LUT)   --->   "%and_ln7 = and i1 %or_ln7, %tmp_1" [CarSimOnFPGA/top_level.cpp:7]   --->   Operation 16 'and' 'and_ln7' <Predicate = true> <Delay = 0.97> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.97> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 17 [1/1] (0.00ns)   --->   "br i1 %and_ln7, label %._crit_edge, label %1" [CarSimOnFPGA/top_level.cpp:7]   --->   Operation 17 'br' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 18 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.floatP(float* %pos_x, float 0.000000e+00) nounwind" [CarSimOnFPGA/top_level.cpp:10]   --->   Operation 18 'write' <Predicate = (!and_ln7)> <Delay = 0.00>
+ST_2 : Operation 19 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.floatP(float* %pos_z, float 0.000000e+00) nounwind" [CarSimOnFPGA/top_level.cpp:10]   --->   Operation 19 'write' <Predicate = (!and_ln7)> <Delay = 0.00>
+ST_2 : Operation 20 [1/1] (0.00ns)   --->   "br label %._crit_edge" [CarSimOnFPGA/top_level.cpp:11]   --->   Operation 20 'br' <Predicate = (!and_ln7)> <Delay = 0.00>
+ST_2 : Operation 21 [1/1] (0.00ns)   --->   "ret void" [CarSimOnFPGA/top_level.cpp:12]   --->   Operation 21 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 5.43ns
+The critical path consists of the following:
+	wire read on port 'en' (CarSimOnFPGA/top_level.cpp:4) [8]  (0 ns)
+	'fcmp' operation ('tmp_1', CarSimOnFPGA/top_level.cpp:7) [15]  (5.43 ns)
+
+ <State 2>: 6.41ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_1', CarSimOnFPGA/top_level.cpp:7) [15]  (5.43 ns)
+	'and' operation ('and_ln7', CarSimOnFPGA/top_level.cpp:7) [16]  (0.978 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

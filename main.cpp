@@ -1,9 +1,10 @@
-#include "top_level.hpp"
+#include "top_level.h"
+#include <stdio.h>
 
 int main()
 {
-	double in = 5;
-	double out0 = 6;
-	double out1 = top_level(in, &out0);
+	float en = 1;
+	float pos_x, pos_y;
+	top_level(en, &pos_x, &pos_y);
 	return 0;
 }

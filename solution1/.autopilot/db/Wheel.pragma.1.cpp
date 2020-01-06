@@ -25453,7 +25453,7 @@ namespace hls {
 
 };
 # 2 "CarSimOnFPGA/Wheel.cpp" 2
-# 1 "CarSimOnFPGA/Wheel.hpp" 1
+# 1 "CarSimOnFPGA/Wheel.h" 1
 class Wheel
 {
 private:
@@ -25463,22 +25463,26 @@ private:
 public:
  Wheel();
 
+ float force_x;
+ float force_z;
+
  void update(float deltaTime,
    float torque,
    float velocity_x,
    float velocity_z,
    float load,
-   float steeringAngle,
-   float * force_x,
-   float * force_z);
+   float steeringAngle);
 };
 # 3 "CarSimOnFPGA/Wheel.cpp" 2
+
 
 Wheel::Wheel()
 {
  radius = 0.3;
  inertia = 5;
  angularVelocity = 0;
+ force_x = 0;
+ force_z = 0;
 }
 
 void Wheel::update(float deltaTime,
@@ -25486,18 +25490,15 @@ void Wheel::update(float deltaTime,
    float velocity_x,
    float velocity_z,
    float load,
-   float steeringAngle,
-   float * force_x,
-   float * force_z)
+   float steeringAngle)
 {
-_ssdm_InlineSelf(0, "");
- float vel_x_temp = cos(steeringAngle) * velocity_x - sin(steeringAngle) * velocity_z;
- float vel_z_temp = sin(steeringAngle) * velocity_x + cos(steeringAngle) * velocity_z;
+ float vel_x_temp = cos(-steeringAngle) * velocity_x - sin(-steeringAngle) * velocity_z;
+ float vel_z_temp = sin(-steeringAngle) * velocity_x + cos(-steeringAngle) * velocity_z;
 
  float slipRatio;
  float slipAngle;
 
- if (vel_x_temp != 0)
+ if (velocity_x != 0)
  {
   slipRatio = (angularVelocity * radius - vel_x_temp) / abs(vel_x_temp);
   slipAngle = atan2(vel_z_temp, vel_x_temp);
@@ -25522,8 +25523,10 @@ _ssdm_InlineSelf(0, "");
  float longForce = 1 * sin(1.9 * atan(10 * s * 1.9 - 0.97 * (10 * s * 1.9 - atan(10 * s * 1.9))));
  float latForce = -1 * sin(1.4 * atan(0.714 * (1 - -0.2) * s * 2.7 + -0.2 * atan(0.714 * s * 2.7)));
 
- *force_x = load * (r / s) * longForce;
- *force_z = load * (a / s) * latForce;
+ float x = load * (r / s) * longForce;
+ float z = load * (a / s) * latForce;
+ force_x = cos(steeringAngle) * x - sin(steeringAngle) * z;
+ force_z = sin(steeringAngle) * x + cos(steeringAngle) * z;
 
- angularVelocity = angularVelocity + ((torque - *force_x * radius) / inertia) * deltaTime;
+ angularVelocity = angularVelocity + ((torque - force_x * radius) / inertia) * deltaTime;
 }
