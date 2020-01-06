@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'top_level'" level="0">
-<item name = "Date">Tue Jan  7 01:06:53 2020
+<item name = "Date">Tue Jan  7 01:45:39 2020
 </item>
 <item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">CarSimOnFPGA</item>

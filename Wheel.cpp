@@ -18,8 +18,13 @@ void Wheel::update(float deltaTime,
 			float load,
 			float steeringAngle)
 {
-	float vel_x_temp = cos(-steeringAngle) * velocity_x - sin(-steeringAngle) * velocity_z;
-	float vel_z_temp = sin(-steeringAngle) * velocity_x + cos(-steeringAngle) * velocity_z;
+	float cos_msteer = cos(-steeringAngle);
+	float sin_msteer = sin(-steeringAngle);
+	float cos_steer = cos(steeringAngle);
+	float sin_steer = sin(steeringAngle);
+
+	float vel_x_temp = cos_steer * velocity_x - sin_steer * velocity_z;
+	float vel_z_temp = sin_steer * velocity_x + cos_steer * velocity_z;
 
 	float slipRatio;
 	float slipAngle;
@@ -46,13 +51,15 @@ void Wheel::update(float deltaTime,
 	float a = slipAngle / 2.7;
 	float s = sqrt(r * r + a * a);
 
-	float longForce = 1 * sin(1.9 * atan(10 * s * 1.9 - 0.97 * (10 * s * 1.9 - atan(10 * s * 1.9))));
-	float latForce = -1 * sin(1.4 * atan(0.714 * (1 - -0.2) * s * 2.7 + -0.2 * atan(0.714 * s * 2.7)));
+	float long_input = 10 * s * 1.9;
+	float lat_input = 0.714 * s * 2.7;
+	float longForce = sin(1.9 * atan(long_input - 0.97 * (long_input - atan(long_input))));
+	float latForce = -sin(1.4 * atan((1 - -0.2) * lat_input + -0.2 * atan(lat_input)));
 
 	float x = load * (r / s) * longForce;
 	float z = load * (a / s) * latForce;
-	force_x = cos(steeringAngle) * x - sin(steeringAngle) * z;
-	force_z = sin(steeringAngle) * x + cos(steeringAngle) * z;
+	force_x = cos_steer * x - sin_steer * z;
+	force_z = sin_steer * x + cos_steer * z;
 
 	angularVelocity = angularVelocity + ((torque - force_x * radius) / inertia) * deltaTime;
 }

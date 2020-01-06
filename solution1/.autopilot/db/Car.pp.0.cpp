@@ -25564,8 +25564,8 @@ void Car::update(float deltaTime, float engine_torque, float steeringAngle, floa
 
  frontLeft.update(deltaTime, engine_torque, flx, fz, chassis.wFL, steeringAngle);
  frontRight.update(deltaTime, engine_torque, frx, fz, chassis.wFR, steeringAngle);
- rearLeft.update(deltaTime, engine_torque, rlx, rz, chassis.wRL, steeringAngle);
- rearRight.update(deltaTime, engine_torque, rrx, rz, chassis.wRR, steeringAngle);
+ rearLeft.update(deltaTime, engine_torque, rlx, rz, chassis.wRL, 0);
+ rearRight.update(deltaTime, engine_torque, rrx, rz, chassis.wRR, 0);
 
  *pos_x = chassis.pos_x;
  *pos_z = chassis.pos_z;
