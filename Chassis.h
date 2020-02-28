@@ -1,4 +1,4 @@
-class Chassis
+/*class Chassis
 {
 public:
 	float vel_x;
@@ -33,4 +33,4 @@ private:
 
 	float accel_x;
 	float accel_z;
-};
+};*/

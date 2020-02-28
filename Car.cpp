@@ -1,4 +1,4 @@
-#include "Car.h"
+/*#include "Car.h"
 #include "hls_math.h"
 
 Car::Car()
@@ -36,3 +36,4 @@ void Car::update(float deltaTime, float engine_torque, float steeringAngle, floa
 	*pos_x = chassis.pos_x;
 	*pos_z = chassis.pos_z;
 }
+*/

@@ -1,4 +1,4 @@
-#include "Wheel.h"
+/*#include "Wheel.h"
 #include "Chassis.h"
 
 class Car
@@ -19,4 +19,4 @@ private:
 	float force_x;
 	float force_z;
 	float torque;
-};
+};*/

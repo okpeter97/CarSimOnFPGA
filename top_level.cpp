@@ -1,12 +1,15 @@
 #include "top_level.h"
-#include "Car.h"
+#include "Wheel.h"
 
-void top_level(float en, float* pos_x, float* pos_z)
+void top_level(float deltaTime,
+		float torque,
+		float velocity_x,
+		float velocity_z,
+		float load,
+		float steeringAngle,
+		float * force_x,
+		float * force_z)
 {
-
-	if (en)
-	{
-		Car car;
-		car.update(0.02, 100, 0, pos_x, pos_z);
-	}
+		Wheel wheel;
+		wheel.update(deltaTime, torque, velocity_x, velocity_z, load, steeringAngle, force_x, force_z);
 }

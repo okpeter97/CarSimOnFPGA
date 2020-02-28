@@ -1,0 +1,21 @@
+szakirodalom
+-szoftver
+-hardware
+-
+
+
+rendszer fizikai modellje
+-tervezes
+-pszeudokod [1]
+-uml
+-szekvencia
+-osztalydiagram
+
+
+szimulacios modell
+meresi eredmenyek
+
+
+konyveszet
+
+[1] Beckman, Brian. "The physics of racing." Burbank, CA 91503 (1991): 1991-2002.

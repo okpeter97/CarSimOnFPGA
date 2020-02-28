@@ -1,1 +1,8 @@
-void top_level(float en, float* pos_x, float* pos_z);
+void top_level(float deltaTime,
+		float torque,
+		float velocity_x,
+		float velocity_z,
+		float load,
+		float steeringAngle,
+		float * force_x,
+		float * force_z);

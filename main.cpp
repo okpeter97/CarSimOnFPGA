@@ -3,8 +3,7 @@
 
 int main()
 {
-	float en = 1;
 	float pos_x, pos_y;
-	top_level(en, &pos_x, &pos_y);
+	top_level(1, 1, 1, 1, 1, 1, &pos_x, &pos_y);
 	return 0;
 }
