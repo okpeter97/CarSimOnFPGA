@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Messages>
+	<Message severity="INFO" prefix="[IMPL 213-8]" key="IMPL_8_1775" tag="" content="Exporting RTL as an IP for System Generator for DSP (Vivado)."/>
+</Messages>
