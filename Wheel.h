@@ -14,6 +14,7 @@ public:
 			float velocity_z,
 			float load,
 			float steeringAngle,
-			float * force_x,
-			float * force_z);
+			float* force_x,
+			float* force_z,
+			float* angularVel);
 };

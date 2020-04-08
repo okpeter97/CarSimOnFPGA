@@ -15,8 +15,9 @@ void Wheel::update(float deltaTime,
 			float velocity_z,
 			float load,
 			float steeringAngle,
-			float * force_x,
-			float * force_z)
+			float* force_x,
+			float* force_z,
+			float* angularVel)
 {
 	float cos_msteer = cos(-steeringAngle);
 	float cos_steer = cos(steeringAngle);
@@ -62,4 +63,5 @@ void Wheel::update(float deltaTime,
 
 	*force_x = cos_msteer * x - sin_steer * z;
 	*force_z = sin_steer * x + cos_msteer * z;
+	*angularVel = angularVelocity;
 }
