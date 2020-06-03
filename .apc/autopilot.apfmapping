@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <autopilotfilemapping:AutoPilotFileMapping xmlns:autopilotfilemapping="www.autoesl.com/autopilotfilemapping">
   <source>
-    <originFiles name="Car.cpp" path="D:\Dev\Repos\CarSimOnFPGA\Car.cpp"/>
-    <originFiles name="Chassis.cpp" path="D:\Dev\Repos\CarSimOnFPGA\Chassis.cpp"/>
-    <originFiles name="Wheel.cpp" path="D:\Dev\Repos\CarSimOnFPGA\Wheel.cpp"/>
     <originFiles name="top_level.cpp" path="D:\Dev\Repos\CarSimOnFPGA\top_level.cpp"/>
+    <originFiles name="Wheel.cpp" path="D:\Dev\Repos\CarSimOnFPGA\Wheel.cpp"/>
+    <originFiles name="Chassis.cpp" path="D:\Dev\Repos\CarSimOnFPGA\Chassis.cpp"/>
+    <originFiles name="Car.cpp" path="D:\Dev\Repos\CarSimOnFPGA\Car.cpp"/>
   </source>
   <testbench>
     <originFiles name="main.cpp" path="D:\Dev\Repos\CarSimOnFPGA\main.cpp"/>

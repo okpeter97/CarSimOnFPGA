@@ -1,9 +1,10 @@
 #include "top_level.h"
-#include <stdio.h>
 
 int main()
 {
-	float pos_x, pos_y;
-	top_level(1, 1, 1, 1, 1, 1, &pos_x, &pos_y);
+	float force_x;
+	float force_z;
+	float angvel;
+	top_level(0.02, 100, 10, 5, 500, 0, &force_x, &force_z, &angvel);
 	return 0;
 }

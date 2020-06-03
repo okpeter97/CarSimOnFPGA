@@ -2,12 +2,12 @@
 # Vivado(TM) HLS - High-Level Synthesis from C, C++ and SystemC v2019.1 (64-bit)
 # Copyright 1986-2019 Xilinx, Inc. All Rights Reserved.
 # ==============================================================
-set ::env(PATH) "$::env(PATH);D:/Apps/Xilinx/Vivado/2019.1/win64/tools/fpo_v7_0"
-set ::env(PATH) "$::env(PATH);D:/Apps/Xilinx/Vivado/2019.1/win64/tools/opencv"
-set ::env(PATH) "$::env(PATH);D:/Apps/Xilinx/Vivado/2019.1/win64/tools/fft_v9_1"
-set ::env(PATH) "$::env(PATH);D:/Apps/Xilinx/Vivado/2019.1/win64/tools/fir_v7_0"
-set ::env(PATH) "$::env(PATH);D:/Apps/Xilinx/Vivado/2019.1/win64/tools/dds_v6_0"
-set ::env(PATH) "$::env(PATH);D:/Apps/Xilinx/Vivado/2019.1/win64/csim"
+set ::env(PATH) "$::env(PATH);C:/Xilinx/Vivado/2019.1/win64/tools/fpo_v7_0"
+set ::env(PATH) "$::env(PATH);C:/Xilinx/Vivado/2019.1/win64/tools/opencv"
+set ::env(PATH) "$::env(PATH);C:/Xilinx/Vivado/2019.1/win64/tools/fft_v9_1"
+set ::env(PATH) "$::env(PATH);C:/Xilinx/Vivado/2019.1/win64/tools/fir_v7_0"
+set ::env(PATH) "$::env(PATH);C:/Xilinx/Vivado/2019.1/win64/tools/dds_v6_0"
+set ::env(PATH) "$::env(PATH);C:/Xilinx/Vivado/2019.1/win64/csim"
 ### C sim ###
 if {![file exists csim.exe]} {
   puts "@E C-simulation is not set up properly. Please re-run csim."

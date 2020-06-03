@@ -40,7 +40,7 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7z010:-clg400:-1
-set SourceFiles {sc {} c {../top_level.cpp ../Wheel.cpp ../Chassis.cpp ../Car.cpp}}
+set SourceFiles {sc {} c {../Car.cpp ../Chassis.cpp ../Wheel.cpp ../top_level.cpp}}
 set SourceFlags {sc {} c {{} {} {} {}}}
 set DirectiveFile D:/Dev/Repos/CarSimOnFPGA/solution1/solution1.directive
 set TBFiles {verilog ../main.cpp bc ../main.cpp vhdl ../main.cpp sc ../main.cpp cas ../main.cpp c {}}

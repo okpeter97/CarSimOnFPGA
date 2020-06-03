@@ -5,4 +5,5 @@ void top_level(float deltaTime,
 		float load,
 		float steeringAngle,
 		float * force_x,
-		float * force_z);
+		float * force_z,
+		float * angularVel);

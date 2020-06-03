@@ -11,6 +11,6 @@ void top_level(float deltaTime,
 		float* force_z,
 		float* angularVel)
 {
-		Wheel wheel;
+		static Wheel wheel;
 		wheel.update(deltaTime, torque, velocity_x, velocity_z, load, steeringAngle, force_x, force_z, angularVel);
 }

@@ -6,11 +6,6 @@
         {
           'fileType' => 'datSource',
           'logicalName' => 'work',
-          'name' => 'verilog_sim/atan_generic_doubqcK_rom.dat'
-        },
-        {
-          'fileType' => 'datSource',
-          'logicalName' => 'work',
           'name' => 'verilog_sim/sin_or_cos_doublecud_rom.dat'
         },
         {
@@ -81,36 +76,6 @@
         {
           'fileType' => 'verilogSource',
           'logicalName' => 'work',
-          'name' => 'verilog_sim/atan_generic_doubqcK.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_sim/atan_generic_double_s.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_sim/top_level_dcmp_64tde.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_sim/top_level_ddiv_64sc4.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_sim/top_level_dsub_64rcU.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_sim/atan.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'work',
           'name' => 'verilog_sim/top_level_mul_170ibs.v'
         },
         {
@@ -156,62 +121,27 @@
         {
           'fileType' => 'verilogSource',
           'logicalName' => 'work',
-          'name' => 'verilog_sim/top_level_dadddsuDeQ.v'
+          'name' => 'verilog_sim/top_level_fadd_32qcK.v'
         },
         {
           'fileType' => 'verilogSource',
           'logicalName' => 'work',
-          'name' => 'verilog_sim/top_level_dmul_64Ee0.v'
+          'name' => 'verilog_sim/top_level_fdiv_32sc4.v'
         },
         {
           'fileType' => 'verilogSource',
           'logicalName' => 'work',
-          'name' => 'verilog_sim/top_level_faddfsuudo.v'
+          'name' => 'verilog_sim/top_level_fmul_32rcU.v'
         },
         {
           'fileType' => 'verilogSource',
           'logicalName' => 'work',
-          'name' => 'verilog_sim/top_level_fadd_32vdy.v'
+          'name' => 'verilog_sim/top_level_fpext_3udo.v'
         },
         {
           'fileType' => 'verilogSource',
           'logicalName' => 'work',
-          'name' => 'verilog_sim/top_level_fcmp_32Bew.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_sim/top_level_fdiv_32xdS.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_sim/top_level_fmul_32wdI.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_sim/top_level_fpext_3Aem.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_sim/top_level_fptrunczec.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_sim/top_level_fsqrt_3CeG.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_sim/top_level_sitofp_yd2.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_sim/update.v'
+          'name' => 'verilog_sim/top_level_fptrunctde.v'
         },
         {
           'fileType' => 'verilogSource',
@@ -266,36 +196,6 @@
         {
           'fileType' => 'vhdlSource',
           'logicalName' => 'work',
-          'name' => 'vhdl_sim/atan_generic_doubqcK.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_sim/atan_generic_double_s.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_sim/top_level_dcmp_64tde.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_sim/top_level_ddiv_64sc4.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_sim/top_level_dsub_64rcU.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_sim/atan.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
           'name' => 'vhdl_sim/top_level_mul_170ibs.vhd'
         },
         {
@@ -341,62 +241,27 @@
         {
           'fileType' => 'vhdlSource',
           'logicalName' => 'work',
-          'name' => 'vhdl_sim/top_level_dadddsuDeQ.vhd'
+          'name' => 'vhdl_sim/top_level_fadd_32qcK.vhd'
         },
         {
           'fileType' => 'vhdlSource',
           'logicalName' => 'work',
-          'name' => 'vhdl_sim/top_level_dmul_64Ee0.vhd'
+          'name' => 'vhdl_sim/top_level_fdiv_32sc4.vhd'
         },
         {
           'fileType' => 'vhdlSource',
           'logicalName' => 'work',
-          'name' => 'vhdl_sim/top_level_faddfsuudo.vhd'
+          'name' => 'vhdl_sim/top_level_fmul_32rcU.vhd'
         },
         {
           'fileType' => 'vhdlSource',
           'logicalName' => 'work',
-          'name' => 'vhdl_sim/top_level_fadd_32vdy.vhd'
+          'name' => 'vhdl_sim/top_level_fpext_3udo.vhd'
         },
         {
           'fileType' => 'vhdlSource',
           'logicalName' => 'work',
-          'name' => 'vhdl_sim/top_level_fcmp_32Bew.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_sim/top_level_fdiv_32xdS.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_sim/top_level_fmul_32wdI.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_sim/top_level_fpext_3Aem.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_sim/top_level_fptrunczec.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_sim/top_level_fsqrt_3CeG.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_sim/top_level_sitofp_yd2.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_sim/update.vhd'
+          'name' => 'vhdl_sim/top_level_fptrunctde.vhd'
         },
         {
           'fileType' => 'vhdlSource',
@@ -411,42 +276,7 @@
         {
           'fileType' => 'TCLSource',
           'logicalName' => 'work',
-          'name' => 'verilog_impl/top_level_ap_dadddsub_3_full_dsp_64_ip.tcl'
-        },
-        {
-          'fileType' => 'TCLSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_impl/top_level_ap_dcmp_0_no_dsp_64_ip.tcl'
-        },
-        {
-          'fileType' => 'TCLSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_impl/top_level_ap_ddiv_29_no_dsp_64_ip.tcl'
-        },
-        {
-          'fileType' => 'TCLSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_impl/top_level_ap_dmul_4_max_dsp_64_ip.tcl'
-        },
-        {
-          'fileType' => 'TCLSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_impl/top_level_ap_dsub_3_full_dsp_64_ip.tcl'
-        },
-        {
-          'fileType' => 'TCLSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_impl/top_level_ap_faddfsub_3_full_dsp_32_ip.tcl'
-        },
-        {
-          'fileType' => 'TCLSource',
-          'logicalName' => 'work',
           'name' => 'verilog_impl/top_level_ap_fadd_3_full_dsp_32_ip.tcl'
-        },
-        {
-          'fileType' => 'TCLSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_impl/top_level_ap_fcmp_0_no_dsp_32_ip.tcl'
         },
         {
           'fileType' => 'TCLSource',
@@ -467,21 +297,6 @@
           'fileType' => 'TCLSource',
           'logicalName' => 'work',
           'name' => 'verilog_impl/top_level_ap_fptrunc_0_no_dsp_64_ip.tcl'
-        },
-        {
-          'fileType' => 'TCLSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_impl/top_level_ap_fsqrt_10_no_dsp_32_ip.tcl'
-        },
-        {
-          'fileType' => 'TCLSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_impl/top_level_ap_sitofp_4_no_dsp_32_ip.tcl'
-        },
-        {
-          'fileType' => 'datSource',
-          'logicalName' => 'work',
-          'name' => 'verilog_impl/atan_generic_doubqcK_rom.dat'
         },
         {
           'fileType' => 'datSource',
@@ -555,36 +370,6 @@
         },
         {
           'fileType' => 'verilogSource',
-          'logicalName' => 'atan_generic_doubqcK',
-          'name' => 'verilog_impl/atan_generic_doubqcK.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'atan_generic_double_s',
-          'name' => 'verilog_impl/atan_generic_double_s.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'top_level_dcmp_64tde',
-          'name' => 'verilog_impl/top_level_dcmp_64tde.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'top_level_ddiv_64sc4',
-          'name' => 'verilog_impl/top_level_ddiv_64sc4.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'top_level_dsub_64rcU',
-          'name' => 'verilog_impl/top_level_dsub_64rcU.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'atan',
-          'name' => 'verilog_impl/atan.v'
-        },
-        {
-          'fileType' => 'verilogSource',
           'logicalName' => 'top_level_mul_170ibs',
           'name' => 'verilog_impl/top_level_mul_170ibs.v'
         },
@@ -630,63 +415,28 @@
         },
         {
           'fileType' => 'verilogSource',
-          'logicalName' => 'top_level_dadddsuDeQ',
-          'name' => 'verilog_impl/top_level_dadddsuDeQ.v'
+          'logicalName' => 'top_level_fadd_32qcK',
+          'name' => 'verilog_impl/top_level_fadd_32qcK.v'
         },
         {
           'fileType' => 'verilogSource',
-          'logicalName' => 'top_level_dmul_64Ee0',
-          'name' => 'verilog_impl/top_level_dmul_64Ee0.v'
+          'logicalName' => 'top_level_fdiv_32sc4',
+          'name' => 'verilog_impl/top_level_fdiv_32sc4.v'
         },
         {
           'fileType' => 'verilogSource',
-          'logicalName' => 'top_level_faddfsuudo',
-          'name' => 'verilog_impl/top_level_faddfsuudo.v'
+          'logicalName' => 'top_level_fmul_32rcU',
+          'name' => 'verilog_impl/top_level_fmul_32rcU.v'
         },
         {
           'fileType' => 'verilogSource',
-          'logicalName' => 'top_level_fadd_32vdy',
-          'name' => 'verilog_impl/top_level_fadd_32vdy.v'
+          'logicalName' => 'top_level_fpext_3udo',
+          'name' => 'verilog_impl/top_level_fpext_3udo.v'
         },
         {
           'fileType' => 'verilogSource',
-          'logicalName' => 'top_level_fcmp_32Bew',
-          'name' => 'verilog_impl/top_level_fcmp_32Bew.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'top_level_fdiv_32xdS',
-          'name' => 'verilog_impl/top_level_fdiv_32xdS.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'top_level_fmul_32wdI',
-          'name' => 'verilog_impl/top_level_fmul_32wdI.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'top_level_fpext_3Aem',
-          'name' => 'verilog_impl/top_level_fpext_3Aem.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'top_level_fptrunczec',
-          'name' => 'verilog_impl/top_level_fptrunczec.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'top_level_fsqrt_3CeG',
-          'name' => 'verilog_impl/top_level_fsqrt_3CeG.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'top_level_sitofp_yd2',
-          'name' => 'verilog_impl/top_level_sitofp_yd2.v'
-        },
-        {
-          'fileType' => 'verilogSource',
-          'logicalName' => 'update',
-          'name' => 'verilog_impl/update.v'
+          'logicalName' => 'top_level_fptrunctde',
+          'name' => 'verilog_impl/top_level_fptrunctde.v'
         },
         {
           'fileType' => 'verilogSource',
@@ -701,42 +451,7 @@
         {
           'fileType' => 'TCLSource',
           'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_ap_dadddsub_3_full_dsp_64_ip.tcl'
-        },
-        {
-          'fileType' => 'TCLSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_ap_dcmp_0_no_dsp_64_ip.tcl'
-        },
-        {
-          'fileType' => 'TCLSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_ap_ddiv_29_no_dsp_64_ip.tcl'
-        },
-        {
-          'fileType' => 'TCLSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_ap_dmul_4_max_dsp_64_ip.tcl'
-        },
-        {
-          'fileType' => 'TCLSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_ap_dsub_3_full_dsp_64_ip.tcl'
-        },
-        {
-          'fileType' => 'TCLSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_ap_faddfsub_3_full_dsp_32_ip.tcl'
-        },
-        {
-          'fileType' => 'TCLSource',
-          'logicalName' => 'work',
           'name' => 'vhdl_impl/top_level_ap_fadd_3_full_dsp_32_ip.tcl'
-        },
-        {
-          'fileType' => 'TCLSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_ap_fcmp_0_no_dsp_32_ip.tcl'
         },
         {
           'fileType' => 'TCLSource',
@@ -757,16 +472,6 @@
           'fileType' => 'TCLSource',
           'logicalName' => 'work',
           'name' => 'vhdl_impl/top_level_ap_fptrunc_0_no_dsp_64_ip.tcl'
-        },
-        {
-          'fileType' => 'TCLSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_ap_fsqrt_10_no_dsp_32_ip.tcl'
-        },
-        {
-          'fileType' => 'TCLSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_ap_sitofp_4_no_dsp_32_ip.tcl'
         },
         {
           'fileType' => 'vhdlSource',
@@ -807,36 +512,6 @@
           'fileType' => 'vhdlSource',
           'logicalName' => 'work',
           'name' => 'vhdl_impl/sin_or_cos_doublehbi.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/atan_generic_doubqcK.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/atan_generic_double_s.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_dcmp_64tde.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_ddiv_64sc4.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_dsub_64rcU.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/atan.vhd'
         },
         {
           'fileType' => 'vhdlSource',
@@ -886,62 +561,27 @@
         {
           'fileType' => 'vhdlSource',
           'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_dadddsuDeQ.vhd'
+          'name' => 'vhdl_impl/top_level_fadd_32qcK.vhd'
         },
         {
           'fileType' => 'vhdlSource',
           'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_dmul_64Ee0.vhd'
+          'name' => 'vhdl_impl/top_level_fdiv_32sc4.vhd'
         },
         {
           'fileType' => 'vhdlSource',
           'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_faddfsuudo.vhd'
+          'name' => 'vhdl_impl/top_level_fmul_32rcU.vhd'
         },
         {
           'fileType' => 'vhdlSource',
           'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_fadd_32vdy.vhd'
+          'name' => 'vhdl_impl/top_level_fpext_3udo.vhd'
         },
         {
           'fileType' => 'vhdlSource',
           'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_fcmp_32Bew.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_fdiv_32xdS.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_fmul_32wdI.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_fpext_3Aem.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_fptrunczec.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_fsqrt_3CeG.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/top_level_sitofp_yd2.vhd'
-        },
-        {
-          'fileType' => 'vhdlSource',
-          'logicalName' => 'work',
-          'name' => 'vhdl_impl/update.vhd'
+          'name' => 'vhdl_impl/top_level_fptrunctde.vhd'
         },
         {
           'fileType' => 'vhdlSource',
@@ -959,7 +599,7 @@
   'model' => {
     'modelParameters'=>{
         'combinational' => '0',
-        'latency' => '330',
+        'latency' => '67',
         'II' => 'x'
     },
     'ports' => [
