@@ -1,0 +1,24 @@
+--------------------------------- Version Log ----------------------------------
+Version                                 Path
+System Generator 2019.1                 C:/Xilinx/Vivado/2019.1
+Matlab 9.4.0.813654 (R2018a)            C:\Program Files\MATLAB\R2018a
+Vivado 2019.1                           C:/Xilinx/Vivado/2019.1
+--------------------------------------------------------------------------------
+Summary of Errors:
+Error 0001: "D:/Dev/Repos/CarSimOnFPGA/solution1" directory specified...
+     Block: 'kerekszimulacio/Vivado HLS'
+--------------------------------------------------------------------------------
+
+Error 0001:
+
+Reported by:
+  'kerekszimulacio/Vivado HLS'
+
+Details:
+"D:/Dev/Repos/CarSimOnFPGA/solution1" directory specified in
+"Solution" parameter does not contain System Generator package
+created by Vivado HLS. To create System Generator package from
+Vivado HLS project select "Export RTL" for "System Generator for DSP".
+Error occurred during "Block Configuration".
+
+--------------------------------------------------------------------------------
