@@ -1,0 +1,169 @@
+
+
+================================================================
+== Vivado HLS Report for 'top_level'
+================================================================
+* Date:           Wed Jun  3 18:19:44 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CarSimOnFPGA
+* Solution:       solution1
+* Product family: zynq
+* Target device:  xc7z010-clg400-1
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.625|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+-----+-----+-----+---------+
+    |  Latency  |  Interval | Pipeline|
+    | min | max | min | max |   Type  |
+    +-----+-----+-----+-----+---------+
+    |   67|   75|   67|   75|   none  |
+    +-----+-----+-----+-----+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------+---------------------+-----+-----+-----+-----+---------+
+        |                                |                     |  Latency  |  Interval | Pipeline|
+        |            Instance            |        Module       | min | max | min | max |   Type  |
+        +--------------------------------+---------------------+-----+-----+-----+-----+---------+
+        |grp_sin_or_cos_double_s_fu_93   |sin_or_cos_double_s  |   43|   51|   43|   51|   none  |
+        |grp_sin_or_cos_double_s_fu_112  |sin_or_cos_double_s  |   43|   51|   43|   51|   none  |
+        +--------------------------------+---------------------+-----+-----+-----+-----+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+-------+-------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
++-----------------+---------+-------+-------+-------+-----+
+|DSP              |        -|      -|      -|      -|    -|
+|Expression       |        -|      -|      0|      2|    -|
+|FIFO             |        -|      -|      -|      -|    -|
+|Instance         |       16|    194|  12074|  17590|    -|
+|Memory           |        -|      -|      -|      -|    -|
+|Multiplexer      |        -|      -|      -|    121|    -|
+|Register         |        -|      -|    347|      -|    -|
++-----------------+---------+-------+-------+-------+-----+
+|Total            |       16|    194|  12421|  17713|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Available        |      120|     80|  35200|  17600|    0|
++-----------------+---------+-------+-------+-------+-----+
+|Utilization (%)  |       13|    242|     35|    100|    0|
++-----------------+---------+-------+-------+-------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------+----------------------+---------+-------+------+------+-----+
+    |            Instance            |        Module        | BRAM_18K| DSP48E|  FF  |  LUT | URAM|
+    +--------------------------------+----------------------+---------+-------+------+------+-----+
+    |grp_sin_or_cos_double_s_fu_93   |sin_or_cos_double_s   |        8|     88|  4885|  6725|    0|
+    |grp_sin_or_cos_double_s_fu_112  |sin_or_cos_double_s   |        8|     88|  4885|  6725|    0|
+    |top_level_fadd_32qcK_U34        |top_level_fadd_32qcK  |        0|      2|   205|   390|    0|
+    |top_level_fadd_32qcK_U35        |top_level_fadd_32qcK  |        0|      2|   205|   390|    0|
+    |top_level_fadd_32qcK_U36        |top_level_fadd_32qcK  |        0|      2|   205|   390|    0|
+    |top_level_fdiv_32sc4_U41        |top_level_fdiv_32sc4  |        0|      0|   761|   994|    0|
+    |top_level_fmul_32rcU_U37        |top_level_fmul_32rcU  |        0|      3|   143|   321|    0|
+    |top_level_fmul_32rcU_U38        |top_level_fmul_32rcU  |        0|      3|   143|   321|    0|
+    |top_level_fmul_32rcU_U39        |top_level_fmul_32rcU  |        0|      3|   143|   321|    0|
+    |top_level_fmul_32rcU_U40        |top_level_fmul_32rcU  |        0|      3|   143|   321|    0|
+    |top_level_fpext_3udo_U44        |top_level_fpext_3udo  |        0|      0|   100|   138|    0|
+    |top_level_fptrunctde_U42        |top_level_fptrunctde  |        0|      0|   128|   277|    0|
+    |top_level_fptrunctde_U43        |top_level_fptrunctde  |        0|      0|   128|   277|    0|
+    +--------------------------------+----------------------+---------+-------+------+------+-----+
+    |Total                           |                      |       16|    194| 12074| 17590|    0|
+    +--------------------------------+----------------------+---------+-------+------+------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |ap_block_state15_on_subcall_done  |    or    |      0|  0|   2|           1|           1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0|   2|           1|           1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +-----------+-----+-----------+-----+-----------+
+    |    Name   | LUT | Input Size| Bits| Total Bits|
+    +-----------+-----+-----------+-----+-----------+
+    |ap_NS_fsm  |  121|         26|    1|         26|
+    +-----------+-----+-----------+-----+-----------+
+    |Total      |  121|         26|    1|         26|
+    +-----------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------+----+----+-----+-----------+
+    |                     Name                    | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                    |  25|   0|   25|          0|
+    |cos_steer_reg_221                            |  32|   0|   32|          0|
+    |grp_sin_or_cos_double_s_fu_112_ap_start_reg  |   1|   0|    1|          0|
+    |grp_sin_or_cos_double_s_fu_93_ap_start_reg   |   1|   0|    1|          0|
+    |sin_steer_reg_226                            |  32|   0|   32|          0|
+    |tmp_1_i_reg_232                              |  32|   0|   32|          0|
+    |tmp_2_i_reg_242                              |  32|   0|   32|          0|
+    |tmp_4_i_reg_247                              |  32|   0|   32|          0|
+    |tmp_6_i_reg_253                              |  32|   0|   32|          0|
+    |tmp_7_i_reg_258                              |  32|   0|   32|          0|
+    |wheel_angularVelocit                         |  32|   0|   32|          0|
+    |x_assign_reg_205                             |  64|   0|   64|          0|
+    +---------------------------------------------+----+----+-----+-----------+
+    |Total                                        | 347|   0|  347|          0|
+    +---------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+---------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  | Source Object |    C Type    |
++-------------------+-----+-----+------------+---------------+--------------+
+|ap_clk             |  in |    1| ap_ctrl_hs |   top_level   | return value |
+|ap_rst             |  in |    1| ap_ctrl_hs |   top_level   | return value |
+|ap_start           |  in |    1| ap_ctrl_hs |   top_level   | return value |
+|ap_done            | out |    1| ap_ctrl_hs |   top_level   | return value |
+|ap_idle            | out |    1| ap_ctrl_hs |   top_level   | return value |
+|ap_ready           | out |    1| ap_ctrl_hs |   top_level   | return value |
+|deltaTime          |  in |   32|   ap_none  |   deltaTime   |    scalar    |
+|torque             |  in |   32|   ap_none  |     torque    |    scalar    |
+|velocity_x         |  in |   32|   ap_none  |   velocity_x  |    scalar    |
+|velocity_z         |  in |   32|   ap_none  |   velocity_z  |    scalar    |
+|load               |  in |   32|   ap_none  |      load     |    scalar    |
+|steeringAngle      |  in |   32|   ap_none  | steeringAngle |    scalar    |
+|force_x            | out |   32|   ap_vld   |    force_x    |    pointer   |
+|force_x_ap_vld     | out |    1|   ap_vld   |    force_x    |    pointer   |
+|force_z            | out |   32|   ap_vld   |    force_z    |    pointer   |
+|force_z_ap_vld     | out |    1|   ap_vld   |    force_z    |    pointer   |
+|angularVel         | out |   32|   ap_vld   |   angularVel  |    pointer   |
+|angularVel_ap_vld  | out |    1|   ap_vld   |   angularVel  |    pointer   |
++-------------------+-----+-----+------------+---------------+--------------+
+

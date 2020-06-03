@@ -1,0 +1,2 @@
+ERROR: [COSIM 212-419] 	the design has unknown latency/II
+ERROR: [COSIM 212-416] 	proc fast_sim_check() failed
