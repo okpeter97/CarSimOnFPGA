@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'sin_or_cos_double_s'" level="0">
-<item name = "Date">Wed Jun  3 18:19:42 2020
+<item name = "Date">Sat Jun  6 18:25:15 2020
 </item>
 <item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">CarSimOnFPGA</item>
@@ -48,14 +48,14 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, 2, 73, 2746, -</column>
+<column name="Expression">-, 2, 73, 2534, -</column>
 <column name="FIFO">-, -, -, -, -</column>
 <column name="Instance">-, 86, 2983, 3006, -</column>
 <column name="Memory">8, -, 213, 852, -</column>
 <column name="Multiplexer">-, -, -, 121, -</column>
 <column name="Register">-, -, 1616, -, -</column>
 <specialColumn name="Available">120, 80, 35200, 17600, 0</specialColumn>
-<specialColumn name="Utilization (%)">6, 110, 13, 38, 0</specialColumn>
+<specialColumn name="Utilization (%)">6, 110, 13, 37, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
@@ -96,13 +96,13 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="r_V_26_fu_762_p2">*, 2, 0, 24, 35, 25</column>
+<column name="r_V_27_fu_762_p2">*, 2, 0, 24, 35, 25</column>
 <column name="add_ln114_1_fu_306_p2">+, 0, 0, 13, 11, 11</column>
 <column name="add_ln114_fu_472_p2">+, 0, 0, 13, 11, 11</column>
-<column name="ret_V_13_fu_785_p2">+, 0, 0, 64, 64, 64</column>
-<column name="ret_V_14_fu_794_p2">+, 0, 0, 64, 64, 64</column>
-<column name="ret_V_15_fu_824_p2">+, 0, 0, 64, 64, 64</column>
-<column name="ret_V_8_fu_832_p2">+, 0, 0, 64, 64, 64</column>
+<column name="ret_V_13_fu_785_p2">+, 0, 0, 11, 64, 64</column>
+<column name="ret_V_14_fu_794_p2">+, 0, 0, 11, 64, 64</column>
+<column name="ret_V_15_fu_824_p2">+, 0, 0, 11, 64, 64</column>
+<column name="ret_V_8_fu_832_p2">+, 0, 0, 11, 64, 64</column>
 <column name="Ex_V_fu_505_p2">-, 0, 0, 13, 11, 11</column>
 <column name="Mx_bits_V_1_fu_413_p2">-, 0, 0, 131, 1, 124</column>
 <column name="ret_V_fu_878_p2">-, 0, 0, 12, 1, 12</column>
@@ -121,9 +121,9 @@
 <column name="addr_V_fu_312_p3">select, 0, 0, 11, 1, 7</column>
 <column name="cos_basis_fu_815_p3">select, 0, 0, 2, 1, 1</column>
 <column name="p_Repl2_3_fu_1079_p3">select, 0, 0, 2, 1, 1</column>
-<column name="p_Val2_31_fu_403_p3">select, 0, 0, 3, 1, 1</column>
-<column name="p_Val2_8_fu_418_p3">select, 0, 0, 124, 1, 124</column>
-<column name="r_V_19_fu_563_p3">select, 0, 0, 63, 1, 63</column>
+<column name="p_Val2_14_fu_418_p3">select, 0, 0, 124, 1, 124</column>
+<column name="p_Val2_37_fu_403_p3">select, 0, 0, 3, 1, 1</column>
+<column name="r_V_20_fu_563_p3">select, 0, 0, 63, 1, 63</column>
 <column name="ret_V_10_fu_1067_p3">select, 0, 0, 52, 1, 52</column>
 <column name="ret_V_9_fu_1036_p3">select, 0, 0, 11, 1, 11</column>
 <column name="select_ln271_fu_993_p3">select, 0, 0, 2, 1, 1</column>
@@ -135,9 +135,9 @@
 <column name="select_ln311_fu_1021_p3">select, 0, 0, 2, 1, 1</column>
 <column name="select_ln482_fu_477_p3">select, 0, 0, 11, 1, 11</column>
 <column name="ush_fu_538_p3">select, 0, 0, 12, 1, 12</column>
-<column name="r_V_17_fu_342_p2">shl, 0, 0, 950, 256, 256</column>
-<column name="r_V_18_fu_487_p2">shl, 0, 0, 411, 124, 124</column>
-<column name="r_V_3_fu_558_p2">shl, 0, 0, 180, 63, 63</column>
+<column name="r_V_18_fu_342_p2">shl, 0, 0, 950, 256, 256</column>
+<column name="r_V_19_fu_487_p2">shl, 0, 0, 411, 124, 124</column>
+<column name="r_V_4_fu_558_p2">shl, 0, 0, 180, 63, 63</column>
 <column name="sin_basis_fu_630_p2">xor, 0, 0, 2, 1, 1</column>
 <column name="xor_ln271_fu_810_p2">xor, 0, 0, 2, 1, 2</column>
 <column name="xor_ln29_fu_624_p2">xor, 0, 0, 2, 1, 2</column>
@@ -174,13 +174,13 @@
 <column name="icmp_ln833_reg_1205">1, 0, 1, 0</column>
 <column name="isNeg_reg_1199">1, 0, 1, 0</column>
 <column name="p_Result_21_reg_1097">1, 0, 1, 0</column>
-<column name="p_Result_i_i_39_reg_1175">61, 0, 61, 0</column>
+<column name="p_Result_i_i_47_reg_1175">61, 0, 61, 0</column>
 <column name="p_Result_i_reg_1219">7, 0, 7, 0</column>
-<column name="p_Val2_16_reg_1343">59, 0, 59, 0</column>
-<column name="p_Val2_30_reg_1153">124, 0, 124, 0</column>
-<column name="p_Val2_31_reg_1164">3, 0, 3, 0</column>
-<column name="p_Val2_8_reg_1170">124, 0, 124, 0</column>
-<column name="r_V_5_reg_1246">49, 0, 98, 49</column>
+<column name="p_Val2_14_reg_1170">124, 0, 124, 0</column>
+<column name="p_Val2_22_reg_1343">59, 0, 59, 0</column>
+<column name="p_Val2_36_reg_1153">124, 0, 124, 0</column>
+<column name="p_Val2_37_reg_1164">3, 0, 3, 0</column>
+<column name="r_V_6_reg_1246">49, 0, 98, 49</column>
 <column name="result_V_reg_1415">63, 0, 63, 0</column>
 <column name="ret_V_10_reg_1440">52, 0, 52, 0</column>
 <column name="ret_V_11_reg_1132">170, 0, 170, 0</column>
@@ -189,12 +189,12 @@
 <column name="ret_V_9_reg_1435">11, 0, 11, 0</column>
 <column name="ret_V_reg_1420">12, 0, 12, 0</column>
 <column name="select_ln311_reg_1430">1, 0, 1, 0</column>
-<column name="tmp_3_reg_1388">37, 0, 37, 0</column>
-<column name="tmp_4_reg_1378">29, 0, 29, 0</column>
-<column name="tmp_V_1_reg_1110">52, 0, 52, 0</column>
+<column name="tmp_54_reg_1378">29, 0, 29, 0</column>
+<column name="tmp_V_2_reg_1110">52, 0, 52, 0</column>
 <column name="tmp_V_reg_1103">11, 0, 11, 0</column>
 <column name="tmp_reg_1240">1, 0, 1, 0</column>
-<column name="trunc_ln1_reg_1348">56, 0, 56, 0</column>
+<column name="tmp_s_reg_1388">37, 0, 37, 0</column>
+<column name="trunc_ln3_reg_1348">56, 0, 56, 0</column>
 <column name="trunc_ln601_reg_1127">7, 0, 7, 0</column>
 <column name="trunc_ln662_1_reg_1353">48, 0, 48, 0</column>
 <column name="trunc_ln_i_reg_1159">3, 0, 3, 0</column>

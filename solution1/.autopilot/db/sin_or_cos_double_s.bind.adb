@@ -343,7 +343,7 @@
 					<Obj>
 						<type>0</type>
 						<id>14</id>
-						<name>tmp_V_1</name>
+						<name>tmp_V_2</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>478</lineNumber>
@@ -1128,7 +1128,7 @@
 					<Obj>
 						<type>0</type>
 						<id>27</id>
-						<name>r_V_17</name>
+						<name>r_V_18</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>427</lineNumber>
@@ -1422,7 +1422,7 @@
 					<Obj>
 						<type>0</type>
 						<id>32</id>
-						<name>p_Val2_30</name>
+						<name>p_Val2_36</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>512</lineNumber>
@@ -1538,7 +1538,7 @@
 					<Obj>
 						<type>0</type>
 						<id>34</id>
-						<name>p_Val2_31</name>
+						<name>p_Val2_37</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>480</lineNumber>
@@ -1706,7 +1706,7 @@
 					<Obj>
 						<type>0</type>
 						<id>37</id>
-						<name>p_Val2_8</name>
+						<name>p_Val2_14</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>520</lineNumber>
@@ -1763,7 +1763,7 @@
 					<Obj>
 						<type>0</type>
 						<id>38</id>
-						<name>p_Result_i_i_39</name>
+						<name>p_Result_i_i_47</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_normalize.h</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>101</lineNumber>
@@ -2195,7 +2195,7 @@
 					<Obj>
 						<type>0</type>
 						<id>45</id>
-						<name>r_V_18</name>
+						<name>r_V_19</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>533</lineNumber>
@@ -2811,7 +2811,7 @@
 					<Obj>
 						<type>0</type>
 						<id>56</id>
-						<name>r_V_3</name>
+						<name>r_V_4</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>535</lineNumber>
@@ -2867,7 +2867,7 @@
 					<Obj>
 						<type>0</type>
 						<id>57</id>
-						<name>r_V_19</name>
+						<name>r_V_20</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_range_redux.h</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>535</lineNumber>
@@ -3351,7 +3351,7 @@
 					<Obj>
 						<type>0</type>
 						<id>71</id>
-						<name>r_V_5</name>
+						<name>r_V_6</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>25</lineNumber>
@@ -3406,7 +3406,7 @@
 					<Obj>
 						<type>0</type>
 						<id>72</id>
-						<name>r_V_20</name>
+						<name>r_V_21</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>25</lineNumber>
@@ -3520,7 +3520,7 @@
 					<Obj>
 						<type>0</type>
 						<id>74</id>
-						<name>r_V_8</name>
+						<name>r_V_9</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>26</lineNumber>
@@ -3575,7 +3575,7 @@
 					<Obj>
 						<type>0</type>
 						<id>75</id>
-						<name>r_V_21</name>
+						<name>r_V_22</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>26</lineNumber>
@@ -3689,7 +3689,7 @@
 					<Obj>
 						<type>0</type>
 						<id>77</id>
-						<name>r_V_22</name>
+						<name>r_V_23</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>27</lineNumber>
@@ -4084,7 +4084,7 @@
 					<Obj>
 						<type>0</type>
 						<id>84</id>
-						<name>p_Val2_16</name>
+						<name>p_Val2_22</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>32</lineNumber>
@@ -4196,7 +4196,7 @@
 					<Obj>
 						<type>0</type>
 						<id>86</id>
-						<name>r_V_10</name>
+						<name>r_V_11</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>33</lineNumber>
@@ -4418,7 +4418,7 @@
 					<Obj>
 						<type>0</type>
 						<id>90</id>
-						<name>r_V_23</name>
+						<name>r_V_24</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>33</lineNumber>
@@ -4474,7 +4474,7 @@
 					<Obj>
 						<type>0</type>
 						<id>91</id>
-						<name>trunc_ln1</name>
+						<name>trunc_ln3</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>33</lineNumber>
@@ -4532,7 +4532,7 @@
 					<Obj>
 						<type>0</type>
 						<id>92</id>
-						<name>r_V_12</name>
+						<name>r_V_13</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>34</lineNumber>
@@ -4754,7 +4754,7 @@
 					<Obj>
 						<type>0</type>
 						<id>96</id>
-						<name>r_V_24</name>
+						<name>r_V_25</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>34</lineNumber>
@@ -5090,7 +5090,7 @@
 					<Obj>
 						<type>0</type>
 						<id>102</id>
-						<name>r_V_25</name>
+						<name>r_V_26</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>35</lineNumber>
@@ -5146,7 +5146,7 @@
 					<Obj>
 						<type>0</type>
 						<id>103</id>
-						<name>tmp_3</name>
+						<name>tmp_s</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>35</lineNumber>
@@ -5426,7 +5426,7 @@
 					<Obj>
 						<type>0</type>
 						<id>108</id>
-						<name>r_V_26</name>
+						<name>r_V_27</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>36</lineNumber>
@@ -5482,7 +5482,7 @@
 					<Obj>
 						<type>0</type>
 						<id>109</id>
-						<name>tmp_4</name>
+						<name>tmp_54</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>36</lineNumber>
@@ -6149,7 +6149,7 @@
 					<Obj>
 						<type>0</type>
 						<id>121</id>
-						<name>r_V_27</name>
+						<name>r_V_28</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>37</lineNumber>
@@ -6410,7 +6410,7 @@
 					<Obj>
 						<type>0</type>
 						<id>126</id>
-						<name>p_Val2_26</name>
+						<name>p_Val2_32</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>475</lineNumber>
@@ -6522,7 +6522,7 @@
 					<Obj>
 						<type>0</type>
 						<id>128</id>
-						<name>tmp_V_2</name>
+						<name>tmp_V_3</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>477</lineNumber>
@@ -6580,7 +6580,7 @@
 					<Obj>
 						<type>0</type>
 						<id>129</id>
-						<name>tmp_V_3</name>
+						<name>tmp_V_4</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>478</lineNumber>
@@ -15168,7 +15168,7 @@
 			</second>
 		</item>
 		<item>
-			<first>p_Result_i_i_39_fu_425</first>
+			<first>p_Result_i_i_47_fu_425</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -15192,7 +15192,15 @@
 			</second>
 		</item>
 		<item>
-			<first>p_Val2_26_fu_885</first>
+			<first>p_Val2_14_fu_418</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>37</item>
+			</second>
+		</item>
+		<item>
+			<first>p_Val2_32_fu_885</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -15200,7 +15208,7 @@
 			</second>
 		</item>
 		<item>
-			<first>p_Val2_30_fu_383</first>
+			<first>p_Val2_36_fu_383</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -15208,19 +15216,11 @@
 			</second>
 		</item>
 		<item>
-			<first>p_Val2_31_fu_403</first>
+			<first>p_Val2_37_fu_403</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
 				<item>34</item>
-			</second>
-		</item>
-		<item>
-			<first>p_Val2_8_fu_418</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>37</item>
 			</second>
 		</item>
 		<item>
@@ -15232,7 +15232,7 @@
 			</second>
 		</item>
 		<item>
-			<first>r_V_10_fu_673</first>
+			<first>r_V_11_fu_673</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -15240,7 +15240,7 @@
 			</second>
 		</item>
 		<item>
-			<first>r_V_12_fu_685</first>
+			<first>r_V_13_fu_685</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -15248,7 +15248,7 @@
 			</second>
 		</item>
 		<item>
-			<first>r_V_17_fu_342</first>
+			<first>r_V_18_fu_342</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -15256,7 +15256,7 @@
 			</second>
 		</item>
 		<item>
-			<first>r_V_18_fu_487</first>
+			<first>r_V_19_fu_487</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -15264,7 +15264,7 @@
 			</second>
 		</item>
 		<item>
-			<first>r_V_19_fu_563</first>
+			<first>r_V_20_fu_563</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -15272,7 +15272,7 @@
 			</second>
 		</item>
 		<item>
-			<first>r_V_26_fu_762</first>
+			<first>r_V_27_fu_762</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -15280,7 +15280,7 @@
 			</second>
 		</item>
 		<item>
-			<first>r_V_3_fu_558</first>
+			<first>r_V_4_fu_558</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -15288,7 +15288,7 @@
 			</second>
 		</item>
 		<item>
-			<first>r_V_5_fu_615</first>
+			<first>r_V_6_fu_615</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -15296,7 +15296,7 @@
 			</second>
 		</item>
 		<item>
-			<first>r_V_8_fu_659</first>
+			<first>r_V_9_fu_659</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -15568,15 +15568,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_3_fu_800</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>103</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_4_fu_768</first>
+			<first>tmp_54_fu_768</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -15584,7 +15576,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_V_1_fu_296</first>
+			<first>tmp_V_2_fu_296</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -15592,7 +15584,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_V_2_fu_897</first>
+			<first>tmp_V_3_fu_897</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -15600,7 +15592,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_V_3_fu_907</first>
+			<first>tmp_V_4_fu_907</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -15632,7 +15624,15 @@
 			</second>
 		</item>
 		<item>
-			<first>trunc_ln1_fu_717</first>
+			<first>tmp_s_fu_800</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>103</item>
+			</second>
+		</item>
+		<item>
+			<first>trunc_ln3_fu_717</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -16743,7 +16743,7 @@
 			</second>
 		</item>
 		<item>
-			<first>p_Result_i_i_39_reg_1175</first>
+			<first>p_Result_i_i_47_reg_1175</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -16759,31 +16759,7 @@
 			</second>
 		</item>
 		<item>
-			<first>p_Val2_16_reg_1343</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>84</item>
-			</second>
-		</item>
-		<item>
-			<first>p_Val2_30_reg_1153</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>32</item>
-			</second>
-		</item>
-		<item>
-			<first>p_Val2_31_reg_1164</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>34</item>
-			</second>
-		</item>
-		<item>
-			<first>p_Val2_8_reg_1170</first>
+			<first>p_Val2_14_reg_1170</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -16791,7 +16767,31 @@
 			</second>
 		</item>
 		<item>
-			<first>r_V_10_reg_1303</first>
+			<first>p_Val2_22_reg_1343</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>84</item>
+			</second>
+		</item>
+		<item>
+			<first>p_Val2_36_reg_1153</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>32</item>
+			</second>
+		</item>
+		<item>
+			<first>p_Val2_37_reg_1164</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>34</item>
+			</second>
+		</item>
+		<item>
+			<first>r_V_11_reg_1303</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -16799,7 +16799,7 @@
 			</second>
 		</item>
 		<item>
-			<first>r_V_12_reg_1313</first>
+			<first>r_V_13_reg_1313</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -16807,7 +16807,7 @@
 			</second>
 		</item>
 		<item>
-			<first>r_V_5_reg_1246</first>
+			<first>r_V_6_reg_1246</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -16815,7 +16815,7 @@
 			</second>
 		</item>
 		<item>
-			<first>r_V_8_reg_1291</first>
+			<first>r_V_9_reg_1291</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -16927,15 +16927,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_3_reg_1388</first>
-			<second>
-				<count>1</count>
-				<item_version>0</item_version>
-				<item>103</item>
-			</second>
-		</item>
-		<item>
-			<first>tmp_4_reg_1378</first>
+			<first>tmp_54_reg_1378</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -16943,7 +16935,7 @@
 			</second>
 		</item>
 		<item>
-			<first>tmp_V_1_reg_1110</first>
+			<first>tmp_V_2_reg_1110</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>
@@ -16967,7 +16959,15 @@
 			</second>
 		</item>
 		<item>
-			<first>trunc_ln1_reg_1348</first>
+			<first>tmp_s_reg_1388</first>
+			<second>
+				<count>1</count>
+				<item_version>0</item_version>
+				<item>103</item>
+			</second>
+		</item>
+		<item>
+			<first>trunc_ln3_reg_1348</first>
 			<second>
 				<count>1</count>
 				<item_version>0</item_version>

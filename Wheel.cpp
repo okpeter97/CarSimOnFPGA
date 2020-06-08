@@ -57,8 +57,8 @@ void Wheel::update(float deltaTime,
 	float x = 0, z = 0;
 	if (s)
 	{
-		float x = load * (r / s) * longForce;
-		float z = load * (a / s) * latForce;
+		x = load * (r / s) * longForce;
+		z = load * (a / s) * latForce;
 	}
 
 	angularVelocity = angularVelocity + ((torque - x * radius) / inertia) * deltaTime;

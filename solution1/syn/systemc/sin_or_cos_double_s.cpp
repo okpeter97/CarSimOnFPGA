@@ -163,7 +163,7 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     top_level_mux_83_jbC_U7->din5(ap_var_for_const2);
     top_level_mux_83_jbC_U7->din6(ap_var_for_const2);
     top_level_mux_83_jbC_U7->din7(ap_var_for_const1);
-    top_level_mux_83_jbC_U7->din8(p_Val2_31_reg_1164);
+    top_level_mux_83_jbC_U7->din8(p_Val2_37_reg_1164);
     top_level_mux_83_jbC_U7->dout(tmp_fu_594_p10);
     top_level_mul_49nkbM_U8 = new top_level_mul_49nkbM<1,2,49,49,98>("top_level_mul_49nkbM_U8");
     top_level_mul_49nkbM_U8->clk(ap_clk);
@@ -258,14 +258,14 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sensitive << ( ap_clk.pos() );
 
     SC_METHOD(thread_B_V_fu_580_p1);
-    sensitive << ( r_V_19_fu_563_p3 );
+    sensitive << ( r_V_20_fu_563_p3 );
 
     SC_METHOD(thread_Ex_V_fu_505_p2);
     sensitive << ( select_ln482_fu_477_p3 );
     sensitive << ( zext_ln655_fu_502_p1 );
 
     SC_METHOD(thread_Mx_bits_V_1_fu_413_p2);
-    sensitive << ( p_Val2_30_reg_1153 );
+    sensitive << ( p_Val2_36_reg_1153 );
 
     SC_METHOD(thread_Mx_zeros_V_fu_468_p1);
     sensitive << ( tmp_i_i_fu_460_p3 );
@@ -430,26 +430,26 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
 
     SC_METHOD(thread_grp_fu_618_p0);
     sensitive << ( ap_CS_fsm_state12 );
-    sensitive << ( r_V_5_fu_615_p1 );
+    sensitive << ( r_V_6_fu_615_p1 );
 
     SC_METHOD(thread_grp_fu_618_p1);
     sensitive << ( ap_CS_fsm_state12 );
-    sensitive << ( r_V_5_fu_615_p1 );
+    sensitive << ( r_V_6_fu_615_p1 );
 
     SC_METHOD(thread_grp_fu_662_p0);
-    sensitive << ( r_V_5_reg_1246 );
+    sensitive << ( r_V_6_reg_1246 );
     sensitive << ( ap_CS_fsm_state14 );
 
     SC_METHOD(thread_grp_fu_662_p1);
-    sensitive << ( r_V_8_fu_659_p1 );
+    sensitive << ( r_V_9_fu_659_p1 );
     sensitive << ( ap_CS_fsm_state14 );
 
     SC_METHOD(thread_grp_fu_667_p0);
-    sensitive << ( r_V_8_fu_659_p1 );
+    sensitive << ( r_V_9_fu_659_p1 );
     sensitive << ( ap_CS_fsm_state14 );
 
     SC_METHOD(thread_grp_fu_667_p1);
-    sensitive << ( r_V_8_fu_659_p1 );
+    sensitive << ( r_V_9_fu_659_p1 );
     sensitive << ( ap_CS_fsm_state14 );
 
     SC_METHOD(thread_grp_fu_679_p0);
@@ -491,7 +491,7 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sensitive << ( grp_scaled_fixed2ieee_fu_268_ap_start_reg );
 
     SC_METHOD(thread_icmp_ln833_1_fu_378_p2);
-    sensitive << ( tmp_V_1_reg_1110 );
+    sensitive << ( tmp_V_2_reg_1110 );
     sensitive << ( ap_CS_fsm_state3 );
 
     SC_METHOD(thread_icmp_ln833_2_fu_524_p2);
@@ -519,10 +519,10 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sensitive << ( and_ln307_fu_1075_p2 );
 
     SC_METHOD(thread_p_Result_22_fu_358_p3);
-    sensitive << ( tmp_V_1_reg_1110 );
+    sensitive << ( tmp_V_2_reg_1110 );
 
     SC_METHOD(thread_p_Result_23_fu_435_p3);
-    sensitive << ( p_Result_i_i_39_reg_1175 );
+    sensitive << ( p_Result_i_i_47_reg_1175 );
 
     SC_METHOD(thread_p_Result_24_fu_452_p3);
     sensitive << ( p_Result_s_fu_442_p4 );
@@ -532,11 +532,11 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sensitive << ( sin_basis_fu_630_p2 );
 
     SC_METHOD(thread_p_Result_26_fu_889_p3);
-    sensitive << ( p_Val2_26_fu_885_p1 );
+    sensitive << ( p_Val2_32_fu_885_p1 );
 
     SC_METHOD(thread_p_Result_27_fu_911_p3);
     sensitive << ( p_Result_21_reg_1097 );
-    sensitive << ( p_Val2_31_reg_1164 );
+    sensitive << ( p_Val2_37_reg_1164 );
 
     SC_METHOD(thread_p_Result_28_fu_1085_p4);
     sensitive << ( ret_V_9_reg_1435 );
@@ -549,60 +549,60 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     SC_METHOD(thread_p_Result_s_fu_442_p4);
     sensitive << ( p_Result_23_fu_435_p3 );
 
-    SC_METHOD(thread_p_Val2_26_fu_885_p1);
-    sensitive << ( grp_scaled_fixed2ieee_fu_268_ap_return );
-
-    SC_METHOD(thread_p_Val2_31_fu_403_p3);
-    sensitive << ( closepath_reg_1116 );
-    sensitive << ( trunc_ln_i_reg_1159 );
-
-    SC_METHOD(thread_p_Val2_8_fu_418_p3);
-    sensitive << ( p_Val2_30_reg_1153 );
+    SC_METHOD(thread_p_Val2_14_fu_418_p3);
+    sensitive << ( p_Val2_36_reg_1153 );
     sensitive << ( trunc_ln745_fu_409_p1 );
     sensitive << ( Mx_bits_V_1_fu_413_p2 );
+
+    SC_METHOD(thread_p_Val2_32_fu_885_p1);
+    sensitive << ( grp_scaled_fixed2ieee_fu_268_ap_return );
+
+    SC_METHOD(thread_p_Val2_37_fu_403_p3);
+    sensitive << ( closepath_reg_1116 );
+    sensitive << ( trunc_ln_i_reg_1159 );
 
     SC_METHOD(thread_p_Val2_s_fu_274_p1);
     sensitive << ( t_in );
 
-    SC_METHOD(thread_r_V_17_fu_342_p2);
+    SC_METHOD(thread_r_V_18_fu_342_p2);
     sensitive << ( ref_4oPi_table_256_V_q0 );
     sensitive << ( zext_ln744_fu_339_p1 );
 
-    SC_METHOD(thread_r_V_18_fu_487_p2);
-    sensitive << ( p_Val2_8_reg_1170 );
+    SC_METHOD(thread_r_V_19_fu_487_p2);
+    sensitive << ( p_Val2_14_reg_1170 );
     sensitive << ( zext_ln1253_fu_484_p1 );
 
-    SC_METHOD(thread_r_V_19_fu_563_p3);
+    SC_METHOD(thread_r_V_20_fu_563_p3);
     sensitive << ( isNeg_reg_1199 );
     sensitive << ( r_V_fu_553_p2 );
-    sensitive << ( r_V_3_fu_558_p2 );
+    sensitive << ( r_V_4_fu_558_p2 );
 
-    SC_METHOD(thread_r_V_26_fu_762_p0);
+    SC_METHOD(thread_r_V_27_fu_762_p0);
     sensitive << ( ap_CS_fsm_state16 );
-    sensitive << ( r_V_26_fu_762_p00 );
+    sensitive << ( r_V_27_fu_762_p00 );
 
-    SC_METHOD(thread_r_V_26_fu_762_p00);
+    SC_METHOD(thread_r_V_27_fu_762_p00);
     sensitive << ( B_fourth_power_V_reg_1338 );
 
-    SC_METHOD(thread_r_V_26_fu_762_p1);
+    SC_METHOD(thread_r_V_27_fu_762_p1);
     sensitive << ( ap_CS_fsm_state16 );
-    sensitive << ( r_V_26_fu_762_p10 );
+    sensitive << ( r_V_27_fu_762_p10 );
 
-    SC_METHOD(thread_r_V_26_fu_762_p10);
+    SC_METHOD(thread_r_V_27_fu_762_p10);
     sensitive << ( fourth_order_double_16_reg_1363 );
 
-    SC_METHOD(thread_r_V_26_fu_762_p2);
-    sensitive << ( r_V_26_fu_762_p0 );
-    sensitive << ( r_V_26_fu_762_p1 );
+    SC_METHOD(thread_r_V_27_fu_762_p2);
+    sensitive << ( r_V_27_fu_762_p0 );
+    sensitive << ( r_V_27_fu_762_p1 );
 
-    SC_METHOD(thread_r_V_3_fu_558_p2);
+    SC_METHOD(thread_r_V_4_fu_558_p2);
     sensitive << ( Mx_V_reg_1186 );
     sensitive << ( zext_ln1287_fu_549_p1 );
 
-    SC_METHOD(thread_r_V_5_fu_615_p1);
+    SC_METHOD(thread_r_V_6_fu_615_p1);
     sensitive << ( B_trunc_V_reg_1229 );
 
-    SC_METHOD(thread_r_V_8_fu_659_p1);
+    SC_METHOD(thread_r_V_9_fu_659_p1);
     sensitive << ( B_squared_V_reg_1275 );
 
     SC_METHOD(thread_r_V_fu_553_p2);
@@ -620,7 +620,7 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     SC_METHOD(thread_ret_V_10_fu_1067_p3);
     sensitive << ( or_ln300_fu_1062_p2 );
     sensitive << ( select_ln300_2_fu_1054_p3 );
-    sensitive << ( tmp_V_3_fu_907_p1 );
+    sensitive << ( tmp_V_4_fu_907_p1 );
 
     SC_METHOD(thread_ret_V_13_fu_785_p2);
     sensitive << ( lhs_V_1_fu_778_p1 );
@@ -647,7 +647,7 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sensitive << ( rhs_V_fu_874_p1 );
 
     SC_METHOD(thread_rhs_V_2_fu_782_p1);
-    sensitive << ( trunc_ln1_reg_1348 );
+    sensitive << ( trunc_ln3_reg_1348 );
 
     SC_METHOD(thread_rhs_V_fu_874_p1);
     sensitive << ( select_ln272_fu_857_p3 );
@@ -677,7 +677,7 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
 
     SC_METHOD(thread_select_ln311_1_fu_1029_p3);
     sensitive << ( icmp_ln833_2_reg_1211 );
-    sensitive << ( tmp_V_2_fu_897_p4 );
+    sensitive << ( tmp_V_3_fu_897_p4 );
 
     SC_METHOD(thread_select_ln311_fu_1021_p3);
     sensitive << ( or_ln311_fu_1016_p2 );
@@ -705,16 +705,16 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sensitive << ( sext_ln1334_fu_529_p1 );
 
     SC_METHOD(thread_t1_V_fu_737_p3);
-    sensitive << ( p_Val2_16_reg_1343 );
+    sensitive << ( p_Val2_22_reg_1343 );
 
-    SC_METHOD(thread_tmp_V_1_fu_296_p1);
+    SC_METHOD(thread_tmp_V_2_fu_296_p1);
     sensitive << ( p_Val2_s_fu_274_p1 );
 
-    SC_METHOD(thread_tmp_V_2_fu_897_p4);
-    sensitive << ( p_Val2_26_fu_885_p1 );
+    SC_METHOD(thread_tmp_V_3_fu_897_p4);
+    sensitive << ( p_Val2_32_fu_885_p1 );
 
-    SC_METHOD(thread_tmp_V_3_fu_907_p1);
-    sensitive << ( p_Val2_26_fu_885_p1 );
+    SC_METHOD(thread_tmp_V_4_fu_907_p1);
+    sensitive << ( p_Val2_32_fu_885_p1 );
 
     SC_METHOD(thread_tmp_V_fu_286_p4);
     sensitive << ( p_Val2_s_fu_274_p1 );
@@ -726,7 +726,7 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sensitive << ( addr_V_fu_312_p3 );
 
     SC_METHOD(thread_trunc_ln745_fu_409_p1);
-    sensitive << ( p_Val2_31_fu_403_p3 );
+    sensitive << ( p_Val2_37_fu_403_p3 );
 
     SC_METHOD(thread_ush_fu_538_p3);
     sensitive << ( isNeg_reg_1199 );
@@ -765,10 +765,10 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sensitive << ( Mx_zeros_V_reg_1180 );
 
     SC_METHOD(thread_zext_ln657_1_fu_829_p1);
-    sensitive << ( tmp_4_reg_1378 );
+    sensitive << ( tmp_54_reg_1378 );
 
     SC_METHOD(thread_zext_ln657_fu_821_p1);
-    sensitive << ( tmp_3_reg_1388 );
+    sensitive << ( tmp_s_reg_1388 );
 
     SC_METHOD(thread_zext_ln744_fu_339_p1);
     sensitive << ( trunc_ln601_reg_1127 );
@@ -830,8 +830,8 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sc_trace(mVcdFile, p_Result_21_reg_1097, "p_Result_21_reg_1097");
     sc_trace(mVcdFile, tmp_V_fu_286_p4, "tmp_V_fu_286_p4");
     sc_trace(mVcdFile, tmp_V_reg_1103, "tmp_V_reg_1103");
-    sc_trace(mVcdFile, tmp_V_1_fu_296_p1, "tmp_V_1_fu_296_p1");
-    sc_trace(mVcdFile, tmp_V_1_reg_1110, "tmp_V_1_reg_1110");
+    sc_trace(mVcdFile, tmp_V_2_fu_296_p1, "tmp_V_2_fu_296_p1");
+    sc_trace(mVcdFile, tmp_V_2_reg_1110, "tmp_V_2_reg_1110");
     sc_trace(mVcdFile, closepath_fu_300_p2, "closepath_fu_300_p2");
     sc_trace(mVcdFile, closepath_reg_1116, "closepath_reg_1116");
     sc_trace(mVcdFile, trunc_ln601_fu_335_p1, "trunc_ln601_fu_335_p1");
@@ -841,15 +841,15 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sc_trace(mVcdFile, ap_CS_fsm_state3, "ap_CS_fsm_state3");
     sc_trace(mVcdFile, icmp_ln833_1_fu_378_p2, "icmp_ln833_1_fu_378_p2");
     sc_trace(mVcdFile, icmp_ln833_1_reg_1147, "icmp_ln833_1_reg_1147");
-    sc_trace(mVcdFile, p_Val2_30_reg_1153, "p_Val2_30_reg_1153");
+    sc_trace(mVcdFile, p_Val2_36_reg_1153, "p_Val2_36_reg_1153");
     sc_trace(mVcdFile, ap_CS_fsm_state7, "ap_CS_fsm_state7");
     sc_trace(mVcdFile, trunc_ln_i_reg_1159, "trunc_ln_i_reg_1159");
-    sc_trace(mVcdFile, p_Val2_31_fu_403_p3, "p_Val2_31_fu_403_p3");
-    sc_trace(mVcdFile, p_Val2_31_reg_1164, "p_Val2_31_reg_1164");
+    sc_trace(mVcdFile, p_Val2_37_fu_403_p3, "p_Val2_37_fu_403_p3");
+    sc_trace(mVcdFile, p_Val2_37_reg_1164, "p_Val2_37_reg_1164");
     sc_trace(mVcdFile, ap_CS_fsm_state8, "ap_CS_fsm_state8");
-    sc_trace(mVcdFile, p_Val2_8_fu_418_p3, "p_Val2_8_fu_418_p3");
-    sc_trace(mVcdFile, p_Val2_8_reg_1170, "p_Val2_8_reg_1170");
-    sc_trace(mVcdFile, p_Result_i_i_39_reg_1175, "p_Result_i_i_39_reg_1175");
+    sc_trace(mVcdFile, p_Val2_14_fu_418_p3, "p_Val2_14_fu_418_p3");
+    sc_trace(mVcdFile, p_Val2_14_reg_1170, "p_Val2_14_reg_1170");
+    sc_trace(mVcdFile, p_Result_i_i_47_reg_1175, "p_Result_i_i_47_reg_1175");
     sc_trace(mVcdFile, Mx_zeros_V_fu_468_p1, "Mx_zeros_V_fu_468_p1");
     sc_trace(mVcdFile, Mx_zeros_V_reg_1180, "Mx_zeros_V_reg_1180");
     sc_trace(mVcdFile, ap_CS_fsm_state9, "ap_CS_fsm_state9");
@@ -870,8 +870,8 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sc_trace(mVcdFile, ap_CS_fsm_state12, "ap_CS_fsm_state12");
     sc_trace(mVcdFile, tmp_fu_594_p10, "tmp_fu_594_p10");
     sc_trace(mVcdFile, tmp_reg_1240, "tmp_reg_1240");
-    sc_trace(mVcdFile, r_V_5_fu_615_p1, "r_V_5_fu_615_p1");
-    sc_trace(mVcdFile, r_V_5_reg_1246, "r_V_5_reg_1246");
+    sc_trace(mVcdFile, r_V_6_fu_615_p1, "r_V_6_fu_615_p1");
+    sc_trace(mVcdFile, r_V_6_reg_1246, "r_V_6_reg_1246");
     sc_trace(mVcdFile, xor_ln29_fu_624_p2, "xor_ln29_fu_624_p2");
     sc_trace(mVcdFile, xor_ln29_reg_1253, "xor_ln29_reg_1253");
     sc_trace(mVcdFile, zext_ln498_fu_643_p1, "zext_ln498_fu_643_p1");
@@ -880,21 +880,21 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sc_trace(mVcdFile, ap_CS_fsm_state13, "ap_CS_fsm_state13");
     sc_trace(mVcdFile, fourth_order_double_10_reg_1281, "fourth_order_double_10_reg_1281");
     sc_trace(mVcdFile, fourth_order_double_12_reg_1286, "fourth_order_double_12_reg_1286");
-    sc_trace(mVcdFile, r_V_8_fu_659_p1, "r_V_8_fu_659_p1");
+    sc_trace(mVcdFile, r_V_9_fu_659_p1, "r_V_9_fu_659_p1");
     sc_trace(mVcdFile, ap_CS_fsm_state14, "ap_CS_fsm_state14");
     sc_trace(mVcdFile, B_third_power_V_reg_1333, "B_third_power_V_reg_1333");
     sc_trace(mVcdFile, ap_CS_fsm_state15, "ap_CS_fsm_state15");
     sc_trace(mVcdFile, B_fourth_power_V_reg_1338, "B_fourth_power_V_reg_1338");
-    sc_trace(mVcdFile, p_Val2_16_reg_1343, "p_Val2_16_reg_1343");
-    sc_trace(mVcdFile, trunc_ln1_reg_1348, "trunc_ln1_reg_1348");
+    sc_trace(mVcdFile, p_Val2_22_reg_1343, "p_Val2_22_reg_1343");
+    sc_trace(mVcdFile, trunc_ln3_reg_1348, "trunc_ln3_reg_1348");
     sc_trace(mVcdFile, trunc_ln662_1_reg_1353, "trunc_ln662_1_reg_1353");
     sc_trace(mVcdFile, fourth_order_double_14_reg_1358, "fourth_order_double_14_reg_1358");
     sc_trace(mVcdFile, fourth_order_double_16_reg_1363, "fourth_order_double_16_reg_1363");
     sc_trace(mVcdFile, ap_CS_fsm_state16, "ap_CS_fsm_state16");
-    sc_trace(mVcdFile, tmp_4_reg_1378, "tmp_4_reg_1378");
+    sc_trace(mVcdFile, tmp_54_reg_1378, "tmp_54_reg_1378");
     sc_trace(mVcdFile, ret_V_14_fu_794_p2, "ret_V_14_fu_794_p2");
     sc_trace(mVcdFile, ret_V_14_reg_1383, "ret_V_14_reg_1383");
-    sc_trace(mVcdFile, tmp_3_reg_1388, "tmp_3_reg_1388");
+    sc_trace(mVcdFile, tmp_s_reg_1388, "tmp_s_reg_1388");
     sc_trace(mVcdFile, ap_CS_fsm_state17, "ap_CS_fsm_state17");
     sc_trace(mVcdFile, cos_basis_fu_815_p3, "cos_basis_fu_815_p3");
     sc_trace(mVcdFile, cos_basis_reg_1393, "cos_basis_reg_1393");
@@ -927,7 +927,7 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sc_trace(mVcdFile, addr_V_fu_312_p3, "addr_V_fu_312_p3");
     sc_trace(mVcdFile, p_Result_i_i_fu_320_p4, "p_Result_i_i_fu_320_p4");
     sc_trace(mVcdFile, zext_ln744_fu_339_p1, "zext_ln744_fu_339_p1");
-    sc_trace(mVcdFile, r_V_17_fu_342_p2, "r_V_17_fu_342_p2");
+    sc_trace(mVcdFile, r_V_18_fu_342_p2, "r_V_18_fu_342_p2");
     sc_trace(mVcdFile, p_Result_22_fu_358_p3, "p_Result_22_fu_358_p3");
     sc_trace(mVcdFile, grp_fu_372_p0, "grp_fu_372_p0");
     sc_trace(mVcdFile, grp_fu_372_p1, "grp_fu_372_p1");
@@ -940,7 +940,7 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sc_trace(mVcdFile, tmp_i_i_fu_460_p3, "tmp_i_i_fu_460_p3");
     sc_trace(mVcdFile, add_ln114_fu_472_p2, "add_ln114_fu_472_p2");
     sc_trace(mVcdFile, zext_ln1253_fu_484_p1, "zext_ln1253_fu_484_p1");
-    sc_trace(mVcdFile, r_V_18_fu_487_p2, "r_V_18_fu_487_p2");
+    sc_trace(mVcdFile, r_V_19_fu_487_p2, "r_V_19_fu_487_p2");
     sc_trace(mVcdFile, select_ln482_fu_477_p3, "select_ln482_fu_477_p3");
     sc_trace(mVcdFile, zext_ln655_fu_502_p1, "zext_ln655_fu_502_p1");
     sc_trace(mVcdFile, sext_ln1334_fu_529_p1, "sext_ln1334_fu_529_p1");
@@ -949,8 +949,8 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sc_trace(mVcdFile, sext_ln1311_fu_545_p1, "sext_ln1311_fu_545_p1");
     sc_trace(mVcdFile, zext_ln1287_fu_549_p1, "zext_ln1287_fu_549_p1");
     sc_trace(mVcdFile, r_V_fu_553_p2, "r_V_fu_553_p2");
-    sc_trace(mVcdFile, r_V_3_fu_558_p2, "r_V_3_fu_558_p2");
-    sc_trace(mVcdFile, r_V_19_fu_563_p3, "r_V_19_fu_563_p3");
+    sc_trace(mVcdFile, r_V_4_fu_558_p2, "r_V_4_fu_558_p2");
+    sc_trace(mVcdFile, r_V_20_fu_563_p3, "r_V_20_fu_563_p3");
     sc_trace(mVcdFile, grp_fu_618_p0, "grp_fu_618_p0");
     sc_trace(mVcdFile, grp_fu_618_p1, "grp_fu_618_p1");
     sc_trace(mVcdFile, xor_ln29_fu_624_p0, "xor_ln29_fu_624_p0");
@@ -969,9 +969,9 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sc_trace(mVcdFile, grp_fu_691_p2, "grp_fu_691_p2");
     sc_trace(mVcdFile, grp_fu_750_p0, "grp_fu_750_p0");
     sc_trace(mVcdFile, grp_fu_750_p1, "grp_fu_750_p1");
-    sc_trace(mVcdFile, r_V_26_fu_762_p0, "r_V_26_fu_762_p0");
-    sc_trace(mVcdFile, r_V_26_fu_762_p1, "r_V_26_fu_762_p1");
-    sc_trace(mVcdFile, r_V_26_fu_762_p2, "r_V_26_fu_762_p2");
+    sc_trace(mVcdFile, r_V_27_fu_762_p0, "r_V_27_fu_762_p0");
+    sc_trace(mVcdFile, r_V_27_fu_762_p1, "r_V_27_fu_762_p1");
+    sc_trace(mVcdFile, r_V_27_fu_762_p2, "r_V_27_fu_762_p2");
     sc_trace(mVcdFile, t1_V_fu_737_p3, "t1_V_fu_737_p3");
     sc_trace(mVcdFile, lhs_V_1_fu_778_p1, "lhs_V_1_fu_778_p1");
     sc_trace(mVcdFile, rhs_V_2_fu_782_p1, "rhs_V_2_fu_782_p1");
@@ -988,7 +988,7 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sc_trace(mVcdFile, grp_fu_851_p2, "grp_fu_851_p2");
     sc_trace(mVcdFile, select_ln272_fu_857_p3, "select_ln272_fu_857_p3");
     sc_trace(mVcdFile, rhs_V_fu_874_p1, "rhs_V_fu_874_p1");
-    sc_trace(mVcdFile, p_Val2_26_fu_885_p1, "p_Val2_26_fu_885_p1");
+    sc_trace(mVcdFile, p_Val2_32_fu_885_p1, "p_Val2_32_fu_885_p1");
     sc_trace(mVcdFile, p_Result_27_fu_911_p3, "p_Result_27_fu_911_p3");
     sc_trace(mVcdFile, tmp_1_fu_917_p18, "tmp_1_fu_917_p18");
     sc_trace(mVcdFile, tmp_2_fu_955_p18, "tmp_2_fu_955_p18");
@@ -997,14 +997,14 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sc_trace(mVcdFile, or_ln311_fu_1016_p2, "or_ln311_fu_1016_p2");
     sc_trace(mVcdFile, xor_ln311_fu_1011_p2, "xor_ln311_fu_1011_p2");
     sc_trace(mVcdFile, p_Result_26_fu_889_p3, "p_Result_26_fu_889_p3");
-    sc_trace(mVcdFile, tmp_V_2_fu_897_p4, "tmp_V_2_fu_897_p4");
+    sc_trace(mVcdFile, tmp_V_3_fu_897_p4, "tmp_V_3_fu_897_p4");
     sc_trace(mVcdFile, select_ln307_fu_1004_p3, "select_ln307_fu_1004_p3");
     sc_trace(mVcdFile, select_ln311_1_fu_1029_p3, "select_ln311_1_fu_1029_p3");
     sc_trace(mVcdFile, and_ln300_1_fu_1044_p2, "and_ln300_1_fu_1044_p2");
     sc_trace(mVcdFile, xor_ln300_fu_1048_p2, "xor_ln300_fu_1048_p2");
     sc_trace(mVcdFile, or_ln300_fu_1062_p2, "or_ln300_fu_1062_p2");
     sc_trace(mVcdFile, select_ln300_2_fu_1054_p3, "select_ln300_2_fu_1054_p3");
-    sc_trace(mVcdFile, tmp_V_3_fu_907_p1, "tmp_V_3_fu_907_p1");
+    sc_trace(mVcdFile, tmp_V_4_fu_907_p1, "tmp_V_4_fu_907_p1");
     sc_trace(mVcdFile, ap_CS_fsm_state25, "ap_CS_fsm_state25");
     sc_trace(mVcdFile, and_ln307_fu_1075_p2, "and_ln307_fu_1075_p2");
     sc_trace(mVcdFile, p_Repl2_3_fu_1079_p3, "p_Repl2_3_fu_1079_p3");
@@ -1017,8 +1017,8 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sc_trace(mVcdFile, grp_fu_750_p00, "grp_fu_750_p00");
     sc_trace(mVcdFile, grp_fu_750_p10, "grp_fu_750_p10");
     sc_trace(mVcdFile, grp_fu_851_p10, "grp_fu_851_p10");
-    sc_trace(mVcdFile, r_V_26_fu_762_p00, "r_V_26_fu_762_p00");
-    sc_trace(mVcdFile, r_V_26_fu_762_p10, "r_V_26_fu_762_p10");
+    sc_trace(mVcdFile, r_V_27_fu_762_p00, "r_V_27_fu_762_p00");
+    sc_trace(mVcdFile, r_V_27_fu_762_p10, "r_V_27_fu_762_p10");
 #endif
 
     }
@@ -1077,16 +1077,16 @@ void sin_or_cos_double_s::thread_ap_clk_no_reset_() {
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state11.read())) {
         B_V_reg_1224 = B_V_fu_580_p1.read();
-        B_trunc_V_reg_1229 = r_V_19_fu_563_p3.read().range(55, 7);
-        p_Result_i_reg_1219 = r_V_19_fu_563_p3.read().range(62, 56);
+        B_trunc_V_reg_1229 = r_V_20_fu_563_p3.read().range(55, 7);
+        p_Result_i_reg_1219 = r_V_20_fu_563_p3.read().range(62, 56);
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state15.read())) {
         B_fourth_power_V_reg_1338 = grp_fu_667_p2.read().range(97, 63);
         B_third_power_V_reg_1333 = grp_fu_662_p2.read().range(97, 56);
         fourth_order_double_14_reg_1358 = fourth_order_double_7_q0.read();
         fourth_order_double_16_reg_1363 = fourth_order_double_s_q0.read();
-        p_Val2_16_reg_1343 = fourth_order_double_4_q0.read();
-        trunc_ln1_reg_1348 = grp_fu_679_p2.read().range(107, 52);
+        p_Val2_22_reg_1343 = fourth_order_double_4_q0.read();
+        trunc_ln3_reg_1348 = grp_fu_679_p2.read().range(107, 52);
         trunc_ln662_1_reg_1353 = grp_fu_691_p2.read().range(92, 45);
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state13.read())) {
@@ -1096,7 +1096,7 @@ void sin_or_cos_double_s::thread_ap_clk_no_reset_() {
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state10.read())) {
         Ex_V_reg_1193 = Ex_V_fu_505_p2.read();
-        Mx_V_reg_1186 = r_V_18_fu_487_p2.read().range(123, 61);
+        Mx_V_reg_1186 = r_V_19_fu_487_p2.read().range(123, 61);
         icmp_ln833_2_reg_1211 = icmp_ln833_2_fu_524_p2.read();
         icmp_ln833_reg_1205 = icmp_ln833_fu_519_p2.read();
         isNeg_reg_1199 = Ex_V_fu_505_p2.read().range(10, 10);
@@ -1113,7 +1113,7 @@ void sin_or_cos_double_s::thread_ap_clk_no_reset_() {
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state1.read()) && esl_seteq<1,1,1>(ap_start.read(), ap_const_logic_1))) {
         closepath_reg_1116 = closepath_fu_300_p2.read();
         p_Result_21_reg_1097 = p_Val2_s_fu_274_p1.read().range(63, 63);
-        tmp_V_1_reg_1110 = tmp_V_1_fu_296_p1.read();
+        tmp_V_2_reg_1110 = tmp_V_2_fu_296_p1.read();
         tmp_V_reg_1103 = p_Val2_s_fu_274_p1.read().range(62, 52);
         trunc_ln601_reg_1127 = trunc_ln601_fu_335_p1.read();
     }
@@ -1125,15 +1125,15 @@ void sin_or_cos_double_s::thread_ap_clk_no_reset_() {
         icmp_ln833_1_reg_1147 = icmp_ln833_1_fu_378_p2.read();
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state8.read())) {
-        p_Result_i_i_39_reg_1175 = p_Val2_8_fu_418_p3.read().range(123, 63);
-        p_Val2_31_reg_1164 = p_Val2_31_fu_403_p3.read();
-        p_Val2_8_reg_1170 = p_Val2_8_fu_418_p3.read();
+        p_Result_i_i_47_reg_1175 = p_Val2_14_fu_418_p3.read().range(123, 63);
+        p_Val2_14_reg_1170 = p_Val2_14_fu_418_p3.read();
+        p_Val2_37_reg_1164 = p_Val2_37_fu_403_p3.read();
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state7.read())) {
-        p_Val2_30_reg_1153 = grp_fu_372_p2.read().range(166, 43);
+        p_Val2_36_reg_1153 = grp_fu_372_p2.read().range(166, 43);
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state12.read())) {
-        r_V_5_reg_1246 = r_V_5_fu_615_p1.read();
+        r_V_6_reg_1246 = r_V_6_fu_615_p1.read();
         tmp_reg_1240 = tmp_fu_594_p10.read();
         xor_ln29_reg_1253 = xor_ln29_fu_624_p2.read();
         zext_ln498_reg_1258 = zext_ln498_fu_643_p1.read();
@@ -1143,14 +1143,14 @@ void sin_or_cos_double_s::thread_ap_clk_no_reset_() {
         ret_V_reg_1420 = ret_V_fu_878_p2.read();
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state2.read())) {
-        ret_V_11_reg_1132 = r_V_17_fu_342_p2.read().range(255, 86);
+        ret_V_11_reg_1132 = r_V_18_fu_342_p2.read().range(255, 86);
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state16.read())) {
         ret_V_14_reg_1383 = ret_V_14_fu_794_p2.read();
-        tmp_4_reg_1378 = r_V_26_fu_762_p2.read().range(59, 31);
+        tmp_54_reg_1378 = r_V_27_fu_762_p2.read().range(59, 31);
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state17.read())) {
-        tmp_3_reg_1388 = grp_fu_750_p2.read().range(74, 38);
+        tmp_s_reg_1388 = grp_fu_750_p2.read().range(74, 38);
     }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state7.read()) && esl_seteq<1,1,1>(closepath_reg_1116.read(), ap_const_lv1_0))) {
         trunc_ln_i_reg_1159 = grp_fu_372_p2.read().range(169, 167);
@@ -1158,7 +1158,7 @@ void sin_or_cos_double_s::thread_ap_clk_no_reset_() {
 }
 
 void sin_or_cos_double_s::thread_B_V_fu_580_p1() {
-    B_V_fu_580_p1 = r_V_19_fu_563_p3.read().range(56-1, 0);
+    B_V_fu_580_p1 = r_V_20_fu_563_p3.read().range(56-1, 0);
 }
 
 void sin_or_cos_double_s::thread_Ex_V_fu_505_p2() {
@@ -1166,7 +1166,7 @@ void sin_or_cos_double_s::thread_Ex_V_fu_505_p2() {
 }
 
 void sin_or_cos_double_s::thread_Mx_bits_V_1_fu_413_p2() {
-    Mx_bits_V_1_fu_413_p2 = (!ap_const_lv124_0.is_01() || !p_Val2_30_reg_1153.read().is_01())? sc_lv<124>(): (sc_biguint<124>(ap_const_lv124_0) - sc_biguint<124>(p_Val2_30_reg_1153.read()));
+    Mx_bits_V_1_fu_413_p2 = (!ap_const_lv124_0.is_01() || !p_Val2_36_reg_1153.read().is_01())? sc_lv<124>(): (sc_biguint<124>(ap_const_lv124_0) - sc_biguint<124>(p_Val2_36_reg_1153.read()));
 }
 
 void sin_or_cos_double_s::thread_Mx_zeros_V_fu_468_p1() {
@@ -1393,27 +1393,27 @@ void sin_or_cos_double_s::thread_grp_fu_372_p10() {
 }
 
 void sin_or_cos_double_s::thread_grp_fu_618_p0() {
-    grp_fu_618_p0 =  (sc_lv<49>) (r_V_5_fu_615_p1.read());
+    grp_fu_618_p0 =  (sc_lv<49>) (r_V_6_fu_615_p1.read());
 }
 
 void sin_or_cos_double_s::thread_grp_fu_618_p1() {
-    grp_fu_618_p1 =  (sc_lv<49>) (r_V_5_fu_615_p1.read());
+    grp_fu_618_p1 =  (sc_lv<49>) (r_V_6_fu_615_p1.read());
 }
 
 void sin_or_cos_double_s::thread_grp_fu_662_p0() {
-    grp_fu_662_p0 =  (sc_lv<49>) (r_V_5_reg_1246.read());
+    grp_fu_662_p0 =  (sc_lv<49>) (r_V_6_reg_1246.read());
 }
 
 void sin_or_cos_double_s::thread_grp_fu_662_p1() {
-    grp_fu_662_p1 =  (sc_lv<49>) (r_V_8_fu_659_p1.read());
+    grp_fu_662_p1 =  (sc_lv<49>) (r_V_9_fu_659_p1.read());
 }
 
 void sin_or_cos_double_s::thread_grp_fu_667_p0() {
-    grp_fu_667_p0 =  (sc_lv<49>) (r_V_8_fu_659_p1.read());
+    grp_fu_667_p0 =  (sc_lv<49>) (r_V_9_fu_659_p1.read());
 }
 
 void sin_or_cos_double_s::thread_grp_fu_667_p1() {
-    grp_fu_667_p1 =  (sc_lv<49>) (r_V_8_fu_659_p1.read());
+    grp_fu_667_p1 =  (sc_lv<49>) (r_V_9_fu_659_p1.read());
 }
 
 void sin_or_cos_double_s::thread_grp_fu_679_p0() {
@@ -1461,7 +1461,7 @@ void sin_or_cos_double_s::thread_grp_scaled_fixed2ieee_fu_268_ap_start() {
 }
 
 void sin_or_cos_double_s::thread_icmp_ln833_1_fu_378_p2() {
-    icmp_ln833_1_fu_378_p2 = (!tmp_V_1_reg_1110.read().is_01() || !ap_const_lv52_0.is_01())? sc_lv<1>(): sc_lv<1>(tmp_V_1_reg_1110.read() == ap_const_lv52_0);
+    icmp_ln833_1_fu_378_p2 = (!tmp_V_2_reg_1110.read().is_01() || !ap_const_lv52_0.is_01())? sc_lv<1>(): sc_lv<1>(tmp_V_2_reg_1110.read() == ap_const_lv52_0);
 }
 
 void sin_or_cos_double_s::thread_icmp_ln833_2_fu_524_p2() {
@@ -1489,11 +1489,11 @@ void sin_or_cos_double_s::thread_p_Repl2_3_fu_1079_p3() {
 }
 
 void sin_or_cos_double_s::thread_p_Result_22_fu_358_p3() {
-    p_Result_22_fu_358_p3 = esl_concat<1,52>(ap_const_lv1_1, tmp_V_1_reg_1110.read());
+    p_Result_22_fu_358_p3 = esl_concat<1,52>(ap_const_lv1_1, tmp_V_2_reg_1110.read());
 }
 
 void sin_or_cos_double_s::thread_p_Result_23_fu_435_p3() {
-    p_Result_23_fu_435_p3 = esl_concat<61,1>(p_Result_i_i_39_reg_1175.read(), ap_const_lv1_1);
+    p_Result_23_fu_435_p3 = esl_concat<61,1>(p_Result_i_i_47_reg_1175.read(), ap_const_lv1_1);
 }
 
 void sin_or_cos_double_s::thread_p_Result_24_fu_452_p3() {
@@ -1505,11 +1505,11 @@ void sin_or_cos_double_s::thread_p_Result_25_fu_636_p3() {
 }
 
 void sin_or_cos_double_s::thread_p_Result_26_fu_889_p3() {
-    p_Result_26_fu_889_p3 = p_Val2_26_fu_885_p1.read().range(63, 63);
+    p_Result_26_fu_889_p3 = p_Val2_32_fu_885_p1.read().range(63, 63);
 }
 
 void sin_or_cos_double_s::thread_p_Result_27_fu_911_p3() {
-    p_Result_27_fu_911_p3 = esl_concat<1,3>(p_Result_21_reg_1097.read(), p_Val2_31_reg_1164.read());
+    p_Result_27_fu_911_p3 = esl_concat<1,3>(p_Result_21_reg_1097.read(), p_Val2_37_reg_1164.read());
 }
 
 void sin_or_cos_double_s::thread_p_Result_28_fu_1085_p4() {
@@ -1524,64 +1524,64 @@ void sin_or_cos_double_s::thread_p_Result_s_fu_442_p4() {
     p_Result_s_fu_442_p4 = p_Result_23_fu_435_p3.read().range(0, 61);
 }
 
-void sin_or_cos_double_s::thread_p_Val2_26_fu_885_p1() {
-    p_Val2_26_fu_885_p1 = grp_scaled_fixed2ieee_fu_268_ap_return.read();
+void sin_or_cos_double_s::thread_p_Val2_14_fu_418_p3() {
+    p_Val2_14_fu_418_p3 = (!trunc_ln745_fu_409_p1.read()[0].is_01())? sc_lv<124>(): ((trunc_ln745_fu_409_p1.read()[0].to_bool())? Mx_bits_V_1_fu_413_p2.read(): p_Val2_36_reg_1153.read());
 }
 
-void sin_or_cos_double_s::thread_p_Val2_31_fu_403_p3() {
-    p_Val2_31_fu_403_p3 = (!closepath_reg_1116.read()[0].is_01())? sc_lv<3>(): ((closepath_reg_1116.read()[0].to_bool())? ap_const_lv3_0: trunc_ln_i_reg_1159.read());
+void sin_or_cos_double_s::thread_p_Val2_32_fu_885_p1() {
+    p_Val2_32_fu_885_p1 = grp_scaled_fixed2ieee_fu_268_ap_return.read();
 }
 
-void sin_or_cos_double_s::thread_p_Val2_8_fu_418_p3() {
-    p_Val2_8_fu_418_p3 = (!trunc_ln745_fu_409_p1.read()[0].is_01())? sc_lv<124>(): ((trunc_ln745_fu_409_p1.read()[0].to_bool())? Mx_bits_V_1_fu_413_p2.read(): p_Val2_30_reg_1153.read());
+void sin_or_cos_double_s::thread_p_Val2_37_fu_403_p3() {
+    p_Val2_37_fu_403_p3 = (!closepath_reg_1116.read()[0].is_01())? sc_lv<3>(): ((closepath_reg_1116.read()[0].to_bool())? ap_const_lv3_0: trunc_ln_i_reg_1159.read());
 }
 
 void sin_or_cos_double_s::thread_p_Val2_s_fu_274_p1() {
     p_Val2_s_fu_274_p1 = t_in.read();
 }
 
-void sin_or_cos_double_s::thread_r_V_17_fu_342_p2() {
-    r_V_17_fu_342_p2 = (!zext_ln744_fu_339_p1.read().is_01())? sc_lv<256>(): ref_4oPi_table_256_V_q0.read() << (unsigned short)zext_ln744_fu_339_p1.read().to_uint();
+void sin_or_cos_double_s::thread_r_V_18_fu_342_p2() {
+    r_V_18_fu_342_p2 = (!zext_ln744_fu_339_p1.read().is_01())? sc_lv<256>(): ref_4oPi_table_256_V_q0.read() << (unsigned short)zext_ln744_fu_339_p1.read().to_uint();
 }
 
-void sin_or_cos_double_s::thread_r_V_18_fu_487_p2() {
-    r_V_18_fu_487_p2 = (!zext_ln1253_fu_484_p1.read().is_01())? sc_lv<124>(): p_Val2_8_reg_1170.read() << (unsigned short)zext_ln1253_fu_484_p1.read().to_uint();
+void sin_or_cos_double_s::thread_r_V_19_fu_487_p2() {
+    r_V_19_fu_487_p2 = (!zext_ln1253_fu_484_p1.read().is_01())? sc_lv<124>(): p_Val2_14_reg_1170.read() << (unsigned short)zext_ln1253_fu_484_p1.read().to_uint();
 }
 
-void sin_or_cos_double_s::thread_r_V_19_fu_563_p3() {
-    r_V_19_fu_563_p3 = (!isNeg_reg_1199.read()[0].is_01())? sc_lv<63>(): ((isNeg_reg_1199.read()[0].to_bool())? r_V_fu_553_p2.read(): r_V_3_fu_558_p2.read());
+void sin_or_cos_double_s::thread_r_V_20_fu_563_p3() {
+    r_V_20_fu_563_p3 = (!isNeg_reg_1199.read()[0].is_01())? sc_lv<63>(): ((isNeg_reg_1199.read()[0].to_bool())? r_V_fu_553_p2.read(): r_V_4_fu_558_p2.read());
 }
 
-void sin_or_cos_double_s::thread_r_V_26_fu_762_p0() {
-    r_V_26_fu_762_p0 =  (sc_lv<35>) (r_V_26_fu_762_p00.read());
+void sin_or_cos_double_s::thread_r_V_27_fu_762_p0() {
+    r_V_27_fu_762_p0 =  (sc_lv<35>) (r_V_27_fu_762_p00.read());
 }
 
-void sin_or_cos_double_s::thread_r_V_26_fu_762_p00() {
-    r_V_26_fu_762_p00 = esl_zext<60,35>(B_fourth_power_V_reg_1338.read());
+void sin_or_cos_double_s::thread_r_V_27_fu_762_p00() {
+    r_V_27_fu_762_p00 = esl_zext<60,35>(B_fourth_power_V_reg_1338.read());
 }
 
-void sin_or_cos_double_s::thread_r_V_26_fu_762_p1() {
-    r_V_26_fu_762_p1 =  (sc_lv<25>) (r_V_26_fu_762_p10.read());
+void sin_or_cos_double_s::thread_r_V_27_fu_762_p1() {
+    r_V_27_fu_762_p1 =  (sc_lv<25>) (r_V_27_fu_762_p10.read());
 }
 
-void sin_or_cos_double_s::thread_r_V_26_fu_762_p10() {
-    r_V_26_fu_762_p10 = esl_zext<60,25>(fourth_order_double_16_reg_1363.read());
+void sin_or_cos_double_s::thread_r_V_27_fu_762_p10() {
+    r_V_27_fu_762_p10 = esl_zext<60,25>(fourth_order_double_16_reg_1363.read());
 }
 
-void sin_or_cos_double_s::thread_r_V_26_fu_762_p2() {
-    r_V_26_fu_762_p2 = (!r_V_26_fu_762_p0.read().is_01() || !r_V_26_fu_762_p1.read().is_01())? sc_lv<60>(): sc_biguint<35>(r_V_26_fu_762_p0.read()) * sc_biguint<25>(r_V_26_fu_762_p1.read());
+void sin_or_cos_double_s::thread_r_V_27_fu_762_p2() {
+    r_V_27_fu_762_p2 = (!r_V_27_fu_762_p0.read().is_01() || !r_V_27_fu_762_p1.read().is_01())? sc_lv<60>(): sc_biguint<35>(r_V_27_fu_762_p0.read()) * sc_biguint<25>(r_V_27_fu_762_p1.read());
 }
 
-void sin_or_cos_double_s::thread_r_V_3_fu_558_p2() {
-    r_V_3_fu_558_p2 = (!zext_ln1287_fu_549_p1.read().is_01())? sc_lv<63>(): Mx_V_reg_1186.read() << (unsigned short)zext_ln1287_fu_549_p1.read().to_uint();
+void sin_or_cos_double_s::thread_r_V_4_fu_558_p2() {
+    r_V_4_fu_558_p2 = (!zext_ln1287_fu_549_p1.read().is_01())? sc_lv<63>(): Mx_V_reg_1186.read() << (unsigned short)zext_ln1287_fu_549_p1.read().to_uint();
 }
 
-void sin_or_cos_double_s::thread_r_V_5_fu_615_p1() {
-    r_V_5_fu_615_p1 = esl_zext<98,49>(B_trunc_V_reg_1229.read());
+void sin_or_cos_double_s::thread_r_V_6_fu_615_p1() {
+    r_V_6_fu_615_p1 = esl_zext<98,49>(B_trunc_V_reg_1229.read());
 }
 
-void sin_or_cos_double_s::thread_r_V_8_fu_659_p1() {
-    r_V_8_fu_659_p1 = esl_zext<98,49>(B_squared_V_reg_1275.read());
+void sin_or_cos_double_s::thread_r_V_9_fu_659_p1() {
+    r_V_9_fu_659_p1 = esl_zext<98,49>(B_squared_V_reg_1275.read());
 }
 
 void sin_or_cos_double_s::thread_r_V_fu_553_p2() {
@@ -1602,7 +1602,7 @@ void sin_or_cos_double_s::thread_ref_4oPi_table_256_V_ce0() {
 }
 
 void sin_or_cos_double_s::thread_ret_V_10_fu_1067_p3() {
-    ret_V_10_fu_1067_p3 = (!or_ln300_fu_1062_p2.read()[0].is_01())? sc_lv<52>(): ((or_ln300_fu_1062_p2.read()[0].to_bool())? select_ln300_2_fu_1054_p3.read(): tmp_V_3_fu_907_p1.read());
+    ret_V_10_fu_1067_p3 = (!or_ln300_fu_1062_p2.read()[0].is_01())? sc_lv<52>(): ((or_ln300_fu_1062_p2.read()[0].to_bool())? select_ln300_2_fu_1054_p3.read(): tmp_V_4_fu_907_p1.read());
 }
 
 void sin_or_cos_double_s::thread_ret_V_13_fu_785_p2() {
@@ -1630,7 +1630,7 @@ void sin_or_cos_double_s::thread_ret_V_fu_878_p2() {
 }
 
 void sin_or_cos_double_s::thread_rhs_V_2_fu_782_p1() {
-    rhs_V_2_fu_782_p1 = esl_sext<64,56>(trunc_ln1_reg_1348.read());
+    rhs_V_2_fu_782_p1 = esl_sext<64,56>(trunc_ln3_reg_1348.read());
 }
 
 void sin_or_cos_double_s::thread_rhs_V_fu_874_p1() {
@@ -1662,7 +1662,7 @@ void sin_or_cos_double_s::thread_select_ln307_fu_1004_p3() {
 }
 
 void sin_or_cos_double_s::thread_select_ln311_1_fu_1029_p3() {
-    select_ln311_1_fu_1029_p3 = (!icmp_ln833_2_reg_1211.read()[0].is_01())? sc_lv<11>(): ((icmp_ln833_2_reg_1211.read()[0].to_bool())? ap_const_lv11_7FF: tmp_V_2_fu_897_p4.read());
+    select_ln311_1_fu_1029_p3 = (!icmp_ln833_2_reg_1211.read()[0].is_01())? sc_lv<11>(): ((icmp_ln833_2_reg_1211.read()[0].to_bool())? ap_const_lv11_7FF: tmp_V_3_fu_897_p4.read());
 }
 
 void sin_or_cos_double_s::thread_select_ln311_fu_1021_p3() {
@@ -1694,19 +1694,19 @@ void sin_or_cos_double_s::thread_sub_ln1311_fu_532_p2() {
 }
 
 void sin_or_cos_double_s::thread_t1_V_fu_737_p3() {
-    t1_V_fu_737_p3 = esl_concat<59,4>(p_Val2_16_reg_1343.read(), ap_const_lv4_0);
+    t1_V_fu_737_p3 = esl_concat<59,4>(p_Val2_22_reg_1343.read(), ap_const_lv4_0);
 }
 
-void sin_or_cos_double_s::thread_tmp_V_1_fu_296_p1() {
-    tmp_V_1_fu_296_p1 = p_Val2_s_fu_274_p1.read().range(52-1, 0);
+void sin_or_cos_double_s::thread_tmp_V_2_fu_296_p1() {
+    tmp_V_2_fu_296_p1 = p_Val2_s_fu_274_p1.read().range(52-1, 0);
 }
 
-void sin_or_cos_double_s::thread_tmp_V_2_fu_897_p4() {
-    tmp_V_2_fu_897_p4 = p_Val2_26_fu_885_p1.read().range(62, 52);
+void sin_or_cos_double_s::thread_tmp_V_3_fu_897_p4() {
+    tmp_V_3_fu_897_p4 = p_Val2_32_fu_885_p1.read().range(62, 52);
 }
 
-void sin_or_cos_double_s::thread_tmp_V_3_fu_907_p1() {
-    tmp_V_3_fu_907_p1 = p_Val2_26_fu_885_p1.read().range(52-1, 0);
+void sin_or_cos_double_s::thread_tmp_V_4_fu_907_p1() {
+    tmp_V_4_fu_907_p1 = p_Val2_32_fu_885_p1.read().range(52-1, 0);
 }
 
 void sin_or_cos_double_s::thread_tmp_V_fu_286_p4() {
@@ -1722,7 +1722,7 @@ void sin_or_cos_double_s::thread_trunc_ln601_fu_335_p1() {
 }
 
 void sin_or_cos_double_s::thread_trunc_ln745_fu_409_p1() {
-    trunc_ln745_fu_409_p1 = p_Val2_31_fu_403_p3.read().range(1-1, 0);
+    trunc_ln745_fu_409_p1 = p_Val2_37_fu_403_p3.read().range(1-1, 0);
 }
 
 void sin_or_cos_double_s::thread_ush_fu_538_p3() {
@@ -1770,11 +1770,11 @@ void sin_or_cos_double_s::thread_zext_ln655_fu_502_p1() {
 }
 
 void sin_or_cos_double_s::thread_zext_ln657_1_fu_829_p1() {
-    zext_ln657_1_fu_829_p1 = esl_zext<64,29>(tmp_4_reg_1378.read());
+    zext_ln657_1_fu_829_p1 = esl_zext<64,29>(tmp_54_reg_1378.read());
 }
 
 void sin_or_cos_double_s::thread_zext_ln657_fu_821_p1() {
-    zext_ln657_fu_821_p1 = esl_zext<64,37>(tmp_3_reg_1388.read());
+    zext_ln657_fu_821_p1 = esl_zext<64,37>(tmp_s_reg_1388.read());
 }
 
 void sin_or_cos_double_s::thread_zext_ln744_fu_339_p1() {

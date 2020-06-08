@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'scaled_fixed2ieee'" level="0">
-<item name = "Date">Wed Jun  3 18:19:41 2020
+<item name = "Date">Sat Jun  6 18:25:14 2020
 </item>
 <item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">CarSimOnFPGA</item>
@@ -108,13 +108,13 @@
 <column name="lshr_ln566_fu_346_p2">lshr, 0, 0, 180, 63, 63</column>
 <column name="or_ln453_fu_588_p2">or, 0, 0, 2, 1, 1</column>
 <column name="out_exp_V_fu_615_p3">select, 0, 0, 11, 1, 1</column>
-<column name="r_V_30_fu_548_p3">select, 0, 0, 63, 1, 63</column>
+<column name="r_V_31_fu_548_p3">select, 0, 0, 63, 1, 63</column>
 <column name="select_ln566_1_fu_321_p3">select, 0, 0, 63, 1, 63</column>
 <column name="select_ln566_2_fu_327_p3">select, 0, 0, 6, 1, 6</column>
 <column name="select_ln566_fu_314_p3">select, 0, 0, 6, 1, 6</column>
 <column name="significand_V_fu_607_p3">select, 0, 0, 52, 1, 1</column>
 <column name="ush_fu_527_p3">select, 0, 0, 32, 1, 32</column>
-<column name="r_V_28_fu_542_p2">shl, 0, 0, 180, 63, 63</column>
+<column name="r_V_29_fu_542_p2">shl, 0, 0, 180, 63, 63</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
@@ -125,7 +125,7 @@
 <column name="i2_0_reg_190">9, 2, 3, 6</column>
 <column name="i_0_reg_134">9, 2, 2, 4</column>
 <column name="p_0119_0_reg_168">9, 2, 63, 126</column>
-<column name="p_Val2_37_reg_201">9, 2, 63, 126</column>
+<column name="p_Val2_43_reg_201">9, 2, 63, 126</column>
 <column name="p_Val2_s_reg_146">15, 3, 32, 96</column>
 <column name="shift_0_reg_178">9, 2, 32, 64</column>
 <column name="shift_1_reg_211">9, 2, 32, 64</column>
@@ -156,7 +156,7 @@
 <column name="out_bits_2_V_load_reg_669">32, 0, 32, 0</column>
 <column name="p_0119_0_reg_168">63, 0, 63, 0</column>
 <column name="p_Result_29_reg_744">32, 0, 32, 0</column>
-<column name="p_Val2_37_reg_201">63, 0, 63, 0</column>
+<column name="p_Val2_43_reg_201">63, 0, 63, 0</column>
 <column name="p_Val2_s_reg_146">32, 0, 32, 0</column>
 <column name="sh_assign_reg_774">32, 0, 32, 0</column>
 <column name="shift_0_reg_178">32, 0, 32, 0</column>

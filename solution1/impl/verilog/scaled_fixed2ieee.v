@@ -80,7 +80,7 @@ wire   [31:0] sub_ln1311_fu_516_p2;
 reg   [31:0] sub_ln1311_reg_787;
 wire   [31:0] shift_fu_522_p2;
 wire    ap_CS_fsm_state7;
-wire   [62:0] r_V_30_fu_548_p3;
+wire   [62:0] r_V_31_fu_548_p3;
 wire   [0:0] icmp_ln1452_fu_560_p2;
 reg   [0:0] icmp_ln1452_reg_807;
 wire   [0:0] icmp_ln444_fu_555_p2;
@@ -92,7 +92,7 @@ wire   [0:0] icmp_ln434_fu_402_p2;
 reg   [62:0] p_0119_0_reg_168;
 reg   [31:0] shift_0_reg_178;
 reg   [2:0] i2_0_reg_190;
-reg   [62:0] p_Val2_37_reg_201;
+reg   [62:0] p_Val2_43_reg_201;
 reg   [31:0] shift_1_reg_211;
 reg   [31:0] out_bits_2_V_fu_94;
 wire   [31:0] out_bits_0_V_fu_375_p5;
@@ -120,22 +120,22 @@ wire   [62:0] lshr_ln566_fu_346_p2;
 wire   [62:0] lshr_ln566_1_fu_352_p2;
 wire   [62:0] p_Result_s_fu_358_p2;
 wire   [16:0] tmp_3_fu_368_p3;
-wire   [1:0] p_Val2_32_fu_418_p5;
-wire   [31:0] p_Val2_32_fu_418_p6;
+wire   [1:0] p_Val2_38_fu_418_p5;
+wire   [31:0] p_Val2_38_fu_418_p6;
 reg   [31:0] p_Result_30_fu_428_p4;
 wire   [1:0] sh_assign_fu_494_p5;
 wire   [31:0] ush_fu_527_p3;
 wire   [62:0] zext_ln1287_fu_532_p1;
 wire   [62:0] r_V_fu_536_p2;
-wire   [62:0] r_V_28_fu_542_p2;
+wire   [62:0] r_V_29_fu_542_p2;
 wire    ap_CS_fsm_state8;
 wire   [11:0] sub_ln452_fu_565_p2;
 wire  signed [31:0] sext_ln452_fu_570_p1;
 wire   [31:0] newexp_fu_574_p2;
-wire   [0:0] tmp_9_fu_580_p3;
+wire   [0:0] tmp_61_fu_580_p3;
 wire   [0:0] or_ln453_fu_588_p2;
 wire   [51:0] phitmp1_fu_597_p4;
-wire   [10:0] empty_42_fu_593_p1;
+wire   [10:0] empty_50_fu_593_p1;
 wire   [10:0] out_exp_V_fu_615_p3;
 wire   [51:0] significand_V_fu_607_p3;
 wire   [63:0] p_Result_31_fu_623_p4;
@@ -163,8 +163,8 @@ top_level_mux_42_bkb_U1(
     .din1(out_bits_2_V_1_load_reg_675),
     .din2(out_bits_2_V_2_load_reg_681),
     .din3(p_Result_29_reg_744),
-    .din4(p_Val2_32_fu_418_p5),
-    .dout(p_Val2_32_fu_418_p6)
+    .din4(p_Val2_38_fu_418_p5),
+    .dout(p_Val2_38_fu_418_p6)
 );
 
 top_level_mux_42_bkb #(
@@ -293,15 +293,15 @@ always @ (posedge ap_clk) begin
     if (((icmp_ln434_fu_402_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state5))) begin
         p_0119_0_reg_168 <= in_V;
     end else if (((icmp_ln444_fu_555_p2 == 1'd1) & (icmp_ln441_reg_765 == 1'd0) & (1'b1 == ap_CS_fsm_state7))) begin
-        p_0119_0_reg_168 <= r_V_30_fu_548_p3;
+        p_0119_0_reg_168 <= r_V_31_fu_548_p3;
     end
 end
 
 always @ (posedge ap_clk) begin
     if (((icmp_ln441_reg_765 == 1'd0) & (icmp_ln444_fu_555_p2 == 1'd0) & (1'b1 == ap_CS_fsm_state7))) begin
-        p_Val2_37_reg_201 <= r_V_30_fu_548_p3;
+        p_Val2_43_reg_201 <= r_V_31_fu_548_p3;
     end else if (((icmp_ln441_fu_466_p2 == 1'd1) & (1'b1 == ap_CS_fsm_state6))) begin
-        p_Val2_37_reg_201 <= p_0119_0_reg_168;
+        p_Val2_43_reg_201 <= p_0119_0_reg_168;
     end
 end
 
@@ -595,7 +595,7 @@ always @ (p_Result_30_fu_428_p4) begin
     end
 end
 
-assign empty_42_fu_593_p1 = newexp_fu_574_p2[10:0];
+assign empty_50_fu_593_p1 = newexp_fu_574_p2[10:0];
 
 assign i_1_fu_408_p2 = (i1_0_reg_157 + 3'd1);
 
@@ -621,22 +621,22 @@ assign lshr_ln566_fu_346_p2 = select_ln566_1_fu_321_p3 >> zext_ln566_fu_338_p1;
 
 assign newexp_fu_574_p2 = ($signed(sext_ln452_fu_570_p1) - $signed(shift_1_reg_211));
 
-assign or_ln453_fu_588_p2 = (tmp_9_fu_580_p3 | icmp_ln1452_reg_807);
+assign or_ln453_fu_588_p2 = (tmp_61_fu_580_p3 | icmp_ln1452_reg_807);
 
 assign out_bits_0_V_fu_375_p5 = {{tmp_3_fu_368_p3}, {p_Val2_s_reg_146[14:0]}};
 
-assign out_exp_V_fu_615_p3 = ((or_ln453_fu_588_p2[0:0] === 1'b1) ? 11'd0 : empty_42_fu_593_p1);
+assign out_exp_V_fu_615_p3 = ((or_ln453_fu_588_p2[0:0] === 1'b1) ? 11'd0 : empty_50_fu_593_p1);
 
 assign p_Result_29_fu_285_p5 = {{tmp_1_fu_277_p3}, {ap_const_lv32_0[15:0]}};
 
 integer ap_tvar_int_0;
 
-always @ (p_Val2_32_fu_418_p6) begin
+always @ (p_Val2_38_fu_418_p6) begin
     for (ap_tvar_int_0 = 32 - 1; ap_tvar_int_0 >= 0; ap_tvar_int_0 = ap_tvar_int_0 - 1) begin
         if (ap_tvar_int_0 > 31 - 0) begin
             p_Result_30_fu_428_p4[ap_tvar_int_0] = 1'b0;
         end else begin
-            p_Result_30_fu_428_p4[ap_tvar_int_0] = p_Val2_32_fu_418_p6[31 - ap_tvar_int_0];
+            p_Result_30_fu_428_p4[ap_tvar_int_0] = p_Val2_38_fu_418_p6[31 - ap_tvar_int_0];
         end
     end
 end
@@ -645,13 +645,13 @@ assign p_Result_31_fu_623_p4 = {{{{1'd0}, {out_exp_V_fu_615_p3}}}, {significand_
 
 assign p_Result_s_fu_358_p2 = (lshr_ln566_fu_346_p2 & lshr_ln566_1_fu_352_p2);
 
-assign p_Val2_32_fu_418_p5 = i1_0_reg_157[1:0];
+assign p_Val2_38_fu_418_p5 = i1_0_reg_157[1:0];
 
-assign phitmp1_fu_597_p4 = {{p_Val2_37_reg_201[61:10]}};
+assign phitmp1_fu_597_p4 = {{p_Val2_43_reg_201[61:10]}};
 
-assign r_V_28_fu_542_p2 = p_0119_0_reg_168 << zext_ln1287_fu_532_p1;
+assign r_V_29_fu_542_p2 = p_0119_0_reg_168 << zext_ln1287_fu_532_p1;
 
-assign r_V_30_fu_548_p3 = ((isNeg_reg_781[0:0] === 1'b1) ? r_V_fu_536_p2 : r_V_28_fu_542_p2);
+assign r_V_31_fu_548_p3 = ((isNeg_reg_781[0:0] === 1'b1) ? r_V_fu_536_p2 : r_V_29_fu_542_p2);
 
 assign r_V_fu_536_p2 = $signed(p_0119_0_reg_168) >>> zext_ln1287_fu_532_p1;
 
@@ -691,7 +691,7 @@ assign tmp_1_fu_277_p3 = {{trunc_ln566_fu_274_p1}, {1'd1}};
 
 assign tmp_3_fu_368_p3 = {{trunc_ln169_reg_749}, {1'd1}};
 
-assign tmp_9_fu_580_p3 = newexp_fu_574_p2[32'd31];
+assign tmp_61_fu_580_p3 = newexp_fu_574_p2[32'd31];
 
 integer ap_tvar_int_1;
 

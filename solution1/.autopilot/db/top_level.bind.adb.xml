@@ -3,145 +3,7 @@
 
 <trans_list>
 
-<trans id="102" from="1" to="2">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="103" from="2" to="3">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="104" from="3" to="4">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="105" from="4" to="5">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="106" from="5" to="6">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="107" from="6" to="7">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="108" from="7" to="8">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="109" from="8" to="9">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="110" from="9" to="10">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="111" from="10" to="11">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="112" from="11" to="12">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="113" from="12" to="13">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="114" from="13" to="14">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="115" from="14" to="15">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="116" from="15" to="16">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="117" from="16" to="17">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="118" from="17" to="18">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="119" from="18" to="19">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="120" from="19" to="20">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="121" from="20" to="21">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="122" from="21" to="22">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="123" from="22" to="23">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="124" from="23" to="24">
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-</trans>
-
-<trans id="125" from="24" to="25">
+<trans id="28" from="1" to="2">
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
@@ -154,7 +16,7 @@
 
 <state id="1" st_id="1">
 
-<operation id="26" st_id="1" stage="1" lat="1">
+<operation id="3" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -163,466 +25,13 @@
 
 <Node id="28" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-codeRepl:11  %torque_read = call float @_ssdm_op_Read.ap_auto.float(float %torque) nounwind
-
-]]></Node>
-<StgValue><ssdm name="torque_read"/></StgValue>
-</operation>
-
-<operation id="27" st_id="1" stage="16" lat="16">
-<core>FDiv</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="36" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:19  %tmp_1_i = fdiv float %torque_read, 5.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
-</operation>
-</state>
-
-<state id="2" st_id="2">
-
-<operation id="28" st_id="2" stage="15" lat="16">
-<core>FDiv</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="36" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:19  %tmp_1_i = fdiv float %torque_read, 5.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
-</operation>
-</state>
-
-<state id="3" st_id="3">
-
-<operation id="29" st_id="3" stage="14" lat="16">
-<core>FDiv</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="36" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:19  %tmp_1_i = fdiv float %torque_read, 5.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
-</operation>
-</state>
-
-<state id="4" st_id="4">
-
-<operation id="30" st_id="4" stage="13" lat="16">
-<core>FDiv</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="36" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:19  %tmp_1_i = fdiv float %torque_read, 5.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
-</operation>
-</state>
-
-<state id="5" st_id="5">
-
-<operation id="31" st_id="5" stage="12" lat="16">
-<core>FDiv</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="36" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:19  %tmp_1_i = fdiv float %torque_read, 5.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
-</operation>
-</state>
-
-<state id="6" st_id="6">
-
-<operation id="32" st_id="6" stage="11" lat="16">
-<core>FDiv</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="36" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:19  %tmp_1_i = fdiv float %torque_read, 5.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
-</operation>
-</state>
-
-<state id="7" st_id="7">
-
-<operation id="33" st_id="7" stage="10" lat="16">
-<core>FDiv</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="36" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:19  %tmp_1_i = fdiv float %torque_read, 5.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
-</operation>
-</state>
-
-<state id="8" st_id="8">
-
-<operation id="34" st_id="8" stage="9" lat="16">
-<core>FDiv</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="36" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:19  %tmp_1_i = fdiv float %torque_read, 5.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
-</operation>
-</state>
-
-<state id="9" st_id="9">
-
-<operation id="35" st_id="9" stage="8" lat="16">
-<core>FDiv</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="36" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:19  %tmp_1_i = fdiv float %torque_read, 5.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
-</operation>
-</state>
-
-<state id="10" st_id="10">
-
-<operation id="36" st_id="10" stage="7" lat="16">
-<core>FDiv</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="36" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:19  %tmp_1_i = fdiv float %torque_read, 5.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
-</operation>
-</state>
-
-<state id="11" st_id="11">
-
-<operation id="37" st_id="11" stage="6" lat="16">
-<core>FDiv</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="36" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:19  %tmp_1_i = fdiv float %torque_read, 5.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
-</operation>
-</state>
-
-<state id="12" st_id="12">
-
-<operation id="38" st_id="12" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="27" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
 codeRepl:10  %steeringAngle_read = call float @_ssdm_op_Read.ap_auto.float(float %steeringAngle) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="steeringAngle_read"/></StgValue>
 </operation>
 
-<operation id="39" st_id="12" stage="2" lat="2">
-<core>Float2Double</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="30" bw="64" op_0_bw="32">
-<![CDATA[
-codeRepl:13  %x_assign = fpext float %steeringAngle_read to double
-
-]]></Node>
-<StgValue><ssdm name="x_assign"/></StgValue>
-</operation>
-
-<operation id="40" st_id="12" stage="5" lat="16">
-<core>FDiv</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="36" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:19  %tmp_1_i = fdiv float %torque_read, 5.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
-</operation>
-</state>
-
-<state id="13" st_id="13">
-
-<operation id="41" st_id="13" stage="1" lat="2">
-<core>Float2Double</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="30" bw="64" op_0_bw="32">
-<![CDATA[
-codeRepl:13  %x_assign = fpext float %steeringAngle_read to double
-
-]]></Node>
-<StgValue><ssdm name="x_assign"/></StgValue>
-</operation>
-
-<operation id="42" st_id="13" stage="4" lat="16">
-<core>FDiv</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="36" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:19  %tmp_1_i = fdiv float %torque_read, 5.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
-</operation>
-</state>
-
-<state id="14" st_id="14">
-
-<operation id="43" st_id="14" stage="2" lat="2">
-<core></core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="31" bw="64" op_0_bw="64" op_1_bw="64" op_2_bw="1" op_3_bw="256" op_4_bw="59" op_5_bw="52" op_6_bw="44" op_7_bw="33" op_8_bw="25">
-<![CDATA[
-codeRepl:14  %tmp_i_i_i = call fastcc double @"sin_or_cos<double>"(double %x_assign, i1 zeroext true) nounwind
-
-]]></Node>
-<StgValue><ssdm name="tmp_i_i_i"/></StgValue>
-</operation>
-
-<operation id="44" st_id="14" stage="2" lat="2">
-<core></core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="33" bw="64" op_0_bw="64" op_1_bw="64" op_2_bw="1" op_3_bw="256" op_4_bw="59" op_5_bw="52" op_6_bw="44" op_7_bw="33" op_8_bw="25">
-<![CDATA[
-codeRepl:16  %tmp_i_i1_i = call fastcc double @"sin_or_cos<double>"(double %x_assign, i1 zeroext false) nounwind
-
-]]></Node>
-<StgValue><ssdm name="tmp_i_i1_i"/></StgValue>
-</operation>
-
-<operation id="45" st_id="14" stage="3" lat="16">
-<core>FDiv</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="36" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:19  %tmp_1_i = fdiv float %torque_read, 5.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
-</operation>
-</state>
-
-<state id="15" st_id="15">
-
-<operation id="46" st_id="15" stage="1" lat="2">
-<core></core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="31" bw="64" op_0_bw="64" op_1_bw="64" op_2_bw="1" op_3_bw="256" op_4_bw="59" op_5_bw="52" op_6_bw="44" op_7_bw="33" op_8_bw="25">
-<![CDATA[
-codeRepl:14  %tmp_i_i_i = call fastcc double @"sin_or_cos<double>"(double %x_assign, i1 zeroext true) nounwind
-
-]]></Node>
-<StgValue><ssdm name="tmp_i_i_i"/></StgValue>
-</operation>
-
-<operation id="47" st_id="15" stage="2" lat="2">
-<core>Double2Float</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="32" bw="32" op_0_bw="64">
-<![CDATA[
-codeRepl:15  %cos_steer = fptrunc double %tmp_i_i_i to float
-
-]]></Node>
-<StgValue><ssdm name="cos_steer"/></StgValue>
-</operation>
-
-<operation id="48" st_id="15" stage="1" lat="2">
-<core></core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="33" bw="64" op_0_bw="64" op_1_bw="64" op_2_bw="1" op_3_bw="256" op_4_bw="59" op_5_bw="52" op_6_bw="44" op_7_bw="33" op_8_bw="25">
-<![CDATA[
-codeRepl:16  %tmp_i_i1_i = call fastcc double @"sin_or_cos<double>"(double %x_assign, i1 zeroext false) nounwind
-
-]]></Node>
-<StgValue><ssdm name="tmp_i_i1_i"/></StgValue>
-</operation>
-
-<operation id="49" st_id="15" stage="2" lat="2">
-<core>Double2Float</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="34" bw="32" op_0_bw="64">
-<![CDATA[
-codeRepl:17  %sin_steer = fptrunc double %tmp_i_i1_i to float
-
-]]></Node>
-<StgValue><ssdm name="sin_steer"/></StgValue>
-</operation>
-
-<operation id="50" st_id="15" stage="2" lat="16">
-<core>FDiv</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="36" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:19  %tmp_1_i = fdiv float %torque_read, 5.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
-</operation>
-</state>
-
-<state id="16" st_id="16">
-
-<operation id="51" st_id="16" stage="1" lat="2">
-<core>Double2Float</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="32" bw="32" op_0_bw="64">
-<![CDATA[
-codeRepl:15  %cos_steer = fptrunc double %tmp_i_i_i to float
-
-]]></Node>
-<StgValue><ssdm name="cos_steer"/></StgValue>
-</operation>
-
-<operation id="52" st_id="16" stage="1" lat="2">
-<core>Double2Float</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="34" bw="32" op_0_bw="64">
-<![CDATA[
-codeRepl:17  %sin_steer = fptrunc double %tmp_i_i1_i to float
-
-]]></Node>
-<StgValue><ssdm name="sin_steer"/></StgValue>
-</operation>
-
-<operation id="53" st_id="16" stage="1" lat="16">
-<core>FDiv</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="36" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:19  %tmp_1_i = fdiv float %torque_read, 5.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_1_i"/></StgValue>
-</operation>
-</state>
-
-<state id="17" st_id="17">
-
-<operation id="54" st_id="17" stage="1" lat="1">
+<operation id="4" st_id="1" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -631,487 +40,91 @@ codeRepl:19  %tmp_1_i = fdiv float %torque_read, 5.000000e+00
 
 <Node id="29" bw="32" op_0_bw="32" op_1_bw="32">
 <![CDATA[
-codeRepl:12  %deltaTime_read = call float @_ssdm_op_Read.ap_auto.float(float %deltaTime) nounwind
+codeRepl:11  %load_read = call float @_ssdm_op_Read.ap_auto.float(float %load) nounwind
+
+]]></Node>
+<StgValue><ssdm name="load_read"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="30" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+codeRepl:12  %velocity_z_read = call float @_ssdm_op_Read.ap_auto.float(float %velocity_z) nounwind
+
+]]></Node>
+<StgValue><ssdm name="velocity_z_read"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="31" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+codeRepl:13  %velocity_x_read = call float @_ssdm_op_Read.ap_auto.float(float %velocity_x) nounwind
+
+]]></Node>
+<StgValue><ssdm name="velocity_x_read"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="32" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+codeRepl:14  %torque_read = call float @_ssdm_op_Read.ap_auto.float(float %torque) nounwind
+
+]]></Node>
+<StgValue><ssdm name="torque_read"/></StgValue>
+</operation>
+
+<operation id="8" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="33" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+codeRepl:15  %deltaTime_read = call float @_ssdm_op_Read.ap_auto.float(float %deltaTime) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="deltaTime_read"/></StgValue>
 </operation>
 
-<operation id="55" st_id="17" stage="4" lat="4">
-<core>FMul</core>
+<operation id="9" st_id="1" stage="2" lat="2">
+<core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="37" bw="32" op_0_bw="32" op_1_bw="32">
+<Node id="34" bw="96" op_0_bw="96" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="256" op_8_bw="59" op_9_bw="52" op_10_bw="44" op_11_bw="33" op_12_bw="25" op_13_bw="32" op_14_bw="126">
 <![CDATA[
-codeRepl:20  %tmp_2_i = fmul float %tmp_1_i, %deltaTime_read
+codeRepl:16  %call_ret = call fastcc { float, float, float } @update(float %deltaTime_read, float %torque_read, float %velocity_x_read, float %velocity_z_read, float %load_read, float %steeringAngle_read)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
-</operation>
-
-<operation id="56" st_id="17" stage="4" lat="4">
-<core>FMul</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="40" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:23  %tmp_4_i = fmul float %cos_steer, 0.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_4_i"/></StgValue>
-</operation>
-
-<operation id="57" st_id="17" stage="4" lat="4">
-<core>FMul</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="41" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:24  %tmp_6_i = fmul float %sin_steer, 0.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_6_i"/></StgValue>
-</operation>
-
-<operation id="58" st_id="17" stage="4" lat="4">
-<core>FMul</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="43" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:26  %tmp_7_i = fmul float %sin_steer, -0.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_7_i"/></StgValue>
+<StgValue><ssdm name="call_ret"/></StgValue>
 </operation>
 </state>
 
-<state id="18" st_id="18">
+<state id="2" st_id="2">
 
-<operation id="59" st_id="18" stage="3" lat="4">
-<core>FMul</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="37" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:20  %tmp_2_i = fmul float %tmp_1_i, %deltaTime_read
-
-]]></Node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
-</operation>
-
-<operation id="60" st_id="18" stage="3" lat="4">
-<core>FMul</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="40" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:23  %tmp_4_i = fmul float %cos_steer, 0.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_4_i"/></StgValue>
-</operation>
-
-<operation id="61" st_id="18" stage="3" lat="4">
-<core>FMul</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="41" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:24  %tmp_6_i = fmul float %sin_steer, 0.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_6_i"/></StgValue>
-</operation>
-
-<operation id="62" st_id="18" stage="3" lat="4">
-<core>FMul</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="43" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:26  %tmp_7_i = fmul float %sin_steer, -0.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_7_i"/></StgValue>
-</operation>
-</state>
-
-<state id="19" st_id="19">
-
-<operation id="63" st_id="19" stage="2" lat="4">
-<core>FMul</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="37" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:20  %tmp_2_i = fmul float %tmp_1_i, %deltaTime_read
-
-]]></Node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
-</operation>
-
-<operation id="64" st_id="19" stage="2" lat="4">
-<core>FMul</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="40" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:23  %tmp_4_i = fmul float %cos_steer, 0.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_4_i"/></StgValue>
-</operation>
-
-<operation id="65" st_id="19" stage="2" lat="4">
-<core>FMul</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="41" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:24  %tmp_6_i = fmul float %sin_steer, 0.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_6_i"/></StgValue>
-</operation>
-
-<operation id="66" st_id="19" stage="2" lat="4">
-<core>FMul</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="43" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:26  %tmp_7_i = fmul float %sin_steer, -0.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_7_i"/></StgValue>
-</operation>
-</state>
-
-<state id="20" st_id="20">
-
-<operation id="67" st_id="20" stage="1" lat="4">
-<core>FMul</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="37" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:20  %tmp_2_i = fmul float %tmp_1_i, %deltaTime_read
-
-]]></Node>
-<StgValue><ssdm name="tmp_2_i"/></StgValue>
-</operation>
-
-<operation id="68" st_id="20" stage="1" lat="4">
-<core>FMul</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="40" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:23  %tmp_4_i = fmul float %cos_steer, 0.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_4_i"/></StgValue>
-</operation>
-
-<operation id="69" st_id="20" stage="1" lat="4">
-<core>FMul</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="41" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:24  %tmp_6_i = fmul float %sin_steer, 0.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_6_i"/></StgValue>
-</operation>
-
-<operation id="70" st_id="20" stage="1" lat="4">
-<core>FMul</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="43" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:26  %tmp_7_i = fmul float %sin_steer, -0.000000e+00
-
-]]></Node>
-<StgValue><ssdm name="tmp_7_i"/></StgValue>
-</operation>
-</state>
-
-<state id="21" st_id="21">
-
-<operation id="71" st_id="21" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="35" bw="32" op_0_bw="32">
-<![CDATA[
-codeRepl:18  %wheel_angularVelocit_1 = load float* @wheel_angularVelocit, align 4
-
-]]></Node>
-<StgValue><ssdm name="wheel_angularVelocit_1"/></StgValue>
-</operation>
-
-<operation id="72" st_id="21" stage="5" lat="5">
-<core>FAddSub</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="38" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:21  %angularVel_write_ass = fadd float %wheel_angularVelocit_1, %tmp_2_i
-
-]]></Node>
-<StgValue><ssdm name="angularVel_write_ass"/></StgValue>
-</operation>
-
-<operation id="73" st_id="21" stage="5" lat="5">
-<core>FAddSub</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="42" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:25  %force_x_write_assign = fadd float %tmp_4_i, %tmp_6_i
-
-]]></Node>
-<StgValue><ssdm name="force_x_write_assign"/></StgValue>
-</operation>
-
-<operation id="74" st_id="21" stage="5" lat="5">
-<core>FAddSub</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="44" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:27  %force_z_write_assign = fadd float %tmp_7_i, %tmp_4_i
-
-]]></Node>
-<StgValue><ssdm name="force_z_write_assign"/></StgValue>
-</operation>
-</state>
-
-<state id="22" st_id="22">
-
-<operation id="75" st_id="22" stage="4" lat="5">
-<core>FAddSub</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="38" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:21  %angularVel_write_ass = fadd float %wheel_angularVelocit_1, %tmp_2_i
-
-]]></Node>
-<StgValue><ssdm name="angularVel_write_ass"/></StgValue>
-</operation>
-
-<operation id="76" st_id="22" stage="4" lat="5">
-<core>FAddSub</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="42" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:25  %force_x_write_assign = fadd float %tmp_4_i, %tmp_6_i
-
-]]></Node>
-<StgValue><ssdm name="force_x_write_assign"/></StgValue>
-</operation>
-
-<operation id="77" st_id="22" stage="4" lat="5">
-<core>FAddSub</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="44" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:27  %force_z_write_assign = fadd float %tmp_7_i, %tmp_4_i
-
-]]></Node>
-<StgValue><ssdm name="force_z_write_assign"/></StgValue>
-</operation>
-</state>
-
-<state id="23" st_id="23">
-
-<operation id="78" st_id="23" stage="3" lat="5">
-<core>FAddSub</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="38" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:21  %angularVel_write_ass = fadd float %wheel_angularVelocit_1, %tmp_2_i
-
-]]></Node>
-<StgValue><ssdm name="angularVel_write_ass"/></StgValue>
-</operation>
-
-<operation id="79" st_id="23" stage="3" lat="5">
-<core>FAddSub</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="42" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:25  %force_x_write_assign = fadd float %tmp_4_i, %tmp_6_i
-
-]]></Node>
-<StgValue><ssdm name="force_x_write_assign"/></StgValue>
-</operation>
-
-<operation id="80" st_id="23" stage="3" lat="5">
-<core>FAddSub</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="44" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:27  %force_z_write_assign = fadd float %tmp_7_i, %tmp_4_i
-
-]]></Node>
-<StgValue><ssdm name="force_z_write_assign"/></StgValue>
-</operation>
-</state>
-
-<state id="24" st_id="24">
-
-<operation id="81" st_id="24" stage="2" lat="5">
-<core>FAddSub</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="38" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:21  %angularVel_write_ass = fadd float %wheel_angularVelocit_1, %tmp_2_i
-
-]]></Node>
-<StgValue><ssdm name="angularVel_write_ass"/></StgValue>
-</operation>
-
-<operation id="82" st_id="24" stage="2" lat="5">
-<core>FAddSub</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="42" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:25  %force_x_write_assign = fadd float %tmp_4_i, %tmp_6_i
-
-]]></Node>
-<StgValue><ssdm name="force_x_write_assign"/></StgValue>
-</operation>
-
-<operation id="83" st_id="24" stage="2" lat="5">
-<core>FAddSub</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="44" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:27  %force_z_write_assign = fadd float %tmp_7_i, %tmp_4_i
-
-]]></Node>
-<StgValue><ssdm name="force_z_write_assign"/></StgValue>
-</operation>
-</state>
-
-<state id="25" st_id="25">
-
-<operation id="84" st_id="25" stage="1" lat="1">
-<core>NULL</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="17" bw="0" op_0_bw="0" op_1_bw="32">
-<![CDATA[
-codeRepl:0  call void (...)* @_ssdm_op_SpecBitsMap(float %deltaTime) nounwind, !map !21
-
-]]></Node>
-<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
-</operation>
-
-<operation id="85" st_id="25" stage="1" lat="1">
+<operation id="10" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1120,13 +133,13 @@ codeRepl:0  call void (...)* @_ssdm_op_SpecBitsMap(float %deltaTime) nounwind, !
 
 <Node id="18" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap(float %torque) nounwind, !map !27
+codeRepl:0  call void (...)* @_ssdm_op_SpecBitsMap(float %deltaTime) nounwind, !map !21
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
 </operation>
 
-<operation id="86" st_id="25" stage="1" lat="1">
+<operation id="11" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1135,13 +148,13 @@ codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap(float %torque) nounwind, !map
 
 <Node id="19" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(float %velocity_x) nounwind, !map !31
+codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap(float %torque) nounwind, !map !27
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
 </operation>
 
-<operation id="87" st_id="25" stage="1" lat="1">
+<operation id="12" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1150,13 +163,13 @@ codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(float %velocity_x) nounwind, 
 
 <Node id="20" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap(float %velocity_z) nounwind, !map !35
+codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(float %velocity_x) nounwind, !map !31
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
 </operation>
 
-<operation id="88" st_id="25" stage="1" lat="1">
+<operation id="13" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1165,13 +178,13 @@ codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap(float %velocity_z) nounwind, 
 
 <Node id="21" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-codeRepl:4  call void (...)* @_ssdm_op_SpecBitsMap(float %load) nounwind, !map !39
+codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap(float %velocity_z) nounwind, !map !35
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
 </operation>
 
-<operation id="89" st_id="25" stage="1" lat="1">
+<operation id="14" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1180,13 +193,13 @@ codeRepl:4  call void (...)* @_ssdm_op_SpecBitsMap(float %load) nounwind, !map !
 
 <Node id="22" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-codeRepl:5  call void (...)* @_ssdm_op_SpecBitsMap(float %steeringAngle) nounwind, !map !43
+codeRepl:4  call void (...)* @_ssdm_op_SpecBitsMap(float %load) nounwind, !map !39
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
 </operation>
 
-<operation id="90" st_id="25" stage="1" lat="1">
+<operation id="15" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1195,13 +208,13 @@ codeRepl:5  call void (...)* @_ssdm_op_SpecBitsMap(float %steeringAngle) nounwin
 
 <Node id="23" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-codeRepl:6  call void (...)* @_ssdm_op_SpecBitsMap(float* %force_x) nounwind, !map !47
+codeRepl:5  call void (...)* @_ssdm_op_SpecBitsMap(float %steeringAngle) nounwind, !map !43
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
 </operation>
 
-<operation id="91" st_id="25" stage="1" lat="1">
+<operation id="16" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1210,13 +223,13 @@ codeRepl:6  call void (...)* @_ssdm_op_SpecBitsMap(float* %force_x) nounwind, !m
 
 <Node id="24" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-codeRepl:7  call void (...)* @_ssdm_op_SpecBitsMap(float* %force_z) nounwind, !map !53
+codeRepl:6  call void (...)* @_ssdm_op_SpecBitsMap(float* %force_x) nounwind, !map !47
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
 </operation>
 
-<operation id="92" st_id="25" stage="1" lat="1">
+<operation id="17" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
@@ -1225,20 +238,35 @@ codeRepl:7  call void (...)* @_ssdm_op_SpecBitsMap(float* %force_z) nounwind, !m
 
 <Node id="25" bw="0" op_0_bw="0" op_1_bw="32">
 <![CDATA[
-codeRepl:8  call void (...)* @_ssdm_op_SpecBitsMap(float* %angularVel) nounwind, !map !57
+codeRepl:7  call void (...)* @_ssdm_op_SpecBitsMap(float* %force_z) nounwind, !map !53
 
 ]]></Node>
 <StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
 </operation>
 
-<operation id="93" st_id="25" stage="1" lat="1">
+<operation id="18" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="26" bw="0" op_0_bw="0" op_1_bw="0">
+<Node id="26" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+codeRepl:8  call void (...)* @_ssdm_op_SpecBitsMap(float* %angularVel) nounwind, !map !57
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="19" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="27" bw="0" op_0_bw="0" op_1_bw="0">
 <![CDATA[
 codeRepl:9  call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @top_level_str) nounwind
 
@@ -1246,121 +274,121 @@ codeRepl:9  call void (...)* @_ssdm_op_SpecTopModule([10 x i8]* @top_level_str) 
 <StgValue><ssdm name="spectopmodule_ln0"/></StgValue>
 </operation>
 
-<operation id="94" st_id="25" stage="1" lat="5">
-<core>FAddSub</core>
+<operation id="20" st_id="2" stage="1" lat="2">
+<core></core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="38" bw="32" op_0_bw="32" op_1_bw="32">
+<Node id="34" bw="96" op_0_bw="96" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="256" op_8_bw="59" op_9_bw="52" op_10_bw="44" op_11_bw="33" op_12_bw="25" op_13_bw="32" op_14_bw="126">
 <![CDATA[
-codeRepl:21  %angularVel_write_ass = fadd float %wheel_angularVelocit_1, %tmp_2_i
+codeRepl:16  %call_ret = call fastcc { float, float, float } @update(float %deltaTime_read, float %torque_read, float %velocity_x_read, float %velocity_z_read, float %load_read, float %steeringAngle_read)
 
 ]]></Node>
-<StgValue><ssdm name="angularVel_write_ass"/></StgValue>
+<StgValue><ssdm name="call_ret"/></StgValue>
 </operation>
 
-<operation id="95" st_id="25" stage="1" lat="1">
+<operation id="21" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="39" bw="0" op_0_bw="32" op_1_bw="32" op_2_bw="32">
+<Node id="35" bw="32" op_0_bw="96">
 <![CDATA[
-codeRepl:22  store float %angularVel_write_ass, float* @wheel_angularVelocit, align 4
+codeRepl:17  %force_x_ret = extractvalue { float, float, float } %call_ret, 0
 
 ]]></Node>
-<StgValue><ssdm name="store_ln64"/></StgValue>
+<StgValue><ssdm name="force_x_ret"/></StgValue>
 </operation>
 
-<operation id="96" st_id="25" stage="1" lat="5">
-<core>FAddSub</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="42" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:25  %force_x_write_assign = fadd float %tmp_4_i, %tmp_6_i
-
-]]></Node>
-<StgValue><ssdm name="force_x_write_assign"/></StgValue>
-</operation>
-
-<operation id="97" st_id="25" stage="1" lat="5">
-<core>FAddSub</core>
-<MemPortIdVec></MemPortIdVec>
-<condition id="-1">
-<or_exp><and_exp></and_exp></or_exp>
-</condition>
-
-<Node id="44" bw="32" op_0_bw="32" op_1_bw="32">
-<![CDATA[
-codeRepl:27  %force_z_write_assign = fadd float %tmp_7_i, %tmp_4_i
-
-]]></Node>
-<StgValue><ssdm name="force_z_write_assign"/></StgValue>
-</operation>
-
-<operation id="98" st_id="25" stage="1" lat="1">
+<operation id="22" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="45" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<Node id="36" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
 <![CDATA[
-codeRepl:28  call void @_ssdm_op_Write.ap_auto.floatP(float* %force_x, float %force_x_write_assign) nounwind
+codeRepl:18  call void @_ssdm_op_Write.ap_auto.floatP(float* %force_x, float %force_x_ret) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="write_ln15"/></StgValue>
 </operation>
 
-<operation id="99" st_id="25" stage="1" lat="1">
+<operation id="23" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="46" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<Node id="37" bw="32" op_0_bw="96">
 <![CDATA[
-codeRepl:29  call void @_ssdm_op_Write.ap_auto.floatP(float* %force_z, float %force_z_write_assign) nounwind
+codeRepl:19  %force_z_ret = extractvalue { float, float, float } %call_ret, 1
+
+]]></Node>
+<StgValue><ssdm name="force_z_ret"/></StgValue>
+</operation>
+
+<operation id="24" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="38" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+codeRepl:20  call void @_ssdm_op_Write.ap_auto.floatP(float* %force_z, float %force_z_ret) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="write_ln15"/></StgValue>
 </operation>
 
-<operation id="100" st_id="25" stage="1" lat="1">
+<operation id="25" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="47" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<Node id="39" bw="32" op_0_bw="96">
 <![CDATA[
-codeRepl:30  call void @_ssdm_op_Write.ap_auto.floatP(float* %angularVel, float %angularVel_write_ass) nounwind
+codeRepl:21  %angularVel_ret = extractvalue { float, float, float } %call_ret, 2
+
+]]></Node>
+<StgValue><ssdm name="angularVel_ret"/></StgValue>
+</operation>
+
+<operation id="26" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="40" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+codeRepl:22  call void @_ssdm_op_Write.ap_auto.floatP(float* %angularVel, float %angularVel_ret) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="write_ln15"/></StgValue>
 </operation>
 
-<operation id="101" st_id="25" stage="1" lat="1">
+<operation id="27" st_id="2" stage="1" lat="1">
 <core>NULL</core>
 <MemPortIdVec></MemPortIdVec>
 <condition id="-1">
 <or_exp><and_exp></and_exp></or_exp>
 </condition>
 
-<Node id="48" bw="0">
+<Node id="41" bw="0">
 <![CDATA[
-codeRepl:31  ret void
+codeRepl:23  ret void
 
 ]]></Node>
 <StgValue><ssdm name="ret_ln16"/></StgValue>
@@ -1370,411 +398,215 @@ codeRepl:31  ret void
 
 
 <ports>
-<port id="126" name="deltaTime" dir="0" iftype="0">
+<port id="29" name="deltaTime" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="deltaTime"/></StgValue>
 </port>
-<port id="127" name="torque" dir="0" iftype="0">
+<port id="30" name="torque" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="torque"/></StgValue>
 </port>
-<port id="128" name="velocity_x" dir="0" iftype="0">
+<port id="31" name="velocity_x" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="velocity_x"/></StgValue>
 </port>
-<port id="129" name="velocity_z" dir="0" iftype="0">
+<port id="32" name="velocity_z" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="velocity_z"/></StgValue>
 </port>
-<port id="130" name="load" dir="0" iftype="0">
+<port id="33" name="load" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="load"/></StgValue>
 </port>
-<port id="131" name="steeringAngle" dir="0" iftype="0">
+<port id="34" name="steeringAngle" dir="0" iftype="0">
 <core>NULL</core><StgValue><ssdm name="steeringAngle"/></StgValue>
 </port>
-<port id="132" name="force_x" dir="1" iftype="0">
+<port id="35" name="force_x" dir="1" iftype="0">
 <core>NULL</core><StgValue><ssdm name="force_x"/></StgValue>
 </port>
-<port id="133" name="force_z" dir="1" iftype="0">
+<port id="36" name="force_z" dir="1" iftype="0">
 <core>NULL</core><StgValue><ssdm name="force_z"/></StgValue>
 </port>
-<port id="134" name="angularVel" dir="1" iftype="0">
+<port id="37" name="angularVel" dir="1" iftype="0">
 <core>NULL</core><StgValue><ssdm name="angularVel"/></StgValue>
 </port>
-<port id="135" name="ref_4oPi_table_256_V" dir="0" iftype="1">
+<port id="38" name="ref_4oPi_table_256_V" dir="0" iftype="1">
 <core>ROM_nP</core><StgValue><ssdm name="ref_4oPi_table_256_V"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="136" name="fourth_order_double_4" dir="0" iftype="1">
+<port id="39" name="fourth_order_double_4" dir="0" iftype="1">
 <core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_4"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="137" name="fourth_order_double_5" dir="0" iftype="1">
+<port id="40" name="fourth_order_double_5" dir="0" iftype="1">
 <core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_5"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="138" name="fourth_order_double_6" dir="0" iftype="1">
+<port id="41" name="fourth_order_double_6" dir="0" iftype="1">
 <core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_6"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="139" name="fourth_order_double_7" dir="0" iftype="1">
+<port id="42" name="fourth_order_double_7" dir="0" iftype="1">
 <core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_7"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="140" name="fourth_order_double_s" dir="0" iftype="1">
+<port id="43" name="fourth_order_double_s" dir="0" iftype="1">
 <core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_s"/><MemPortTyVec>1 </MemPortTyVec>
 </StgValue>
 </port>
-<port id="141" name="wheel_angularVelocit" dir="2" iftype="0">
+<port id="44" name="wheel_angularVelocit" dir="2" iftype="0">
 <core>NULL</core><StgValue><ssdm name="wheel_angularVelocit"/></StgValue>
+</port>
+<port id="45" name="cordic_ctab_table_12" dir="0" iftype="1">
+<core>ROM_nP</core><StgValue><ssdm name="cordic_ctab_table_12"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
 </port>
 </ports>
 
 
 <dataflows>
-<dataflow id="143" from="_ssdm_op_Read.ap_auto.float" to="torque_read" fromId="142" toId="26">
+<dataflow id="47" from="_ssdm_op_Read.ap_auto.float" to="steeringAngle_read" fromId="46" toId="3">
 </dataflow>
-<dataflow id="144" from="torque" to="torque_read" fromId="127" toId="26">
+<dataflow id="48" from="steeringAngle" to="steeringAngle_read" fromId="34" toId="3">
 </dataflow>
-<dataflow id="145" from="torque_read" to="tmp_1_i" fromId="26" toId="27">
+<dataflow id="49" from="_ssdm_op_Read.ap_auto.float" to="load_read" fromId="46" toId="4">
 </dataflow>
-<dataflow id="147" from="StgValue_146" to="tmp_1_i" fromId="146" toId="27">
+<dataflow id="50" from="load" to="load_read" fromId="33" toId="4">
 </dataflow>
-<dataflow id="148" from="torque_read" to="tmp_1_i" fromId="26" toId="28">
+<dataflow id="51" from="_ssdm_op_Read.ap_auto.float" to="velocity_z_read" fromId="46" toId="5">
 </dataflow>
-<dataflow id="149" from="StgValue_146" to="tmp_1_i" fromId="146" toId="28">
+<dataflow id="52" from="velocity_z" to="velocity_z_read" fromId="32" toId="5">
 </dataflow>
-<dataflow id="150" from="torque_read" to="tmp_1_i" fromId="26" toId="29">
+<dataflow id="53" from="_ssdm_op_Read.ap_auto.float" to="velocity_x_read" fromId="46" toId="6">
 </dataflow>
-<dataflow id="151" from="StgValue_146" to="tmp_1_i" fromId="146" toId="29">
+<dataflow id="54" from="velocity_x" to="velocity_x_read" fromId="31" toId="6">
 </dataflow>
-<dataflow id="152" from="torque_read" to="tmp_1_i" fromId="26" toId="30">
+<dataflow id="55" from="_ssdm_op_Read.ap_auto.float" to="torque_read" fromId="46" toId="7">
 </dataflow>
-<dataflow id="153" from="StgValue_146" to="tmp_1_i" fromId="146" toId="30">
+<dataflow id="56" from="torque" to="torque_read" fromId="30" toId="7">
 </dataflow>
-<dataflow id="154" from="torque_read" to="tmp_1_i" fromId="26" toId="31">
+<dataflow id="57" from="_ssdm_op_Read.ap_auto.float" to="deltaTime_read" fromId="46" toId="8">
 </dataflow>
-<dataflow id="155" from="StgValue_146" to="tmp_1_i" fromId="146" toId="31">
+<dataflow id="58" from="deltaTime" to="deltaTime_read" fromId="29" toId="8">
 </dataflow>
-<dataflow id="156" from="torque_read" to="tmp_1_i" fromId="26" toId="32">
+<dataflow id="60" from="update" to="call_ret" fromId="59" toId="9">
 </dataflow>
-<dataflow id="157" from="StgValue_146" to="tmp_1_i" fromId="146" toId="32">
+<dataflow id="61" from="deltaTime_read" to="call_ret" fromId="8" toId="9">
 </dataflow>
-<dataflow id="158" from="torque_read" to="tmp_1_i" fromId="26" toId="33">
+<dataflow id="62" from="torque_read" to="call_ret" fromId="7" toId="9">
 </dataflow>
-<dataflow id="159" from="StgValue_146" to="tmp_1_i" fromId="146" toId="33">
+<dataflow id="63" from="velocity_x_read" to="call_ret" fromId="6" toId="9">
 </dataflow>
-<dataflow id="160" from="torque_read" to="tmp_1_i" fromId="26" toId="34">
+<dataflow id="64" from="velocity_z_read" to="call_ret" fromId="5" toId="9">
 </dataflow>
-<dataflow id="161" from="StgValue_146" to="tmp_1_i" fromId="146" toId="34">
+<dataflow id="65" from="load_read" to="call_ret" fromId="4" toId="9">
 </dataflow>
-<dataflow id="162" from="torque_read" to="tmp_1_i" fromId="26" toId="35">
+<dataflow id="66" from="steeringAngle_read" to="call_ret" fromId="3" toId="9">
 </dataflow>
-<dataflow id="163" from="StgValue_146" to="tmp_1_i" fromId="146" toId="35">
+<dataflow id="67" from="ref_4oPi_table_256_V" to="call_ret" fromId="38" toId="9">
 </dataflow>
-<dataflow id="164" from="torque_read" to="tmp_1_i" fromId="26" toId="36">
+<dataflow id="68" from="fourth_order_double_4" to="call_ret" fromId="39" toId="9">
 </dataflow>
-<dataflow id="165" from="StgValue_146" to="tmp_1_i" fromId="146" toId="36">
+<dataflow id="69" from="fourth_order_double_5" to="call_ret" fromId="40" toId="9">
 </dataflow>
-<dataflow id="166" from="torque_read" to="tmp_1_i" fromId="26" toId="37">
+<dataflow id="70" from="fourth_order_double_6" to="call_ret" fromId="41" toId="9">
 </dataflow>
-<dataflow id="167" from="StgValue_146" to="tmp_1_i" fromId="146" toId="37">
+<dataflow id="71" from="fourth_order_double_7" to="call_ret" fromId="42" toId="9">
 </dataflow>
-<dataflow id="168" from="_ssdm_op_Read.ap_auto.float" to="steeringAngle_read" fromId="142" toId="38">
+<dataflow id="72" from="fourth_order_double_s" to="call_ret" fromId="43" toId="9">
 </dataflow>
-<dataflow id="169" from="steeringAngle" to="steeringAngle_read" fromId="131" toId="38">
+<dataflow id="73" from="wheel_angularVelocit" to="call_ret" fromId="44" toId="9">
 </dataflow>
-<dataflow id="170" from="steeringAngle_read" to="x_assign" fromId="38" toId="39">
+<dataflow id="74" from="cordic_ctab_table_12" to="call_ret" fromId="45" toId="9">
 </dataflow>
-<dataflow id="171" from="torque_read" to="tmp_1_i" fromId="26" toId="40">
+<dataflow id="76" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="75" toId="10">
 </dataflow>
-<dataflow id="172" from="StgValue_146" to="tmp_1_i" fromId="146" toId="40">
+<dataflow id="77" from="deltaTime" to="specbitsmap_ln0" fromId="29" toId="10">
 </dataflow>
-<dataflow id="173" from="steeringAngle_read" to="x_assign" fromId="38" toId="41">
+<dataflow id="78" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="75" toId="11">
 </dataflow>
-<dataflow id="174" from="torque_read" to="tmp_1_i" fromId="26" toId="42">
+<dataflow id="79" from="torque" to="specbitsmap_ln0" fromId="30" toId="11">
 </dataflow>
-<dataflow id="175" from="StgValue_146" to="tmp_1_i" fromId="146" toId="42">
+<dataflow id="80" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="75" toId="12">
 </dataflow>
-<dataflow id="177" from="sin_or_cos<double>" to="tmp_i_i_i" fromId="176" toId="43">
+<dataflow id="81" from="velocity_x" to="specbitsmap_ln0" fromId="31" toId="12">
 </dataflow>
-<dataflow id="178" from="x_assign" to="tmp_i_i_i" fromId="41" toId="43">
+<dataflow id="82" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="75" toId="13">
 </dataflow>
-<dataflow id="180" from="StgValue_179" to="tmp_i_i_i" fromId="179" toId="43">
+<dataflow id="83" from="velocity_z" to="specbitsmap_ln0" fromId="32" toId="13">
 </dataflow>
-<dataflow id="181" from="ref_4oPi_table_256_V" to="tmp_i_i_i" fromId="135" toId="43">
+<dataflow id="84" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="75" toId="14">
 </dataflow>
-<dataflow id="182" from="fourth_order_double_4" to="tmp_i_i_i" fromId="136" toId="43">
+<dataflow id="85" from="load" to="specbitsmap_ln0" fromId="33" toId="14">
 </dataflow>
-<dataflow id="183" from="fourth_order_double_5" to="tmp_i_i_i" fromId="137" toId="43">
+<dataflow id="86" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="75" toId="15">
 </dataflow>
-<dataflow id="184" from="fourth_order_double_6" to="tmp_i_i_i" fromId="138" toId="43">
+<dataflow id="87" from="steeringAngle" to="specbitsmap_ln0" fromId="34" toId="15">
 </dataflow>
-<dataflow id="185" from="fourth_order_double_7" to="tmp_i_i_i" fromId="139" toId="43">
+<dataflow id="88" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="75" toId="16">
 </dataflow>
-<dataflow id="186" from="fourth_order_double_s" to="tmp_i_i_i" fromId="140" toId="43">
+<dataflow id="89" from="force_x" to="specbitsmap_ln0" fromId="35" toId="16">
 </dataflow>
-<dataflow id="187" from="sin_or_cos<double>" to="tmp_i_i1_i" fromId="176" toId="44">
+<dataflow id="90" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="75" toId="17">
 </dataflow>
-<dataflow id="188" from="x_assign" to="tmp_i_i1_i" fromId="41" toId="44">
+<dataflow id="91" from="force_z" to="specbitsmap_ln0" fromId="36" toId="17">
 </dataflow>
-<dataflow id="190" from="StgValue_189" to="tmp_i_i1_i" fromId="189" toId="44">
+<dataflow id="92" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="75" toId="18">
 </dataflow>
-<dataflow id="191" from="ref_4oPi_table_256_V" to="tmp_i_i1_i" fromId="135" toId="44">
+<dataflow id="93" from="angularVel" to="specbitsmap_ln0" fromId="37" toId="18">
 </dataflow>
-<dataflow id="192" from="fourth_order_double_4" to="tmp_i_i1_i" fromId="136" toId="44">
+<dataflow id="95" from="_ssdm_op_SpecTopModule" to="spectopmodule_ln0" fromId="94" toId="19">
 </dataflow>
-<dataflow id="193" from="fourth_order_double_5" to="tmp_i_i1_i" fromId="137" toId="44">
+<dataflow id="97" from="top_level_str" to="spectopmodule_ln0" fromId="96" toId="19">
 </dataflow>
-<dataflow id="194" from="fourth_order_double_6" to="tmp_i_i1_i" fromId="138" toId="44">
+<dataflow id="98" from="update" to="call_ret" fromId="59" toId="20">
 </dataflow>
-<dataflow id="195" from="fourth_order_double_7" to="tmp_i_i1_i" fromId="139" toId="44">
+<dataflow id="99" from="deltaTime_read" to="call_ret" fromId="8" toId="20">
 </dataflow>
-<dataflow id="196" from="fourth_order_double_s" to="tmp_i_i1_i" fromId="140" toId="44">
+<dataflow id="100" from="torque_read" to="call_ret" fromId="7" toId="20">
 </dataflow>
-<dataflow id="197" from="torque_read" to="tmp_1_i" fromId="26" toId="45">
+<dataflow id="101" from="velocity_x_read" to="call_ret" fromId="6" toId="20">
 </dataflow>
-<dataflow id="198" from="StgValue_146" to="tmp_1_i" fromId="146" toId="45">
+<dataflow id="102" from="velocity_z_read" to="call_ret" fromId="5" toId="20">
 </dataflow>
-<dataflow id="199" from="sin_or_cos<double>" to="tmp_i_i_i" fromId="176" toId="46">
+<dataflow id="103" from="load_read" to="call_ret" fromId="4" toId="20">
 </dataflow>
-<dataflow id="200" from="x_assign" to="tmp_i_i_i" fromId="41" toId="46">
+<dataflow id="104" from="steeringAngle_read" to="call_ret" fromId="3" toId="20">
 </dataflow>
-<dataflow id="201" from="StgValue_179" to="tmp_i_i_i" fromId="179" toId="46">
+<dataflow id="105" from="ref_4oPi_table_256_V" to="call_ret" fromId="38" toId="20">
 </dataflow>
-<dataflow id="202" from="ref_4oPi_table_256_V" to="tmp_i_i_i" fromId="135" toId="46">
+<dataflow id="106" from="fourth_order_double_4" to="call_ret" fromId="39" toId="20">
 </dataflow>
-<dataflow id="203" from="fourth_order_double_4" to="tmp_i_i_i" fromId="136" toId="46">
+<dataflow id="107" from="fourth_order_double_5" to="call_ret" fromId="40" toId="20">
 </dataflow>
-<dataflow id="204" from="fourth_order_double_5" to="tmp_i_i_i" fromId="137" toId="46">
+<dataflow id="108" from="fourth_order_double_6" to="call_ret" fromId="41" toId="20">
 </dataflow>
-<dataflow id="205" from="fourth_order_double_6" to="tmp_i_i_i" fromId="138" toId="46">
+<dataflow id="109" from="fourth_order_double_7" to="call_ret" fromId="42" toId="20">
 </dataflow>
-<dataflow id="206" from="fourth_order_double_7" to="tmp_i_i_i" fromId="139" toId="46">
+<dataflow id="110" from="fourth_order_double_s" to="call_ret" fromId="43" toId="20">
 </dataflow>
-<dataflow id="207" from="fourth_order_double_s" to="tmp_i_i_i" fromId="140" toId="46">
+<dataflow id="111" from="wheel_angularVelocit" to="call_ret" fromId="44" toId="20">
 </dataflow>
-<dataflow id="208" from="tmp_i_i_i" to="cos_steer" fromId="46" toId="47">
+<dataflow id="112" from="cordic_ctab_table_12" to="call_ret" fromId="45" toId="20">
 </dataflow>
-<dataflow id="209" from="sin_or_cos<double>" to="tmp_i_i1_i" fromId="176" toId="48">
+<dataflow id="113" from="call_ret" to="force_x_ret" fromId="20" toId="21">
 </dataflow>
-<dataflow id="210" from="x_assign" to="tmp_i_i1_i" fromId="41" toId="48">
+<dataflow id="115" from="_ssdm_op_Write.ap_auto.floatP" to="write_ln15" fromId="114" toId="22">
 </dataflow>
-<dataflow id="211" from="StgValue_189" to="tmp_i_i1_i" fromId="189" toId="48">
+<dataflow id="116" from="force_x" to="write_ln15" fromId="35" toId="22">
 </dataflow>
-<dataflow id="212" from="ref_4oPi_table_256_V" to="tmp_i_i1_i" fromId="135" toId="48">
+<dataflow id="117" from="force_x_ret" to="write_ln15" fromId="21" toId="22">
 </dataflow>
-<dataflow id="213" from="fourth_order_double_4" to="tmp_i_i1_i" fromId="136" toId="48">
+<dataflow id="118" from="call_ret" to="force_z_ret" fromId="20" toId="23">
 </dataflow>
-<dataflow id="214" from="fourth_order_double_5" to="tmp_i_i1_i" fromId="137" toId="48">
+<dataflow id="119" from="_ssdm_op_Write.ap_auto.floatP" to="write_ln15" fromId="114" toId="24">
 </dataflow>
-<dataflow id="215" from="fourth_order_double_6" to="tmp_i_i1_i" fromId="138" toId="48">
+<dataflow id="120" from="force_z" to="write_ln15" fromId="36" toId="24">
 </dataflow>
-<dataflow id="216" from="fourth_order_double_7" to="tmp_i_i1_i" fromId="139" toId="48">
+<dataflow id="121" from="force_z_ret" to="write_ln15" fromId="23" toId="24">
 </dataflow>
-<dataflow id="217" from="fourth_order_double_s" to="tmp_i_i1_i" fromId="140" toId="48">
+<dataflow id="122" from="call_ret" to="angularVel_ret" fromId="20" toId="25">
 </dataflow>
-<dataflow id="218" from="tmp_i_i1_i" to="sin_steer" fromId="48" toId="49">
+<dataflow id="123" from="_ssdm_op_Write.ap_auto.floatP" to="write_ln15" fromId="114" toId="26">
 </dataflow>
-<dataflow id="219" from="torque_read" to="tmp_1_i" fromId="26" toId="50">
+<dataflow id="124" from="angularVel" to="write_ln15" fromId="37" toId="26">
 </dataflow>
-<dataflow id="220" from="StgValue_146" to="tmp_1_i" fromId="146" toId="50">
-</dataflow>
-<dataflow id="221" from="tmp_i_i_i" to="cos_steer" fromId="46" toId="51">
-</dataflow>
-<dataflow id="222" from="tmp_i_i1_i" to="sin_steer" fromId="48" toId="52">
-</dataflow>
-<dataflow id="223" from="torque_read" to="tmp_1_i" fromId="26" toId="53">
-</dataflow>
-<dataflow id="224" from="StgValue_146" to="tmp_1_i" fromId="146" toId="53">
-</dataflow>
-<dataflow id="225" from="_ssdm_op_Read.ap_auto.float" to="deltaTime_read" fromId="142" toId="54">
-</dataflow>
-<dataflow id="226" from="deltaTime" to="deltaTime_read" fromId="126" toId="54">
-</dataflow>
-<dataflow id="227" from="tmp_1_i" to="tmp_2_i" fromId="53" toId="55">
-</dataflow>
-<dataflow id="228" from="deltaTime_read" to="tmp_2_i" fromId="54" toId="55">
-</dataflow>
-<dataflow id="229" from="cos_steer" to="tmp_4_i" fromId="51" toId="56">
-</dataflow>
-<dataflow id="231" from="StgValue_230" to="tmp_4_i" fromId="230" toId="56">
-</dataflow>
-<dataflow id="232" from="sin_steer" to="tmp_6_i" fromId="52" toId="57">
-</dataflow>
-<dataflow id="233" from="StgValue_230" to="tmp_6_i" fromId="230" toId="57">
-</dataflow>
-<dataflow id="234" from="sin_steer" to="tmp_7_i" fromId="52" toId="58">
-</dataflow>
-<dataflow id="236" from="StgValue_235" to="tmp_7_i" fromId="235" toId="58">
-</dataflow>
-<dataflow id="237" from="tmp_1_i" to="tmp_2_i" fromId="53" toId="59">
-</dataflow>
-<dataflow id="238" from="deltaTime_read" to="tmp_2_i" fromId="54" toId="59">
-</dataflow>
-<dataflow id="239" from="cos_steer" to="tmp_4_i" fromId="51" toId="60">
-</dataflow>
-<dataflow id="240" from="StgValue_230" to="tmp_4_i" fromId="230" toId="60">
-</dataflow>
-<dataflow id="241" from="sin_steer" to="tmp_6_i" fromId="52" toId="61">
-</dataflow>
-<dataflow id="242" from="StgValue_230" to="tmp_6_i" fromId="230" toId="61">
-</dataflow>
-<dataflow id="243" from="sin_steer" to="tmp_7_i" fromId="52" toId="62">
-</dataflow>
-<dataflow id="244" from="StgValue_235" to="tmp_7_i" fromId="235" toId="62">
-</dataflow>
-<dataflow id="245" from="tmp_1_i" to="tmp_2_i" fromId="53" toId="63">
-</dataflow>
-<dataflow id="246" from="deltaTime_read" to="tmp_2_i" fromId="54" toId="63">
-</dataflow>
-<dataflow id="247" from="cos_steer" to="tmp_4_i" fromId="51" toId="64">
-</dataflow>
-<dataflow id="248" from="StgValue_230" to="tmp_4_i" fromId="230" toId="64">
-</dataflow>
-<dataflow id="249" from="sin_steer" to="tmp_6_i" fromId="52" toId="65">
-</dataflow>
-<dataflow id="250" from="StgValue_230" to="tmp_6_i" fromId="230" toId="65">
-</dataflow>
-<dataflow id="251" from="sin_steer" to="tmp_7_i" fromId="52" toId="66">
-</dataflow>
-<dataflow id="252" from="StgValue_235" to="tmp_7_i" fromId="235" toId="66">
-</dataflow>
-<dataflow id="253" from="tmp_1_i" to="tmp_2_i" fromId="53" toId="67">
-</dataflow>
-<dataflow id="254" from="deltaTime_read" to="tmp_2_i" fromId="54" toId="67">
-</dataflow>
-<dataflow id="255" from="cos_steer" to="tmp_4_i" fromId="51" toId="68">
-</dataflow>
-<dataflow id="256" from="StgValue_230" to="tmp_4_i" fromId="230" toId="68">
-</dataflow>
-<dataflow id="257" from="sin_steer" to="tmp_6_i" fromId="52" toId="69">
-</dataflow>
-<dataflow id="258" from="StgValue_230" to="tmp_6_i" fromId="230" toId="69">
-</dataflow>
-<dataflow id="259" from="sin_steer" to="tmp_7_i" fromId="52" toId="70">
-</dataflow>
-<dataflow id="260" from="StgValue_235" to="tmp_7_i" fromId="235" toId="70">
-</dataflow>
-<dataflow id="261" from="wheel_angularVelocit" to="wheel_angularVelocit_1" fromId="141" toId="71">
-</dataflow>
-<dataflow id="262" from="wheel_angularVelocit_1" to="angularVel_write_ass" fromId="71" toId="72">
-</dataflow>
-<dataflow id="263" from="tmp_2_i" to="angularVel_write_ass" fromId="67" toId="72">
-</dataflow>
-<dataflow id="264" from="tmp_4_i" to="force_x_write_assign" fromId="68" toId="73">
-</dataflow>
-<dataflow id="265" from="tmp_6_i" to="force_x_write_assign" fromId="69" toId="73">
-</dataflow>
-<dataflow id="266" from="tmp_7_i" to="force_z_write_assign" fromId="70" toId="74">
-</dataflow>
-<dataflow id="267" from="tmp_4_i" to="force_z_write_assign" fromId="68" toId="74">
-</dataflow>
-<dataflow id="268" from="wheel_angularVelocit_1" to="angularVel_write_ass" fromId="71" toId="75">
-</dataflow>
-<dataflow id="269" from="tmp_2_i" to="angularVel_write_ass" fromId="67" toId="75">
-</dataflow>
-<dataflow id="270" from="tmp_4_i" to="force_x_write_assign" fromId="68" toId="76">
-</dataflow>
-<dataflow id="271" from="tmp_6_i" to="force_x_write_assign" fromId="69" toId="76">
-</dataflow>
-<dataflow id="272" from="tmp_7_i" to="force_z_write_assign" fromId="70" toId="77">
-</dataflow>
-<dataflow id="273" from="tmp_4_i" to="force_z_write_assign" fromId="68" toId="77">
-</dataflow>
-<dataflow id="274" from="wheel_angularVelocit_1" to="angularVel_write_ass" fromId="71" toId="78">
-</dataflow>
-<dataflow id="275" from="tmp_2_i" to="angularVel_write_ass" fromId="67" toId="78">
-</dataflow>
-<dataflow id="276" from="tmp_4_i" to="force_x_write_assign" fromId="68" toId="79">
-</dataflow>
-<dataflow id="277" from="tmp_6_i" to="force_x_write_assign" fromId="69" toId="79">
-</dataflow>
-<dataflow id="278" from="tmp_7_i" to="force_z_write_assign" fromId="70" toId="80">
-</dataflow>
-<dataflow id="279" from="tmp_4_i" to="force_z_write_assign" fromId="68" toId="80">
-</dataflow>
-<dataflow id="280" from="wheel_angularVelocit_1" to="angularVel_write_ass" fromId="71" toId="81">
-</dataflow>
-<dataflow id="281" from="tmp_2_i" to="angularVel_write_ass" fromId="67" toId="81">
-</dataflow>
-<dataflow id="282" from="tmp_4_i" to="force_x_write_assign" fromId="68" toId="82">
-</dataflow>
-<dataflow id="283" from="tmp_6_i" to="force_x_write_assign" fromId="69" toId="82">
-</dataflow>
-<dataflow id="284" from="tmp_7_i" to="force_z_write_assign" fromId="70" toId="83">
-</dataflow>
-<dataflow id="285" from="tmp_4_i" to="force_z_write_assign" fromId="68" toId="83">
-</dataflow>
-<dataflow id="287" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="286" toId="84">
-</dataflow>
-<dataflow id="288" from="deltaTime" to="specbitsmap_ln0" fromId="126" toId="84">
-</dataflow>
-<dataflow id="289" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="286" toId="85">
-</dataflow>
-<dataflow id="290" from="torque" to="specbitsmap_ln0" fromId="127" toId="85">
-</dataflow>
-<dataflow id="291" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="286" toId="86">
-</dataflow>
-<dataflow id="292" from="velocity_x" to="specbitsmap_ln0" fromId="128" toId="86">
-</dataflow>
-<dataflow id="293" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="286" toId="87">
-</dataflow>
-<dataflow id="294" from="velocity_z" to="specbitsmap_ln0" fromId="129" toId="87">
-</dataflow>
-<dataflow id="295" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="286" toId="88">
-</dataflow>
-<dataflow id="296" from="load" to="specbitsmap_ln0" fromId="130" toId="88">
-</dataflow>
-<dataflow id="297" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="286" toId="89">
-</dataflow>
-<dataflow id="298" from="steeringAngle" to="specbitsmap_ln0" fromId="131" toId="89">
-</dataflow>
-<dataflow id="299" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="286" toId="90">
-</dataflow>
-<dataflow id="300" from="force_x" to="specbitsmap_ln0" fromId="132" toId="90">
-</dataflow>
-<dataflow id="301" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="286" toId="91">
-</dataflow>
-<dataflow id="302" from="force_z" to="specbitsmap_ln0" fromId="133" toId="91">
-</dataflow>
-<dataflow id="303" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="286" toId="92">
-</dataflow>
-<dataflow id="304" from="angularVel" to="specbitsmap_ln0" fromId="134" toId="92">
-</dataflow>
-<dataflow id="306" from="_ssdm_op_SpecTopModule" to="spectopmodule_ln0" fromId="305" toId="93">
-</dataflow>
-<dataflow id="308" from="top_level_str" to="spectopmodule_ln0" fromId="307" toId="93">
-</dataflow>
-<dataflow id="309" from="wheel_angularVelocit_1" to="angularVel_write_ass" fromId="71" toId="94">
-</dataflow>
-<dataflow id="310" from="tmp_2_i" to="angularVel_write_ass" fromId="67" toId="94">
-</dataflow>
-<dataflow id="311" from="angularVel_write_ass" to="store_ln64" fromId="94" toId="95">
-</dataflow>
-<dataflow id="312" from="wheel_angularVelocit" to="store_ln64" fromId="141" toId="95">
-</dataflow>
-<dataflow id="313" from="tmp_4_i" to="force_x_write_assign" fromId="68" toId="96">
-</dataflow>
-<dataflow id="314" from="tmp_6_i" to="force_x_write_assign" fromId="69" toId="96">
-</dataflow>
-<dataflow id="315" from="tmp_7_i" to="force_z_write_assign" fromId="70" toId="97">
-</dataflow>
-<dataflow id="316" from="tmp_4_i" to="force_z_write_assign" fromId="68" toId="97">
-</dataflow>
-<dataflow id="318" from="_ssdm_op_Write.ap_auto.floatP" to="write_ln15" fromId="317" toId="98">
-</dataflow>
-<dataflow id="319" from="force_x" to="write_ln15" fromId="132" toId="98">
-</dataflow>
-<dataflow id="320" from="force_x_write_assign" to="write_ln15" fromId="96" toId="98">
-</dataflow>
-<dataflow id="321" from="_ssdm_op_Write.ap_auto.floatP" to="write_ln15" fromId="317" toId="99">
-</dataflow>
-<dataflow id="322" from="force_z" to="write_ln15" fromId="133" toId="99">
-</dataflow>
-<dataflow id="323" from="force_z_write_assign" to="write_ln15" fromId="97" toId="99">
-</dataflow>
-<dataflow id="324" from="_ssdm_op_Write.ap_auto.floatP" to="write_ln15" fromId="317" toId="100">
-</dataflow>
-<dataflow id="325" from="angularVel" to="write_ln15" fromId="134" toId="100">
-</dataflow>
-<dataflow id="326" from="angularVel_write_ass" to="write_ln15" fromId="94" toId="100">
+<dataflow id="125" from="angularVel_ret" to="write_ln15" fromId="25" toId="26">
 </dataflow>
 </dataflows>
 

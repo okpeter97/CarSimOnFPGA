@@ -223,10 +223,10 @@
 
 <Node id="14" bw="52" op_0_bw="64">
 <![CDATA[
-._crit_edge_ifconv:5  %tmp_V_1 = trunc i64 %p_Val2_s to i52
+._crit_edge_ifconv:5  %tmp_V_2 = trunc i64 %p_Val2_s to i52
 
 ]]></Node>
-<StgValue><ssdm name="tmp_V_1"/></StgValue>
+<StgValue><ssdm name="tmp_V_2"/></StgValue>
 </operation>
 
 <operation id="31" st_id="1" stage="1" lat="1">
@@ -391,10 +391,10 @@
 
 <Node id="27" bw="256" op_0_bw="256" op_1_bw="256">
 <![CDATA[
-._crit_edge_ifconv:18  %r_V_17 = shl i256 %table_256_V, %zext_ln744
+._crit_edge_ifconv:18  %r_V_18 = shl i256 %table_256_V, %zext_ln744
 
 ]]></Node>
-<StgValue><ssdm name="r_V_17"/></StgValue>
+<StgValue><ssdm name="r_V_18"/></StgValue>
 </operation>
 
 <operation id="42" st_id="2" stage="1" lat="1">
@@ -406,7 +406,7 @@
 
 <Node id="28" bw="170" op_0_bw="170" op_1_bw="256" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge_ifconv:19  %ret_V_11 = call i170 @_ssdm_op_PartSelect.i170.i256.i32.i32(i256 %r_V_17, i32 86, i32 255) nounwind
+._crit_edge_ifconv:19  %ret_V_11 = call i170 @_ssdm_op_PartSelect.i170.i256.i32.i32(i256 %r_V_18, i32 86, i32 255) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="ret_V_11"/></StgValue>
@@ -424,7 +424,7 @@
 
 <Node id="18" bw="53" op_0_bw="53" op_1_bw="1" op_2_bw="52">
 <![CDATA[
-._crit_edge_ifconv:9  %p_Result_22 = call i53 @_ssdm_op_BitConcatenate.i53.i1.i52(i1 true, i52 %tmp_V_1) nounwind
+._crit_edge_ifconv:9  %p_Result_22 = call i53 @_ssdm_op_BitConcatenate.i53.i1.i52(i1 true, i52 %tmp_V_2) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="p_Result_22"/></StgValue>
@@ -484,7 +484,7 @@
 
 <Node id="135" bw="1" op_0_bw="52" op_1_bw="52">
 <![CDATA[
-._crit_edge_ifconv:126  %icmp_ln833_1 = icmp eq i52 %tmp_V_1, 0
+._crit_edge_ifconv:126  %icmp_ln833_1 = icmp eq i52 %tmp_V_2, 0
 
 ]]></Node>
 <StgValue><ssdm name="icmp_ln833_1"/></StgValue>
@@ -571,10 +571,10 @@
 
 <Node id="32" bw="124" op_0_bw="124" op_1_bw="223" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge_ifconv:23  %p_Val2_30 = call i124 @_ssdm_op_PartSelect.i124.i223.i32.i32(i223 %ret_V_12, i32 43, i32 166)
+._crit_edge_ifconv:23  %p_Val2_36 = call i124 @_ssdm_op_PartSelect.i124.i223.i32.i32(i223 %ret_V_12, i32 43, i32 166)
 
 ]]></Node>
-<StgValue><ssdm name="p_Val2_30"/></StgValue>
+<StgValue><ssdm name="p_Val2_36"/></StgValue>
 </operation>
 
 <operation id="53" st_id="7" stage="1" lat="1">
@@ -605,10 +605,10 @@
 
 <Node id="34" bw="3" op_0_bw="1" op_1_bw="3" op_2_bw="3">
 <![CDATA[
-._crit_edge_ifconv:25  %p_Val2_31 = select i1 %closepath, i3 0, i3 %trunc_ln_i
+._crit_edge_ifconv:25  %p_Val2_37 = select i1 %closepath, i3 0, i3 %trunc_ln_i
 
 ]]></Node>
-<StgValue><ssdm name="p_Val2_31"/></StgValue>
+<StgValue><ssdm name="p_Val2_37"/></StgValue>
 </operation>
 
 <operation id="55" st_id="8" stage="1" lat="1">
@@ -620,7 +620,7 @@
 
 <Node id="35" bw="1" op_0_bw="3">
 <![CDATA[
-._crit_edge_ifconv:26  %trunc_ln745 = trunc i3 %p_Val2_31 to i1
+._crit_edge_ifconv:26  %trunc_ln745 = trunc i3 %p_Val2_37 to i1
 
 ]]></Node>
 <StgValue><ssdm name="trunc_ln745"/></StgValue>
@@ -635,7 +635,7 @@
 
 <Node id="36" bw="124" op_0_bw="124" op_1_bw="124">
 <![CDATA[
-._crit_edge_ifconv:27  %Mx_bits_V_1 = sub i124 0, %p_Val2_30
+._crit_edge_ifconv:27  %Mx_bits_V_1 = sub i124 0, %p_Val2_36
 
 ]]></Node>
 <StgValue><ssdm name="Mx_bits_V_1"/></StgValue>
@@ -650,10 +650,10 @@
 
 <Node id="37" bw="124" op_0_bw="1" op_1_bw="124" op_2_bw="124">
 <![CDATA[
-._crit_edge_ifconv:28  %p_Val2_8 = select i1 %trunc_ln745, i124 %Mx_bits_V_1, i124 %p_Val2_30
+._crit_edge_ifconv:28  %p_Val2_14 = select i1 %trunc_ln745, i124 %Mx_bits_V_1, i124 %p_Val2_36
 
 ]]></Node>
-<StgValue><ssdm name="p_Val2_8"/></StgValue>
+<StgValue><ssdm name="p_Val2_14"/></StgValue>
 </operation>
 
 <operation id="58" st_id="8" stage="1" lat="1">
@@ -665,10 +665,10 @@
 
 <Node id="38" bw="61" op_0_bw="61" op_1_bw="124" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge_ifconv:29  %p_Result_i_i_39 = call i61 @_ssdm_op_PartSelect.i61.i124.i32.i32(i124 %p_Val2_8, i32 63, i32 123) nounwind
+._crit_edge_ifconv:29  %p_Result_i_i_47 = call i61 @_ssdm_op_PartSelect.i61.i124.i32.i32(i124 %p_Val2_14, i32 63, i32 123) nounwind
 
 ]]></Node>
-<StgValue><ssdm name="p_Result_i_i_39"/></StgValue>
+<StgValue><ssdm name="p_Result_i_i_47"/></StgValue>
 </operation>
 </state>
 
@@ -683,7 +683,7 @@
 
 <Node id="39" bw="62" op_0_bw="62" op_1_bw="61" op_2_bw="1">
 <![CDATA[
-._crit_edge_ifconv:30  %p_Result_23 = call i62 @_ssdm_op_BitConcatenate.i62.i61.i1(i61 %p_Result_i_i_39, i1 true) nounwind
+._crit_edge_ifconv:30  %p_Result_23 = call i62 @_ssdm_op_BitConcatenate.i62.i61.i1(i61 %p_Result_i_i_47, i1 true) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="p_Result_23"/></StgValue>
@@ -807,10 +807,10 @@
 
 <Node id="45" bw="124" op_0_bw="124" op_1_bw="124">
 <![CDATA[
-._crit_edge_ifconv:36  %r_V_18 = shl i124 %p_Val2_8, %zext_ln1253
+._crit_edge_ifconv:36  %r_V_19 = shl i124 %p_Val2_14, %zext_ln1253
 
 ]]></Node>
-<StgValue><ssdm name="r_V_18"/></StgValue>
+<StgValue><ssdm name="r_V_19"/></StgValue>
 </operation>
 
 <operation id="68" st_id="10" stage="1" lat="1">
@@ -822,7 +822,7 @@
 
 <Node id="46" bw="63" op_0_bw="63" op_1_bw="124" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge_ifconv:37  %Mx_V = call i63 @_ssdm_op_PartSelect.i63.i124.i32.i32(i124 %r_V_18, i32 61, i32 123)
+._crit_edge_ifconv:37  %Mx_V = call i63 @_ssdm_op_PartSelect.i63.i124.i32.i32(i124 %r_V_19, i32 61, i32 123)
 
 ]]></Node>
 <StgValue><ssdm name="Mx_V"/></StgValue>
@@ -1008,10 +1008,10 @@
 
 <Node id="56" bw="63" op_0_bw="63" op_1_bw="63">
 <![CDATA[
-._crit_edge_ifconv:47  %r_V_3 = shl i63 %Mx_V, %zext_ln1287
+._crit_edge_ifconv:47  %r_V_4 = shl i63 %Mx_V, %zext_ln1287
 
 ]]></Node>
-<StgValue><ssdm name="r_V_3"/></StgValue>
+<StgValue><ssdm name="r_V_4"/></StgValue>
 </operation>
 
 <operation id="81" st_id="11" stage="1" lat="1">
@@ -1023,10 +1023,10 @@
 
 <Node id="57" bw="63" op_0_bw="1" op_1_bw="63" op_2_bw="63">
 <![CDATA[
-._crit_edge_ifconv:48  %r_V_19 = select i1 %isNeg, i63 %r_V, i63 %r_V_3
+._crit_edge_ifconv:48  %r_V_20 = select i1 %isNeg, i63 %r_V, i63 %r_V_4
 
 ]]></Node>
-<StgValue><ssdm name="r_V_19"/></StgValue>
+<StgValue><ssdm name="r_V_20"/></StgValue>
 </operation>
 
 <operation id="82" st_id="11" stage="1" lat="1">
@@ -1038,7 +1038,7 @@
 
 <Node id="68" bw="7" op_0_bw="7" op_1_bw="63" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge_ifconv:59  %p_Result_i = call i7 @_ssdm_op_PartSelect.i7.i63.i32.i32(i63 %r_V_19, i32 56, i32 62) nounwind
+._crit_edge_ifconv:59  %p_Result_i = call i7 @_ssdm_op_PartSelect.i7.i63.i32.i32(i63 %r_V_20, i32 56, i32 62) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="p_Result_i"/></StgValue>
@@ -1053,7 +1053,7 @@
 
 <Node id="69" bw="56" op_0_bw="63">
 <![CDATA[
-._crit_edge_ifconv:60  %B_V = trunc i63 %r_V_19 to i56
+._crit_edge_ifconv:60  %B_V = trunc i63 %r_V_20 to i56
 
 ]]></Node>
 <StgValue><ssdm name="B_V"/></StgValue>
@@ -1068,7 +1068,7 @@
 
 <Node id="70" bw="49" op_0_bw="49" op_1_bw="63" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge_ifconv:61  %B_trunc_V = call i49 @_ssdm_op_PartSelect.i49.i63.i32.i32(i63 %r_V_19, i32 7, i32 55)
+._crit_edge_ifconv:61  %B_trunc_V = call i49 @_ssdm_op_PartSelect.i49.i63.i32.i32(i63 %r_V_20, i32 7, i32 55)
 
 ]]></Node>
 <StgValue><ssdm name="B_trunc_V"/></StgValue>
@@ -1101,7 +1101,7 @@
 
 <Node id="58" bw="1" op_0_bw="1" op_1_bw="1" op_2_bw="1" op_3_bw="1" op_4_bw="1" op_5_bw="1" op_6_bw="1" op_7_bw="1" op_8_bw="1" op_9_bw="3">
 <![CDATA[
-._crit_edge_ifconv:49  %tmp = call i1 @_ssdm_op_Mux.ap_auto.8i1.i3(i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i3 %p_Val2_31) nounwind
+._crit_edge_ifconv:49  %tmp = call i1 @_ssdm_op_Mux.ap_auto.8i1.i3(i1 false, i1 true, i1 true, i1 false, i1 false, i1 true, i1 true, i1 false, i3 %p_Val2_37) nounwind
 
 ]]></Node>
 <StgValue><ssdm name="tmp"/></StgValue>
@@ -1116,10 +1116,10 @@
 
 <Node id="71" bw="98" op_0_bw="49">
 <![CDATA[
-._crit_edge_ifconv:62  %r_V_5 = zext i49 %B_trunc_V to i98
+._crit_edge_ifconv:62  %r_V_6 = zext i49 %B_trunc_V to i98
 
 ]]></Node>
-<StgValue><ssdm name="r_V_5"/></StgValue>
+<StgValue><ssdm name="r_V_6"/></StgValue>
 </operation>
 
 <operation id="88" st_id="12" stage="2" lat="2">
@@ -1131,10 +1131,10 @@
 
 <Node id="72" bw="98" op_0_bw="98" op_1_bw="98">
 <![CDATA[
-._crit_edge_ifconv:63  %r_V_20 = mul i98 %r_V_5, %r_V_5
+._crit_edge_ifconv:63  %r_V_21 = mul i98 %r_V_6, %r_V_6
 
 ]]></Node>
-<StgValue><ssdm name="r_V_20"/></StgValue>
+<StgValue><ssdm name="r_V_21"/></StgValue>
 </operation>
 
 <operation id="89" st_id="12" stage="1" lat="1">
@@ -1269,10 +1269,10 @@
 
 <Node id="72" bw="98" op_0_bw="98" op_1_bw="98">
 <![CDATA[
-._crit_edge_ifconv:63  %r_V_20 = mul i98 %r_V_5, %r_V_5
+._crit_edge_ifconv:63  %r_V_21 = mul i98 %r_V_6, %r_V_6
 
 ]]></Node>
-<StgValue><ssdm name="r_V_20"/></StgValue>
+<StgValue><ssdm name="r_V_21"/></StgValue>
 </operation>
 
 <operation id="98" st_id="13" stage="1" lat="1">
@@ -1284,7 +1284,7 @@
 
 <Node id="73" bw="49" op_0_bw="49" op_1_bw="98" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge_ifconv:64  %B_squared_V = call i49 @_ssdm_op_PartSelect.i49.i98.i32.i32(i98 %r_V_20, i32 49, i32 97)
+._crit_edge_ifconv:64  %B_squared_V = call i49 @_ssdm_op_PartSelect.i49.i98.i32.i32(i98 %r_V_21, i32 49, i32 97)
 
 ]]></Node>
 <StgValue><ssdm name="B_squared_V"/></StgValue>
@@ -1332,10 +1332,10 @@
 
 <Node id="74" bw="98" op_0_bw="49">
 <![CDATA[
-._crit_edge_ifconv:65  %r_V_8 = zext i49 %B_squared_V to i98
+._crit_edge_ifconv:65  %r_V_9 = zext i49 %B_squared_V to i98
 
 ]]></Node>
-<StgValue><ssdm name="r_V_8"/></StgValue>
+<StgValue><ssdm name="r_V_9"/></StgValue>
 </operation>
 
 <operation id="102" st_id="14" stage="2" lat="2">
@@ -1347,10 +1347,10 @@
 
 <Node id="75" bw="98" op_0_bw="98" op_1_bw="98">
 <![CDATA[
-._crit_edge_ifconv:66  %r_V_21 = mul i98 %r_V_5, %r_V_8
+._crit_edge_ifconv:66  %r_V_22 = mul i98 %r_V_6, %r_V_9
 
 ]]></Node>
-<StgValue><ssdm name="r_V_21"/></StgValue>
+<StgValue><ssdm name="r_V_22"/></StgValue>
 </operation>
 
 <operation id="103" st_id="14" stage="2" lat="2">
@@ -1362,10 +1362,10 @@
 
 <Node id="77" bw="98" op_0_bw="98" op_1_bw="98">
 <![CDATA[
-._crit_edge_ifconv:68  %r_V_22 = mul i98 %r_V_8, %r_V_8
+._crit_edge_ifconv:68  %r_V_23 = mul i98 %r_V_9, %r_V_9
 
 ]]></Node>
-<StgValue><ssdm name="r_V_22"/></StgValue>
+<StgValue><ssdm name="r_V_23"/></StgValue>
 </operation>
 
 <operation id="104" st_id="14" stage="1" lat="1">
@@ -1392,10 +1392,10 @@
 
 <Node id="84" bw="59" op_0_bw="8">
 <![CDATA[
-._crit_edge_ifconv:75  %p_Val2_16 = load i59* %fourth_order_double_8, align 8
+._crit_edge_ifconv:75  %p_Val2_22 = load i59* %fourth_order_double_8, align 8
 
 ]]></Node>
-<StgValue><ssdm name="p_Val2_16"/></StgValue>
+<StgValue><ssdm name="p_Val2_22"/></StgValue>
 </operation>
 
 <operation id="106" st_id="14" stage="1" lat="1">
@@ -1407,10 +1407,10 @@
 
 <Node id="86" bw="108" op_0_bw="56">
 <![CDATA[
-._crit_edge_ifconv:77  %r_V_10 = zext i56 %B_V to i108
+._crit_edge_ifconv:77  %r_V_11 = zext i56 %B_V to i108
 
 ]]></Node>
-<StgValue><ssdm name="r_V_10"/></StgValue>
+<StgValue><ssdm name="r_V_11"/></StgValue>
 </operation>
 
 <operation id="107" st_id="14" stage="1" lat="1">
@@ -1437,10 +1437,10 @@
 
 <Node id="90" bw="108" op_0_bw="108" op_1_bw="108">
 <![CDATA[
-._crit_edge_ifconv:81  %r_V_23 = mul nsw i108 %r_V_10, %sext_ln1072
+._crit_edge_ifconv:81  %r_V_24 = mul nsw i108 %r_V_11, %sext_ln1072
 
 ]]></Node>
-<StgValue><ssdm name="r_V_23"/></StgValue>
+<StgValue><ssdm name="r_V_24"/></StgValue>
 </operation>
 
 <operation id="109" st_id="14" stage="1" lat="1">
@@ -1452,10 +1452,10 @@
 
 <Node id="92" bw="93" op_0_bw="49">
 <![CDATA[
-._crit_edge_ifconv:83  %r_V_12 = zext i49 %B_squared_V to i93
+._crit_edge_ifconv:83  %r_V_13 = zext i49 %B_squared_V to i93
 
 ]]></Node>
-<StgValue><ssdm name="r_V_12"/></StgValue>
+<StgValue><ssdm name="r_V_13"/></StgValue>
 </operation>
 
 <operation id="110" st_id="14" stage="1" lat="1">
@@ -1482,10 +1482,10 @@
 
 <Node id="96" bw="93" op_0_bw="93" op_1_bw="93">
 <![CDATA[
-._crit_edge_ifconv:87  %r_V_24 = mul nsw i93 %r_V_12, %sext_ln1072_1
+._crit_edge_ifconv:87  %r_V_25 = mul nsw i93 %r_V_13, %sext_ln1072_1
 
 ]]></Node>
-<StgValue><ssdm name="r_V_24"/></StgValue>
+<StgValue><ssdm name="r_V_25"/></StgValue>
 </operation>
 
 <operation id="112" st_id="14" stage="1" lat="1">
@@ -1560,10 +1560,10 @@
 
 <Node id="75" bw="98" op_0_bw="98" op_1_bw="98">
 <![CDATA[
-._crit_edge_ifconv:66  %r_V_21 = mul i98 %r_V_5, %r_V_8
+._crit_edge_ifconv:66  %r_V_22 = mul i98 %r_V_6, %r_V_9
 
 ]]></Node>
-<StgValue><ssdm name="r_V_21"/></StgValue>
+<StgValue><ssdm name="r_V_22"/></StgValue>
 </operation>
 
 <operation id="117" st_id="15" stage="1" lat="1">
@@ -1575,7 +1575,7 @@
 
 <Node id="76" bw="42" op_0_bw="42" op_1_bw="98" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge_ifconv:67  %B_third_power_V = call i42 @_ssdm_op_PartSelect.i42.i98.i32.i32(i98 %r_V_21, i32 56, i32 97)
+._crit_edge_ifconv:67  %B_third_power_V = call i42 @_ssdm_op_PartSelect.i42.i98.i32.i32(i98 %r_V_22, i32 56, i32 97)
 
 ]]></Node>
 <StgValue><ssdm name="B_third_power_V"/></StgValue>
@@ -1590,10 +1590,10 @@
 
 <Node id="77" bw="98" op_0_bw="98" op_1_bw="98">
 <![CDATA[
-._crit_edge_ifconv:68  %r_V_22 = mul i98 %r_V_8, %r_V_8
+._crit_edge_ifconv:68  %r_V_23 = mul i98 %r_V_9, %r_V_9
 
 ]]></Node>
-<StgValue><ssdm name="r_V_22"/></StgValue>
+<StgValue><ssdm name="r_V_23"/></StgValue>
 </operation>
 
 <operation id="119" st_id="15" stage="1" lat="1">
@@ -1605,7 +1605,7 @@
 
 <Node id="78" bw="35" op_0_bw="35" op_1_bw="98" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge_ifconv:69  %B_fourth_power_V = call i35 @_ssdm_op_PartSelect.i35.i98.i32.i32(i98 %r_V_22, i32 63, i32 97)
+._crit_edge_ifconv:69  %B_fourth_power_V = call i35 @_ssdm_op_PartSelect.i35.i98.i32.i32(i98 %r_V_23, i32 63, i32 97)
 
 ]]></Node>
 <StgValue><ssdm name="B_fourth_power_V"/></StgValue>
@@ -1620,10 +1620,10 @@
 
 <Node id="84" bw="59" op_0_bw="8">
 <![CDATA[
-._crit_edge_ifconv:75  %p_Val2_16 = load i59* %fourth_order_double_8, align 8
+._crit_edge_ifconv:75  %p_Val2_22 = load i59* %fourth_order_double_8, align 8
 
 ]]></Node>
-<StgValue><ssdm name="p_Val2_16"/></StgValue>
+<StgValue><ssdm name="p_Val2_22"/></StgValue>
 </operation>
 
 <operation id="121" st_id="15" stage="1" lat="2">
@@ -1635,10 +1635,10 @@
 
 <Node id="90" bw="108" op_0_bw="108" op_1_bw="108">
 <![CDATA[
-._crit_edge_ifconv:81  %r_V_23 = mul nsw i108 %r_V_10, %sext_ln1072
+._crit_edge_ifconv:81  %r_V_24 = mul nsw i108 %r_V_11, %sext_ln1072
 
 ]]></Node>
-<StgValue><ssdm name="r_V_23"/></StgValue>
+<StgValue><ssdm name="r_V_24"/></StgValue>
 </operation>
 
 <operation id="122" st_id="15" stage="1" lat="1">
@@ -1650,10 +1650,10 @@
 
 <Node id="91" bw="56" op_0_bw="56" op_1_bw="108" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge_ifconv:82  %trunc_ln1 = call i56 @_ssdm_op_PartSelect.i56.i108.i32.i32(i108 %r_V_23, i32 52, i32 107)
+._crit_edge_ifconv:82  %trunc_ln3 = call i56 @_ssdm_op_PartSelect.i56.i108.i32.i32(i108 %r_V_24, i32 52, i32 107)
 
 ]]></Node>
-<StgValue><ssdm name="trunc_ln1"/></StgValue>
+<StgValue><ssdm name="trunc_ln3"/></StgValue>
 </operation>
 
 <operation id="123" st_id="15" stage="1" lat="2">
@@ -1665,10 +1665,10 @@
 
 <Node id="96" bw="93" op_0_bw="93" op_1_bw="93">
 <![CDATA[
-._crit_edge_ifconv:87  %r_V_24 = mul nsw i93 %r_V_12, %sext_ln1072_1
+._crit_edge_ifconv:87  %r_V_25 = mul nsw i93 %r_V_13, %sext_ln1072_1
 
 ]]></Node>
-<StgValue><ssdm name="r_V_24"/></StgValue>
+<StgValue><ssdm name="r_V_25"/></StgValue>
 </operation>
 
 <operation id="124" st_id="15" stage="1" lat="1">
@@ -1680,7 +1680,7 @@
 
 <Node id="97" bw="48" op_0_bw="48" op_1_bw="93" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge_ifconv:88  %trunc_ln662_1 = call i48 @_ssdm_op_PartSelect.i48.i93.i32.i32(i93 %r_V_24, i32 45, i32 92)
+._crit_edge_ifconv:88  %trunc_ln662_1 = call i48 @_ssdm_op_PartSelect.i48.i93.i32.i32(i93 %r_V_25, i32 45, i32 92)
 
 ]]></Node>
 <StgValue><ssdm name="trunc_ln662_1"/></StgValue>
@@ -1728,7 +1728,7 @@
 
 <Node id="85" bw="63" op_0_bw="63" op_1_bw="59" op_2_bw="4">
 <![CDATA[
-._crit_edge_ifconv:76  %t1_V = call i63 @_ssdm_op_BitConcatenate.i63.i59.i4(i59 %p_Val2_16, i4 0)
+._crit_edge_ifconv:76  %t1_V = call i63 @_ssdm_op_BitConcatenate.i63.i59.i4(i59 %p_Val2_22, i4 0)
 
 ]]></Node>
 <StgValue><ssdm name="t1_V"/></StgValue>
@@ -1773,10 +1773,10 @@
 
 <Node id="102" bw="75" op_0_bw="75" op_1_bw="75">
 <![CDATA[
-._crit_edge_ifconv:93  %r_V_25 = mul i75 %zext_ln1070, %zext_ln1072
+._crit_edge_ifconv:93  %r_V_26 = mul i75 %zext_ln1070, %zext_ln1072
 
 ]]></Node>
-<StgValue><ssdm name="r_V_25"/></StgValue>
+<StgValue><ssdm name="r_V_26"/></StgValue>
 </operation>
 
 <operation id="131" st_id="16" stage="1" lat="1">
@@ -1818,10 +1818,10 @@
 
 <Node id="108" bw="60" op_0_bw="60" op_1_bw="60">
 <![CDATA[
-._crit_edge_ifconv:99  %r_V_26 = mul i60 %zext_ln1070_1, %zext_ln1072_1
+._crit_edge_ifconv:99  %r_V_27 = mul i60 %zext_ln1070_1, %zext_ln1072_1
 
 ]]></Node>
-<StgValue><ssdm name="r_V_26"/></StgValue>
+<StgValue><ssdm name="r_V_27"/></StgValue>
 </operation>
 
 <operation id="134" st_id="16" stage="1" lat="1">
@@ -1833,10 +1833,10 @@
 
 <Node id="109" bw="29" op_0_bw="29" op_1_bw="60" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge_ifconv:100  %tmp_4 = call i29 @_ssdm_op_PartSelect.i29.i60.i32.i32(i60 %r_V_26, i32 31, i32 59)
+._crit_edge_ifconv:100  %tmp_54 = call i29 @_ssdm_op_PartSelect.i29.i60.i32.i32(i60 %r_V_27, i32 31, i32 59)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_4"/></StgValue>
+<StgValue><ssdm name="tmp_54"/></StgValue>
 </operation>
 
 <operation id="135" st_id="16" stage="1" lat="1">
@@ -1863,7 +1863,7 @@
 
 <Node id="111" bw="64" op_0_bw="56">
 <![CDATA[
-._crit_edge_ifconv:102  %rhs_V_2 = sext i56 %trunc_ln1 to i64
+._crit_edge_ifconv:102  %rhs_V_2 = sext i56 %trunc_ln3 to i64
 
 ]]></Node>
 <StgValue><ssdm name="rhs_V_2"/></StgValue>
@@ -1926,10 +1926,10 @@
 
 <Node id="102" bw="75" op_0_bw="75" op_1_bw="75">
 <![CDATA[
-._crit_edge_ifconv:93  %r_V_25 = mul i75 %zext_ln1070, %zext_ln1072
+._crit_edge_ifconv:93  %r_V_26 = mul i75 %zext_ln1070, %zext_ln1072
 
 ]]></Node>
-<StgValue><ssdm name="r_V_25"/></StgValue>
+<StgValue><ssdm name="r_V_26"/></StgValue>
 </operation>
 
 <operation id="141" st_id="17" stage="1" lat="1">
@@ -1941,10 +1941,10 @@
 
 <Node id="103" bw="37" op_0_bw="37" op_1_bw="75" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge_ifconv:94  %tmp_3 = call i37 @_ssdm_op_PartSelect.i37.i75.i32.i32(i75 %r_V_25, i32 38, i32 74)
+._crit_edge_ifconv:94  %tmp_s = call i37 @_ssdm_op_PartSelect.i37.i75.i32.i32(i75 %r_V_26, i32 38, i32 74)
 
 ]]></Node>
-<StgValue><ssdm name="tmp_3"/></StgValue>
+<StgValue><ssdm name="tmp_s"/></StgValue>
 </operation>
 </state>
 
@@ -1990,7 +1990,7 @@
 
 <Node id="115" bw="64" op_0_bw="37">
 <![CDATA[
-._crit_edge_ifconv:106  %zext_ln657 = zext i37 %tmp_3 to i64
+._crit_edge_ifconv:106  %zext_ln657 = zext i37 %tmp_s to i64
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln657"/></StgValue>
@@ -2020,7 +2020,7 @@
 
 <Node id="117" bw="64" op_0_bw="29">
 <![CDATA[
-._crit_edge_ifconv:108  %zext_ln657_1 = zext i29 %tmp_4 to i64
+._crit_edge_ifconv:108  %zext_ln657_1 = zext i29 %tmp_54 to i64
 
 ]]></Node>
 <StgValue><ssdm name="zext_ln657_1"/></StgValue>
@@ -2098,10 +2098,10 @@
 
 <Node id="121" bw="126" op_0_bw="126" op_1_bw="126">
 <![CDATA[
-._crit_edge_ifconv:112  %r_V_27 = mul i126 %sext_ln1072_2, %zext_ln1070_2
+._crit_edge_ifconv:112  %r_V_28 = mul i126 %sext_ln1072_2, %zext_ln1070_2
 
 ]]></Node>
-<StgValue><ssdm name="r_V_27"/></StgValue>
+<StgValue><ssdm name="r_V_28"/></StgValue>
 </operation>
 </state>
 
@@ -2116,10 +2116,10 @@
 
 <Node id="121" bw="126" op_0_bw="126" op_1_bw="126">
 <![CDATA[
-._crit_edge_ifconv:112  %r_V_27 = mul i126 %sext_ln1072_2, %zext_ln1070_2
+._crit_edge_ifconv:112  %r_V_28 = mul i126 %sext_ln1072_2, %zext_ln1070_2
 
 ]]></Node>
-<StgValue><ssdm name="r_V_27"/></StgValue>
+<StgValue><ssdm name="r_V_28"/></StgValue>
 </operation>
 </state>
 
@@ -2134,10 +2134,10 @@
 
 <Node id="121" bw="126" op_0_bw="126" op_1_bw="126">
 <![CDATA[
-._crit_edge_ifconv:112  %r_V_27 = mul i126 %sext_ln1072_2, %zext_ln1070_2
+._crit_edge_ifconv:112  %r_V_28 = mul i126 %sext_ln1072_2, %zext_ln1070_2
 
 ]]></Node>
-<StgValue><ssdm name="r_V_27"/></StgValue>
+<StgValue><ssdm name="r_V_28"/></StgValue>
 </operation>
 </state>
 
@@ -2152,10 +2152,10 @@
 
 <Node id="121" bw="126" op_0_bw="126" op_1_bw="126">
 <![CDATA[
-._crit_edge_ifconv:112  %r_V_27 = mul i126 %sext_ln1072_2, %zext_ln1070_2
+._crit_edge_ifconv:112  %r_V_28 = mul i126 %sext_ln1072_2, %zext_ln1070_2
 
 ]]></Node>
-<StgValue><ssdm name="r_V_27"/></StgValue>
+<StgValue><ssdm name="r_V_28"/></StgValue>
 </operation>
 </state>
 
@@ -2185,10 +2185,10 @@
 
 <Node id="121" bw="126" op_0_bw="126" op_1_bw="126">
 <![CDATA[
-._crit_edge_ifconv:112  %r_V_27 = mul i126 %sext_ln1072_2, %zext_ln1070_2
+._crit_edge_ifconv:112  %r_V_28 = mul i126 %sext_ln1072_2, %zext_ln1070_2
 
 ]]></Node>
-<StgValue><ssdm name="r_V_27"/></StgValue>
+<StgValue><ssdm name="r_V_28"/></StgValue>
 </operation>
 
 <operation id="157" st_id="23" stage="1" lat="1">
@@ -2200,7 +2200,7 @@
 
 <Node id="122" bw="63" op_0_bw="63" op_1_bw="126" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge_ifconv:113  %result_V = call i63 @_ssdm_op_PartSelect.i63.i126.i32.i32(i126 %r_V_27, i32 63, i32 125)
+._crit_edge_ifconv:113  %result_V = call i63 @_ssdm_op_PartSelect.i63.i126.i32.i32(i126 %r_V_28, i32 63, i32 125)
 
 ]]></Node>
 <StgValue><ssdm name="result_V"/></StgValue>
@@ -2278,10 +2278,10 @@
 
 <Node id="126" bw="64" op_0_bw="64">
 <![CDATA[
-._crit_edge_ifconv:117  %p_Val2_26 = bitcast double %resultf to i64
+._crit_edge_ifconv:117  %p_Val2_32 = bitcast double %resultf to i64
 
 ]]></Node>
-<StgValue><ssdm name="p_Val2_26"/></StgValue>
+<StgValue><ssdm name="p_Val2_32"/></StgValue>
 </operation>
 
 <operation id="163" st_id="24" stage="1" lat="1">
@@ -2293,7 +2293,7 @@
 
 <Node id="127" bw="1" op_0_bw="1" op_1_bw="64" op_2_bw="32">
 <![CDATA[
-._crit_edge_ifconv:118  %p_Result_26 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %p_Val2_26, i32 63)
+._crit_edge_ifconv:118  %p_Result_26 = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %p_Val2_32, i32 63)
 
 ]]></Node>
 <StgValue><ssdm name="p_Result_26"/></StgValue>
@@ -2309,10 +2309,10 @@
 
 <Node id="128" bw="11" op_0_bw="11" op_1_bw="64" op_2_bw="32" op_3_bw="32">
 <![CDATA[
-._crit_edge_ifconv:119  %tmp_V_2 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %p_Val2_26, i32 52, i32 62) nounwind
+._crit_edge_ifconv:119  %tmp_V_3 = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %p_Val2_32, i32 52, i32 62) nounwind
 
 ]]></Node>
-<StgValue><ssdm name="tmp_V_2"/></StgValue>
+<StgValue><ssdm name="tmp_V_3"/></StgValue>
 </operation>
 
 <operation id="165" st_id="24" stage="1" lat="1">
@@ -2324,10 +2324,10 @@
 
 <Node id="129" bw="52" op_0_bw="64">
 <![CDATA[
-._crit_edge_ifconv:120  %tmp_V_3 = trunc i64 %p_Val2_26 to i52
+._crit_edge_ifconv:120  %tmp_V_4 = trunc i64 %p_Val2_32 to i52
 
 ]]></Node>
-<StgValue><ssdm name="tmp_V_3"/></StgValue>
+<StgValue><ssdm name="tmp_V_4"/></StgValue>
 </operation>
 
 <operation id="166" st_id="24" stage="1" lat="1">
@@ -2339,7 +2339,7 @@
 
 <Node id="130" bw="4" op_0_bw="4" op_1_bw="1" op_2_bw="3">
 <![CDATA[
-._crit_edge_ifconv:121  %p_Result_27 = call i4 @_ssdm_op_BitConcatenate.i4.i1.i3(i1 %p_Result_21, i3 %p_Val2_31)
+._crit_edge_ifconv:121  %p_Result_27 = call i4 @_ssdm_op_BitConcatenate.i4.i1.i3(i1 %p_Result_21, i3 %p_Val2_37)
 
 ]]></Node>
 <StgValue><ssdm name="p_Result_27"/></StgValue>
@@ -2476,7 +2476,7 @@
 
 <Node id="143" bw="11" op_0_bw="1" op_1_bw="11" op_2_bw="11">
 <![CDATA[
-._crit_edge_ifconv:134  %select_ln311_1 = select i1 %icmp_ln833_2, i11 -1, i11 %tmp_V_2
+._crit_edge_ifconv:134  %select_ln311_1 = select i1 %icmp_ln833_2, i11 -1, i11 %tmp_V_3
 
 ]]></Node>
 <StgValue><ssdm name="select_ln311_1"/></StgValue>
@@ -2566,7 +2566,7 @@
 
 <Node id="150" bw="52" op_0_bw="1" op_1_bw="52" op_2_bw="52">
 <![CDATA[
-._crit_edge_ifconv:141  %ret_V_10 = select i1 %or_ln300, i52 %select_ln300_2, i52 %tmp_V_3
+._crit_edge_ifconv:141  %ret_V_10 = select i1 %or_ln300, i52 %select_ln300_2, i52 %tmp_V_4
 
 ]]></Node>
 <StgValue><ssdm name="ret_V_10"/></StgValue>
@@ -2784,7 +2784,7 @@
 </dataflow>
 <dataflow id="239" from="StgValue_238" to="tmp_V" fromId="238" toId="29">
 </dataflow>
-<dataflow id="240" from="p_Val2_s" to="tmp_V_1" fromId="27" toId="30">
+<dataflow id="240" from="p_Val2_s" to="tmp_V_2" fromId="27" toId="30">
 </dataflow>
 <dataflow id="241" from="tmp_V" to="closepath" fromId="29" toId="31">
 </dataflow>
@@ -2824,13 +2824,13 @@
 </dataflow>
 <dataflow id="266" from="trunc_ln601" to="zext_ln744" fromId="38" toId="40">
 </dataflow>
-<dataflow id="267" from="table_256_V" to="r_V_17" fromId="39" toId="41">
+<dataflow id="267" from="table_256_V" to="r_V_18" fromId="39" toId="41">
 </dataflow>
-<dataflow id="268" from="zext_ln744" to="r_V_17" fromId="40" toId="41">
+<dataflow id="268" from="zext_ln744" to="r_V_18" fromId="40" toId="41">
 </dataflow>
 <dataflow id="270" from="_ssdm_op_PartSelect.i170.i256.i32.i32" to="ret_V_11" fromId="269" toId="42">
 </dataflow>
-<dataflow id="271" from="r_V_17" to="ret_V_11" fromId="41" toId="42">
+<dataflow id="271" from="r_V_18" to="ret_V_11" fromId="41" toId="42">
 </dataflow>
 <dataflow id="273" from="StgValue_272" to="ret_V_11" fromId="272" toId="42">
 </dataflow>
@@ -2840,7 +2840,7 @@
 </dataflow>
 <dataflow id="279" from="StgValue_278" to="p_Result_22" fromId="278" toId="43">
 </dataflow>
-<dataflow id="280" from="tmp_V_1" to="p_Result_22" fromId="30" toId="43">
+<dataflow id="280" from="tmp_V_2" to="p_Result_22" fromId="30" toId="43">
 </dataflow>
 <dataflow id="281" from="ret_V_11" to="lhs_V" fromId="42" toId="44">
 </dataflow>
@@ -2850,7 +2850,7 @@
 </dataflow>
 <dataflow id="284" from="rhs_V_1" to="ret_V_12" fromId="45" toId="46">
 </dataflow>
-<dataflow id="285" from="tmp_V_1" to="icmp_ln833_1" fromId="30" toId="47">
+<dataflow id="285" from="tmp_V_2" to="icmp_ln833_1" fromId="30" toId="47">
 </dataflow>
 <dataflow id="287" from="StgValue_286" to="icmp_ln833_1" fromId="286" toId="47">
 </dataflow>
@@ -2870,13 +2870,13 @@
 </dataflow>
 <dataflow id="295" from="rhs_V_1" to="ret_V_12" fromId="45" toId="51">
 </dataflow>
-<dataflow id="297" from="_ssdm_op_PartSelect.i124.i223.i32.i32" to="p_Val2_30" fromId="296" toId="52">
+<dataflow id="297" from="_ssdm_op_PartSelect.i124.i223.i32.i32" to="p_Val2_36" fromId="296" toId="52">
 </dataflow>
-<dataflow id="298" from="ret_V_12" to="p_Val2_30" fromId="51" toId="52">
+<dataflow id="298" from="ret_V_12" to="p_Val2_36" fromId="51" toId="52">
 </dataflow>
-<dataflow id="300" from="StgValue_299" to="p_Val2_30" fromId="299" toId="52">
+<dataflow id="300" from="StgValue_299" to="p_Val2_36" fromId="299" toId="52">
 </dataflow>
-<dataflow id="302" from="StgValue_301" to="p_Val2_30" fromId="301" toId="52">
+<dataflow id="302" from="StgValue_301" to="p_Val2_36" fromId="301" toId="52">
 </dataflow>
 <dataflow id="304" from="_ssdm_op_PartSelect.i3.i223.i32.i32" to="trunc_ln_i" fromId="303" toId="53">
 </dataflow>
@@ -2886,35 +2886,35 @@
 </dataflow>
 <dataflow id="309" from="StgValue_308" to="trunc_ln_i" fromId="308" toId="53">
 </dataflow>
-<dataflow id="310" from="closepath" to="p_Val2_31" fromId="31" toId="54">
+<dataflow id="310" from="closepath" to="p_Val2_37" fromId="31" toId="54">
 </dataflow>
-<dataflow id="312" from="StgValue_311" to="p_Val2_31" fromId="311" toId="54">
+<dataflow id="312" from="StgValue_311" to="p_Val2_37" fromId="311" toId="54">
 </dataflow>
-<dataflow id="313" from="trunc_ln_i" to="p_Val2_31" fromId="53" toId="54">
+<dataflow id="313" from="trunc_ln_i" to="p_Val2_37" fromId="53" toId="54">
 </dataflow>
-<dataflow id="314" from="p_Val2_31" to="trunc_ln745" fromId="54" toId="55">
+<dataflow id="314" from="p_Val2_37" to="trunc_ln745" fromId="54" toId="55">
 </dataflow>
 <dataflow id="316" from="StgValue_315" to="Mx_bits_V_1" fromId="315" toId="56">
 </dataflow>
-<dataflow id="317" from="p_Val2_30" to="Mx_bits_V_1" fromId="52" toId="56">
+<dataflow id="317" from="p_Val2_36" to="Mx_bits_V_1" fromId="52" toId="56">
 </dataflow>
-<dataflow id="318" from="trunc_ln745" to="p_Val2_8" fromId="55" toId="57">
+<dataflow id="318" from="trunc_ln745" to="p_Val2_14" fromId="55" toId="57">
 </dataflow>
-<dataflow id="319" from="Mx_bits_V_1" to="p_Val2_8" fromId="56" toId="57">
+<dataflow id="319" from="Mx_bits_V_1" to="p_Val2_14" fromId="56" toId="57">
 </dataflow>
-<dataflow id="320" from="p_Val2_30" to="p_Val2_8" fromId="52" toId="57">
+<dataflow id="320" from="p_Val2_36" to="p_Val2_14" fromId="52" toId="57">
 </dataflow>
-<dataflow id="322" from="_ssdm_op_PartSelect.i61.i124.i32.i32" to="p_Result_i_i_39" fromId="321" toId="58">
+<dataflow id="322" from="_ssdm_op_PartSelect.i61.i124.i32.i32" to="p_Result_i_i_47" fromId="321" toId="58">
 </dataflow>
-<dataflow id="323" from="p_Val2_8" to="p_Result_i_i_39" fromId="57" toId="58">
+<dataflow id="323" from="p_Val2_14" to="p_Result_i_i_47" fromId="57" toId="58">
 </dataflow>
-<dataflow id="324" from="StgValue_231" to="p_Result_i_i_39" fromId="231" toId="58">
+<dataflow id="324" from="StgValue_231" to="p_Result_i_i_47" fromId="231" toId="58">
 </dataflow>
-<dataflow id="326" from="StgValue_325" to="p_Result_i_i_39" fromId="325" toId="58">
+<dataflow id="326" from="StgValue_325" to="p_Result_i_i_47" fromId="325" toId="58">
 </dataflow>
 <dataflow id="328" from="_ssdm_op_BitConcatenate.i62.i61.i1" to="p_Result_23" fromId="327" toId="59">
 </dataflow>
-<dataflow id="329" from="p_Result_i_i_39" to="p_Result_23" fromId="58" toId="59">
+<dataflow id="329" from="p_Result_i_i_47" to="p_Result_23" fromId="58" toId="59">
 </dataflow>
 <dataflow id="330" from="StgValue_278" to="p_Result_23" fromId="278" toId="59">
 </dataflow>
@@ -2952,13 +2952,13 @@
 </dataflow>
 <dataflow id="355" from="Mx_zeros_V" to="zext_ln1253" fromId="63" toId="66">
 </dataflow>
-<dataflow id="356" from="p_Val2_8" to="r_V_18" fromId="57" toId="67">
+<dataflow id="356" from="p_Val2_14" to="r_V_19" fromId="57" toId="67">
 </dataflow>
-<dataflow id="357" from="zext_ln1253" to="r_V_18" fromId="66" toId="67">
+<dataflow id="357" from="zext_ln1253" to="r_V_19" fromId="66" toId="67">
 </dataflow>
 <dataflow id="359" from="_ssdm_op_PartSelect.i63.i124.i32.i32" to="Mx_V" fromId="358" toId="68">
 </dataflow>
-<dataflow id="360" from="r_V_18" to="Mx_V" fromId="67" toId="68">
+<dataflow id="360" from="r_V_19" to="Mx_V" fromId="67" toId="68">
 </dataflow>
 <dataflow id="361" from="StgValue_334" to="Mx_V" fromId="334" toId="68">
 </dataflow>
@@ -3004,29 +3004,29 @@
 </dataflow>
 <dataflow id="385" from="zext_ln1287" to="r_V" fromId="78" toId="79">
 </dataflow>
-<dataflow id="386" from="Mx_V" to="r_V_3" fromId="68" toId="80">
+<dataflow id="386" from="Mx_V" to="r_V_4" fromId="68" toId="80">
 </dataflow>
-<dataflow id="387" from="zext_ln1287" to="r_V_3" fromId="78" toId="80">
+<dataflow id="387" from="zext_ln1287" to="r_V_4" fromId="78" toId="80">
 </dataflow>
-<dataflow id="388" from="isNeg" to="r_V_19" fromId="71" toId="81">
+<dataflow id="388" from="isNeg" to="r_V_20" fromId="71" toId="81">
 </dataflow>
-<dataflow id="389" from="r_V" to="r_V_19" fromId="79" toId="81">
+<dataflow id="389" from="r_V" to="r_V_20" fromId="79" toId="81">
 </dataflow>
-<dataflow id="390" from="r_V_3" to="r_V_19" fromId="80" toId="81">
+<dataflow id="390" from="r_V_4" to="r_V_20" fromId="80" toId="81">
 </dataflow>
 <dataflow id="392" from="_ssdm_op_PartSelect.i7.i63.i32.i32" to="p_Result_i" fromId="391" toId="82">
 </dataflow>
-<dataflow id="393" from="r_V_19" to="p_Result_i" fromId="81" toId="82">
+<dataflow id="393" from="r_V_20" to="p_Result_i" fromId="81" toId="82">
 </dataflow>
 <dataflow id="395" from="StgValue_394" to="p_Result_i" fromId="394" toId="82">
 </dataflow>
 <dataflow id="396" from="StgValue_238" to="p_Result_i" fromId="238" toId="82">
 </dataflow>
-<dataflow id="397" from="r_V_19" to="B_V" fromId="81" toId="83">
+<dataflow id="397" from="r_V_20" to="B_V" fromId="81" toId="83">
 </dataflow>
 <dataflow id="399" from="_ssdm_op_PartSelect.i49.i63.i32.i32" to="B_trunc_V" fromId="398" toId="84">
 </dataflow>
-<dataflow id="400" from="r_V_19" to="B_trunc_V" fromId="81" toId="84">
+<dataflow id="400" from="r_V_20" to="B_trunc_V" fromId="81" toId="84">
 </dataflow>
 <dataflow id="401" from="StgValue_254" to="B_trunc_V" fromId="254" toId="84">
 </dataflow>
@@ -3054,13 +3054,13 @@
 </dataflow>
 <dataflow id="417" from="StgValue_409" to="tmp" fromId="409" toId="86">
 </dataflow>
-<dataflow id="418" from="p_Val2_31" to="tmp" fromId="54" toId="86">
+<dataflow id="418" from="p_Val2_37" to="tmp" fromId="54" toId="86">
 </dataflow>
-<dataflow id="419" from="B_trunc_V" to="r_V_5" fromId="84" toId="87">
+<dataflow id="419" from="B_trunc_V" to="r_V_6" fromId="84" toId="87">
 </dataflow>
-<dataflow id="420" from="r_V_5" to="r_V_20" fromId="87" toId="88">
+<dataflow id="420" from="r_V_6" to="r_V_21" fromId="87" toId="88">
 </dataflow>
-<dataflow id="421" from="r_V_5" to="r_V_20" fromId="87" toId="88">
+<dataflow id="421" from="r_V_6" to="r_V_21" fromId="87" toId="88">
 </dataflow>
 <dataflow id="422" from="do_cos_read" to="xor_ln29" fromId="85" toId="89">
 </dataflow>
@@ -3094,13 +3094,13 @@
 </dataflow>
 <dataflow id="438" from="fourth_order_double_11" to="fourth_order_double_12" fromId="95" toId="96">
 </dataflow>
-<dataflow id="439" from="r_V_5" to="r_V_20" fromId="87" toId="97">
+<dataflow id="439" from="r_V_6" to="r_V_21" fromId="87" toId="97">
 </dataflow>
-<dataflow id="440" from="r_V_5" to="r_V_20" fromId="87" toId="97">
+<dataflow id="440" from="r_V_6" to="r_V_21" fromId="87" toId="97">
 </dataflow>
 <dataflow id="442" from="_ssdm_op_PartSelect.i49.i98.i32.i32" to="B_squared_V" fromId="441" toId="98">
 </dataflow>
-<dataflow id="443" from="r_V_20" to="B_squared_V" fromId="97" toId="98">
+<dataflow id="443" from="r_V_21" to="B_squared_V" fromId="97" toId="98">
 </dataflow>
 <dataflow id="445" from="StgValue_444" to="B_squared_V" fromId="444" toId="98">
 </dataflow>
@@ -3110,15 +3110,15 @@
 </dataflow>
 <dataflow id="449" from="fourth_order_double_11" to="fourth_order_double_12" fromId="95" toId="100">
 </dataflow>
-<dataflow id="450" from="B_squared_V" to="r_V_8" fromId="98" toId="101">
+<dataflow id="450" from="B_squared_V" to="r_V_9" fromId="98" toId="101">
 </dataflow>
-<dataflow id="451" from="r_V_5" to="r_V_21" fromId="87" toId="102">
+<dataflow id="451" from="r_V_6" to="r_V_22" fromId="87" toId="102">
 </dataflow>
-<dataflow id="452" from="r_V_8" to="r_V_21" fromId="101" toId="102">
+<dataflow id="452" from="r_V_9" to="r_V_22" fromId="101" toId="102">
 </dataflow>
-<dataflow id="453" from="r_V_8" to="r_V_22" fromId="101" toId="103">
+<dataflow id="453" from="r_V_9" to="r_V_23" fromId="101" toId="103">
 </dataflow>
-<dataflow id="454" from="r_V_8" to="r_V_22" fromId="101" toId="103">
+<dataflow id="454" from="r_V_9" to="r_V_23" fromId="101" toId="103">
 </dataflow>
 <dataflow id="455" from="fourth_order_double_4" to="fourth_order_double_8" fromId="219" toId="104">
 </dataflow>
@@ -3126,23 +3126,23 @@
 </dataflow>
 <dataflow id="457" from="zext_ln498" to="fourth_order_double_8" fromId="92" toId="104">
 </dataflow>
-<dataflow id="458" from="fourth_order_double_8" to="p_Val2_16" fromId="104" toId="105">
+<dataflow id="458" from="fourth_order_double_8" to="p_Val2_22" fromId="104" toId="105">
 </dataflow>
-<dataflow id="459" from="B_V" to="r_V_10" fromId="83" toId="106">
+<dataflow id="459" from="B_V" to="r_V_11" fromId="83" toId="106">
 </dataflow>
 <dataflow id="460" from="fourth_order_double_10" to="sext_ln1072" fromId="99" toId="107">
 </dataflow>
-<dataflow id="461" from="r_V_10" to="r_V_23" fromId="106" toId="108">
+<dataflow id="461" from="r_V_11" to="r_V_24" fromId="106" toId="108">
 </dataflow>
-<dataflow id="462" from="sext_ln1072" to="r_V_23" fromId="107" toId="108">
+<dataflow id="462" from="sext_ln1072" to="r_V_24" fromId="107" toId="108">
 </dataflow>
-<dataflow id="463" from="B_squared_V" to="r_V_12" fromId="98" toId="109">
+<dataflow id="463" from="B_squared_V" to="r_V_13" fromId="98" toId="109">
 </dataflow>
 <dataflow id="464" from="fourth_order_double_12" to="sext_ln1072_1" fromId="100" toId="110">
 </dataflow>
-<dataflow id="465" from="r_V_12" to="r_V_24" fromId="109" toId="111">
+<dataflow id="465" from="r_V_13" to="r_V_25" fromId="109" toId="111">
 </dataflow>
-<dataflow id="466" from="sext_ln1072_1" to="r_V_24" fromId="110" toId="111">
+<dataflow id="466" from="sext_ln1072_1" to="r_V_25" fromId="110" toId="111">
 </dataflow>
 <dataflow id="467" from="fourth_order_double_7" to="fourth_order_double_13" fromId="222" toId="112">
 </dataflow>
@@ -3160,51 +3160,51 @@
 </dataflow>
 <dataflow id="474" from="fourth_order_double_15" to="fourth_order_double_16" fromId="114" toId="115">
 </dataflow>
-<dataflow id="475" from="r_V_5" to="r_V_21" fromId="87" toId="116">
+<dataflow id="475" from="r_V_6" to="r_V_22" fromId="87" toId="116">
 </dataflow>
-<dataflow id="476" from="r_V_8" to="r_V_21" fromId="101" toId="116">
+<dataflow id="476" from="r_V_9" to="r_V_22" fromId="101" toId="116">
 </dataflow>
 <dataflow id="478" from="_ssdm_op_PartSelect.i42.i98.i32.i32" to="B_third_power_V" fromId="477" toId="117">
 </dataflow>
-<dataflow id="479" from="r_V_21" to="B_third_power_V" fromId="116" toId="117">
+<dataflow id="479" from="r_V_22" to="B_third_power_V" fromId="116" toId="117">
 </dataflow>
 <dataflow id="480" from="StgValue_394" to="B_third_power_V" fromId="394" toId="117">
 </dataflow>
 <dataflow id="481" from="StgValue_446" to="B_third_power_V" fromId="446" toId="117">
 </dataflow>
-<dataflow id="482" from="r_V_8" to="r_V_22" fromId="101" toId="118">
+<dataflow id="482" from="r_V_9" to="r_V_23" fromId="101" toId="118">
 </dataflow>
-<dataflow id="483" from="r_V_8" to="r_V_22" fromId="101" toId="118">
+<dataflow id="483" from="r_V_9" to="r_V_23" fromId="101" toId="118">
 </dataflow>
 <dataflow id="485" from="_ssdm_op_PartSelect.i35.i98.i32.i32" to="B_fourth_power_V" fromId="484" toId="119">
 </dataflow>
-<dataflow id="486" from="r_V_22" to="B_fourth_power_V" fromId="118" toId="119">
+<dataflow id="486" from="r_V_23" to="B_fourth_power_V" fromId="118" toId="119">
 </dataflow>
 <dataflow id="487" from="StgValue_231" to="B_fourth_power_V" fromId="231" toId="119">
 </dataflow>
 <dataflow id="488" from="StgValue_446" to="B_fourth_power_V" fromId="446" toId="119">
 </dataflow>
-<dataflow id="489" from="fourth_order_double_8" to="p_Val2_16" fromId="104" toId="120">
+<dataflow id="489" from="fourth_order_double_8" to="p_Val2_22" fromId="104" toId="120">
 </dataflow>
-<dataflow id="490" from="r_V_10" to="r_V_23" fromId="106" toId="121">
+<dataflow id="490" from="r_V_11" to="r_V_24" fromId="106" toId="121">
 </dataflow>
-<dataflow id="491" from="sext_ln1072" to="r_V_23" fromId="107" toId="121">
+<dataflow id="491" from="sext_ln1072" to="r_V_24" fromId="107" toId="121">
 </dataflow>
-<dataflow id="493" from="_ssdm_op_PartSelect.i56.i108.i32.i32" to="trunc_ln1" fromId="492" toId="122">
+<dataflow id="493" from="_ssdm_op_PartSelect.i56.i108.i32.i32" to="trunc_ln3" fromId="492" toId="122">
 </dataflow>
-<dataflow id="494" from="r_V_23" to="trunc_ln1" fromId="121" toId="122">
+<dataflow id="494" from="r_V_24" to="trunc_ln3" fromId="121" toId="122">
 </dataflow>
-<dataflow id="495" from="StgValue_236" to="trunc_ln1" fromId="236" toId="122">
+<dataflow id="495" from="StgValue_236" to="trunc_ln3" fromId="236" toId="122">
 </dataflow>
-<dataflow id="497" from="StgValue_496" to="trunc_ln1" fromId="496" toId="122">
+<dataflow id="497" from="StgValue_496" to="trunc_ln3" fromId="496" toId="122">
 </dataflow>
-<dataflow id="498" from="r_V_12" to="r_V_24" fromId="109" toId="123">
+<dataflow id="498" from="r_V_13" to="r_V_25" fromId="109" toId="123">
 </dataflow>
-<dataflow id="499" from="sext_ln1072_1" to="r_V_24" fromId="110" toId="123">
+<dataflow id="499" from="sext_ln1072_1" to="r_V_25" fromId="110" toId="123">
 </dataflow>
 <dataflow id="501" from="_ssdm_op_PartSelect.i48.i93.i32.i32" to="trunc_ln662_1" fromId="500" toId="124">
 </dataflow>
-<dataflow id="502" from="r_V_24" to="trunc_ln662_1" fromId="123" toId="124">
+<dataflow id="502" from="r_V_25" to="trunc_ln662_1" fromId="123" toId="124">
 </dataflow>
 <dataflow id="504" from="StgValue_503" to="trunc_ln662_1" fromId="503" toId="124">
 </dataflow>
@@ -3216,7 +3216,7 @@
 </dataflow>
 <dataflow id="510" from="_ssdm_op_BitConcatenate.i63.i59.i4" to="t1_V" fromId="509" toId="127">
 </dataflow>
-<dataflow id="511" from="p_Val2_16" to="t1_V" fromId="120" toId="127">
+<dataflow id="511" from="p_Val2_22" to="t1_V" fromId="120" toId="127">
 </dataflow>
 <dataflow id="513" from="StgValue_512" to="t1_V" fromId="512" toId="127">
 </dataflow>
@@ -3224,29 +3224,29 @@
 </dataflow>
 <dataflow id="515" from="fourth_order_double_14" to="zext_ln1072" fromId="125" toId="129">
 </dataflow>
-<dataflow id="516" from="zext_ln1070" to="r_V_25" fromId="128" toId="130">
+<dataflow id="516" from="zext_ln1070" to="r_V_26" fromId="128" toId="130">
 </dataflow>
-<dataflow id="517" from="zext_ln1072" to="r_V_25" fromId="129" toId="130">
+<dataflow id="517" from="zext_ln1072" to="r_V_26" fromId="129" toId="130">
 </dataflow>
 <dataflow id="518" from="B_fourth_power_V" to="zext_ln1070_1" fromId="119" toId="131">
 </dataflow>
 <dataflow id="519" from="fourth_order_double_16" to="zext_ln1072_1" fromId="126" toId="132">
 </dataflow>
-<dataflow id="520" from="zext_ln1070_1" to="r_V_26" fromId="131" toId="133">
+<dataflow id="520" from="zext_ln1070_1" to="r_V_27" fromId="131" toId="133">
 </dataflow>
-<dataflow id="521" from="zext_ln1072_1" to="r_V_26" fromId="132" toId="133">
+<dataflow id="521" from="zext_ln1072_1" to="r_V_27" fromId="132" toId="133">
 </dataflow>
-<dataflow id="523" from="_ssdm_op_PartSelect.i29.i60.i32.i32" to="tmp_4" fromId="522" toId="134">
+<dataflow id="523" from="_ssdm_op_PartSelect.i29.i60.i32.i32" to="tmp_54" fromId="522" toId="134">
 </dataflow>
-<dataflow id="524" from="r_V_26" to="tmp_4" fromId="133" toId="134">
+<dataflow id="524" from="r_V_27" to="tmp_54" fromId="133" toId="134">
 </dataflow>
-<dataflow id="526" from="StgValue_525" to="tmp_4" fromId="525" toId="134">
+<dataflow id="526" from="StgValue_525" to="tmp_54" fromId="525" toId="134">
 </dataflow>
-<dataflow id="528" from="StgValue_527" to="tmp_4" fromId="527" toId="134">
+<dataflow id="528" from="StgValue_527" to="tmp_54" fromId="527" toId="134">
 </dataflow>
 <dataflow id="529" from="t1_V" to="lhs_V_1" fromId="127" toId="135">
 </dataflow>
-<dataflow id="530" from="trunc_ln1" to="rhs_V_2" fromId="122" toId="136">
+<dataflow id="530" from="trunc_ln3" to="rhs_V_2" fromId="122" toId="136">
 </dataflow>
 <dataflow id="531" from="lhs_V_1" to="ret_V_13" fromId="135" toId="137">
 </dataflow>
@@ -3258,17 +3258,17 @@
 </dataflow>
 <dataflow id="535" from="sext_ln657" to="ret_V_14" fromId="138" toId="139">
 </dataflow>
-<dataflow id="536" from="zext_ln1070" to="r_V_25" fromId="128" toId="140">
+<dataflow id="536" from="zext_ln1070" to="r_V_26" fromId="128" toId="140">
 </dataflow>
-<dataflow id="537" from="zext_ln1072" to="r_V_25" fromId="129" toId="140">
+<dataflow id="537" from="zext_ln1072" to="r_V_26" fromId="129" toId="140">
 </dataflow>
-<dataflow id="539" from="_ssdm_op_PartSelect.i37.i75.i32.i32" to="tmp_3" fromId="538" toId="141">
+<dataflow id="539" from="_ssdm_op_PartSelect.i37.i75.i32.i32" to="tmp_s" fromId="538" toId="141">
 </dataflow>
-<dataflow id="540" from="r_V_25" to="tmp_3" fromId="140" toId="141">
+<dataflow id="540" from="r_V_26" to="tmp_s" fromId="140" toId="141">
 </dataflow>
-<dataflow id="542" from="StgValue_541" to="tmp_3" fromId="541" toId="141">
+<dataflow id="542" from="StgValue_541" to="tmp_s" fromId="541" toId="141">
 </dataflow>
-<dataflow id="544" from="StgValue_543" to="tmp_3" fromId="543" toId="141">
+<dataflow id="544" from="StgValue_543" to="tmp_s" fromId="543" toId="141">
 </dataflow>
 <dataflow id="545" from="tmp" to="xor_ln271" fromId="86" toId="142">
 </dataflow>
@@ -3280,13 +3280,13 @@
 </dataflow>
 <dataflow id="549" from="tmp" to="cos_basis" fromId="86" toId="143">
 </dataflow>
-<dataflow id="550" from="tmp_3" to="zext_ln657" fromId="141" toId="144">
+<dataflow id="550" from="tmp_s" to="zext_ln657" fromId="141" toId="144">
 </dataflow>
 <dataflow id="551" from="ret_V_14" to="ret_V_15" fromId="139" toId="145">
 </dataflow>
 <dataflow id="552" from="zext_ln657" to="ret_V_15" fromId="144" toId="145">
 </dataflow>
-<dataflow id="553" from="tmp_4" to="zext_ln657_1" fromId="134" toId="146">
+<dataflow id="553" from="tmp_54" to="zext_ln657_1" fromId="134" toId="146">
 </dataflow>
 <dataflow id="554" from="ret_V_15" to="ret_V_8" fromId="145" toId="147">
 </dataflow>
@@ -3302,21 +3302,21 @@
 </dataflow>
 <dataflow id="561" from="ret_V_8" to="sext_ln1072_2" fromId="147" toId="150">
 </dataflow>
-<dataflow id="562" from="sext_ln1072_2" to="r_V_27" fromId="150" toId="151">
+<dataflow id="562" from="sext_ln1072_2" to="r_V_28" fromId="150" toId="151">
 </dataflow>
-<dataflow id="563" from="zext_ln1070_2" to="r_V_27" fromId="149" toId="151">
+<dataflow id="563" from="zext_ln1070_2" to="r_V_28" fromId="149" toId="151">
 </dataflow>
-<dataflow id="564" from="sext_ln1072_2" to="r_V_27" fromId="150" toId="152">
+<dataflow id="564" from="sext_ln1072_2" to="r_V_28" fromId="150" toId="152">
 </dataflow>
-<dataflow id="565" from="zext_ln1070_2" to="r_V_27" fromId="149" toId="152">
+<dataflow id="565" from="zext_ln1070_2" to="r_V_28" fromId="149" toId="152">
 </dataflow>
-<dataflow id="566" from="sext_ln1072_2" to="r_V_27" fromId="150" toId="153">
+<dataflow id="566" from="sext_ln1072_2" to="r_V_28" fromId="150" toId="153">
 </dataflow>
-<dataflow id="567" from="zext_ln1070_2" to="r_V_27" fromId="149" toId="153">
+<dataflow id="567" from="zext_ln1070_2" to="r_V_28" fromId="149" toId="153">
 </dataflow>
-<dataflow id="568" from="sext_ln1072_2" to="r_V_27" fromId="150" toId="154">
+<dataflow id="568" from="sext_ln1072_2" to="r_V_28" fromId="150" toId="154">
 </dataflow>
-<dataflow id="569" from="zext_ln1070_2" to="r_V_27" fromId="149" toId="154">
+<dataflow id="569" from="zext_ln1070_2" to="r_V_28" fromId="149" toId="154">
 </dataflow>
 <dataflow id="570" from="cos_basis" to="select_ln272" fromId="143" toId="155">
 </dataflow>
@@ -3324,13 +3324,13 @@
 </dataflow>
 <dataflow id="572" from="Ex_V" to="select_ln272" fromId="70" toId="155">
 </dataflow>
-<dataflow id="573" from="sext_ln1072_2" to="r_V_27" fromId="150" toId="156">
+<dataflow id="573" from="sext_ln1072_2" to="r_V_28" fromId="150" toId="156">
 </dataflow>
-<dataflow id="574" from="zext_ln1070_2" to="r_V_27" fromId="149" toId="156">
+<dataflow id="574" from="zext_ln1070_2" to="r_V_28" fromId="149" toId="156">
 </dataflow>
 <dataflow id="576" from="_ssdm_op_PartSelect.i63.i126.i32.i32" to="result_V" fromId="575" toId="157">
 </dataflow>
-<dataflow id="577" from="r_V_27" to="result_V" fromId="156" toId="157">
+<dataflow id="577" from="r_V_28" to="result_V" fromId="156" toId="157">
 </dataflow>
 <dataflow id="578" from="StgValue_231" to="result_V" fromId="231" toId="157">
 </dataflow>
@@ -3354,29 +3354,29 @@
 </dataflow>
 <dataflow id="590" from="ret_V" to="resultf" fromId="159" toId="161">
 </dataflow>
-<dataflow id="591" from="resultf" to="p_Val2_26" fromId="161" toId="162">
+<dataflow id="591" from="resultf" to="p_Val2_32" fromId="161" toId="162">
 </dataflow>
 <dataflow id="592" from="_ssdm_op_BitSelect.i1.i64.i32" to="p_Result_26" fromId="228" toId="163">
 </dataflow>
-<dataflow id="593" from="p_Val2_26" to="p_Result_26" fromId="162" toId="163">
+<dataflow id="593" from="p_Val2_32" to="p_Result_26" fromId="162" toId="163">
 </dataflow>
 <dataflow id="594" from="StgValue_231" to="p_Result_26" fromId="231" toId="163">
 </dataflow>
-<dataflow id="595" from="_ssdm_op_PartSelect.i11.i64.i32.i32" to="tmp_V_2" fromId="233" toId="164">
+<dataflow id="595" from="_ssdm_op_PartSelect.i11.i64.i32.i32" to="tmp_V_3" fromId="233" toId="164">
 </dataflow>
-<dataflow id="596" from="p_Val2_26" to="tmp_V_2" fromId="162" toId="164">
+<dataflow id="596" from="p_Val2_32" to="tmp_V_3" fromId="162" toId="164">
 </dataflow>
-<dataflow id="597" from="StgValue_236" to="tmp_V_2" fromId="236" toId="164">
+<dataflow id="597" from="StgValue_236" to="tmp_V_3" fromId="236" toId="164">
 </dataflow>
-<dataflow id="598" from="StgValue_238" to="tmp_V_2" fromId="238" toId="164">
+<dataflow id="598" from="StgValue_238" to="tmp_V_3" fromId="238" toId="164">
 </dataflow>
-<dataflow id="599" from="p_Val2_26" to="tmp_V_3" fromId="162" toId="165">
+<dataflow id="599" from="p_Val2_32" to="tmp_V_4" fromId="162" toId="165">
 </dataflow>
 <dataflow id="601" from="_ssdm_op_BitConcatenate.i4.i1.i3" to="p_Result_27" fromId="600" toId="166">
 </dataflow>
 <dataflow id="602" from="p_Result_21" to="p_Result_27" fromId="28" toId="166">
 </dataflow>
-<dataflow id="603" from="p_Val2_31" to="p_Result_27" fromId="54" toId="166">
+<dataflow id="603" from="p_Val2_37" to="p_Result_27" fromId="54" toId="166">
 </dataflow>
 <dataflow id="605" from="_ssdm_op_Mux.ap_auto.16i1.i4" to="tmp_1" fromId="604" toId="167">
 </dataflow>
@@ -3484,7 +3484,7 @@
 </dataflow>
 <dataflow id="658" from="StgValue_373" to="select_ln311_1" fromId="373" toId="175">
 </dataflow>
-<dataflow id="659" from="tmp_V_2" to="select_ln311_1" fromId="164" toId="175">
+<dataflow id="659" from="tmp_V_3" to="select_ln311_1" fromId="164" toId="175">
 </dataflow>
 <dataflow id="660" from="and_ln300" to="ret_V_9" fromId="170" toId="176">
 </dataflow>
@@ -3514,7 +3514,7 @@
 </dataflow>
 <dataflow id="674" from="select_ln300_2" to="ret_V_10" fromId="179" toId="181">
 </dataflow>
-<dataflow id="675" from="tmp_V_3" to="ret_V_10" fromId="165" toId="181">
+<dataflow id="675" from="tmp_V_4" to="ret_V_10" fromId="165" toId="181">
 </dataflow>
 <dataflow id="677" from="_ssdm_op_SpecMemCore" to="specmemcore_ln16" fromId="676" toId="182">
 </dataflow>

@@ -11,12 +11,7 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
-#include "sin_or_cos_double_s.h"
-#include "top_level_fadd_32qcK.h"
-#include "top_level_fmul_32rcU.h"
-#include "top_level_fdiv_32sc4.h"
-#include "top_level_fptrunctde.h"
-#include "top_level_fpext_3udo.h"
+#include "update.h"
 
 namespace ap_rtl {
 
@@ -40,10 +35,6 @@ struct top_level : public sc_module {
     sc_out< sc_logic > force_z_ap_vld;
     sc_out< sc_lv<32> > angularVel;
     sc_out< sc_logic > angularVel_ap_vld;
-    sc_signal< sc_logic > ap_var_for_const0;
-    sc_signal< sc_lv<32> > ap_var_for_const1;
-    sc_signal< sc_lv<32> > ap_var_for_const2;
-    sc_signal< sc_lv<32> > ap_var_for_const3;
 
 
     // Module declarations
@@ -56,146 +47,32 @@ struct top_level : public sc_module {
 
     ofstream mHdltvinHandle;
     ofstream mHdltvoutHandle;
-    sin_or_cos_double_s* grp_sin_or_cos_double_s_fu_93;
-    sin_or_cos_double_s* grp_sin_or_cos_double_s_fu_112;
-    top_level_fadd_32qcK<1,5,32,32,32>* top_level_fadd_32qcK_U34;
-    top_level_fadd_32qcK<1,5,32,32,32>* top_level_fadd_32qcK_U35;
-    top_level_fadd_32qcK<1,5,32,32,32>* top_level_fadd_32qcK_U36;
-    top_level_fmul_32rcU<1,4,32,32,32>* top_level_fmul_32rcU_U37;
-    top_level_fmul_32rcU<1,4,32,32,32>* top_level_fmul_32rcU_U38;
-    top_level_fmul_32rcU<1,4,32,32,32>* top_level_fmul_32rcU_U39;
-    top_level_fmul_32rcU<1,4,32,32,32>* top_level_fmul_32rcU_U40;
-    top_level_fdiv_32sc4<1,16,32,32,32>* top_level_fdiv_32sc4_U41;
-    top_level_fptrunctde<1,2,64,32>* top_level_fptrunctde_U42;
-    top_level_fptrunctde<1,2,64,32>* top_level_fptrunctde_U43;
-    top_level_fpext_3udo<1,2,32,64>* top_level_fpext_3udo_U44;
-    sc_signal< sc_lv<25> > ap_CS_fsm;
+    update* grp_update_fu_103;
+    sc_signal< sc_lv<2> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
-    sc_signal< sc_lv<32> > wheel_angularVelocit;
-    sc_signal< sc_logic > ap_CS_fsm_state12;
-    sc_signal< sc_lv<64> > grp_fu_180_p1;
-    sc_signal< sc_lv<64> > x_assign_reg_205;
-    sc_signal< sc_logic > ap_CS_fsm_state13;
-    sc_signal< sc_lv<64> > grp_sin_or_cos_double_s_fu_93_ap_return;
-    sc_signal< sc_logic > ap_CS_fsm_state15;
-    sc_signal< sc_logic > grp_sin_or_cos_double_s_fu_93_ap_ready;
-    sc_signal< sc_logic > grp_sin_or_cos_double_s_fu_93_ap_done;
-    sc_signal< sc_logic > grp_sin_or_cos_double_s_fu_112_ap_ready;
-    sc_signal< sc_logic > grp_sin_or_cos_double_s_fu_112_ap_done;
-    sc_signal< bool > ap_block_state15_on_subcall_done;
-    sc_signal< sc_lv<64> > grp_sin_or_cos_double_s_fu_112_ap_return;
-    sc_signal< sc_lv<32> > grp_fu_172_p1;
-    sc_signal< sc_lv<32> > cos_steer_reg_221;
-    sc_signal< sc_logic > ap_CS_fsm_state16;
-    sc_signal< sc_lv<32> > grp_fu_176_p1;
-    sc_signal< sc_lv<32> > sin_steer_reg_226;
-    sc_signal< sc_lv<32> > grp_fu_166_p2;
-    sc_signal< sc_lv<32> > tmp_1_i_reg_232;
-    sc_signal< sc_logic > ap_CS_fsm_state17;
-    sc_signal< sc_lv<32> > grp_fu_146_p2;
-    sc_signal< sc_lv<32> > tmp_2_i_reg_242;
-    sc_signal< sc_logic > ap_CS_fsm_state20;
-    sc_signal< sc_lv<32> > grp_fu_151_p2;
-    sc_signal< sc_lv<32> > tmp_4_i_reg_247;
-    sc_signal< sc_lv<32> > grp_fu_156_p2;
-    sc_signal< sc_lv<32> > tmp_6_i_reg_253;
-    sc_signal< sc_lv<32> > grp_fu_161_p2;
-    sc_signal< sc_lv<32> > tmp_7_i_reg_258;
-    sc_signal< sc_logic > ap_CS_fsm_state21;
-    sc_signal< sc_logic > grp_sin_or_cos_double_s_fu_93_ap_start;
-    sc_signal< sc_logic > grp_sin_or_cos_double_s_fu_93_ap_idle;
-    sc_signal< sc_logic > grp_sin_or_cos_double_s_fu_93_do_cos;
-    sc_signal< sc_logic > grp_sin_or_cos_double_s_fu_112_ap_start;
-    sc_signal< sc_logic > grp_sin_or_cos_double_s_fu_112_ap_idle;
-    sc_signal< sc_logic > grp_sin_or_cos_double_s_fu_112_do_cos;
-    sc_signal< sc_logic > grp_sin_or_cos_double_s_fu_93_ap_start_reg;
-    sc_signal< sc_logic > ap_CS_fsm_state14;
-    sc_signal< sc_logic > grp_sin_or_cos_double_s_fu_112_ap_start_reg;
-    sc_signal< sc_lv<32> > grp_fu_131_p2;
-    sc_signal< sc_logic > ap_CS_fsm_state25;
-    sc_signal< sc_lv<32> > grp_fu_136_p2;
-    sc_signal< sc_lv<32> > grp_fu_141_p2;
-    sc_signal< sc_logic > grp_fu_166_ce;
-    sc_signal< sc_logic > ap_CS_fsm_state18;
-    sc_signal< sc_logic > ap_CS_fsm_state19;
-    sc_signal< sc_logic > ap_CS_fsm_state22;
-    sc_signal< sc_logic > ap_CS_fsm_state23;
-    sc_signal< sc_logic > ap_CS_fsm_state24;
-    sc_signal< sc_logic > grp_fu_172_ce;
-    sc_signal< sc_logic > grp_fu_176_ce;
-    sc_signal< sc_lv<25> > ap_NS_fsm;
+    sc_signal< sc_logic > grp_update_fu_103_ap_start;
+    sc_signal< sc_logic > grp_update_fu_103_ap_done;
+    sc_signal< sc_logic > grp_update_fu_103_ap_idle;
+    sc_signal< sc_logic > grp_update_fu_103_ap_ready;
+    sc_signal< sc_lv<32> > grp_update_fu_103_ap_return_0;
+    sc_signal< sc_lv<32> > grp_update_fu_103_ap_return_1;
+    sc_signal< sc_lv<32> > grp_update_fu_103_ap_return_2;
+    sc_signal< sc_logic > grp_update_fu_103_ap_start_reg;
+    sc_signal< sc_logic > ap_CS_fsm_state2;
+    sc_signal< sc_lv<2> > ap_NS_fsm;
     static const sc_logic ap_const_logic_1;
     static const sc_logic ap_const_logic_0;
-    static const sc_lv<25> ap_ST_fsm_state1;
-    static const sc_lv<25> ap_ST_fsm_state2;
-    static const sc_lv<25> ap_ST_fsm_state3;
-    static const sc_lv<25> ap_ST_fsm_state4;
-    static const sc_lv<25> ap_ST_fsm_state5;
-    static const sc_lv<25> ap_ST_fsm_state6;
-    static const sc_lv<25> ap_ST_fsm_state7;
-    static const sc_lv<25> ap_ST_fsm_state8;
-    static const sc_lv<25> ap_ST_fsm_state9;
-    static const sc_lv<25> ap_ST_fsm_state10;
-    static const sc_lv<25> ap_ST_fsm_state11;
-    static const sc_lv<25> ap_ST_fsm_state12;
-    static const sc_lv<25> ap_ST_fsm_state13;
-    static const sc_lv<25> ap_ST_fsm_state14;
-    static const sc_lv<25> ap_ST_fsm_state15;
-    static const sc_lv<25> ap_ST_fsm_state16;
-    static const sc_lv<25> ap_ST_fsm_state17;
-    static const sc_lv<25> ap_ST_fsm_state18;
-    static const sc_lv<25> ap_ST_fsm_state19;
-    static const sc_lv<25> ap_ST_fsm_state20;
-    static const sc_lv<25> ap_ST_fsm_state21;
-    static const sc_lv<25> ap_ST_fsm_state22;
-    static const sc_lv<25> ap_ST_fsm_state23;
-    static const sc_lv<25> ap_ST_fsm_state24;
-    static const sc_lv<25> ap_ST_fsm_state25;
+    static const sc_lv<2> ap_ST_fsm_state1;
+    static const sc_lv<2> ap_ST_fsm_state2;
     static const sc_lv<32> ap_const_lv32_0;
+    static const sc_lv<32> ap_const_lv32_1;
     static const bool ap_const_boolean_1;
-    static const sc_lv<32> ap_const_lv32_B;
-    static const sc_lv<32> ap_const_lv32_C;
-    static const sc_lv<32> ap_const_lv32_E;
-    static const bool ap_const_boolean_0;
-    static const sc_lv<32> ap_const_lv32_F;
-    static const sc_lv<32> ap_const_lv32_10;
-    static const sc_lv<32> ap_const_lv32_13;
-    static const sc_lv<32> ap_const_lv32_14;
-    static const sc_lv<32> ap_const_lv32_D;
-    static const sc_lv<1> ap_const_lv1_1;
-    static const sc_lv<1> ap_const_lv1_0;
-    static const sc_lv<32> ap_const_lv32_18;
-    static const sc_lv<32> ap_const_lv32_80000000;
-    static const sc_lv<32> ap_const_lv32_40A00000;
-    static const sc_lv<32> ap_const_lv32_11;
-    static const sc_lv<32> ap_const_lv32_12;
-    static const sc_lv<32> ap_const_lv32_15;
-    static const sc_lv<32> ap_const_lv32_16;
-    static const sc_lv<32> ap_const_lv32_17;
     // Thread declarations
-    void thread_ap_var_for_const0();
-    void thread_ap_var_for_const1();
-    void thread_ap_var_for_const2();
-    void thread_ap_var_for_const3();
     void thread_ap_clk_no_reset_();
     void thread_angularVel();
     void thread_angularVel_ap_vld();
     void thread_ap_CS_fsm_state1();
-    void thread_ap_CS_fsm_state12();
-    void thread_ap_CS_fsm_state13();
-    void thread_ap_CS_fsm_state14();
-    void thread_ap_CS_fsm_state15();
-    void thread_ap_CS_fsm_state16();
-    void thread_ap_CS_fsm_state17();
-    void thread_ap_CS_fsm_state18();
-    void thread_ap_CS_fsm_state19();
-    void thread_ap_CS_fsm_state20();
-    void thread_ap_CS_fsm_state21();
-    void thread_ap_CS_fsm_state22();
-    void thread_ap_CS_fsm_state23();
-    void thread_ap_CS_fsm_state24();
-    void thread_ap_CS_fsm_state25();
-    void thread_ap_block_state15_on_subcall_done();
+    void thread_ap_CS_fsm_state2();
     void thread_ap_done();
     void thread_ap_idle();
     void thread_ap_ready();
@@ -203,13 +80,7 @@ struct top_level : public sc_module {
     void thread_force_x_ap_vld();
     void thread_force_z();
     void thread_force_z_ap_vld();
-    void thread_grp_fu_166_ce();
-    void thread_grp_fu_172_ce();
-    void thread_grp_fu_176_ce();
-    void thread_grp_sin_or_cos_double_s_fu_112_ap_start();
-    void thread_grp_sin_or_cos_double_s_fu_112_do_cos();
-    void thread_grp_sin_or_cos_double_s_fu_93_ap_start();
-    void thread_grp_sin_or_cos_double_s_fu_93_do_cos();
+    void thread_grp_update_fu_103_ap_start();
     void thread_ap_NS_fsm();
     void thread_hdltv_gen();
 };

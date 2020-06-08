@@ -1,4 +1,4 @@
-INFO-FLOW: Workspace D:/Dev/Repos/CarSimOnFPGA/solution1 opened at Wed Jun 03 18:18:10 +0300 2020
+INFO-FLOW: Workspace D:/Dev/Repos/CarSimOnFPGA/solution1 opened at Sat Jun 06 18:23:47 +0300 2020
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -40,11 +40,11 @@ Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interfac
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.2 sec.
+Command         ap_source done; 0.182 sec.
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.321 sec.
-Command     ap_source done; 0.322 sec.
+Command       ap_source done; 0.275 sec.
+Command     ap_source done; 0.275 sec.
 Execute     open_platform DefaultPlatform 
 Execute     import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6 
 Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
@@ -59,7 +59,7 @@ Execute     source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fp
 Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
 Execute     set_part xc7z010-clg400-1 
 Execute       ap_part_info -name xc7z010-clg400-1 -data single -quiet 
-Command       ap_part_info done; 2.069 sec.
+Command       ap_part_info done; 1.741 sec.
 Execute       ap_part_info -name xc7z010-clg400-1 -data info 
 Execute       add_library xilinx/zynq/zynq:xc7z010:-clg400:-1 
 Execute         get_default_platform 
@@ -77,7 +77,7 @@ Execute         get_default_platform
 INFO: [HLS 200-10] Setting target device to 'xc7z010-clg400-1'
 Execute       ap_part_info -name xc7z010-clg400-1 -data info 
 Execute       get_default_platform 
-Command     set_part done; 2.393 sec.
+Command     set_part done; 1.962 sec.
 Execute     ap_part_info -data single -name xc7z010-clg400-1 
 Execute     ap_part_info -name xc7z010-clg400-1 -data resources 
 Execute     ap_part_info -name xc7z010-clg400-1 -data info 
@@ -87,7 +87,7 @@ Execute     ap_part_info -name xc7z010-clg400-1 -data info
 Execute     config_chip_info -quiet -speed slow 
 Execute     config_export -format=sysgen 
 Execute     config_export -rtl=vhdl 
-Command   open_solution done; 2.915 sec.
+Command   open_solution done; 2.381 sec.
 Execute   set_part xc7z010-clg400-1 -tool vivado 
 Execute     ap_part_info -name xc7z010-clg400-1 -data single -quiet 
 Execute     ap_part_info -name xc7z010-clg400-1 -data info 
@@ -106,7 +106,7 @@ Execute     add_library xilinx/zynq/zynq_fpv6
 Execute       get_default_platform 
 Execute     ap_part_info -name xc7z010-clg400-1 -data info 
 Execute     get_default_platform 
-Command   set_part done; 0.329 sec.
+Command   set_part done; 0.208 sec.
 Execute   create_clock -period 10 -name default 
 Execute   config_export -format sysgen -rtl vhdl 
 Execute   csynth_design 
@@ -124,139 +124,6 @@ Execute     elaborate -effort=medium -skip_syncheck=0 -keep_printf=0 -skip_cdt=0
 Execute       get_config_schedule -relax_ii_for_timing 
 INFO: [SCHED 204-61] Option 'relax_ii_for_timing' is enabled, will increase II to preserve clock frequency constraints.
 Execute       get_config_schedule -suppress_dependence_error_break 
-INFO: [HLS 200-10] Analyzing design file 'CarSimOnFPGA/Car.cpp' ... 
-INFO-FLOW: Compiling one TU...
-Execute       is_m_axi_addr64 
-INFO-FLOW: Handling CarSimOnFPGA/Car.cpp as C++
-Execute       ap_part_info -name xc7z010-clg400-1 -data info 
-Execute       is_encrypted CarSimOnFPGA/Car.cpp 
-Execute       ap_part_info -name xc7z010-clg400-1 -data info 
-INFO-FLOW: Running: GCC PP
-INFO-FLOW: Source preprocessing
-Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "CarSimOnFPGA/Car.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-exceptions -D__llvm__ -E CarSimOnFPGA/Car.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp
-Command       clang done; 2.344 sec.
-Execute       tidy_31 xilinx-xfmat-array-geometry D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp std=gnu++98 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 0.119 sec.
-INFO-FLOW: Syntax Checking before pre-processing...
-Execute       clang -syntaxcheck -src D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp"  -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/useless.bc"  
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/useless.bc
-Command       clang done; 2.333 sec.
-INFO-FLOW: Done: GCC PP time: 4.8 seconds per iteration
-Execute       source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
-Execute       source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
-Execute         source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/try/try.tcl 
-Execute       list_core -type functional_unit 
-Execute       tidy_31 xilinx-systemc-detector D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp std=gnu++98 -directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/.systemc_flag 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-INFO-FLOW: Running: tidy-3.1 CDT preprocess
-Execute       tidy_31 xilinx-directive2pragma D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp std=gnu++98 -directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/all.directive.json 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/all.directive.json -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Execute       get_config_dataflow -strict_mode 
-Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-dataflow-lawyer.Car.pp.0.cpp.diag.yml D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-dataflow-lawyer.Car.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-dataflow-lawyer.Car.pp.0.cpp.err.log 
-Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp std=gnu++98 
-Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.Car.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.Car.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.Car.pp.0.cpp.err.log 
-Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-legacy-rewriter.Car.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-legacy-rewriter.Car.pp.0.cpp.err.log 
-Command       tidy_31 done; 0.147 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.3 seconds per iteration
-INFO-FLOW: Pragma Handling...
-Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pragma.1.cpp std=gnu++98 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Execute       ap_part_info -name xc7z010-clg400-1 -data info 
-INFO-FLOW: Processing labels
-Execute       clang -src D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.bc" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.bc
-Command       clang done; 2.339 sec.
-INFO: [HLS 200-10] Analyzing design file 'CarSimOnFPGA/Chassis.cpp' ... 
-INFO-FLOW: Compiling one TU...
-Execute       is_m_axi_addr64 
-INFO-FLOW: Handling CarSimOnFPGA/Chassis.cpp as C++
-Execute       ap_part_info -name xc7z010-clg400-1 -data info 
-Execute       is_encrypted CarSimOnFPGA/Chassis.cpp 
-Execute       ap_part_info -name xc7z010-clg400-1 -data info 
-INFO-FLOW: Running: GCC PP
-INFO-FLOW: Source preprocessing
-Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "CarSimOnFPGA/Chassis.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-exceptions -D__llvm__ -E CarSimOnFPGA/Chassis.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp
-Command       clang done; 2.333 sec.
-Execute       tidy_31 xilinx-xfmat-array-geometry D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp std=gnu++98 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-INFO-FLOW: Syntax Checking before pre-processing...
-Execute       clang -syntaxcheck -src D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp"  -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/useless.bc"  
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/useless.bc
-Command       clang done; 2.313 sec.
-INFO-FLOW: Done: GCC PP time: 4.7 seconds per iteration
-Execute       list_core -type functional_unit 
-Execute       tidy_31 xilinx-systemc-detector D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp std=gnu++98 -directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/.systemc_flag 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-INFO-FLOW: Running: tidy-3.1 CDT preprocess
-Execute       tidy_31 xilinx-directive2pragma D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp std=gnu++98 -directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/all.directive.json 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/all.directive.json -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Execute       get_config_dataflow -strict_mode 
-Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-dataflow-lawyer.Chassis.pp.0.cpp.diag.yml D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-dataflow-lawyer.Chassis.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-dataflow-lawyer.Chassis.pp.0.cpp.err.log 
-Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp std=gnu++98 
-Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.Chassis.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.Chassis.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.Chassis.pp.0.cpp.err.log 
-Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-legacy-rewriter.Chassis.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-legacy-rewriter.Chassis.pp.0.cpp.err.log 
-Command       tidy_31 done; 0.164 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.3 seconds per iteration
-INFO-FLOW: Pragma Handling...
-Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pragma.1.cpp std=gnu++98 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Execute       ap_part_info -name xc7z010-clg400-1 -data info 
-INFO-FLOW: Processing labels
-Execute       clang -src D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.bc" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.bc
-Command       clang done; 2.367 sec.
-INFO: [HLS 200-10] Analyzing design file 'CarSimOnFPGA/Wheel.cpp' ... 
-INFO-FLOW: Compiling one TU...
-Execute       is_m_axi_addr64 
-INFO-FLOW: Handling CarSimOnFPGA/Wheel.cpp as C++
-Execute       ap_part_info -name xc7z010-clg400-1 -data info 
-Execute       is_encrypted CarSimOnFPGA/Wheel.cpp 
-Execute       ap_part_info -name xc7z010-clg400-1 -data info 
-INFO-FLOW: Running: GCC PP
-INFO-FLOW: Source preprocessing
-Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "CarSimOnFPGA/Wheel.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-exceptions -D__llvm__ -E CarSimOnFPGA/Wheel.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp
-Command       clang done; 2.509 sec.
-Execute       tidy_31 xilinx-xfmat-array-geometry D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp std=gnu++98 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 2.304 sec.
-INFO-FLOW: Syntax Checking before pre-processing...
-Execute       clang -syntaxcheck -src D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp"  -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/useless.bc"  
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/useless.bc
-Command       clang done; 7.483 sec.
-INFO-FLOW: Done: GCC PP time: 12.3 seconds per iteration
-Execute       list_core -type functional_unit 
-Execute       tidy_31 xilinx-systemc-detector D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp std=gnu++98 -directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/.systemc_flag 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 2.137 sec.
-INFO-FLOW: Running: tidy-3.1 CDT preprocess
-Execute       tidy_31 xilinx-directive2pragma D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp std=gnu++98 -directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/all.directive.json 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/all.directive.json -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 1.944 sec.
-Execute       get_config_dataflow -strict_mode 
-Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-dataflow-lawyer.Wheel.pp.0.cpp.diag.yml D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-dataflow-lawyer.Wheel.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-dataflow-lawyer.Wheel.pp.0.cpp.err.log 
-Command       ap_eval done; 1.241 sec.
-Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp std=gnu++98 
-Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.Wheel.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.Wheel.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.Wheel.pp.0.cpp.err.log 
-Command         ap_eval done; 2.33 sec.
-Execute         source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
-Execute           source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
-Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-legacy-rewriter.Wheel.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-legacy-rewriter.Wheel.pp.0.cpp.err.log 
-Command         ap_eval done; 1.257 sec.
-Command       tidy_31 done; 3.665 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 6.9 seconds per iteration
-INFO-FLOW: Pragma Handling...
-Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pragma.1.cpp std=gnu++98 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
-Command       tidy_31 done; 2.338 sec.
-Execute       ap_part_info -name xc7z010-clg400-1 -data info 
-INFO-FLOW: Processing labels
-Execute       clang -src D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.bc" 
-INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.bc
-Command       clang done; 7.353 sec.
 INFO: [HLS 200-10] Analyzing design file 'CarSimOnFPGA/top_level.cpp' ... 
 INFO-FLOW: Compiling one TU...
 Execute       is_m_axi_addr64 
@@ -268,14 +135,17 @@ INFO-FLOW: Running: GCC PP
 INFO-FLOW: Source preprocessing
 Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "CarSimOnFPGA/top_level.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.pp.0.cpp" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-exceptions -D__llvm__ -E CarSimOnFPGA/top_level.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.pp.0.cpp
-Command       clang done; 2.329 sec.
+Command       clang done; 2.346 sec.
 Execute       tidy_31 xilinx-xfmat-array-geometry D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.pp.0.cpp std=gnu++98 
 INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
 INFO-FLOW: Syntax Checking before pre-processing...
 Execute       clang -syntaxcheck -src D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.pp.0.cpp"  -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/useless.bc"  
 INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.pp.0.cpp -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/useless.bc
-Command       clang done; 2.365 sec.
-INFO-FLOW: Done: GCC PP time: 4.8 seconds per iteration
+Command       clang done; 2.242 sec.
+INFO-FLOW: Done: GCC PP time: 4.7 seconds per iteration
+Execute       source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/huddle.tcl 
+Execute       source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/json2huddle.tcl 
+Execute         source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/try/try.tcl 
 Execute       list_core -type functional_unit 
 Execute       tidy_31 xilinx-systemc-detector D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.pp.0.cpp std=gnu++98 -directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/.systemc_flag 
 INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
@@ -287,8 +157,8 @@ Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/cla
 Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.pp.0.cpp std=gnu++98 
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.top_level.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.top_level.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.top_level.pp.0.cpp.err.log 
 Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-legacy-rewriter.top_level.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-legacy-rewriter.top_level.pp.0.cpp.err.log 
-Command       tidy_31 done; 0.177 sec.
-INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.4 seconds per iteration
+Command       tidy_31 done; 0.139 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.3 seconds per iteration
 INFO-FLOW: Pragma Handling...
 Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.pragma.1.cpp std=gnu++98 
 INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
@@ -296,25 +166,154 @@ Execute       ap_part_info -name xc7z010-clg400-1 -data info
 INFO-FLOW: Processing labels
 Execute       clang -src D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.bc" 
 INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.bc
-Command       clang done; 2.4 sec.
+Command       clang done; 2.229 sec.
+INFO: [HLS 200-10] Analyzing design file 'CarSimOnFPGA/Wheel.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling CarSimOnFPGA/Wheel.cpp as C++
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+Execute       is_encrypted CarSimOnFPGA/Wheel.cpp 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "CarSimOnFPGA/Wheel.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-exceptions -D__llvm__ -E CarSimOnFPGA/Wheel.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp
+Command       clang done; 2.457 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.818 sec.
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp"  -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/useless.bc
+Command       clang done; 6.433 sec.
+INFO-FLOW: Done: GCC PP time: 10.7 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp std=gnu++98 -directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.714 sec.
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp std=gnu++98 -directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/all.directive.json -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 1.692 sec.
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-dataflow-lawyer.Wheel.pp.0.cpp.diag.yml D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-dataflow-lawyer.Wheel.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-dataflow-lawyer.Wheel.pp.0.cpp.err.log 
+Command       ap_eval done; 1.026 sec.
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.Wheel.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.Wheel.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.Wheel.pp.0.cpp.err.log 
+Command         ap_eval done; 1.997 sec.
+Execute         source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/yaml/yaml.tcl 
+Execute           source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/cmdline/cmdline.tcl 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-legacy-rewriter.Wheel.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-legacy-rewriter.Wheel.pp.0.cpp.err.log 
+Command         ap_eval done; 1.065 sec.
+Command       tidy_31 done; 3.113 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 5.9 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Command       tidy_31 done; 2.019 sec.
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.bc" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.bc
+Command       clang done; 6.441 sec.
+INFO: [HLS 200-10] Analyzing design file 'CarSimOnFPGA/Chassis.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling CarSimOnFPGA/Chassis.cpp as C++
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+Execute       is_encrypted CarSimOnFPGA/Chassis.cpp 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "CarSimOnFPGA/Chassis.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-exceptions -D__llvm__ -E CarSimOnFPGA/Chassis.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp
+Command       clang done; 2.222 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp"  -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/useless.bc
+Command       clang done; 2.22 sec.
+INFO-FLOW: Done: GCC PP time: 4.5 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp std=gnu++98 -directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp std=gnu++98 -directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/all.directive.json -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-dataflow-lawyer.Chassis.pp.0.cpp.diag.yml D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-dataflow-lawyer.Chassis.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-dataflow-lawyer.Chassis.pp.0.cpp.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.Chassis.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.Chassis.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.Chassis.pp.0.cpp.err.log 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-legacy-rewriter.Chassis.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-legacy-rewriter.Chassis.pp.0.cpp.err.log 
+Command       tidy_31 done; 0.134 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.3 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.bc" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.bc
+Command       clang done; 2.268 sec.
+INFO: [HLS 200-10] Analyzing design file 'CarSimOnFPGA/Car.cpp' ... 
+INFO-FLOW: Compiling one TU...
+Execute       is_m_axi_addr64 
+INFO-FLOW: Handling CarSimOnFPGA/Car.cpp as C++
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+Execute       is_encrypted CarSimOnFPGA/Car.cpp 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+INFO-FLOW: Running: GCC PP
+INFO-FLOW: Source preprocessing
+Execute       clang  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls  -fno-exceptions  -D__llvm__  -E "CarSimOnFPGA/Car.cpp"     -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-exceptions -D__llvm__ -E CarSimOnFPGA/Car.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp
+Command       clang done; 2.216 sec.
+Execute       tidy_31 xilinx-xfmat-array-geometry D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-xfmat-array-geometry -quiet -fix D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: Syntax Checking before pre-processing...
+Execute       clang -syntaxcheck -src D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp  -fno-limit-debug-info -gcc-toolchain "C:/Xilinx/Vivado/2019.1/msys" -hls    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit  -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__  "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp"  -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/useless.bc"  
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -fno-threadsafe-statics -fno-use-cxa-atexit -D__CLANG_3_1__ -D__cdecl= -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/useless.bc
+Command       clang done; 2.223 sec.
+INFO-FLOW: Done: GCC PP time: 4.5 seconds per iteration
+Execute       list_core -type functional_unit 
+Execute       tidy_31 xilinx-systemc-detector D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp std=gnu++98 -directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/.systemc_flag 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-systemc-detector -import-directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/.systemc_flag -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+INFO-FLOW: Running: tidy-3.1 CDT preprocess
+Execute       tidy_31 xilinx-directive2pragma D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp std=gnu++98 -directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/all.directive.json 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-directive2pragma -import-directive=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/all.directive.json -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Execute       get_config_dataflow -strict_mode 
+Execute       ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-dataflow-lawyer -export-fixes=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-dataflow-lawyer.Car.pp.0.cpp.diag.yml D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 -fstrict-dataflow > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-dataflow-lawyer.Car.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-dataflow-lawyer.Car.pp.0.cpp.err.log 
+Execute       tidy_31 -errorcheck xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp std=gnu++98 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -export-fixes=D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.Car.pp.0.cpp.diag.yml -header-filter=.* -checks=-*,xilinx-constantarray-param,xilinx-resource-pragma-transformer,xilinx-xfmat-array-geometry -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.Car.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/tidy-3.1.Car.pp.0.cpp.err.log 
+Execute         ap_eval exec -ignorestderr C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/xilinx-legacy-rewriter D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pp.0.cpp -- -std=gnu++98 -fhls -ferror-limit=0 > D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-legacy-rewriter.Car.pp.0.cpp.out.log 2> D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/xilinx-legacy-rewriter.Car.pp.0.cpp.err.log 
+Command       tidy_31 done; 0.137 sec.
+INFO-FLOW: Done: tidy-3.1 CDT preprocess time: 0.3 seconds per iteration
+INFO-FLOW: Pragma Handling...
+Execute       tidy_31 xilinx-ssdm-intrinsics-arguments D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pragma.1.cpp std=gnu++98 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang-3.9-csynth/bin/tidy-3.1 -header-filter=.* -checks=-*,xilinx-ssdm-intrinsics-arguments -quiet -fix-errors D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pragma.1.cpp -- -std=gnu++98 -fhls -ferror-limit=0
+Execute       ap_part_info -name xc7z010-clg400-1 -data info 
+INFO-FLOW: Processing labels
+Execute       clang -src D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pragma.2.cpp  -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions  -D__llvm__  -w  "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pragma.2.cpp"    -fno-math-errno -c -emit-llvm -O0  -mllvm -disable-llvm-optzns -fno-threadsafe-statics  -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot" -I "C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc" -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o "D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.bc" 
+INFO-FLOW: exec C:/Xilinx/Vivado/2019.1/win64/tools/clang/bin/clang -fno-limit-debug-info -gcc-toolchain C:/Xilinx/Vivado/2019.1/msys -hls -hls-analyze-label -hls-analyze-pragma -fno-exceptions -D__llvm__ -w D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.pragma.2.cpp -fno-math-errno -c -emit-llvm -O0 -mllvm -disable-llvm-optzns -fno-threadsafe-statics -fno-use-cxa-atexit -DAESL_SYN -D__SYNTHESIS__ -D__HLS_SYN__ -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot -I C:/Xilinx/Vivado/2019.1/common/technology/autopilot/ap_sysc -include etc/autopilot_ssdm_op.h -D__DSP48E1__ -g -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.bc
+Command       clang done; 2.218 sec.
 INFO-FLOW: Linking Debug ...
-Execute       llvm-ld D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.g.bc D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.g.bc D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.g.bc D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.g.bc -hls-opt -except-internalize top_level -LC:/Xilinx/Vivado/2019.1/win64/lib -lhlsm -lhlsmc++ -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/a.g 
-Command       llvm-ld done; 4.862 sec.
-INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:05 ; elapsed = 00:01:04 . Memory (MB): peak = 185.965 ; gain = 94.988
-INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:05 ; elapsed = 00:01:04 . Memory (MB): peak = 185.965 ; gain = 94.988
+Execute       llvm-ld D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.g.bc D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Wheel.g.bc D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Chassis.g.bc D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/Car.g.bc -hls-opt -except-internalize top_level -LC:/Xilinx/Vivado/2019.1/win64/lib -lhlsm -lhlsmc++ -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/a.g 
+Command       llvm-ld done; 4.004 sec.
+INFO: [HLS 200-111] Finished Linking Time (s): cpu = 00:00:04 ; elapsed = 00:00:57 . Memory (MB): peak = 185.270 ; gain = 95.117
+INFO: [HLS 200-111] Finished Checking Pragmas Time (s): cpu = 00:00:04 ; elapsed = 00:00:57 . Memory (MB): peak = 185.270 ; gain = 95.117
 Execute       get_config_sdx -target 
 Execute       opt_and_import_c a -opt_level=2 -skip_syncheck=0 -ng=0 -keep_printf=0 
 Execute         cleanup_all_models 
 INFO: [HLS 200-10] Starting code transformations ...
 Execute         transform -promote-dbg-pointer D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/a.pp.bc -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/a.pp.0.bc -f 
-Command         transform done; 1.311 sec.
+Command         transform done; 0.994 sec.
 Execute         llvm-ld D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/a.pp.0.bc -disable-opt -LC:/Xilinx/Vivado/2019.1/win64/lib -lfloatconversion -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/a.g.0 
-Command         llvm-ld done; 5.141 sec.
+Command         llvm-ld done; 4.173 sec.
 INFO-FLOW: Running Standard Transforms...
 Execute         transform -hls -share-std-xform -demangle-name -inline-byval-memcpy -always-inline -promote-dbg-pointer -interface-preproc -mem2reg -scalarrepl -mem2reg -keep-read-access -instcombine -dce -promote-dbg-pointer -bitop-raise -loop-simplify -indvarspre -indvars -loop-simplify -xunroll -constprop -instcombine -simplifycfg -indvars -simplifycfg -dce -globaldce -basicaa -simplifycfg -mem2reg -globalopt -global-constprop -deadargelim -instcombine -simplifycfg -prune-eh -simplifycfg -scalarrepl -instcombine -reassociate -licm -simplifycfg -loop-simplify -indvars -instcombine -simplifycfg -mem2reg -loop-simplify -indvars -instcombine -gvn -gvn -instcombine -adce -break-crit-edges -simplifycfg -loop-delete -global-array-opt -dce -dse -adce -find-syn-modules -top top_level -deadargelim -mem2reg -instcombine -dce -presyn-prepare -auto-rom-infer -interface-preproc -syn-check -check-rec-only -find-region -simplifycfg -func-extr -function-inline -globaldce -mem2reg -instcombine -dce -gvn -globaldce -adce -adse -constprop -instcombine -bit-constprop -instcombine -dce -simplifycfg -bitop-raise -simplifycfg -dce -loop-delete -reassociate -globalopt -global-privatize -mem2reg -dce -global-constprop -pointer-simplify -constprop -dce -func-inst -deadargelim -auto-shift-reg-idiom -promote-dbg-pointer -norm-name D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/a.g.0.bc -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/a.g.1.bc -f -phase std-opt 
 INFO: [XFORM 203-603] Inlining function 'cordic_::cordic_circ_v1<88, 1, 0, 0, 88, 3, 86, 1>' into 'cordic_::atan_generic<double>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:620).
-Command         transform done; 5.869 sec.
-INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:12 ; elapsed = 00:01:17 . Memory (MB): peak = 326.426 ; gain = 235.449
+Command         transform done; 4.534 sec.
+INFO: [HLS 200-111] Finished Standard Transforms Time (s): cpu = 00:00:09 ; elapsed = 00:01:07 . Memory (MB): peak = 327.074 ; gain = 236.922
 INFO: [HLS 200-10] Checking synthesizability ...
 INFO-FLOW: Checking Synthesizability 1/2..
 Execute         transform -hls -syn-check -check-rec-only -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -function-uniquify -directive-preproc -mem2reg -dse -dce -auto-rom-infer -dce -pag -array-normalize -instcombine -dce -warn-fifo-pointer -array-seg-normalize -instcombine -dce -array-flatten -instcombine -dce -array-burst -dce -deadargelim -promote-global-argument -simplifycfg -mem2reg -globaldce -dce -deadargelim -dce -instcombine -function-inline -globaldce -dce -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -dse -adse -instcombine -ptrLegalization -simplifycfg -dce -instcombine -pointer-simplify -ptrArgReplace -dce -instcombine -resolve-double-ptr -disaggr -scalarrepl -norm-name -dce -mem2reg -instcombine -ptrLegalization -simplifycfg -deadargelim -instcombine -dce -inst-simplify -function-uniquify -directive-preproc -mem2reg -dse -dce -globaldce -check-dspbuiltin D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/a.g.1.bc -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/a.g.2.prechk.bc -f 
@@ -352,13 +351,13 @@ INFO: [XFORM 203-602] Inlining function 'cos' into 'Wheel::update' (CarSimOnFPGA
 INFO: [XFORM 203-602] Inlining function 'sin' into 'Wheel::update' (CarSimOnFPGA/Wheel.cpp:23) automatically.
 INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'Wheel::update' (CarSimOnFPGA/Wheel.cpp:33) automatically.
 INFO: [XFORM 203-602] Inlining function 'atan' into 'Wheel::update' (CarSimOnFPGA/Wheel.cpp:34) automatically.
-Command         transform done; 2.299 sec.
+Command         transform done; 1.787 sec.
 INFO-FLOW: Checking Synthesizability 2/2..
 Execute         transform -syn-check D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/a.g.2.prechk.bc -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/a.g.2.bc -f -phase syn-check 
 WARNING: [SYNCHK 200-23] r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:425: variable-indexed range selection may cause suboptimal QoR.
 INFO: [SYNCHK 200-10] 0 error(s), 1 warning(s).
-Command         transform done; 0.99 sec.
-INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:14 ; elapsed = 00:01:20 . Memory (MB): peak = 399.770 ; gain = 308.793
+Command         transform done; 0.825 sec.
+INFO: [HLS 200-111] Finished Checking Synthesizability Time (s): cpu = 00:00:11 ; elapsed = 00:01:09 . Memory (MB): peak = 400.223 ; gain = 310.070
 INFO-FLOW: Compiler optimizing ...
 INFO-FLOW: Share syncheck's 1.bc for syn flow: copy D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/a.g.1.bc to D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/a.o.1.bc
 INFO-FLOW: Presyn 1...
@@ -389,47 +388,79 @@ INFO: [XFORM 203-602] Inlining function 'hotbm_::value_list<double>::sin_or_cos_
 INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'hotbm_::sin_or_cos<double>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:316) automatically.
 INFO: [XFORM 203-602] Inlining function 'hotbm_::cos' into 'cos' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/sincosdouble.cpp:13) automatically.
 INFO: [XFORM 203-602] Inlining function 'hotbm_::sin' into 'sin' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/sincosdouble.cpp:8) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::mantissa' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::expv' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<float>::__signbit' into 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, (ap_q_mode)6, float>' into 'generic_cast_IEEE754<int, float>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_cast_IEEE754<int, float>' into '__hls_fptosi_float_i32' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'generic_nan<double>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint/hls_nan.h:15) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZN9fp_structIdEC1Ed4' into 'cordic_::atan_generic<double>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:578) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZNK9fp_structIdE4expvEv8' into 'cordic_::atan_generic<double>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:606) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZNK9fp_structIdE8mantissaEv6' into 'cordic_::atan_generic<double>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:607) automatically.
+INFO: [XFORM 203-602] Inlining function 'cordic_::addsub<0, 0, ap_fixed<88, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<88, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_uint<1> >' into 'cordic_::atan_generic<double>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:189->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:620) automatically.
+INFO: [XFORM 203-602] Inlining function 'cordic_::addsub<0, 0, ap_fixed<88, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<88, 3, (ap_q_mode)5, (ap_o_mode)3, 0>, bool>' into 'cordic_::atan_generic<double>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:191->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:620) automatically.
+INFO: [XFORM 203-602] Inlining function 'cordic_::addsub<0, 0, ap_fixed<86, 1, (ap_q_mode)5, (ap_o_mode)3, 0>, ap_fixed<86, 1, (ap_q_mode)0, (ap_o_mode)3, 0>, ap_uint<1> >' into 'cordic_::atan_generic<double>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:193->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:620) automatically.
+INFO: [XFORM 203-602] Inlining function '_ZN9fp_structIdEC1Ed4' into 'cordic_::atan_cordic<double>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:630) automatically.
+INFO: [XFORM 203-602] Inlining function 'fp_struct<double>::to_ieee' into 'cordic_::atan_cordic<double>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:633) automatically.
+INFO: [XFORM 203-602] Inlining function 'generic_nan<double>' into 'cordic_::atan_cordic<double>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:642) automatically.
+INFO: [XFORM 203-602] Inlining function 'cordic_::atan_cordic<double>' into 'atan' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8) automatically.
 INFO: [XFORM 203-602] Inlining function 'cos' into 'Wheel::update' (CarSimOnFPGA/Wheel.cpp:22) automatically.
 INFO: [XFORM 203-602] Inlining function 'sin' into 'Wheel::update' (CarSimOnFPGA/Wheel.cpp:23) automatically.
-INFO: [XFORM 203-602] Inlining function 'Wheel::update' into 'top_level' (CarSimOnFPGA/top_level.cpp:15) automatically.
-Command         transform done; 3.134 sec.
+INFO: [XFORM 203-602] Inlining function '__hls_fptosi_float_i32' into 'Wheel::update' (CarSimOnFPGA/Wheel.cpp:33) automatically.
+Command         transform done; 3.125 sec.
 INFO-FLOW: Presyn 2...
 Execute         transform -hls -keep-callgraph -scalarrepl -mem2reg -port-alignment -attach-range -dce -pipe-mux-gen -indvars -loop-bound -inst-simplify -instcombine -dce -merge-array-access -mem2reg -dce -clean-region -mergereturn -if-conv -instcombine -dce -constprop -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -gvn -gvn -basicaa -aggr-aa -aggrmodref-aa -aggr-aa -dse -adse -adce -scalarrepl -mem2reg -global-constprop -deadargelim -deadargelim -instcombine -dce -simplifycfg -ptrArgReplace -mem2reg -function-inline -globaldce -mem2reg -instcombine -dce -expr-balance -instcombine -dce -bitwidthmin -interface-preproc -directive-preproc -inst-rectify -instcombine -dce -functionattrs -constprop -instcombine -bit-constprop -simplify-global-access -globalopt -globaldce -inst-simplify -instcombine -elimdeaddata -dce -loop-delete -simplifycfg -loop-simplify -auto-burst -norm-name D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/a.o.1.tmp.bc -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/a.o.2.bc -f -phase presyn 
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:452:51) to (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:467:1) in function 'scaled_fixed2ieee<63, 1>'... converting 3 basic blocks.
 INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:238:18) to (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:316:12) in function 'hotbm_::sin_or_cos<double>'... converting 9 basic blocks.
-Command         transform done; 1.118 sec.
-INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:18 ; elapsed = 00:01:24 . Memory (MB): peak = 506.957 ; gain = 415.980
+INFO: [XFORM 203-401] Performing if-conversion on hyperblock from (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:622:9) to (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:622:9) in function 'cordic_::atan_generic<double>'... converting 10 basic blocks.
+Command         transform done; 1.389 sec.
+INFO: [HLS 200-111] Finished Pre-synthesis Time (s): cpu = 00:00:15 ; elapsed = 00:01:14 . Memory (MB): peak = 522.270 ; gain = 432.117
 INFO-FLOW: Building ssdm...
 Execute         transform -hls -function-uniquify -auto-function-inline -globaldce -ptrArgReplace -mem2reg -dce -reset-lda -loop-simplify -indvars -licm -loop-dep -loop-bound -licm -loop-simplify -flattenloopnest -array-flatten -gvn -instcombine -dce -array-map -dce -func-legal -gvn -adce -instcombine -cfgopt -simplifycfg -loop-simplify -array-burst -promote-global-argument -dce -ptrLegalization -axi4-lower -array-seg-normalize -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -gvn -gvn -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -dse -adse -adce -licm -inst-simplify -dce -globaldce -instcombine -array-stream -eliminate-keepreads -instcombine -dce -deadargelim -doublePtrSimplify -doublePtrElim -dce -doublePtrSimplify -promote-dbg-pointer -dce -scalarrepl -mem2reg -disaggr -norm-name -mem2reg -instcombine -dse -adse -adce -ptrLegalization -dce -auto-rom-infer -array-flatten -dce -instcombine -check-doubleptr -loop-rot -constprop -cfgopt -simplifycfg -loop-simplify -indvars -pointer-simplify -dce -loop-bound -loop-simplify -loop-preproc -constprop -global-constprop -gvn -mem2reg -instcombine -dce -loop-bound -loop-merge -dce -bitwidthmin -deadargelim -dce -canonicalize-dataflow -dce -scalar-propagation -deadargelim -globaldce -mem2reg -read-loop-dep -interface-preproc -directive-preproc -interface-gen -bram-byte-enable -deadargelim -inst-simplify -dce -gvn -mem2reg -instcombine -dce -adse -loop-bound -instcombine -cfgopt -simplifycfg -loop-simplify -clean-region -io-protocol -find-region -mem2reg -bitop-raise -complex-op-raise -inst-simplify -inst-rectify -instcombine -adce -deadargelim -loop-simplify -phi-opt -bitop-raise -cfgopt -simplifycfg -strip-dead-prototypes -interface-lower -bitop-lower -intrinsic-lower -auto-function-inline -basicaa -aggrmodref-aa -globalsmodref-aa -aggr-aa -inst-simplify -simplifycfg -loop-simplify -mergereturn -inst-simplify -inst-rectify -dce -load-elim -bitop-lower -loop-rewind -pointer-simplify -dce -cfgopt -dce -loop-bound -loop-dep -read-loop-dep -dce -check-stream -norm-name -legalize -validate-dataflow -inst-clarity -bitwidth -dump-loop-dep-to-ir -check-all-ssdm -cdfg-build D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/a.o.2.bc -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/a.o.3.bc -f -phase build-ssdm 
 WARNING: [XFORM 203-631] Renaming function 'scaled_fixed2ieee<63, 1>' to 'scaled_fixed2ieee' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_float_utils.h:110:37)
 WARNING: [XFORM 203-631] Renaming function 'hotbm_::sin_or_cos<double>' to 'sin_or_cos<double>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:238)
-Command         transform done; 1.559 sec.
-INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:19 ; elapsed = 00:01:26 . Memory (MB): peak = 533.379 ; gain = 442.402
+WARNING: [XFORM 203-631] Renaming function 'cordic_::atan_generic<double>' to 'atan_generic<double>' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:577)
+WARNING: [XFORM 203-631] Renaming function 'Wheel::update' to 'update' (CarSimOnFPGA/Wheel.cpp:12)
+Command         transform done; 2.174 sec.
+INFO: [HLS 200-111] Finished Architecture Synthesis Time (s): cpu = 00:00:17 ; elapsed = 00:01:16 . Memory (MB): peak = 583.738 ; gain = 493.586
 INFO-FLOW: Finish building internal data model.
-Command       opt_and_import_c done; 21.605 sec.
-Command     elaborate done; 81.598 sec.
+Command       opt_and_import_c done; 19.146 sec.
+Command     elaborate done; 72.544 sec.
 Execute     autosyn -from_csynth_design=1 
 INFO: [HLS 200-10] Starting hardware synthesis ...
 INFO-FLOW: Synthesizing C/C++ design ...
 INFO: [HLS 200-10] Synthesizing 'top_level' ...
 Execute       ap_set_top_model top_level 
 WARNING: [SYN 201-103] Legalizing function name 'sin_or_cos<double>' to 'sin_or_cos_double_s'.
+WARNING: [SYN 201-103] Legalizing function name 'atan_generic<double>' to 'atan_generic_double_s'.
 Execute       get_model_list top_level -filter all-wo-channel -topdown 
 Execute       preproc_iomode -model top_level 
+Execute       preproc_iomode -model update 
+Execute       preproc_iomode -model atan 
+Execute       preproc_iomode -model atan_generic<double> 
 Execute       preproc_iomode -model sin_or_cos<double> 
 Execute       preproc_iomode -model scaled_fixed2ieee 
 Execute       get_model_list top_level -filter all-wo-channel 
-INFO-FLOW: Model list for configure: scaled_fixed2ieee sin_or_cos<double> top_level
+INFO-FLOW: Model list for configure: scaled_fixed2ieee sin_or_cos<double> atan_generic<double> atan update top_level
 INFO-FLOW: Configuring Module : scaled_fixed2ieee ...
 Execute       set_default_model scaled_fixed2ieee 
 Execute       apply_spec_resource_limit scaled_fixed2ieee 
 INFO-FLOW: Configuring Module : sin_or_cos<double> ...
 Execute       set_default_model sin_or_cos<double> 
 Execute       apply_spec_resource_limit sin_or_cos<double> 
+INFO-FLOW: Configuring Module : atan_generic<double> ...
+Execute       set_default_model atan_generic<double> 
+Execute       apply_spec_resource_limit atan_generic<double> 
+INFO-FLOW: Configuring Module : atan ...
+Execute       set_default_model atan 
+Execute       apply_spec_resource_limit atan 
+INFO-FLOW: Configuring Module : update ...
+Execute       set_default_model update 
+Execute       apply_spec_resource_limit update 
 INFO-FLOW: Configuring Module : top_level ...
 Execute       set_default_model top_level 
 Execute       apply_spec_resource_limit top_level 
-INFO-FLOW: Model list for preprocess: scaled_fixed2ieee sin_or_cos<double> top_level
+INFO-FLOW: Model list for preprocess: scaled_fixed2ieee sin_or_cos<double> atan_generic<double> atan update top_level
 INFO-FLOW: Preprocessing Module: scaled_fixed2ieee ...
 Execute       set_default_model scaled_fixed2ieee 
 Execute       cdfg_preprocess -model scaled_fixed2ieee 
@@ -438,11 +469,23 @@ INFO-FLOW: Preprocessing Module: sin_or_cos<double> ...
 Execute       set_default_model sin_or_cos<double> 
 Execute       cdfg_preprocess -model sin_or_cos<double> 
 Execute       rtl_gen_preprocess sin_or_cos<double> 
+INFO-FLOW: Preprocessing Module: atan_generic<double> ...
+Execute       set_default_model atan_generic<double> 
+Execute       cdfg_preprocess -model atan_generic<double> 
+Execute       rtl_gen_preprocess atan_generic<double> 
+INFO-FLOW: Preprocessing Module: atan ...
+Execute       set_default_model atan 
+Execute       cdfg_preprocess -model atan 
+Execute       rtl_gen_preprocess atan 
+INFO-FLOW: Preprocessing Module: update ...
+Execute       set_default_model update 
+Execute       cdfg_preprocess -model update 
+Execute       rtl_gen_preprocess update 
 INFO-FLOW: Preprocessing Module: top_level ...
 Execute       set_default_model top_level 
 Execute       cdfg_preprocess -model top_level 
 Execute       rtl_gen_preprocess top_level 
-INFO-FLOW: Model list for synthesis: scaled_fixed2ieee sin_or_cos<double> top_level
+INFO-FLOW: Model list for synthesis: scaled_fixed2ieee sin_or_cos<double> atan_generic<double> atan update top_level
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'scaled_fixed2ieee' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -450,13 +493,12 @@ Execute       set_default_model scaled_fixed2ieee
 Execute       schedule -model scaled_fixed2ieee 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.176 sec.
-INFO: [HLS 200-111]  Elapsed time: 86.544 seconds; current allocated memory: 462.765 MB.
+Command       schedule done; 0.144 sec.
+INFO: [HLS 200-111]  Elapsed time: 76.58 seconds; current allocated memory: 513.268 MB.
 Execute       syn_report -verbosereport -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/scaled_fixed2ieee.verbose.sched.rpt 
 INFO: [HLS 200-434] Only 0 loops out of a total 3 loops have been pipelined in this design.
-Command       syn_report done; 0.217 sec.
+Command       syn_report done; 0.104 sec.
 Execute       db_write -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/scaled_fixed2ieee.sched.adb -f 
-Command       db_write done; 0.103 sec.
 INFO-FLOW: Finish scheduling scaled_fixed2ieee.
 Execute       set_default_model scaled_fixed2ieee 
 Execute       bind -model scaled_fixed2ieee 
@@ -466,12 +508,12 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.119 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.616 seconds; current allocated memory: 463.170 MB.
+Command       bind done; 0.111 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.472 seconds; current allocated memory: 513.672 MB.
 Execute       syn_report -verbosereport -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/scaled_fixed2ieee.verbose.bind.rpt 
-Command       syn_report done; 0.145 sec.
+Command       syn_report done; 0.146 sec.
 Execute       db_write -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/scaled_fixed2ieee.bind.adb -f 
-Command       db_write done; 0.107 sec.
+Command       db_write done; 0.105 sec.
 INFO-FLOW: Finish binding scaled_fixed2ieee.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'sin_or_cos_double_s' 
@@ -480,12 +522,12 @@ Execute       set_default_model sin_or_cos<double>
 Execute       schedule -model sin_or_cos<double> 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.79 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.28 seconds; current allocated memory: 464.102 MB.
+Command       schedule done; 0.622 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.087 seconds; current allocated memory: 514.620 MB.
 Execute       syn_report -verbosereport -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/sin_or_cos_double_s.verbose.sched.rpt 
-Command       syn_report done; 0.166 sec.
+Command       syn_report done; 0.149 sec.
 Execute       db_write -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/sin_or_cos_double_s.sched.adb -f 
-Command       db_write done; 0.114 sec.
+Command       db_write done; 0.12 sec.
 INFO-FLOW: Finish scheduling sin_or_cos<double>.
 Execute       set_default_model sin_or_cos<double> 
 Execute       bind -model sin_or_cos<double> 
@@ -495,13 +537,94 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.193 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.662 seconds; current allocated memory: 464.775 MB.
+Command       bind done; 0.17 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.616 seconds; current allocated memory: 515.277 MB.
 Execute       syn_report -verbosereport -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/sin_or_cos_double_s.verbose.bind.rpt 
-Command       syn_report done; 0.432 sec.
+Command       syn_report done; 0.35 sec.
 Execute       db_write -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/sin_or_cos_double_s.bind.adb -f 
-Command       db_write done; 0.152 sec.
+Command       db_write done; 0.133 sec.
 INFO-FLOW: Finish binding sin_or_cos<double>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'atan_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model atan_generic<double> 
+Execute       schedule -model atan_generic<double> 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.199 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.896 seconds; current allocated memory: 515.712 MB.
+Execute       syn_report -verbosereport -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan_generic_double_s.verbose.sched.rpt 
+Execute       db_write -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan_generic_double_s.sched.adb -f 
+INFO-FLOW: Finish scheduling atan_generic<double>.
+Execute       set_default_model atan_generic<double> 
+Execute       bind -model atan_generic<double> 
+BIND OPTION: model=atan_generic<double>
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.123 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.48 seconds; current allocated memory: 516.150 MB.
+Execute       syn_report -verbosereport -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan_generic_double_s.verbose.bind.rpt 
+Command       syn_report done; 0.184 sec.
+Execute       db_write -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan_generic_double_s.bind.adb -f 
+Command       db_write done; 0.103 sec.
+INFO-FLOW: Finish binding atan_generic<double>.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'atan' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model atan 
+Execute       schedule -model atan 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+INFO: [HLS 200-111]  Elapsed time: 0.575 seconds; current allocated memory: 516.411 MB.
+Execute       syn_report -verbosereport -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan.verbose.sched.rpt 
+Execute       db_write -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan.sched.adb -f 
+INFO-FLOW: Finish scheduling atan.
+Execute       set_default_model atan 
+Execute       bind -model atan 
+BIND OPTION: model=atan
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.131 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.448 seconds; current allocated memory: 516.598 MB.
+Execute       syn_report -verbosereport -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan.verbose.bind.rpt 
+Command       syn_report done; 0.22 sec.
+Execute       db_write -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan.bind.adb -f 
+INFO-FLOW: Finish binding atan.
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-42] -- Implementing module 'update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       set_default_model update 
+Execute       schedule -model update 
+INFO: [SCHED 204-11] Starting scheduling ...
+INFO: [SCHED 204-11] Finished scheduling.
+Command       schedule done; 0.511 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.01 seconds; current allocated memory: 517.472 MB.
+Execute       syn_report -verbosereport -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/update.verbose.sched.rpt 
+Command       syn_report done; 0.501 sec.
+Execute       db_write -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/update.sched.adb -f 
+Command       db_write done; 0.232 sec.
+INFO-FLOW: Finish scheduling update.
+Execute       set_default_model update 
+Execute       bind -model update 
+BIND OPTION: model=update
+INFO: [BIND 205-100] Starting micro-architecture generation ...
+INFO: [BIND 205-101] Performing variable lifetime analysis.
+INFO: [BIND 205-101] Exploring resource sharing.
+INFO: [BIND 205-101] Binding ...
+INFO: [BIND 205-100] Finished micro-architecture generation.
+Command       bind done; 0.587 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.492 seconds; current allocated memory: 518.834 MB.
+Execute       syn_report -verbosereport -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/update.verbose.bind.rpt 
+Command       syn_report done; 1.391 sec.
+Execute       db_write -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/update.bind.adb -f 
+Command       db_write done; 0.23 sec.
+INFO-FLOW: Finish binding update.
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-42] -- Implementing module 'top_level' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -509,10 +632,8 @@ Execute       set_default_model top_level
 Execute       schedule -model top_level 
 INFO: [SCHED 204-11] Starting scheduling ...
 INFO: [SCHED 204-11] Finished scheduling.
-Command       schedule done; 0.108 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.944 seconds; current allocated memory: 465.077 MB.
+INFO: [HLS 200-111]  Elapsed time: 1.901 seconds; current allocated memory: 519.218 MB.
 Execute       syn_report -verbosereport -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.verbose.sched.rpt 
-Command       syn_report done; 0.112 sec.
 Execute       db_write -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.sched.adb -f 
 INFO-FLOW: Finish scheduling top_level.
 Execute       set_default_model top_level 
@@ -523,18 +644,21 @@ INFO: [BIND 205-101] Performing variable lifetime analysis.
 INFO: [BIND 205-101] Exploring resource sharing.
 INFO: [BIND 205-101] Binding ...
 INFO: [BIND 205-100] Finished micro-architecture generation.
-Command       bind done; 0.305 sec.
-INFO: [HLS 200-111]  Elapsed time: 0.639 seconds; current allocated memory: 465.327 MB.
+Command       bind done; 0.414 sec.
+INFO: [HLS 200-111]  Elapsed time: 0.694 seconds; current allocated memory: 519.426 MB.
 Execute       syn_report -verbosereport -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.verbose.bind.rpt 
-Command       syn_report done; 0.724 sec.
+Command       syn_report done; 0.968 sec.
 Execute       db_write -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.bind.adb -f 
 INFO-FLOW: Finish binding top_level.
 Execute       get_model_list top_level -filter all-wo-channel 
 INFO-FLOW: Preprocessing for RTLGen ...
 Execute       rtl_gen_preprocess scaled_fixed2ieee 
 Execute       rtl_gen_preprocess sin_or_cos<double> 
+Execute       rtl_gen_preprocess atan_generic<double> 
+Execute       rtl_gen_preprocess atan 
+Execute       rtl_gen_preprocess update 
 Execute       rtl_gen_preprocess top_level 
-INFO-FLOW: Model list for RTL generation: scaled_fixed2ieee sin_or_cos<double> top_level
+INFO-FLOW: Model list for RTL generation: scaled_fixed2ieee sin_or_cos<double> atan_generic<double> atan update top_level
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'scaled_fixed2ieee' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -544,18 +668,18 @@ Execute       create_rtl_model scaled_fixed2ieee -vendor xilinx -mg_file D:/Dev/
 INFO: [SYN 201-210] Renamed object name 'top_level_mux_42_32_1_1' to 'top_level_mux_42_bkb' due to the length limit 20
 INFO: [RTGEN 206-100] Generating core module 'top_level_mux_42_bkb': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'scaled_fixed2ieee'.
-Command       create_rtl_model done; 0.132 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.174 seconds; current allocated memory: 466.173 MB.
+Command       create_rtl_model done; 0.114 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.365 seconds; current allocated memory: 520.414 MB.
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.rtl_wrap.cfg.tcl 
-Execute       gen_rtl scaled_fixed2ieee -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/systemc/scaled_fixed2ieee -synmodules scaled_fixed2ieee sin_or_cos<double> top_level 
+Execute       gen_rtl scaled_fixed2ieee -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/systemc/scaled_fixed2ieee -synmodules scaled_fixed2ieee sin_or_cos<double> atan_generic<double> atan update top_level 
 Execute       gen_rtl scaled_fixed2ieee -style xilinx -f -lang vhdl -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/vhdl/scaled_fixed2ieee 
 Execute       gen_rtl scaled_fixed2ieee -style xilinx -f -lang vlog -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/verilog/scaled_fixed2ieee 
 Execute       syn_report -csynth -model scaled_fixed2ieee -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/report/scaled_fixed2ieee_csynth.rpt 
 Execute       syn_report -rtlxml -model scaled_fixed2ieee -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/report/scaled_fixed2ieee_csynth.xml 
 Execute       syn_report -verbosereport -model scaled_fixed2ieee -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/scaled_fixed2ieee.verbose.rpt 
-Command       syn_report done; 0.247 sec.
+Command       syn_report done; 0.178 sec.
 Execute       db_write -model scaled_fixed2ieee -f -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/scaled_fixed2ieee.adb 
-Command       db_write done; 0.202 sec.
+Command       db_write done; 0.167 sec.
 Execute       gen_tb_info scaled_fixed2ieee -p D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/scaled_fixed2ieee 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'sin_or_cos_double_s' 
@@ -586,20 +710,113 @@ INFO: [RTGEN 206-100] Generating core module 'top_level_mul_64socq': 1 instance(
 INFO: [RTGEN 206-100] Generating core module 'top_level_mux_164pcA': 2 instance(s).
 INFO: [RTGEN 206-100] Generating core module 'top_level_mux_83_jbC': 1 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'sin_or_cos_double_s'.
-Command       create_rtl_model done; 0.595 sec.
-INFO: [HLS 200-111]  Elapsed time: 1.623 seconds; current allocated memory: 467.870 MB.
+Command       create_rtl_model done; 0.558 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.382 seconds; current allocated memory: 522.077 MB.
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.rtl_wrap.cfg.tcl 
-Execute       gen_rtl sin_or_cos<double> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/systemc/sin_or_cos_double_s -synmodules scaled_fixed2ieee sin_or_cos<double> top_level 
+Execute       gen_rtl sin_or_cos<double> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/systemc/sin_or_cos_double_s -synmodules scaled_fixed2ieee sin_or_cos<double> atan_generic<double> atan update top_level 
 Execute       gen_rtl sin_or_cos<double> -style xilinx -f -lang vhdl -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/vhdl/sin_or_cos_double_s 
 Execute       gen_rtl sin_or_cos<double> -style xilinx -f -lang vlog -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/verilog/sin_or_cos_double_s 
 Execute       syn_report -csynth -model sin_or_cos<double> -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/report/sin_or_cos_double_s_csynth.rpt 
-Command       syn_report done; 0.138 sec.
+Command       syn_report done; 0.125 sec.
 Execute       syn_report -rtlxml -model sin_or_cos<double> -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/report/sin_or_cos_double_s_csynth.xml 
 Execute       syn_report -verbosereport -model sin_or_cos<double> -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/sin_or_cos_double_s.verbose.rpt 
-Command       syn_report done; 0.544 sec.
+Command       syn_report done; 0.413 sec.
 Execute       db_write -model sin_or_cos<double> -f -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/sin_or_cos_double_s.adb 
-Command       db_write done; 0.298 sec.
+Command       db_write done; 0.267 sec.
 Execute       gen_tb_info sin_or_cos<double> -p D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/sin_or_cos_double_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'atan_generic_double_s' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model atan_generic<double> -vendor xilinx -mg_file D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan_generic_double_s.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'atan_generic_double_s_cordic_ctab_table_12' to 'atan_generic_doubqcK' due to the length limit 20
+INFO: [RTGEN 206-100] Finished creating RTL model for 'atan_generic_double_s'.
+Command       create_rtl_model done; 0.112 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.376 seconds; current allocated memory: 523.154 MB.
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.rtl_wrap.cfg.tcl 
+Execute       gen_rtl atan_generic<double> -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/systemc/atan_generic_double_s -synmodules scaled_fixed2ieee sin_or_cos<double> atan_generic<double> atan update top_level 
+Execute       gen_rtl atan_generic<double> -style xilinx -f -lang vhdl -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/vhdl/atan_generic_double_s 
+Execute       gen_rtl atan_generic<double> -style xilinx -f -lang vlog -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/verilog/atan_generic_double_s 
+Execute       syn_report -csynth -model atan_generic<double> -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/report/atan_generic_double_s_csynth.rpt 
+Execute       syn_report -rtlxml -model atan_generic<double> -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/report/atan_generic_double_s_csynth.xml 
+Execute       syn_report -verbosereport -model atan_generic<double> -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan_generic_double_s.verbose.rpt 
+Command       syn_report done; 0.241 sec.
+Execute       db_write -model atan_generic<double> -f -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan_generic_double_s.adb 
+Command       db_write done; 0.237 sec.
+Execute       gen_tb_info atan_generic<double> -p D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan_generic_double_s 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'atan' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model atan -vendor xilinx -mg_file D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan.compgen.tcl 
+INFO: [SYN 201-210] Renamed object name 'top_level_dsub_64ns_64ns_64_5_full_dsp_1' to 'top_level_dsub_64rcU' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_level_ddiv_64ns_64ns_64_31_1' to 'top_level_ddiv_64sc4' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_level_dcmp_64ns_64ns_1_2_1' to 'top_level_dcmp_64tde' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'top_level_dcmp_64tde': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_level_ddiv_64sc4': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_level_dsub_64rcU': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'atan'.
+Command       create_rtl_model done; 0.17 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.167 seconds; current allocated memory: 523.931 MB.
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.rtl_wrap.cfg.tcl 
+Execute       gen_rtl atan -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/systemc/atan -synmodules scaled_fixed2ieee sin_or_cos<double> atan_generic<double> atan update top_level 
+Execute       gen_rtl atan -style xilinx -f -lang vhdl -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/vhdl/atan 
+Execute       gen_rtl atan -style xilinx -f -lang vlog -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/verilog/atan 
+Execute       syn_report -csynth -model atan -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/report/atan_csynth.rpt 
+Execute       syn_report -rtlxml -model atan -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/report/atan_csynth.xml 
+Execute       syn_report -verbosereport -model atan -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan.verbose.rpt 
+Command       syn_report done; 0.318 sec.
+Execute       db_write -model atan -f -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan.adb 
+Command       db_write done; 0.215 sec.
+Execute       gen_tb_info atan -p D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+INFO: [HLS 200-10] -- Generating RTL for module 'update' 
+INFO: [HLS 200-10] ----------------------------------------------------------------
+Execute       get_config_rtl -module_prefix 
+Execute       get_config_rtl -module_auto_prefix 
+Execute       create_rtl_model update -vendor xilinx -mg_file D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/update.compgen.tcl 
+WARNING: [RTGEN 206-101] Register 'wheel_angularVelocit' is power-on initialization.
+INFO: [SYN 201-210] Renamed object name 'top_level_faddfsub_32ns_32ns_32_5_full_dsp_1' to 'top_level_faddfsuudo' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_level_fadd_32ns_32ns_32_5_full_dsp_1' to 'top_level_fadd_32vdy' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_level_fmul_32ns_32ns_32_4_max_dsp_1' to 'top_level_fmul_32wdI' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_level_fdiv_32ns_32ns_32_16_1' to 'top_level_fdiv_32xdS' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_level_sitofp_32ns_32_6_1' to 'top_level_sitofp_yd2' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_level_fptrunc_64ns_32_2_1' to 'top_level_fptrunczec' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_level_fpext_32ns_64_2_1' to 'top_level_fpext_3Aem' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_level_fcmp_32ns_32ns_1_2_1' to 'top_level_fcmp_32Bew' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_level_fsqrt_32ns_32ns_32_12_1' to 'top_level_fsqrt_3CeG' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_level_dadd_64ns_64ns_64_5_full_dsp_1' to 'top_level_dadd_64DeQ' due to the length limit 20
+INFO: [SYN 201-210] Renamed object name 'top_level_dmul_64ns_64ns_64_6_max_dsp_1' to 'top_level_dmul_64Ee0' due to the length limit 20
+INFO: [RTGEN 206-100] Generating core module 'top_level_dadd_64DeQ': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_level_ddiv_64sc4': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_level_dmul_64Ee0': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_level_dsub_64rcU': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_level_fadd_32vdy': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_level_faddfsuudo': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_level_fcmp_32Bew': 3 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_level_fdiv_32xdS': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_level_fmul_32wdI': 5 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_level_fpext_3Aem': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_level_fptrunczec': 2 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_level_fsqrt_3CeG': 1 instance(s).
+INFO: [RTGEN 206-100] Generating core module 'top_level_sitofp_yd2': 1 instance(s).
+INFO: [RTGEN 206-100] Finished creating RTL model for 'update'.
+Command       create_rtl_model done; 0.793 sec.
+INFO: [HLS 200-111]  Elapsed time: 1.726 seconds; current allocated memory: 526.916 MB.
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.rtl_wrap.cfg.tcl 
+Execute       gen_rtl update -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/systemc/update -synmodules scaled_fixed2ieee sin_or_cos<double> atan_generic<double> atan update top_level 
+Execute       gen_rtl update -style xilinx -f -lang vhdl -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/vhdl/update 
+Execute       gen_rtl update -style xilinx -f -lang vlog -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/verilog/update 
+Execute       syn_report -csynth -model update -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/report/update_csynth.rpt 
+Command       syn_report done; 0.155 sec.
+Execute       syn_report -rtlxml -model update -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/report/update_csynth.xml 
+Execute       syn_report -verbosereport -model update -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/update.verbose.rpt 
+Command       syn_report done; 1.464 sec.
+Execute       db_write -model update -f -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/update.adb 
+Command       db_write done; 0.464 sec.
+Execute       gen_tb_info update -p D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/update 
 INFO: [HLS 200-10] ----------------------------------------------------------------
 INFO: [HLS 200-10] -- Generating RTL for module 'top_level' 
 INFO: [HLS 200-10] ----------------------------------------------------------------
@@ -616,40 +833,23 @@ INFO: [RTGEN 206-500] Setting interface mode on port 'top_level/force_x' to 'ap_
 INFO: [RTGEN 206-500] Setting interface mode on port 'top_level/force_z' to 'ap_vld'.
 INFO: [RTGEN 206-500] Setting interface mode on port 'top_level/angularVel' to 'ap_vld'.
 INFO: [RTGEN 206-500] Setting interface mode on function 'top_level' to 'ap_ctrl_hs'.
-WARNING: [RTGEN 206-101] Register 'wheel_angularVelocit' is power-on initialization.
-INFO: [SYN 201-210] Renamed object name 'top_level_fadd_32ns_32ns_32_5_full_dsp_1' to 'top_level_fadd_32qcK' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'top_level_fmul_32ns_32ns_32_4_max_dsp_1' to 'top_level_fmul_32rcU' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'top_level_fdiv_32ns_32ns_32_16_1' to 'top_level_fdiv_32sc4' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'top_level_fptrunc_64ns_32_2_1' to 'top_level_fptrunctde' due to the length limit 20
-INFO: [SYN 201-210] Renamed object name 'top_level_fpext_32ns_64_2_1' to 'top_level_fpext_3udo' due to the length limit 20
-WARNING: [RTGEN 206-101] Port 'top_level/velocity_x' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'top_level/velocity_z' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-WARNING: [RTGEN 206-101] Port 'top_level/load' has no fanin or fanout and is left dangling.
-               Please use C simulation to confirm this function argument can be read from or written to.
-INFO: [RTGEN 206-100] Generating core module 'top_level_fadd_32qcK': 3 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'top_level_fdiv_32sc4': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'top_level_fmul_32rcU': 4 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'top_level_fpext_3udo': 1 instance(s).
-INFO: [RTGEN 206-100] Generating core module 'top_level_fptrunctde': 2 instance(s).
 INFO: [RTGEN 206-100] Finished creating RTL model for 'top_level'.
-Command       create_rtl_model done; 0.684 sec.
-INFO: [HLS 200-111]  Elapsed time: 2.235 seconds; current allocated memory: 468.863 MB.
+Command       create_rtl_model done; 0.248 sec.
+INFO: [HLS 200-111]  Elapsed time: 3.186 seconds; current allocated memory: 527.590 MB.
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.rtl_wrap.cfg.tcl 
-Execute       gen_rtl top_level -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/systemc/top_level -synmodules scaled_fixed2ieee sin_or_cos<double> top_level 
+Execute       gen_rtl top_level -istop -style xilinx -tracefl mytrace -tracefmt vcd -traceopt all -f -lang sc -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/systemc/top_level -synmodules scaled_fixed2ieee sin_or_cos<double> atan_generic<double> atan update top_level 
 Execute       gen_rtl top_level -istop -style xilinx -f -lang vhdl -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/vhdl/top_level 
 Execute       gen_rtl top_level -istop -style xilinx -f -lang vlog -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/verilog/top_level 
 Execute       syn_report -csynth -model top_level -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/report/top_level_csynth.rpt 
 Execute       syn_report -rtlxml -model top_level -o D:/Dev/Repos/CarSimOnFPGA/solution1/syn/report/top_level_csynth.xml 
 Execute       syn_report -verbosereport -model top_level -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.verbose.rpt 
-Command       syn_report done; 0.646 sec.
+Command       syn_report done; 0.965 sec.
 Execute       db_write -model top_level -f -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.adb 
-Command       db_write done; 0.155 sec.
+Command       db_write done; 0.151 sec.
 Execute       gen_tb_info top_level -p D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level 
 Execute       export_constraint_db -f -tool general -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.constraint.tcl 
 Execute       syn_report -designview -model top_level -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.design.xml 
-Command       syn_report done; 0.253 sec.
+Command       syn_report done; 0.41 sec.
 Execute       get_config_rtl -disable_wave_debug 
 Execute       syn_report -wcfg -model top_level -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level_dataflow_ana.wcfg 
 Execute       syn_report -protoinst -model top_level -o D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.protoinst 
@@ -657,7 +857,7 @@ Execute       get_config_debug -directory
 Execute       sc_get_clocks top_level 
 Execute       get_config_export -vivado_clock 
 Execute       sc_get_portdomain top_level 
-INFO-FLOW: Model list for RTL component generation: scaled_fixed2ieee sin_or_cos<double> top_level
+INFO-FLOW: Model list for RTL component generation: scaled_fixed2ieee sin_or_cos<double> atan_generic<double> atan update top_level
 INFO-FLOW: Handling components in module [scaled_fixed2ieee] ... 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/scaled_fixed2ieee.compgen.tcl 
 INFO-FLOW: Found component top_level_mux_42_bkb.
@@ -694,23 +894,52 @@ INFO-FLOW: Found component sin_or_cos_doubleg8j.
 INFO-FLOW: Append model sin_or_cos_doubleg8j
 INFO-FLOW: Found component sin_or_cos_doublehbi.
 INFO-FLOW: Append model sin_or_cos_doublehbi
+INFO-FLOW: Handling components in module [atan_generic_double_s] ... 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan_generic_double_s.compgen.tcl 
+INFO-FLOW: Found component atan_generic_doubqcK.
+INFO-FLOW: Append model atan_generic_doubqcK
+INFO-FLOW: Handling components in module [atan] ... 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan.compgen.tcl 
+INFO-FLOW: Found component top_level_dsub_64rcU.
+INFO-FLOW: Append model top_level_dsub_64rcU
+INFO-FLOW: Found component top_level_ddiv_64sc4.
+INFO-FLOW: Append model top_level_ddiv_64sc4
+INFO-FLOW: Found component top_level_dcmp_64tde.
+INFO-FLOW: Append model top_level_dcmp_64tde
+INFO-FLOW: Handling components in module [update] ... 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/update.compgen.tcl 
+INFO-FLOW: Found component top_level_faddfsuudo.
+INFO-FLOW: Append model top_level_faddfsuudo
+INFO-FLOW: Found component top_level_fadd_32vdy.
+INFO-FLOW: Append model top_level_fadd_32vdy
+INFO-FLOW: Found component top_level_fmul_32wdI.
+INFO-FLOW: Append model top_level_fmul_32wdI
+INFO-FLOW: Found component top_level_fdiv_32xdS.
+INFO-FLOW: Append model top_level_fdiv_32xdS
+INFO-FLOW: Found component top_level_sitofp_yd2.
+INFO-FLOW: Append model top_level_sitofp_yd2
+INFO-FLOW: Found component top_level_fptrunczec.
+INFO-FLOW: Append model top_level_fptrunczec
+INFO-FLOW: Found component top_level_fpext_3Aem.
+INFO-FLOW: Append model top_level_fpext_3Aem
+INFO-FLOW: Found component top_level_fcmp_32Bew.
+INFO-FLOW: Append model top_level_fcmp_32Bew
+INFO-FLOW: Found component top_level_fsqrt_3CeG.
+INFO-FLOW: Append model top_level_fsqrt_3CeG
+INFO-FLOW: Found component top_level_dadd_64DeQ.
+INFO-FLOW: Append model top_level_dadd_64DeQ
+INFO-FLOW: Found component top_level_dmul_64Ee0.
+INFO-FLOW: Append model top_level_dmul_64Ee0
 INFO-FLOW: Handling components in module [top_level] ... 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.compgen.tcl 
-INFO-FLOW: Found component top_level_fadd_32qcK.
-INFO-FLOW: Append model top_level_fadd_32qcK
-INFO-FLOW: Found component top_level_fmul_32rcU.
-INFO-FLOW: Append model top_level_fmul_32rcU
-INFO-FLOW: Found component top_level_fdiv_32sc4.
-INFO-FLOW: Append model top_level_fdiv_32sc4
-INFO-FLOW: Found component top_level_fptrunctde.
-INFO-FLOW: Append model top_level_fptrunctde
-INFO-FLOW: Found component top_level_fpext_3udo.
-INFO-FLOW: Append model top_level_fpext_3udo
 INFO-FLOW: Append model scaled_fixed2ieee
 INFO-FLOW: Append model sin_or_cos_double_s
+INFO-FLOW: Append model atan_generic_double_s
+INFO-FLOW: Append model atan
+INFO-FLOW: Append model update
 INFO-FLOW: Append model top_level
 INFO-FLOW: Generating RTL model list ...
-INFO-FLOW: All models in this session: top_level_mux_42_bkb top_level_mul_170ibs top_level_mux_83_jbC top_level_mul_49nkbM top_level_mul_56nlbW top_level_mul_49nmb6 top_level_mul_42nncg top_level_mul_64socq top_level_mux_164pcA top_level_mux_164pcA sin_or_cos_doublecud sin_or_cos_doubledEe sin_or_cos_doubleeOg sin_or_cos_doublefYi sin_or_cos_doubleg8j sin_or_cos_doublehbi top_level_fadd_32qcK top_level_fmul_32rcU top_level_fdiv_32sc4 top_level_fptrunctde top_level_fpext_3udo scaled_fixed2ieee sin_or_cos_double_s top_level
+INFO-FLOW: All models in this session: top_level_mux_42_bkb top_level_mul_170ibs top_level_mux_83_jbC top_level_mul_49nkbM top_level_mul_56nlbW top_level_mul_49nmb6 top_level_mul_42nncg top_level_mul_64socq top_level_mux_164pcA top_level_mux_164pcA sin_or_cos_doublecud sin_or_cos_doubledEe sin_or_cos_doubleeOg sin_or_cos_doublefYi sin_or_cos_doubleg8j sin_or_cos_doublehbi atan_generic_doubqcK top_level_dsub_64rcU top_level_ddiv_64sc4 top_level_dcmp_64tde top_level_faddfsuudo top_level_fadd_32vdy top_level_fmul_32wdI top_level_fdiv_32xdS top_level_sitofp_yd2 top_level_fptrunczec top_level_fpext_3Aem top_level_fcmp_32Bew top_level_fsqrt_3CeG top_level_dadd_64DeQ top_level_dmul_64Ee0 scaled_fixed2ieee sin_or_cos_double_s atan_generic_double_s atan update top_level
 INFO-FLOW: To file: write model top_level_mux_42_bkb
 INFO-FLOW: To file: write model top_level_mul_170ibs
 INFO-FLOW: To file: write model top_level_mux_83_jbC
@@ -727,13 +956,26 @@ INFO-FLOW: To file: write model sin_or_cos_doubleeOg
 INFO-FLOW: To file: write model sin_or_cos_doublefYi
 INFO-FLOW: To file: write model sin_or_cos_doubleg8j
 INFO-FLOW: To file: write model sin_or_cos_doublehbi
-INFO-FLOW: To file: write model top_level_fadd_32qcK
-INFO-FLOW: To file: write model top_level_fmul_32rcU
-INFO-FLOW: To file: write model top_level_fdiv_32sc4
-INFO-FLOW: To file: write model top_level_fptrunctde
-INFO-FLOW: To file: write model top_level_fpext_3udo
+INFO-FLOW: To file: write model atan_generic_doubqcK
+INFO-FLOW: To file: write model top_level_dsub_64rcU
+INFO-FLOW: To file: write model top_level_ddiv_64sc4
+INFO-FLOW: To file: write model top_level_dcmp_64tde
+INFO-FLOW: To file: write model top_level_faddfsuudo
+INFO-FLOW: To file: write model top_level_fadd_32vdy
+INFO-FLOW: To file: write model top_level_fmul_32wdI
+INFO-FLOW: To file: write model top_level_fdiv_32xdS
+INFO-FLOW: To file: write model top_level_sitofp_yd2
+INFO-FLOW: To file: write model top_level_fptrunczec
+INFO-FLOW: To file: write model top_level_fpext_3Aem
+INFO-FLOW: To file: write model top_level_fcmp_32Bew
+INFO-FLOW: To file: write model top_level_fsqrt_3CeG
+INFO-FLOW: To file: write model top_level_dadd_64DeQ
+INFO-FLOW: To file: write model top_level_dmul_64Ee0
 INFO-FLOW: To file: write model scaled_fixed2ieee
 INFO-FLOW: To file: write model sin_or_cos_double_s
+INFO-FLOW: To file: write model atan_generic_double_s
+INFO-FLOW: To file: write model atan
+INFO-FLOW: To file: write model update
 INFO-FLOW: To file: write model top_level
 INFO-FLOW: Finished generating RTL model list.
 
@@ -764,11 +1006,11 @@ Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interf
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source done; 0.171 sec.
+Command           ap_source done; 0.163 sec.
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.257 sec.
-Command       ap_source done; 0.257 sec.
+Command         ap_source done; 0.245 sec.
+Command       ap_source done; 0.245 sec.
 Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
@@ -860,19 +1102,49 @@ Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet
 Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
 Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
-Command       ap_source done; 2.404 sec.
+Command       ap_source done; 1.659 sec.
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan_generic_double_s.compgen.tcl 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+INFO: [RTMG 210-279] Implementing memory 'atan_generic_doubqcK_rom' using auto ROMs.
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Command       ap_source done; 0.159 sec.
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan.compgen.tcl 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Command       ap_source done; 0.406 sec.
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/update.compgen.tcl 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Command       ap_source done; 1.589 sec.
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.compgen.tcl 
-Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
-Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
-Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
-Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
-Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
-Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
-Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
-Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
-Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
-Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
-Command       ap_source done; 0.946 sec.
 INFO-FLOW: DBG:CMD:     auto_generate -export -impltomg_flag -rtl both -tool Vivado -pcore_version 1.00.a -phase csynth_design -d D:/Dev/Repos/CarSimOnFPGA/solution1
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/global.setting.tcl 
 INFO-FLOW: DBG:CMD: read_platform_lib D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/global.setting.tcl
@@ -895,11 +1167,11 @@ Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interf
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
-Command           ap_source done; 0.191 sec.
+Command           ap_source done; 0.163 sec.
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
-Command         ap_source done; 0.294 sec.
-Command       ap_source done; 0.294 sec.
+Command         ap_source done; 0.244 sec.
+Command       ap_source done; 0.245 sec.
 Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=top_level xml_exists=0
@@ -913,22 +1185,47 @@ INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/global.setting.tcl 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/scaled_fixed2ieee.compgen.tcl 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/sin_or_cos_double_s.compgen.tcl 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan_generic_double_s.compgen.tcl 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan.compgen.tcl 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Command       ap_source done; 0.174 sec.
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/update.compgen.tcl 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Command       ap_source done; 0.663 sec.
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.compgen.tcl 
-Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
-Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
-Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
-Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
-Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
-Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
-Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
-Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
-Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
-Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
-Command       ap_source done; 0.352 sec.
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=1 expOnly=1 dstVlogDir=impl/.pcores/verilog
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/global.setting.tcl 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/scaled_fixed2ieee.compgen.tcl 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/sin_or_cos_double_s.compgen.tcl 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan_generic_double_s.compgen.tcl 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan.compgen.tcl 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/update.compgen.tcl 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.compgen.tcl 
 Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
@@ -956,13 +1253,22 @@ Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet
 Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
 Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
 Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
-Command       ap_source done; 0.131 sec.
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute         ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Command       ap_source done; 0.129 sec.
 Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
 Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
 INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=impl/.pcores/verilog_sim
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/global.setting.tcl 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/scaled_fixed2ieee.compgen.tcl 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/sin_or_cos_double_s.compgen.tcl 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan_generic_double_s.compgen.tcl 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan.compgen.tcl 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/update.compgen.tcl 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.compgen.tcl 
 Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
 Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
@@ -973,9 +1279,9 @@ Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet
 Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.constraint.tcl 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.tbgen.tcl 
-INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=14
+INFO-FLOW: DBG:CMD:       hasPcoreIpAdapter=false #gSsdmPorts=20
 INFO-FLOW: DBG:CMD: Skipping loadAnalyze_DB, #g_database=9
-INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=24 #gSsdmPorts=14
+INFO-FLOW: DBG:CMD:       generate_json is_phase_csynth=1 g_has_adaptors=false generate_bd_files=0 #modelList=37 #gSsdmPorts=20
 Execute       source C:/Xilinx/Vivado/2019.1/tps/tcl/tcllib1.11.1/fileutil/fileutil.tcl 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/global.setting.tcl 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/global.setting.tcl 
@@ -998,13 +1304,25 @@ Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet
 Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/global.setting.tcl 
 Execute       get_config_debug -directory 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/impl/misc/top_level_ap_dadd_3_full_dsp_64_ip.tcl 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/impl/misc/top_level_ap_dcmp_0_no_dsp_64_ip.tcl 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/impl/misc/top_level_ap_ddiv_29_no_dsp_64_ip.tcl 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/impl/misc/top_level_ap_dmul_4_max_dsp_64_ip.tcl 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/impl/misc/top_level_ap_dsub_3_full_dsp_64_ip.tcl 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/impl/misc/top_level_ap_fadd_3_full_dsp_32_ip.tcl 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/impl/misc/top_level_ap_faddfsub_3_full_dsp_32_ip.tcl 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/impl/misc/top_level_ap_fcmp_0_no_dsp_32_ip.tcl 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/impl/misc/top_level_ap_fdiv_14_no_dsp_32_ip.tcl 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/impl/misc/top_level_ap_fmul_2_max_dsp_32_ip.tcl 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/impl/misc/top_level_ap_fpext_0_no_dsp_32_ip.tcl 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/impl/misc/top_level_ap_fptrunc_0_no_dsp_64_ip.tcl 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/impl/misc/top_level_ap_fsqrt_10_no_dsp_32_ip.tcl 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/impl/misc/top_level_ap_sitofp_4_no_dsp_32_ip.tcl 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/scaled_fixed2ieee.tbgen.tcl 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/sin_or_cos_double_s.tbgen.tcl 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan_generic_double_s.tbgen.tcl 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan.tbgen.tcl 
+Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/update.tbgen.tcl 
 Execute       source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.tbgen.tcl 
 Execute       get_config_sdx -target 
 Execute       get_config_sdx -profile 
@@ -1013,14 +1331,14 @@ Execute       get_config_rtl -stall_sig_gen
 Execute       get_config_rtl -profile 
 INFO-FLOW: DBG:CMD: add_json_sdx_info kernel file does not exist, skipping opencl info: D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/kernel.internal.xml
 INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
-INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:29 ; elapsed = 00:01:47 . Memory (MB): peak = 550.070 ; gain = 459.094
+INFO: [HLS 200-111] Finished generating all RTL models Time (s): cpu = 00:00:36 ; elapsed = 00:01:50 . Memory (MB): peak = 617.254 ; gain = 527.102
 INFO: [VHDL 208-304] Generating VHDL RTL for top_level.
 INFO: [VLOG 209-307] Generating Verilog RTL for top_level.
-Command     autosyn done; 21.164 sec.
-Command   csynth_design done; 102.798 sec.
-Command ap_source done; 106.211 sec.
+Command     autosyn done; 34.213 sec.
+Command   csynth_design done; 106.787 sec.
+Command ap_source done; 109.466 sec.
 Execute cleanup_all 
-INFO-FLOW: Workspace D:/Dev/Repos/CarSimOnFPGA/solution1 opened at Wed Jun 03 18:24:14 +0300 2020
+INFO-FLOW: Workspace D:/Dev/Repos/CarSimOnFPGA/solution1 opened at Sat Jun 06 18:30:00 +0300 2020
 Execute     config_clock -quiet -name default -period 10 -default=false 
 INFO: [SYN 201-201] Setting up clock 'default' with a period of 10ns.
 Execute     open_platform DefaultPlatform 
@@ -1036,6 +1354,7 @@ Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/d
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.lib 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.lib 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.lib 
+Command       ap_source done; 0.103 sec.
 Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.hlp 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/target_info.tcl 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/xilinx_interface.hlp 
@@ -1049,6 +1368,7 @@ Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interfac
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/maxi.hlp 
 Execute           source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/saxilite.hlp 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.hlp 
+Command     import_lib done; 0.213 sec.
 Execute     source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq.gen 
 Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interface/plb46.gen 
@@ -1062,11 +1382,11 @@ Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interfac
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.205 sec.
+Command         ap_source done; 0.181 sec.
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.302 sec.
-Command     ap_source done; 0.302 sec.
+Command       ap_source done; 0.375 sec.
+Command     ap_source done; 0.383 sec.
 Execute     open_platform DefaultPlatform 
 Execute     import_lib C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6 
 Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.lib 
@@ -1081,7 +1401,7 @@ Execute     source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fp
 Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
 Execute     set_part xc7z010-clg400-1 
 Execute       ap_part_info -name xc7z010-clg400-1 -data single -quiet 
-Command       ap_part_info done; 1.829 sec.
+Command       ap_part_info done; 2.668 sec.
 Execute       ap_part_info -name xc7z010-clg400-1 -data info 
 Execute       add_library xilinx/zynq/zynq:xc7z010:-clg400:-1 
 Execute         get_default_platform 
@@ -1099,7 +1419,7 @@ Execute         get_default_platform
 INFO: [HLS 200-10] Setting target device to 'xc7z010-clg400-1'
 Execute       ap_part_info -name xc7z010-clg400-1 -data info 
 Execute       get_default_platform 
-Command     set_part done; 2.093 sec.
+Command     set_part done; 2.935 sec.
 Execute     ap_part_info -data single -name xc7z010-clg400-1 
 Execute     ap_part_info -name xc7z010-clg400-1 -data resources 
 Execute     ap_part_info -name xc7z010-clg400-1 -data info 
@@ -1109,7 +1429,7 @@ Execute     ap_part_info -name xc7z010-clg400-1 -data info
 Execute     config_chip_info -quiet -speed slow 
 Execute     config_export -format=sysgen 
 Execute     config_export -rtl=vhdl 
-Command   open_solution done; 2.554 sec.
+Command   open_solution done; 3.708 sec.
 Execute   export_design -rtl vhdl -format sysgen 
 Execute     get_config_export -acc 
 Execute     get_config_export -clock_margin 
@@ -1160,11 +1480,11 @@ Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interfac
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.179 sec.
+Command         ap_source done; 0.165 sec.
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.276 sec.
-Command     ap_source done; 0.277 sec.
+Command       ap_source done; 0.248 sec.
+Command     ap_source done; 0.248 sec.
 Execute     source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:   using AESL_AUTOCG::g_clock_period=10.000 (was NA)
@@ -1196,11 +1516,11 @@ Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interfac
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.201 sec.
+Command         ap_source done; 0.162 sec.
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.292 sec.
-Command     ap_source done; 0.292 sec.
+Command       ap_source done; 0.242 sec.
+Command     ap_source done; 0.243 sec.
 Execute     source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
 INFO-FLOW: DBG:CMD:       initCTypeInfo top_module=top_level xml_exists=1
@@ -1213,18 +1533,40 @@ INFO-FLOW: DBG:CMD:       generate_ip_cores sim=0 export=0 expOnly=0 dstVlogDir=
 Execute     source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/global.setting.tcl 
 Execute     source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/scaled_fixed2ieee.compgen.tcl 
 Execute     source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/sin_or_cos_double_s.compgen.tcl 
+Execute     source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan_generic_double_s.compgen.tcl 
+Execute     source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/atan.compgen.tcl 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Command     ap_source done; 0.191 sec.
+Execute     source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/update.compgen.tcl 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
+Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
+Command     ap_source done; 0.665 sec.
 Execute     source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.compgen.tcl 
-Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
-Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
-Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
-Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
-Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
-Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
-Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
-Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
-Execute       ap_part_info -name xc7z010-clg400-1 -data names -quiet 
-Execute       ap_part_info -name xc7z010-clg400-1 -data info -quiet 
-Command     ap_source done; 0.343 sec.
 INFO-FLOW: DBG:CMD:       generate_sysgen_xmlfile D:/Dev/Repos/CarSimOnFPGA/solution1/impl/sysgen
 INFO-FLOW: DBG:CMD:         AESL_AUTOSIM::autosim_wrap -libgen -fastsim
 Execute     source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/global.setting.tcl 
@@ -1249,11 +1591,11 @@ Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/interfac
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/dds_compiler.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/util.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfft.gen 
-Command         ap_source done; 0.181 sec.
+Command         ap_source done; 0.166 sec.
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/ip/xfir.gen 
 Execute         source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/dsp48.gen 
-Command       ap_source done; 0.277 sec.
-Command     ap_source done; 0.277 sec.
+Command       ap_source done; 0.248 sec.
+Command     ap_source done; 0.249 sec.
 Execute     source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/zynq/zynq_fpv6.gen 
 Execute       source C:/Xilinx/Vivado/2019.1/common/technology/xilinx/common/xilinx_fp.gen 
 Execute     ap_part_info -name xc7z010-clg400-1 -data names -quiet 
@@ -1262,10 +1604,10 @@ Execute     source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/global.sett
 Execute     source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.rtl_wrap.cfg.tcl 
 Execute     source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.tbgen.tcl 
 Execute     is_encrypted D:/Dev/Repos/CarSimOnFPGA/main.cpp 
-Execute     is_encrypted D:/Dev/Repos/CarSimOnFPGA/Car.cpp 
-Execute     is_encrypted D:/Dev/Repos/CarSimOnFPGA/Chassis.cpp 
-Execute     is_encrypted D:/Dev/Repos/CarSimOnFPGA/Wheel.cpp 
 Execute     is_encrypted D:/Dev/Repos/CarSimOnFPGA/top_level.cpp 
+Execute     is_encrypted D:/Dev/Repos/CarSimOnFPGA/Wheel.cpp 
+Execute     is_encrypted D:/Dev/Repos/CarSimOnFPGA/Chassis.cpp 
+Execute     is_encrypted D:/Dev/Repos/CarSimOnFPGA/Car.cpp 
 Execute     source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.tbgen.tcl 
 Execute     source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/top_level.tbgen.tcl 
 Execute     source D:/Dev/Repos/CarSimOnFPGA/solution1/.autopilot/db/hls_design_meta.tcl 
@@ -1282,6 +1624,6 @@ Execute     get_config_sdx -target
 INFO-FLOW: DBG:CMD:       delete-temp-dirs (skipped for debug)
 Execute     ap_part_info -name xc7z010-clg400-1 -data names -quiet 
 Execute     ap_part_info -name xc7z010-clg400-1 -data info -quiet 
-Command   export_design done; 27.034 sec.
-Command ap_source done; 29.609 sec.
+Command   export_design done; 44.536 sec.
+Command ap_source done; 48.257 sec.
 Execute cleanup_all 

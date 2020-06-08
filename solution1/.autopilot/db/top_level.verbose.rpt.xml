@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'top_level'" level="0">
-<item name = "Date">Wed Jun  3 18:19:44 2020
+<item name = "Date">Sat Jun  6 18:25:23 2020
 </item>
 <item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">CarSimOnFPGA</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 8.625, 1.25</column>
+<column name="ap_clk">10.00, 8.933, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,15 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">67, 75, 67, 75, none</column>
+<column name="">240, 1538, 240, 1538, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_sin_or_cos_double_s_fu_93">sin_or_cos_double_s, 43, 51, 43, 51, none</column>
-<column name="grp_sin_or_cos_double_s_fu_112">sin_or_cos_double_s, 43, 51, 43, 51, none</column>
+<column name="grp_update_fu_103">update, 239, 1537, 239, 1537, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -49,33 +48,21 @@
 <item name = "Summary"><table name="" hasTotal="1">
 <keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
 <column name="DSP">-, -, -, -, -</column>
-<column name="Expression">-, -, 0, 2, -</column>
+<column name="Expression">-, -, -, -, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">16, 194, 12074, 17590, -</column>
+<column name="Instance">24, 242, 35618, 53793, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 121, -</column>
-<column name="Register">-, -, 347, -, -</column>
+<column name="Multiplexer">-, -, -, 15, -</column>
+<column name="Register">-, -, 3, -, -</column>
 <specialColumn name="Available">120, 80, 35200, 17600, 0</specialColumn>
-<specialColumn name="Utilization (%)">13, 242, 35, 100, 0</specialColumn>
+<specialColumn name="Utilization (%)">20, 302, 101, 305, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
-<column name="grp_sin_or_cos_double_s_fu_93">sin_or_cos_double_s, 8, 88, 4885, 6725, 0</column>
-<column name="grp_sin_or_cos_double_s_fu_112">sin_or_cos_double_s, 8, 88, 4885, 6725, 0</column>
-<column name="top_level_fadd_32qcK_U34">top_level_fadd_32qcK, 0, 2, 205, 390, 0</column>
-<column name="top_level_fadd_32qcK_U35">top_level_fadd_32qcK, 0, 2, 205, 390, 0</column>
-<column name="top_level_fadd_32qcK_U36">top_level_fadd_32qcK, 0, 2, 205, 390, 0</column>
-<column name="top_level_fdiv_32sc4_U41">top_level_fdiv_32sc4, 0, 0, 761, 994, 0</column>
-<column name="top_level_fmul_32rcU_U37">top_level_fmul_32rcU, 0, 3, 143, 321, 0</column>
-<column name="top_level_fmul_32rcU_U38">top_level_fmul_32rcU, 0, 3, 143, 321, 0</column>
-<column name="top_level_fmul_32rcU_U39">top_level_fmul_32rcU, 0, 3, 143, 321, 0</column>
-<column name="top_level_fmul_32rcU_U40">top_level_fmul_32rcU, 0, 3, 143, 321, 0</column>
-<column name="top_level_fpext_3udo_U44">top_level_fpext_3udo, 0, 0, 100, 138, 0</column>
-<column name="top_level_fptrunctde_U42">top_level_fptrunctde, 0, 0, 128, 277, 0</column>
-<column name="top_level_fptrunctde_U43">top_level_fptrunctde, 0, 0, 128, 277, 0</column>
+<column name="grp_update_fu_103">update, 24, 242, 35618, 53793, 0</column>
 </table>
 </item>
 <item name = "DSP48E"><table name="" hasTotal="0">
@@ -92,28 +79,17 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="ap_block_state15_on_subcall_done">or, 0, 0, 2, 1, 1</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">121, 26, 1, 26</column>
+<column name="ap_NS_fsm">15, 3, 1, 3</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="ap_CS_fsm">25, 0, 25, 0</column>
-<column name="cos_steer_reg_221">32, 0, 32, 0</column>
-<column name="grp_sin_or_cos_double_s_fu_112_ap_start_reg">1, 0, 1, 0</column>
-<column name="grp_sin_or_cos_double_s_fu_93_ap_start_reg">1, 0, 1, 0</column>
-<column name="sin_steer_reg_226">32, 0, 32, 0</column>
-<column name="tmp_1_i_reg_232">32, 0, 32, 0</column>
-<column name="tmp_2_i_reg_242">32, 0, 32, 0</column>
-<column name="tmp_4_i_reg_247">32, 0, 32, 0</column>
-<column name="tmp_6_i_reg_253">32, 0, 32, 0</column>
-<column name="tmp_7_i_reg_258">32, 0, 32, 0</column>
-<column name="wheel_angularVelocit">32, 0, 32, 0</column>
-<column name="x_assign_reg_205">64, 0, 64, 0</column>
+<column name="ap_CS_fsm">2, 0, 2, 0</column>
+<column name="grp_update_fu_103_ap_start_reg">1, 0, 1, 0</column>
 </table>
 </item>
 </section>
