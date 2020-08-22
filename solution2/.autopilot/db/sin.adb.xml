@@ -1,0 +1,162 @@
+<stg><name>sin</name>
+
+
+<trans_list>
+
+<trans id="7" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="3" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="8" bw="64" op_0_bw="64" op_1_bw="64">
+<![CDATA[
+:0  %x_read = call double @_ssdm_op_Read.ap_auto.double(double %x) nounwind
+
+]]></Node>
+<StgValue><ssdm name="x_read"/></StgValue>
+</operation>
+
+<operation id="4" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="64" op_0_bw="64" op_1_bw="64" op_2_bw="1" op_3_bw="256" op_4_bw="59" op_5_bw="52" op_6_bw="44" op_7_bw="33" op_8_bw="25">
+<![CDATA[
+:1  %tmp_i = call fastcc double @"sin_or_cos<double>"(double %x_read, i1 zeroext false) nounwind
+
+]]></Node>
+<StgValue><ssdm name="tmp_i"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="5" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="9" bw="64" op_0_bw="64" op_1_bw="64" op_2_bw="1" op_3_bw="256" op_4_bw="59" op_5_bw="52" op_6_bw="44" op_7_bw="33" op_8_bw="25">
+<![CDATA[
+:1  %tmp_i = call fastcc double @"sin_or_cos<double>"(double %x_read, i1 zeroext false) nounwind
+
+]]></Node>
+<StgValue><ssdm name="tmp_i"/></StgValue>
+</operation>
+
+<operation id="6" st_id="2" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="10" bw="0" op_0_bw="64">
+<![CDATA[
+:2  ret double %tmp_i
+
+]]></Node>
+<StgValue><ssdm name="ret_ln8"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="8" name="x" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="x"/></StgValue>
+</port>
+<port id="9" name="ref_4oPi_table_256_V" dir="0" iftype="1">
+<core>ROM_nP</core><StgValue><ssdm name="ref_4oPi_table_256_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="10" name="fourth_order_double_4" dir="0" iftype="1">
+<core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_4"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="11" name="fourth_order_double_5" dir="0" iftype="1">
+<core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_5"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="12" name="fourth_order_double_6" dir="0" iftype="1">
+<core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_6"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="13" name="fourth_order_double_7" dir="0" iftype="1">
+<core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_7"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="14" name="fourth_order_double_s" dir="0" iftype="1">
+<core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_s"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="16" from="_ssdm_op_Read.ap_auto.double" to="x_read" fromId="15" toId="3">
+</dataflow>
+<dataflow id="17" from="x" to="x_read" fromId="8" toId="3">
+</dataflow>
+<dataflow id="19" from="sin_or_cos<double>" to="tmp_i" fromId="18" toId="4">
+</dataflow>
+<dataflow id="20" from="x_read" to="tmp_i" fromId="3" toId="4">
+</dataflow>
+<dataflow id="22" from="StgValue_21" to="tmp_i" fromId="21" toId="4">
+</dataflow>
+<dataflow id="23" from="ref_4oPi_table_256_V" to="tmp_i" fromId="9" toId="4">
+</dataflow>
+<dataflow id="24" from="fourth_order_double_4" to="tmp_i" fromId="10" toId="4">
+</dataflow>
+<dataflow id="25" from="fourth_order_double_5" to="tmp_i" fromId="11" toId="4">
+</dataflow>
+<dataflow id="26" from="fourth_order_double_6" to="tmp_i" fromId="12" toId="4">
+</dataflow>
+<dataflow id="27" from="fourth_order_double_7" to="tmp_i" fromId="13" toId="4">
+</dataflow>
+<dataflow id="28" from="fourth_order_double_s" to="tmp_i" fromId="14" toId="4">
+</dataflow>
+<dataflow id="29" from="sin_or_cos<double>" to="tmp_i" fromId="18" toId="5">
+</dataflow>
+<dataflow id="30" from="x_read" to="tmp_i" fromId="3" toId="5">
+</dataflow>
+<dataflow id="31" from="StgValue_21" to="tmp_i" fromId="21" toId="5">
+</dataflow>
+<dataflow id="32" from="ref_4oPi_table_256_V" to="tmp_i" fromId="9" toId="5">
+</dataflow>
+<dataflow id="33" from="fourth_order_double_4" to="tmp_i" fromId="10" toId="5">
+</dataflow>
+<dataflow id="34" from="fourth_order_double_5" to="tmp_i" fromId="11" toId="5">
+</dataflow>
+<dataflow id="35" from="fourth_order_double_6" to="tmp_i" fromId="12" toId="5">
+</dataflow>
+<dataflow id="36" from="fourth_order_double_7" to="tmp_i" fromId="13" toId="5">
+</dataflow>
+<dataflow id="37" from="fourth_order_double_s" to="tmp_i" fromId="14" toId="5">
+</dataflow>
+<dataflow id="38" from="tmp_i" to="ret_ln8" fromId="5" toId="6">
+</dataflow>
+</dataflows>
+
+
+</stg>

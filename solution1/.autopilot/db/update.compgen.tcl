@@ -1,10 +1,10 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 43
-set name top_level_faddfsuudo
+set id 31
+set name top_level_wheelSipcA
 set corename simcore_faddfsub
 set op faddfsub
-set stage_num 5
+set stage_num 4
 set max_latency -1
 set registered_input 1
 set impl_style full_dsp
@@ -97,11 +97,11 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 44
-set name top_level_fadd_32vdy
+set id 32
+set name top_level_wheelSiqcK
 set corename simcore_fadd
 set op fadd
-set stage_num 5
+set stage_num 4
 set max_latency -1
 set registered_input 1
 set impl_style full_dsp
@@ -188,11 +188,11 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 46
-set name top_level_fmul_32wdI
+set id 33
+set name top_level_wheelSircU
 set corename simcore_fmul
 set op fmul
-set stage_num 4
+set stage_num 2
 set max_latency -1
 set registered_input 1
 set impl_style max_dsp
@@ -279,11 +279,11 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 51
-set name top_level_fdiv_32xdS
+set id 37
+set name top_level_wheelSisc4
 set corename simcore_fdiv
 set op fdiv
-set stage_num 16
+set stage_num 8
 set max_latency -1
 set registered_input 1
 set Futype4reduceCEFanout 1
@@ -367,11 +367,11 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 53
-set name top_level_sitofp_yd2
+set id 39
+set name top_level_wheelSitde
 set corename simcore_sitofp
 set op sitofp
-set stage_num 6
+set stage_num 3
 set max_latency -1
 set registered_input 1
 set Futype4reduceCEFanout 1
@@ -449,8 +449,8 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 54
-set name top_level_fptrunczec
+set id 40
+set name top_level_wheelSiudo
 set corename simcore_fptrunc
 set op fptrunc
 set stage_num 2
@@ -531,8 +531,8 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 56
-set name top_level_fpext_3Aem
+set id 42
+set name top_level_wheelSivdy
 set corename simcore_fpext
 set op fpext
 set stage_num 2
@@ -613,8 +613,8 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 58
-set name top_level_fcmp_32Bew
+set id 44
+set name top_level_wheelSiwdI
 set corename simcore_fcmp
 set op fcmp
 set stage_num 2
@@ -707,11 +707,11 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 61
-set name top_level_fsqrt_3CeG
+set id 46
+set name top_level_wheelSixdS
 set corename simcore_fsqrt
 set op fsqrt
-set stage_num 12
+set stage_num 7
 set max_latency -1
 set registered_input 1
 set Futype4reduceCEFanout 1
@@ -795,10 +795,10 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 63
-set name top_level_dadd_64DeQ
-set corename simcore_dadd
-set op dadd
+set id 47
+set name top_level_wheelSiyd2
+set corename simcore_dadddsub
+set op dadddsub
 set stage_num 5
 set max_latency -1
 set registered_input 1
@@ -812,12 +812,14 @@ set in0_width 64
 set in0_signed 0
 set in1_width 64
 set in1_signed 0
+set opcode_width 2
+set opcode_signed 0
 set ce_width 1
 set ce_signed 0
 set out_width 64
 if {${::AESL::PGuard_simmodel_gen}} {
-if {[info proc ap_gen_simcore_dadd] == "ap_gen_simcore_dadd"} {
-eval "ap_gen_simcore_dadd { \
+if {[info proc ap_gen_simcore_dadddsub] == "ap_gen_simcore_dadddsub"} {
+eval "ap_gen_simcore_dadddsub { \
     id ${id} \
     name ${name} \
     corename ${corename} \
@@ -837,12 +839,14 @@ eval "ap_gen_simcore_dadd { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
+    opcode_width ${opcode_width} \
+    opcode_signed ${opcode_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
 }"
 } else {
-puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_dadd, check your AutoPilot builtin lib"
+puts "@W \[IMPL-100\] Cannot find ap_gen_simcore_dadddsub, check your AutoPilot builtin lib"
 }
 }
 
@@ -852,7 +856,7 @@ if {${::AESL::PGuard_rtl_comp_handler}} {
 }
 
 
-set op dadd
+set op dadddsub
 set corename DAddSub
 if {${::AESL::PGuard_autocg_gen} && (${::AESL::PGuard_autocg_fpip} || ${::AESL::PGuard_autocg_fpv6en} || ${::AESL::PGuard_autocg_hpen})} {
 if {[info proc ::AESL_LIB_XILINX_FPV6::fpv6_gen] == "::AESL_LIB_XILINX_FPV6::fpv6_gen"} {
@@ -876,6 +880,8 @@ eval "::AESL_LIB_XILINX_FPV6::fpv6_gen { \
     in0_signed ${in0_signed} \
     in1_width ${in1_width} \
     in1_signed ${in1_signed} \
+    opcode_width ${opcode_width} \
+    opcode_signed ${opcode_signed} \
     ce_width ${ce_width} \
     ce_signed ${ce_signed} \
     out_width ${out_width} \
@@ -886,11 +892,11 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 64
-set name top_level_dmul_64Ee0
+set id 48
+set name top_level_wheelSizec
 set corename simcore_dmul
 set op dmul
-set stage_num 6
+set stage_num 5
 set max_latency -1
 set registered_input 1
 set impl_style max_dsp
@@ -987,7 +993,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 80 \
+    id 63 \
     name deltaTime \
     type other \
     dir I \
@@ -1002,7 +1008,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 81 \
+    id 64 \
     name torque \
     type other \
     dir I \
@@ -1017,52 +1023,7 @@ eval "cg_default_interface_gen_dc { \
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 82 \
-    name velocity_x \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_velocity_x \
-    op interface \
-    ports { velocity_x { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 83 \
-    name velocity_z \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_velocity_z \
-    op interface \
-    ports { velocity_z { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 84 \
-    name load \
-    type other \
-    dir I \
-    reset_level 1 \
-    sync_rst true \
-    corename dc_load \
-    op interface \
-    ports { load { I 32 vector } } \
-} "
-}
-
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id 85 \
+    id 65 \
     name steeringAngle \
     type other \
     dir I \
@@ -1071,6 +1032,156 @@ eval "cg_default_interface_gen_dc { \
     corename dc_steeringAngle \
     op interface \
     ports { steeringAngle { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 66 \
+    name wheel_vel_x \
+    type other \
+    dir IO \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_wheel_vel_x \
+    op interface \
+    ports { wheel_vel_x_i { I 32 vector } wheel_vel_x_o { O 32 vector } wheel_vel_x_o_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 67 \
+    name wheel_angularVelocit \
+    type other \
+    dir IO \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_wheel_angularVelocit \
+    op interface \
+    ports { wheel_angularVelocit_i { I 32 vector } wheel_angularVelocit_o { O 32 vector } wheel_angularVelocit_o_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 68 \
+    name wheel_radius \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_wheel_radius \
+    op interface \
+    ports { wheel_radius { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 69 \
+    name wheel_slipAngle \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_wheel_slipAngle \
+    op interface \
+    ports { wheel_slipAngle { O 32 vector } wheel_slipAngle_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 70 \
+    name wheel_slipRatio \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_wheel_slipRatio \
+    op interface \
+    ports { wheel_slipRatio { O 32 vector } wheel_slipRatio_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 71 \
+    name wheel_inertia \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_wheel_inertia \
+    op interface \
+    ports { wheel_inertia { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 72 \
+    name wheel_mass \
+    type other \
+    dir I \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_wheel_mass \
+    op interface \
+    ports { wheel_mass { I 32 vector } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 73 \
+    name wheel_pos_x \
+    type other \
+    dir IO \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_wheel_pos_x \
+    op interface \
+    ports { wheel_pos_x_i { I 32 vector } wheel_pos_x_o { O 32 vector } wheel_pos_x_o_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 74 \
+    name wheel_fz \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_wheel_fz \
+    op interface \
+    ports { wheel_fz { O 32 vector } wheel_fz_ap_vld { O 1 bit } } \
+} "
+}
+
+# Direct connection:
+if {${::AESL::PGuard_autoexp_gen}} {
+eval "cg_default_interface_gen_dc { \
+    id 75 \
+    name wheel_fx \
+    type other \
+    dir O \
+    reset_level 1 \
+    sync_rst true \
+    corename dc_wheel_fx \
+    op interface \
+    ports { wheel_fx { O 32 vector } wheel_fx_ap_vld { O 1 bit } } \
 } "
 }
 
@@ -1088,20 +1199,6 @@ eval "cg_default_interface_gen_dc { \
 } "
 }
 
-# Direct connection:
-if {${::AESL::PGuard_autoexp_gen}} {
-eval "cg_default_interface_gen_dc { \
-    id -2 \
-    name ap_return \
-    type ap_return \
-    reset_level 1 \
-    sync_rst true \
-    corename ap_return \
-    op interface \
-    ports { ap_return { O 1 vector } } \
-} "
-}
-
 
 # Adapter definition:
 set PortName ap_clk
@@ -1109,7 +1206,7 @@ set DataWd 1
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc cg_default_interface_gen_clock] == "cg_default_interface_gen_clock"} {
 eval "cg_default_interface_gen_clock { \
-    id -3 \
+    id -2 \
     name ${PortName} \
     reset_level 1 \
     sync_rst true \
@@ -1129,7 +1226,7 @@ set DataWd 1
 if {${::AESL::PGuard_autoexp_gen}} {
 if {[info proc cg_default_interface_gen_reset] == "cg_default_interface_gen_reset"} {
 eval "cg_default_interface_gen_reset { \
-    id -4 \
+    id -3 \
     name ${PortName} \
     reset_level 1 \
     sync_rst true \

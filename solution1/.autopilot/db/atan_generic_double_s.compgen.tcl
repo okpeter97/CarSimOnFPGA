@@ -1,9 +1,9 @@
 # This script segment is generated automatically by AutoPilot
 
 # Memory (RAM/ROM)  definition:
-set ID 34
+set ID 22
 set hasByteEnable 0
-set MemName atan_generic_doubqcK
+set MemName atan_generic_doublbW
 set CoreName ap_simcore_mem
 set PortList { 1 }
 set DataWd 126
@@ -16,7 +16,7 @@ set HasInitializer 1
 set Initializer $ROMData
 set NumOfStage 2
 set MaxLatency -1
-set DelayBudget 3.254
+set DelayBudget 2.266
 set ClkPeriod 10
 set RegisteredInput 0
 if {${::AESL::PGuard_simmodel_gen}} {
@@ -93,7 +93,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 35 \
+    id 23 \
     name t_in \
     type other \
     dir I \

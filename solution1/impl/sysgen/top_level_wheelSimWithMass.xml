@@ -1,0 +1,1147 @@
+
+{
+  'fileSets' => [
+    {
+      'files' => [
+        {
+          'fileType' => 'datSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/atan_generic_doublbW_rom.dat'
+        },
+        {
+          'fileType' => 'datSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/sin_or_cos_doublecud_rom.dat'
+        },
+        {
+          'fileType' => 'datSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/sin_or_cos_doubledEe_rom.dat'
+        },
+        {
+          'fileType' => 'datSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/sin_or_cos_doubleeOg_rom.dat'
+        },
+        {
+          'fileType' => 'datSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/sin_or_cos_doublefYi_rom.dat'
+        },
+        {
+          'fileType' => 'datSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/sin_or_cos_doubleg8j_rom.dat'
+        },
+        {
+          'fileType' => 'datSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/sin_or_cos_doublehbi_rom.dat'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/atan_generic_doublbW.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/top_level_wheelSibkb.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/scaled_fixed2ieee.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/sin_or_cos_doublecud.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/sin_or_cos_doubledEe.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/sin_or_cos_doubleeOg.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/sin_or_cos_doublefYi.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/sin_or_cos_doubleg8j.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/sin_or_cos_doublehbi.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/atan_generic_double_s.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/top_level_wheelSimb6.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/top_level_wheelSincg.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/top_level_wheelSiocq.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/atan.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/top_level_wheelSiibs.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/top_level_wheelSijbC.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/top_level_wheelSikbM.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/sin_or_cos_double_s.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/top_level_wheelSipcA.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/top_level_wheelSiqcK.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/top_level_wheelSircU.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/top_level_wheelSisc4.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/top_level_wheelSitde.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/top_level_wheelSiudo.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/top_level_wheelSivdy.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/top_level_wheelSiwdI.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/top_level_wheelSixdS.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/top_level_wheelSiyd2.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/top_level_wheelSizec.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/update.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_sim/top_level_wheelSimWithMass.v'
+        }
+      ],
+      'name' => 'vivado_hls_sim_verilog_fileset'
+    },
+    {
+      'files' => [
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/atan_generic_doublbW.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/top_level_wheelSibkb.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/scaled_fixed2ieee.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/sin_or_cos_doublecud.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/sin_or_cos_doubledEe.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/sin_or_cos_doubleeOg.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/sin_or_cos_doublefYi.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/sin_or_cos_doubleg8j.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/sin_or_cos_doublehbi.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/atan_generic_double_s.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/top_level_wheelSimb6.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/top_level_wheelSincg.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/top_level_wheelSiocq.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/atan.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/top_level_wheelSiibs.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/top_level_wheelSijbC.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/top_level_wheelSikbM.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/sin_or_cos_double_s.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/top_level_wheelSipcA.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/top_level_wheelSiqcK.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/top_level_wheelSircU.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/top_level_wheelSisc4.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/top_level_wheelSitde.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/top_level_wheelSiudo.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/top_level_wheelSivdy.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/top_level_wheelSiwdI.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/top_level_wheelSixdS.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/top_level_wheelSiyd2.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/top_level_wheelSizec.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/update.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_sim/top_level_wheelSimWithMass.vhd'
+        }
+      ],
+      'name' => 'vivado_hls_sim_vhdl_fileset'
+    },
+    {
+      'files' => [
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/top_level_wheelSimWithMass_ap_dadddsub_3_full_dsp_64_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/top_level_wheelSimWithMass_ap_dcmp_0_no_dsp_64_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/top_level_wheelSimWithMass_ap_ddiv_15_no_dsp_64_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/top_level_wheelSimWithMass_ap_dmul_3_max_dsp_64_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/top_level_wheelSimWithMass_ap_dsub_3_full_dsp_64_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/top_level_wheelSimWithMass_ap_faddfsub_2_full_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/top_level_wheelSimWithMass_ap_fadd_2_full_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/top_level_wheelSimWithMass_ap_fcmp_0_no_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/top_level_wheelSimWithMass_ap_fdiv_6_no_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/top_level_wheelSimWithMass_ap_fmul_0_max_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/top_level_wheelSimWithMass_ap_fpext_0_no_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/top_level_wheelSimWithMass_ap_fptrunc_0_no_dsp_64_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/top_level_wheelSimWithMass_ap_fsqrt_5_no_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/top_level_wheelSimWithMass_ap_sitofp_1_no_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'datSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/atan_generic_doublbW_rom.dat'
+        },
+        {
+          'fileType' => 'datSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/sin_or_cos_doublecud_rom.dat'
+        },
+        {
+          'fileType' => 'datSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/sin_or_cos_doubledEe_rom.dat'
+        },
+        {
+          'fileType' => 'datSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/sin_or_cos_doubleeOg_rom.dat'
+        },
+        {
+          'fileType' => 'datSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/sin_or_cos_doublefYi_rom.dat'
+        },
+        {
+          'fileType' => 'datSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/sin_or_cos_doubleg8j_rom.dat'
+        },
+        {
+          'fileType' => 'datSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/sin_or_cos_doublehbi_rom.dat'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'atan_generic_doublbW',
+          'name' => 'verilog_impl/atan_generic_doublbW.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'top_level_wheelSibkb',
+          'name' => 'verilog_impl/top_level_wheelSibkb.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'scaled_fixed2ieee',
+          'name' => 'verilog_impl/scaled_fixed2ieee.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'sin_or_cos_doublecud',
+          'name' => 'verilog_impl/sin_or_cos_doublecud.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'sin_or_cos_doubledEe',
+          'name' => 'verilog_impl/sin_or_cos_doubledEe.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'sin_or_cos_doubleeOg',
+          'name' => 'verilog_impl/sin_or_cos_doubleeOg.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'sin_or_cos_doublefYi',
+          'name' => 'verilog_impl/sin_or_cos_doublefYi.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'sin_or_cos_doubleg8j',
+          'name' => 'verilog_impl/sin_or_cos_doubleg8j.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'sin_or_cos_doublehbi',
+          'name' => 'verilog_impl/sin_or_cos_doublehbi.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'atan_generic_double_s',
+          'name' => 'verilog_impl/atan_generic_double_s.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'top_level_wheelSimb6',
+          'name' => 'verilog_impl/top_level_wheelSimb6.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'top_level_wheelSincg',
+          'name' => 'verilog_impl/top_level_wheelSincg.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'top_level_wheelSiocq',
+          'name' => 'verilog_impl/top_level_wheelSiocq.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'atan',
+          'name' => 'verilog_impl/atan.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'top_level_wheelSiibs',
+          'name' => 'verilog_impl/top_level_wheelSiibs.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'top_level_wheelSijbC',
+          'name' => 'verilog_impl/top_level_wheelSijbC.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'top_level_wheelSikbM',
+          'name' => 'verilog_impl/top_level_wheelSikbM.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'sin_or_cos_double_s',
+          'name' => 'verilog_impl/sin_or_cos_double_s.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'top_level_wheelSipcA',
+          'name' => 'verilog_impl/top_level_wheelSipcA.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'top_level_wheelSiqcK',
+          'name' => 'verilog_impl/top_level_wheelSiqcK.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'top_level_wheelSircU',
+          'name' => 'verilog_impl/top_level_wheelSircU.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'top_level_wheelSisc4',
+          'name' => 'verilog_impl/top_level_wheelSisc4.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'top_level_wheelSitde',
+          'name' => 'verilog_impl/top_level_wheelSitde.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'top_level_wheelSiudo',
+          'name' => 'verilog_impl/top_level_wheelSiudo.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'top_level_wheelSivdy',
+          'name' => 'verilog_impl/top_level_wheelSivdy.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'top_level_wheelSiwdI',
+          'name' => 'verilog_impl/top_level_wheelSiwdI.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'top_level_wheelSixdS',
+          'name' => 'verilog_impl/top_level_wheelSixdS.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'top_level_wheelSiyd2',
+          'name' => 'verilog_impl/top_level_wheelSiyd2.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'top_level_wheelSizec',
+          'name' => 'verilog_impl/top_level_wheelSizec.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'update',
+          'name' => 'verilog_impl/update.v'
+        },
+        {
+          'fileType' => 'verilogSource',
+          'logicalName' => 'work',
+          'name' => 'verilog_impl/top_level_wheelSimWithMass.v'
+        }
+      ],
+      'name' => 'vivado_hls_impl_verilog_fileset'
+    },
+    {
+      'files' => [
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSimWithMass_ap_dadddsub_3_full_dsp_64_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSimWithMass_ap_dcmp_0_no_dsp_64_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSimWithMass_ap_ddiv_15_no_dsp_64_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSimWithMass_ap_dmul_3_max_dsp_64_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSimWithMass_ap_dsub_3_full_dsp_64_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSimWithMass_ap_faddfsub_2_full_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSimWithMass_ap_fadd_2_full_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSimWithMass_ap_fcmp_0_no_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSimWithMass_ap_fdiv_6_no_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSimWithMass_ap_fmul_0_max_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSimWithMass_ap_fpext_0_no_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSimWithMass_ap_fptrunc_0_no_dsp_64_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSimWithMass_ap_fsqrt_5_no_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'TCLSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSimWithMass_ap_sitofp_1_no_dsp_32_ip.tcl'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/atan_generic_doublbW.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSibkb.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/scaled_fixed2ieee.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/sin_or_cos_doublecud.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/sin_or_cos_doubledEe.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/sin_or_cos_doubleeOg.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/sin_or_cos_doublefYi.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/sin_or_cos_doubleg8j.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/sin_or_cos_doublehbi.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/atan_generic_double_s.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSimb6.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSincg.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSiocq.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/atan.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSiibs.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSijbC.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSikbM.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/sin_or_cos_double_s.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSipcA.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSiqcK.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSircU.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSisc4.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSitde.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSiudo.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSivdy.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSiwdI.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSixdS.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSiyd2.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSizec.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/update.vhd'
+        },
+        {
+          'fileType' => 'vhdlSource',
+          'logicalName' => 'work',
+          'name' => 'vhdl_impl/top_level_wheelSimWithMass.vhd'
+        }
+      ],
+      'name' => 'vivado_hls_impl_vhdl_fileset'
+    }
+  ],
+  'DesignConstraint' => {
+      'clk_period' => '10.000'
+  },
+  'library' => 'VIVADO_HLS',
+  'model' => {
+    'modelParameters'=>{
+        'combinational' => '0',
+        'latency' => '196',
+        'II' => 'x'
+    },
+    'ports' => [
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'bool'
+        },
+        'direction' => 'in',
+        'left' => '0',
+        'name' => 'ap_clk',
+        'right' => '0',
+        'type' => 'std_logic'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'bool'
+        },
+        'direction' => 'in',
+        'left' => '0',
+        'name' => 'ap_rst',
+        'right' => '0',
+        'type' => 'std_logic'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'bool'
+        },
+        'direction' => 'in',
+        'left' => '0',
+        'name' => 'ap_start',
+        'right' => '0',
+        'type' => 'std_logic'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'bool'
+        },
+        'direction' => 'out',
+        'left' => '0',
+        'name' => 'ap_done',
+        'right' => '0',
+        'type' => 'std_logic'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'bool'
+        },
+        'direction' => 'out',
+        'left' => '0',
+        'name' => 'ap_idle',
+        'right' => '0',
+        'type' => 'std_logic'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'bool'
+        },
+        'direction' => 'out',
+        'left' => '0',
+        'name' => 'ap_ready',
+        'right' => '0',
+        'type' => 'std_logic'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '24',
+          'type' => 'Floating-point'
+        },
+        'direction' => 'in',
+        'left' => '31',
+        'name' => 'deltaTime',
+        'right' => '0',
+        'type' => 'std_logic_vector'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '24',
+          'type' => 'Floating-point'
+        },
+        'direction' => 'in',
+        'left' => '31',
+        'name' => 'initVel',
+        'right' => '0',
+        'type' => 'std_logic_vector'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '24',
+          'type' => 'Floating-point'
+        },
+        'direction' => 'in',
+        'left' => '31',
+        'name' => 'torque',
+        'right' => '0',
+        'type' => 'std_logic_vector'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '24',
+          'type' => 'Floating-point'
+        },
+        'direction' => 'in',
+        'left' => '31',
+        'name' => 'steeringAngle',
+        'right' => '0',
+        'type' => 'std_logic_vector'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '24',
+          'type' => 'Floating-point'
+        },
+        'direction' => 'out',
+        'left' => '31',
+        'name' => 'slipRatio',
+        'right' => '0',
+        'type' => 'std_logic_vector'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'bool'
+        },
+        'direction' => 'out',
+        'left' => '0',
+        'name' => 'slipRatio_ap_vld',
+        'right' => '0',
+        'type' => 'std_logic'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '24',
+          'type' => 'Floating-point'
+        },
+        'direction' => 'out',
+        'left' => '31',
+        'name' => 'slipAngle',
+        'right' => '0',
+        'type' => 'std_logic_vector'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'bool'
+        },
+        'direction' => 'out',
+        'left' => '0',
+        'name' => 'slipAngle_ap_vld',
+        'right' => '0',
+        'type' => 'std_logic'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '24',
+          'type' => 'Floating-point'
+        },
+        'direction' => 'out',
+        'left' => '31',
+        'name' => 'force_x',
+        'right' => '0',
+        'type' => 'std_logic_vector'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'bool'
+        },
+        'direction' => 'out',
+        'left' => '0',
+        'name' => 'force_x_ap_vld',
+        'right' => '0',
+        'type' => 'std_logic'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '24',
+          'type' => 'Floating-point'
+        },
+        'direction' => 'out',
+        'left' => '31',
+        'name' => 'force_y',
+        'right' => '0',
+        'type' => 'std_logic_vector'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'bool'
+        },
+        'direction' => 'out',
+        'left' => '0',
+        'name' => 'force_y_ap_vld',
+        'right' => '0',
+        'type' => 'std_logic'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '24',
+          'type' => 'Floating-point'
+        },
+        'direction' => 'out',
+        'left' => '31',
+        'name' => 'vel_x',
+        'right' => '0',
+        'type' => 'std_logic_vector'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'bool'
+        },
+        'direction' => 'out',
+        'left' => '0',
+        'name' => 'vel_x_ap_vld',
+        'right' => '0',
+        'type' => 'std_logic'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '24',
+          'type' => 'Floating-point'
+        },
+        'direction' => 'out',
+        'left' => '31',
+        'name' => 'angularVel',
+        'right' => '0',
+        'type' => 'std_logic_vector'
+      },
+      {
+        'dataType' => {
+          'fractionWidth' => '0',
+          'type' => 'bool'
+        },
+        'direction' => 'out',
+        'left' => '0',
+        'name' => 'angularVel_ap_vld',
+        'right' => '0',
+        'type' => 'std_logic'
+      }
+    ],
+    'views' => [
+      {
+        'envIdentifier' => 'verilogSource:sysgen.xilinx.com:synthesis',
+        'fileSetRef' => {
+          'localName' => 'vivado_hls_impl_verilog_fileset'
+        },
+        'language' => 'VERILOG',
+        'name' => 'xilinx_verilogsynthesis'
+      },
+      {
+        'envIdentifier' => 'vhdlSource:sysgen.xilinx.com:synthesis',
+        'fileSetRef' => {
+          'localName' => 'vivado_hls_impl_vhdl_fileset'
+        },
+        'language' => 'VHDL',
+        'name' => 'xilinx_vhdlsynthesis'
+      },
+      {
+        'envIdentifier' => 'verilogSource:sysgen.xilinx.com:synthesis',
+        'fileSetRef' => {
+          'localName' => 'vivado_hls_sim_verilog_fileset'
+        },
+        'language' => 'VERILOG',
+        'name' => 'xilinx_verilogsimulation'
+      },
+      {
+        'envIdentifier' => 'vhdlSource:sysgen.xilinx.com:synthesis',
+        'fileSetRef' => {
+          'localName' => 'vivado_hls_sim_vhdl_fileset'
+        },
+        'language' => 'VHDL',
+        'name' => 'xilinx_vhdlsimulation'
+      }
+    ]
+  },
+  'name' => 'top_level_wheelSimWithMass',
+  'vendor' => 'xilinx.com',
+  'version' => '1.0'
+}

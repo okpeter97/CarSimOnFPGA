@@ -42,6 +42,11 @@
 			<location>D:/Dev/Repos/CarSimOnFPGA/solution1/.tcls</location>
 		</link>
 		<link>
+			<name>solution2/constraints</name>
+			<type>2</type>
+			<location>D:/Dev/Repos/CarSimOnFPGA/solution2/.tcls</location>
+		</link>
+		<link>
 			<name>source/Car.cpp</name>
 			<type>1</type>
 			<location>D:/Dev/Repos/CarSimOnFPGA/Car.cpp</location>
@@ -55,6 +60,11 @@
 			<name>source/Wheel.cpp</name>
 			<type>1</type>
 			<location>D:/Dev/Repos/CarSimOnFPGA/Wheel.cpp</location>
+		</link>
+		<link>
+			<name>source/WheelWithMass.cpp</name>
+			<type>1</type>
+			<location>D:/Dev/Repos/CarSimOnFPGA/WheelWithMass.cpp</location>
 		</link>
 		<link>
 			<name>source/top_level.cpp</name>
@@ -80,6 +90,21 @@
 			<name>solution1/constraints/script.tcl</name>
 			<type>1</type>
 			<location>D:/Dev/Repos/CarSimOnFPGA/solution1/script.tcl</location>
+		</link>
+		<link>
+			<name>solution2/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>D:/Dev/Repos/CarSimOnFPGA/solution2/solution2.directive</location>
+		</link>
+		<link>
+			<name>solution2/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>D:/Dev/Repos/CarSimOnFPGA/solution2/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution2/constraints/script.tcl</name>
+			<type>1</type>
+			<location>D:/Dev/Repos/CarSimOnFPGA/solution2/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

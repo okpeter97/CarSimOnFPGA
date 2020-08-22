@@ -37,22 +37,12 @@
       <fractionWidth>24</fractionWidth>
     </RtlPort>
     <RtlPort>
+      <name>initVel</name>
+      <type>Floating-point</type>
+      <fractionWidth>24</fractionWidth>
+    </RtlPort>
+    <RtlPort>
       <name>torque</name>
-      <type>Floating-point</type>
-      <fractionWidth>24</fractionWidth>
-    </RtlPort>
-    <RtlPort>
-      <name>velocity_x</name>
-      <type>Floating-point</type>
-      <fractionWidth>24</fractionWidth>
-    </RtlPort>
-    <RtlPort>
-      <name>velocity_z</name>
-      <type>Floating-point</type>
-      <fractionWidth>24</fractionWidth>
-    </RtlPort>
-    <RtlPort>
-      <name>load</name>
       <type>Floating-point</type>
       <fractionWidth>24</fractionWidth>
     </RtlPort>
@@ -60,6 +50,26 @@
       <name>steeringAngle</name>
       <type>Floating-point</type>
       <fractionWidth>24</fractionWidth>
+    </RtlPort>
+    <RtlPort>
+      <name>slipRatio</name>
+      <type>Floating-point</type>
+      <fractionWidth>24</fractionWidth>
+    </RtlPort>
+    <RtlPort>
+      <name>slipRatio_ap_vld</name>
+      <type>bool</type>
+      <fractionWidth>0</fractionWidth>
+    </RtlPort>
+    <RtlPort>
+      <name>slipAngle</name>
+      <type>Floating-point</type>
+      <fractionWidth>24</fractionWidth>
+    </RtlPort>
+    <RtlPort>
+      <name>slipAngle_ap_vld</name>
+      <type>bool</type>
+      <fractionWidth>0</fractionWidth>
     </RtlPort>
     <RtlPort>
       <name>force_x</name>
@@ -72,12 +82,22 @@
       <fractionWidth>0</fractionWidth>
     </RtlPort>
     <RtlPort>
-      <name>force_z</name>
+      <name>force_y</name>
       <type>Floating-point</type>
       <fractionWidth>24</fractionWidth>
     </RtlPort>
     <RtlPort>
-      <name>force_z_ap_vld</name>
+      <name>force_y_ap_vld</name>
+      <type>bool</type>
+      <fractionWidth>0</fractionWidth>
+    </RtlPort>
+    <RtlPort>
+      <name>vel_x</name>
+      <type>Floating-point</type>
+      <fractionWidth>24</fractionWidth>
+    </RtlPort>
+    <RtlPort>
+      <name>vel_x_ap_vld</name>
       <type>bool</type>
       <fractionWidth>0</fractionWidth>
     </RtlPort>
@@ -98,7 +118,7 @@
   <Machine>32</Machine>
   <modelParameters>
     <combinational>0</combinational>
-    <latency>240</latency>
+    <latency>196</latency>
     <II>x</II>
   </modelParameters>
 </AdditionalInfo>

@@ -18,7 +18,7 @@ __SIM_DDS__ = 1
 
 ObjDir = obj
 
-HLS_SOURCES = ../../../main.cpp ../../../Car.cpp ../../../Chassis.cpp ../../../Wheel.cpp ../../../top_level.cpp
+HLS_SOURCES = ../../../main.cpp ../../../Car.cpp ../../../Chassis.cpp ../../../Wheel.cpp ../../../WheelWithMass.cpp ../../../top_level.cpp
 
 TARGET := csim.exe
 
@@ -79,24 +79,30 @@ $(ObjDir)/main.o: ../../../main.cpp $(ObjDir)/.dir
 
 $(ObjDir)/Car.o: ../../../Car.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../Car.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/Car.d
 
 $(ObjDir)/Chassis.o: ../../../Chassis.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../Chassis.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/Chassis.d
 
 $(ObjDir)/Wheel.o: ../../../Wheel.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../Wheel.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/Wheel.d
 
+$(ObjDir)/WheelWithMass.o: ../../../WheelWithMass.cpp $(ObjDir)/.dir
+	$(Echo) "   Compiling ../../../WheelWithMass.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
+
+-include $(ObjDir)/WheelWithMass.d
+
 $(ObjDir)/top_level.o: ../../../top_level.cpp $(ObjDir)/.dir
 	$(Echo) "   Compiling ../../../top_level.cpp in $(BuildMode) mode" $(AVE_DIR_DLOG)
-	$(Verb)  $(CC) ${CCFLAG} -c -MMD  $(IFLAG) $(DFLAG) $< -o $@ ; \
+	$(Verb)  $(CC) ${CCFLAG} -c -MMD -Wno-unknown-pragmas  $(IFLAG) $(DFLAG) $< -o $@ ; \
 
 -include $(ObjDir)/top_level.d

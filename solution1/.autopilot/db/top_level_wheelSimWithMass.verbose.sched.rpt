@@ -1,0 +1,181 @@
+
+
+================================================================
+== Vivado HLS Report for 'top_level_wheelSimWithMass'
+================================================================
+* Date:           Sat Aug 22 16:35:12 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CarSimOnFPGA
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k325t-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.006|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+------+-----+------+---------+
+    |   Latency  |  Interval  | Pipeline|
+    | min |  max | min |  max |   Type  |
+    +-----+------+-----+------+---------+
+    |  196|  1242|  196|  1242|   none  |
+    +-----+------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 1
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 5
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 3 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 8.41>
+ST_1 : Operation 6 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float %deltaTime) nounwind, !map !58"   --->   Operation 6 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 7 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float %initVel) nounwind, !map !64"   --->   Operation 7 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 8 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float %torque) nounwind, !map !68"   --->   Operation 8 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 9 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float %steeringAngle) nounwind, !map !72"   --->   Operation 9 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 10 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %slipRatio) nounwind, !map !76"   --->   Operation 10 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 11 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %slipAngle) nounwind, !map !82"   --->   Operation 11 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 12 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %force_x) nounwind, !map !86"   --->   Operation 12 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 13 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %force_y) nounwind, !map !90"   --->   Operation 13 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 14 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %vel_x) nounwind, !map !94"   --->   Operation 14 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 15 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecBitsMap(float* %angularVel) nounwind, !map !98"   --->   Operation 15 'specbitsmap' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 16 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecTopModule([27 x i8]* @top_level_wheelSimWi) nounwind"   --->   Operation 16 'spectopmodule' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 17 [1/1] (0.00ns)   --->   "%steeringAngle_read = call float @_ssdm_op_Read.ap_auto.float(float %steeringAngle) nounwind" [CarSimOnFPGA/top_level.cpp:27]   --->   Operation 17 'read' 'steeringAngle_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 18 [1/1] (0.00ns)   --->   "%torque_read = call float @_ssdm_op_Read.ap_auto.float(float %torque) nounwind" [CarSimOnFPGA/top_level.cpp:27]   --->   Operation 18 'read' 'torque_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 19 [1/1] (0.00ns)   --->   "%initVel_read = call float @_ssdm_op_Read.ap_auto.float(float %initVel) nounwind" [CarSimOnFPGA/top_level.cpp:27]   --->   Operation 19 'read' 'initVel_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 20 [1/1] (0.00ns)   --->   "%deltaTime_read = call float @_ssdm_op_Read.ap_auto.float(float %deltaTime) nounwind" [CarSimOnFPGA/top_level.cpp:27]   --->   Operation 20 'read' 'deltaTime_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 21 [1/1] (0.00ns)   --->   "%guard_variable_for_t_1 = load i1* @guard_variable_for_t, align 1" [CarSimOnFPGA/top_level.cpp:38]   --->   Operation 21 'load' 'guard_variable_for_t_1' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 22 [1/1] (0.00ns)   --->   "br i1 %guard_variable_for_t_1, label %._crit_edge, label %codeRepl" [CarSimOnFPGA/top_level.cpp:38]   --->   Operation 22 'br' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 23 [1/1] (0.00ns)   --->   "store float 5.000000e+02, float* @wheel_mass, align 4" [CarSimOnFPGA/WheelWithMass.cpp:7->CarSimOnFPGA/top_level.cpp:38]   --->   Operation 23 'store' <Predicate = (!guard_variable_for_t_1)> <Delay = 0.00>
+ST_1 : Operation 24 [1/1] (0.00ns)   --->   "store float 0x3FD3333340000000, float* @wheel_radius, align 4" [CarSimOnFPGA/WheelWithMass.cpp:8->CarSimOnFPGA/top_level.cpp:38]   --->   Operation 24 'store' <Predicate = (!guard_variable_for_t_1)> <Delay = 0.00>
+ST_1 : Operation 25 [1/1] (0.00ns)   --->   "store float 5.000000e+00, float* @wheel_inertia, align 4" [CarSimOnFPGA/WheelWithMass.cpp:9->CarSimOnFPGA/top_level.cpp:38]   --->   Operation 25 'store' <Predicate = (!guard_variable_for_t_1)> <Delay = 0.00>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "store float 0.000000e+00, float* @wheel_slipRatio, align 4" [CarSimOnFPGA/WheelWithMass.cpp:11->CarSimOnFPGA/top_level.cpp:38]   --->   Operation 26 'store' <Predicate = (!guard_variable_for_t_1)> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "store float 0.000000e+00, float* @wheel_slipAngle, align 4" [CarSimOnFPGA/WheelWithMass.cpp:12->CarSimOnFPGA/top_level.cpp:38]   --->   Operation 27 'store' <Predicate = (!guard_variable_for_t_1)> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "store float 0.000000e+00, float* @wheel_fx, align 4" [CarSimOnFPGA/WheelWithMass.cpp:14->CarSimOnFPGA/top_level.cpp:38]   --->   Operation 28 'store' <Predicate = (!guard_variable_for_t_1)> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "store float 0.000000e+00, float* @wheel_fz, align 4" [CarSimOnFPGA/WheelWithMass.cpp:15->CarSimOnFPGA/top_level.cpp:38]   --->   Operation 29 'store' <Predicate = (!guard_variable_for_t_1)> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "store float 0.000000e+00, float* @wheel_pos_x, align 4" [CarSimOnFPGA/WheelWithMass.cpp:21->CarSimOnFPGA/top_level.cpp:38]   --->   Operation 30 'store' <Predicate = (!guard_variable_for_t_1)> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "store float %initVel_read, float* @wheel_vel_x, align 4" [CarSimOnFPGA/WheelWithMass.cpp:24->CarSimOnFPGA/top_level.cpp:38]   --->   Operation 31 'store' <Predicate = (!guard_variable_for_t_1)> <Delay = 0.00>
+ST_1 : Operation 32 [2/2] (8.41ns)   --->   "%wheel_angularVelocit_2 = fmul float %initVel_read, 0x3FD3333340000000" [CarSimOnFPGA/WheelWithMass.cpp:26->CarSimOnFPGA/top_level.cpp:38]   --->   Operation 32 'fmul' 'wheel_angularVelocit_2' <Predicate = (!guard_variable_for_t_1)> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "store i1 true, i1* @guard_variable_for_t, align 1" [CarSimOnFPGA/top_level.cpp:38]   --->   Operation 33 'store' <Predicate = (!guard_variable_for_t_1)> <Delay = 0.00>
+
+State 2 <SV = 1> <Delay = 8.41>
+ST_2 : Operation 34 [1/2] (8.41ns)   --->   "%wheel_angularVelocit_2 = fmul float %initVel_read, 0x3FD3333340000000" [CarSimOnFPGA/WheelWithMass.cpp:26->CarSimOnFPGA/top_level.cpp:38]   --->   Operation 34 'fmul' 'wheel_angularVelocit_2' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 35 [1/1] (0.00ns)   --->   "store float %wheel_angularVelocit_2, float* @wheel_angularVelocit, align 4" [CarSimOnFPGA/WheelWithMass.cpp:26->CarSimOnFPGA/top_level.cpp:38]   --->   Operation 35 'store' <Predicate = true> <Delay = 0.00>
+ST_2 : Operation 36 [1/1] (0.00ns)   --->   "br label %._crit_edge"   --->   Operation 36 'br' <Predicate = true> <Delay = 0.00>
+
+State 3 <SV = 2> <Delay = 2.30>
+ST_3 : Operation 37 [2/2] (2.30ns)   --->   "call fastcc void @update(float %deltaTime_read, float %torque_read, float %steeringAngle_read)" [CarSimOnFPGA/top_level.cpp:39]   --->   Operation 37 'call' <Predicate = true> <Delay = 2.30> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 4 <SV = 3> <Delay = 0.00>
+ST_4 : Operation 38 [1/2] (0.00ns)   --->   "call fastcc void @update(float %deltaTime_read, float %torque_read, float %steeringAngle_read)" [CarSimOnFPGA/top_level.cpp:39]   --->   Operation 38 'call' <Predicate = true> <Delay = 0.00> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 5 <SV = 4> <Delay = 0.00>
+ST_5 : Operation 39 [1/1] (0.00ns)   --->   "%wheel_slipRatio_load = load float* @wheel_slipRatio, align 4" [CarSimOnFPGA/top_level.cpp:40]   --->   Operation 39 'load' 'wheel_slipRatio_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 40 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.floatP(float* %slipRatio, float %wheel_slipRatio_load) nounwind" [CarSimOnFPGA/top_level.cpp:40]   --->   Operation 40 'write' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 41 [1/1] (0.00ns)   --->   "%wheel_slipAngle_load = load float* @wheel_slipAngle, align 4" [CarSimOnFPGA/top_level.cpp:41]   --->   Operation 41 'load' 'wheel_slipAngle_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 42 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.floatP(float* %slipAngle, float %wheel_slipAngle_load) nounwind" [CarSimOnFPGA/top_level.cpp:41]   --->   Operation 42 'write' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 43 [1/1] (0.00ns)   --->   "%wheel_fx_load = load float* @wheel_fx, align 4" [CarSimOnFPGA/top_level.cpp:42]   --->   Operation 43 'load' 'wheel_fx_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 44 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.floatP(float* %force_x, float %wheel_fx_load) nounwind" [CarSimOnFPGA/top_level.cpp:42]   --->   Operation 44 'write' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 45 [1/1] (0.00ns)   --->   "%wheel_fz_load = load float* @wheel_fz, align 4" [CarSimOnFPGA/top_level.cpp:43]   --->   Operation 45 'load' 'wheel_fz_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 46 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.floatP(float* %force_y, float %wheel_fz_load) nounwind" [CarSimOnFPGA/top_level.cpp:43]   --->   Operation 46 'write' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 47 [1/1] (0.00ns)   --->   "%wheel_vel_x_load = load float* @wheel_vel_x, align 4" [CarSimOnFPGA/top_level.cpp:44]   --->   Operation 47 'load' 'wheel_vel_x_load' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 48 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.floatP(float* %vel_x, float %wheel_vel_x_load) nounwind" [CarSimOnFPGA/top_level.cpp:44]   --->   Operation 48 'write' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 49 [1/1] (0.00ns)   --->   "%wheel_angularVelocit_3 = load float* @wheel_angularVelocit, align 4" [CarSimOnFPGA/top_level.cpp:45]   --->   Operation 49 'load' 'wheel_angularVelocit_3' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 50 [1/1] (0.00ns)   --->   "call void @_ssdm_op_Write.ap_auto.floatP(float* %angularVel, float %wheel_angularVelocit_3) nounwind" [CarSimOnFPGA/top_level.cpp:45]   --->   Operation 50 'write' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 51 [1/1] (0.00ns)   --->   "ret void" [CarSimOnFPGA/top_level.cpp:46]   --->   Operation 51 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 8.42ns
+The critical path consists of the following:
+	wire read on port 'initVel' (CarSimOnFPGA/top_level.cpp:27) [42]  (0 ns)
+	'fmul' operation ('wheel_angularVelocit_2', CarSimOnFPGA/WheelWithMass.cpp:26->CarSimOnFPGA/top_level.cpp:38) [56]  (8.42 ns)
+
+ <State 2>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('wheel_angularVelocit_2', CarSimOnFPGA/WheelWithMass.cpp:26->CarSimOnFPGA/top_level.cpp:38) [56]  (8.42 ns)
+
+ <State 3>: 2.31ns
+The critical path consists of the following:
+	'call' operation ('call_ln39', CarSimOnFPGA/top_level.cpp:39) to 'update' [61]  (2.31 ns)
+
+ <State 4>: 0ns
+The critical path consists of the following:
+
+ <State 5>: 0ns
+The critical path consists of the following:
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

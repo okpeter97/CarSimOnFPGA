@@ -3,9 +3,14 @@ class Wheel
 private:
 	float radius;
 	float inertia;
-	float angularVelocity;
 
 public:
+	float angularVelocity;
+	float force_x;
+	float force_z;
+	float slipRatio;
+	float slipAngle;
+
 	Wheel();
 
 	void update(float deltaTime,
@@ -13,8 +18,5 @@ public:
 			float velocity_x,
 			float velocity_z,
 			float load,
-			float steeringAngle,
-			float* force_x,
-			float* force_z,
-			float* angularVel);
+			float steeringAngle);
 };

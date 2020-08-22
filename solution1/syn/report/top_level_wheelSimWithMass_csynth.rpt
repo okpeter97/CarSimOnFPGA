@@ -1,0 +1,163 @@
+
+
+================================================================
+== Vivado HLS Report for 'top_level_wheelSimWithMass'
+================================================================
+* Date:           Sat Aug 22 16:35:23 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CarSimOnFPGA
+* Solution:       solution1
+* Product family: kintex7
+* Target device:  xc7k325t-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.006|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+------+-----+------+---------+
+    |   Latency  |  Interval  | Pipeline|
+    | min |  max | min |  max |   Type  |
+    +-----+------+-----+------+---------+
+    |  196|  1242|  196|  1242|   none  |
+    +-----+------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------+--------+-----+------+-----+------+---------+
+        |                   |        |   Latency  |  Interval  | Pipeline|
+        |      Instance     | Module | min |  max | min |  max |   Type  |
+        +-------------------+--------+-----+------+-----+------+---------+
+        |grp_update_fu_144  |update  |  193|  1238|  193|  1238|   none  |
+        +-------------------+--------+-----+------+-----+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       -|       -|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |       20|    241|   18217|   33745|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|      88|    -|
+|Register         |        -|      -|     260|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |       20|    241|   18477|   33833|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |      890|    840|  407600|  203800|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        2|     28|       4|      16|    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------+----------------------+---------+-------+-------+-------+-----+
+    |         Instance         |        Module        | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
+    +--------------------------+----------------------+---------+-------+-------+-------+-----+
+    |top_level_wheelSircU_U76  |top_level_wheelSircU  |        0|      3|    128|    135|    0|
+    |grp_update_fu_144         |update                |       20|    238|  18089|  33610|    0|
+    +--------------------------+----------------------+---------+-------+-------+-------+-----+
+    |Total                     |                      |       20|    241|  18217|  33745|    0|
+    +--------------------------+----------------------+---------+-------+-------+-------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +----------------------+----+-----------+-----+-----------+
+    |         Name         | LUT| Input Size| Bits| Total Bits|
+    +----------------------+----+-----------+-----+-----------+
+    |ap_NS_fsm             |  25|          6|    1|          6|
+    |wheel_angularVelocit  |   9|          2|   32|         64|
+    |wheel_fx              |   9|          2|   32|         64|
+    |wheel_fz              |   9|          2|   32|         64|
+    |wheel_pos_x           |   9|          2|   32|         64|
+    |wheel_slipAngle       |   9|          2|   32|         64|
+    |wheel_slipRatio       |   9|          2|   32|         64|
+    |wheel_vel_x           |   9|          2|   32|         64|
+    +----------------------+----+-----------+-----+-----------+
+    |Total                 |  88|         20|  225|        454|
+    +----------------------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------+----+----+-----+-----------+
+    |              Name              | FF | LUT| Bits| Const Bits|
+    +--------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                       |   5|   0|    5|          0|
+    |grp_update_fu_144_ap_start_reg  |   1|   0|    1|          0|
+    |guard_variable_for_t            |   1|   0|    1|          0|
+    |wheel_angularVelocit            |  32|   0|   32|          0|
+    |wheel_fx                        |  32|   0|   32|          0|
+    |wheel_fz                        |  32|   0|   32|          0|
+    |wheel_inertia                   |   3|   0|   32|         29|
+    |wheel_mass                      |   9|   0|   32|         23|
+    |wheel_pos_x                     |  32|   0|   32|          0|
+    |wheel_radius                    |  17|   0|   32|         15|
+    |wheel_slipAngle                 |  32|   0|   32|          0|
+    |wheel_slipRatio                 |  32|   0|   32|          0|
+    |wheel_vel_x                     |  32|   0|   32|          0|
+    +--------------------------------+----+----+-----+-----------+
+    |Total                           | 260|   0|  327|         67|
+    +--------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+----------------------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |        Source Object       |    C Type    |
++-------------------+-----+-----+------------+----------------------------+--------------+
+|ap_clk             |  in |    1| ap_ctrl_hs | top_level_wheelSimWithMass | return value |
+|ap_rst             |  in |    1| ap_ctrl_hs | top_level_wheelSimWithMass | return value |
+|ap_start           |  in |    1| ap_ctrl_hs | top_level_wheelSimWithMass | return value |
+|ap_done            | out |    1| ap_ctrl_hs | top_level_wheelSimWithMass | return value |
+|ap_idle            | out |    1| ap_ctrl_hs | top_level_wheelSimWithMass | return value |
+|ap_ready           | out |    1| ap_ctrl_hs | top_level_wheelSimWithMass | return value |
+|deltaTime          |  in |   32|   ap_none  |          deltaTime         |    scalar    |
+|initVel            |  in |   32|   ap_none  |           initVel          |    scalar    |
+|torque             |  in |   32|   ap_none  |           torque           |    scalar    |
+|steeringAngle      |  in |   32|   ap_none  |        steeringAngle       |    scalar    |
+|slipRatio          | out |   32|   ap_vld   |          slipRatio         |    pointer   |
+|slipRatio_ap_vld   | out |    1|   ap_vld   |          slipRatio         |    pointer   |
+|slipAngle          | out |   32|   ap_vld   |          slipAngle         |    pointer   |
+|slipAngle_ap_vld   | out |    1|   ap_vld   |          slipAngle         |    pointer   |
+|force_x            | out |   32|   ap_vld   |           force_x          |    pointer   |
+|force_x_ap_vld     | out |    1|   ap_vld   |           force_x          |    pointer   |
+|force_y            | out |   32|   ap_vld   |           force_y          |    pointer   |
+|force_y_ap_vld     | out |    1|   ap_vld   |           force_y          |    pointer   |
+|vel_x              | out |   32|   ap_vld   |            vel_x           |    pointer   |
+|vel_x_ap_vld       | out |    1|   ap_vld   |            vel_x           |    pointer   |
+|angularVel         | out |   32|   ap_vld   |         angularVel         |    pointer   |
+|angularVel_ap_vld  | out |    1|   ap_vld   |         angularVel         |    pointer   |
++-------------------+-----+-----+------------+----------------------------+--------------+
+

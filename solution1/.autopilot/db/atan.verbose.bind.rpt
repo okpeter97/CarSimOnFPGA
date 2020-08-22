@@ -3,13 +3,13 @@
 ================================================================
 == Vivado HLS Report for 'atan'
 ================================================================
-* Date:           Sat Jun  6 18:25:07 2020
+* Date:           Sat Aug 22 16:35:08 2020
 
 * Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
 * Project:        CarSimOnFPGA
 * Solution:       solution1
-* Product family: zynq
-* Target device:  xc7z010-clg400-1
+* Product family: kintex7
+* Target device:  xc7k325t-ffg900-2
 
 
 ================================================================
@@ -20,7 +20,7 @@
     +--------+-------+----------+------------+
     |  Clock | Target| Estimated| Uncertainty|
     +--------+-------+----------+------------+
-    |ap_clk  |  10.00|     8.621|        1.25|
+    |ap_clk  |  10.00|     8.610|        1.25|
     +--------+-------+----------+------------+
 
 + Latency (clock cycles): 
@@ -29,7 +29,7 @@
     |  Latency  |  Interval | Pipeline|
     | min | max | min | max |   Type  |
     +-----+-----+-----+-----+---------+
-    |    1|  310|    1|  310|   none  |
+    |    1|  203|    1|  203|   none  |
     +-----+-----+-----+-----+---------+
 
     + Detail: 
@@ -38,7 +38,7 @@
         |                                 |                       |  Latency  |  Interval | Pipeline|
         |             Instance            |         Module        | min | max | min | max |   Type  |
         +---------------------------------+-----------------------+-----+-----+-----+-----+---------+
-        |grp_atan_generic_double_s_fu_57  |atan_generic_double_s  |    1|  270|    1|  270|   none  |
+        |grp_atan_generic_double_s_fu_57  |atan_generic_double_s  |    1|  179|    1|  179|   none  |
         +---------------------------------+-----------------------+-----+-----+-----+-----+---------+
 
         * Loop: 
@@ -70,13 +70,13 @@ IsGatedGlobalClock: 0
 ============================================================
 + Verbose Summary: Schedule
 ============================================================
-* Number of FSM states : 41
+* Number of FSM states : 25
 * Pipeline : 0
 * Dataflow Pipeline: 0
 
 * FSM state transitions: 
-1 --> 2 41 
-2 --> 3 41 
+1 --> 2 25 
+2 --> 3 25 
 3 --> 4 
 4 --> 5 
 5 --> 6 
@@ -95,175 +95,113 @@ IsGatedGlobalClock: 0
 18 --> 19 
 19 --> 20 
 20 --> 21 
-21 --> 22 
+21 --> 22 25 
 22 --> 23 
 23 --> 24 
 24 --> 25 
-25 --> 26 
-26 --> 27 
-27 --> 28 
-28 --> 29 
-29 --> 30 
-30 --> 31 
-31 --> 32 
-32 --> 33 
-33 --> 34 
-34 --> 35 
-35 --> 36 41 
-36 --> 37 
-37 --> 38 
-38 --> 39 
-39 --> 40 
-40 --> 41 
-41 --> 
+25 --> 
 
 * FSM state operations: 
 
-State 1 <SV = 0> <Delay = 5.46>
-ST_1 : Operation 42 [1/1] (0.00ns)   --->   "%x_read = call double @_ssdm_op_Read.ap_auto.double(double %x) nounwind" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:7]   --->   Operation 42 'read' 'x_read' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 43 [1/1] (0.00ns)   --->   "%p_Val2_s = bitcast double %x_read to i64" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:475->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:479->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:630->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 43 'bitcast' 'p_Val2_s' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 44 [1/1] (0.00ns)   --->   "%p_Result_s = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %p_Val2_s, i32 63)" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:476->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:479->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:630->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 44 'bitselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 45 [1/1] (0.00ns)   --->   "%tmp_V = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %p_Val2_s, i32 52, i32 62) nounwind" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:477->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:479->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:630->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 45 'partselect' 'tmp_V' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 46 [1/1] (0.00ns)   --->   "%tmp_V_14 = trunc i64 %p_Val2_s to i52" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:478->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:479->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:630->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 46 'trunc' 'tmp_V_14' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 47 [1/1] (0.00ns)   --->   "%trunc_ln368 = trunc i64 %p_Val2_s to i63" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:495->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:512->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:526->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:633->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 47 'trunc' 'trunc_ln368' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 48 [1/1] (0.00ns)   --->   "%p_Result_44 = call i64 @_ssdm_op_BitConcatenate.i64.i1.i63(i1 false, i63 %trunc_ln368)" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:495->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:512->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:526->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:633->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 48 'bitconcatenate' 'p_Result_44' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 49 [1/1] (0.00ns)   --->   "%absx = bitcast i64 %p_Result_44 to double" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:512->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:526->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:633->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 49 'bitcast' 'absx' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 50 [1/1] (1.88ns)   --->   "%icmp_ln833 = icmp eq i11 %tmp_V, -1" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:638->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 50 'icmp' 'icmp_ln833' <Predicate = true> <Delay = 1.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 51 [1/1] (0.00ns)   --->   "br i1 %icmp_ln833, label %1, label %2" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:638->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 51 'br' <Predicate = true> <Delay = 0.00>
-ST_1 : Operation 52 [2/2] (5.46ns)   --->   "%tmp_4 = fcmp oeq double %absx, 1.000000e+00" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:644->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 52 'dcmp' 'tmp_4' <Predicate = (!icmp_ln833)> <Delay = 5.46> <Core = "DCmp">   --->   Core 120 'DCmp' <Latency = 1> <II = 1> <Delay = 5.46> <FuncUnit> <Opcode : 'dcmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 53 [1/1] (2.89ns)   --->   "%icmp_ln833_3 = icmp eq i52 %tmp_V_14, 0" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:639->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 53 'icmp' 'icmp_ln833_3' <Predicate = (icmp_ln833)> <Delay = 2.89> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
-ST_1 : Operation 54 [1/1] (1.48ns)   --->   "%select_ln639 = select i1 %icmp_ln833_3, double 0x3FF921FB54442D18, double 0x7FFFFFFFFFFFFFFF" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:639->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 54 'select' 'select_ln639' <Predicate = (icmp_ln833)> <Delay = 1.48> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_1 : Operation 55 [1/1] (1.86ns)   --->   "br label %"atan_cordic<double>.exit"" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:639->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 55 'br' <Predicate = (icmp_ln833)> <Delay = 1.86>
+State 1 <SV = 0> <Delay = 2.81>
+ST_1 : Operation 26 [1/1] (0.00ns)   --->   "%x_read = call double @_ssdm_op_Read.ap_auto.double(double %x) nounwind" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:7]   --->   Operation 26 'read' 'x_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 27 [1/1] (0.00ns)   --->   "%p_Val2_s = bitcast double %x_read to i64" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:475->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:479->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:630->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 27 'bitcast' 'p_Val2_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 28 [1/1] (0.00ns)   --->   "%p_Result_s = call i1 @_ssdm_op_BitSelect.i1.i64.i32(i64 %p_Val2_s, i32 63)" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:476->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:479->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:630->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 28 'bitselect' 'p_Result_s' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 29 [1/1] (0.00ns)   --->   "%tmp_V = call i11 @_ssdm_op_PartSelect.i11.i64.i32.i32(i64 %p_Val2_s, i32 52, i32 62) nounwind" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:477->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:479->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:630->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 29 'partselect' 'tmp_V' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 30 [1/1] (0.00ns)   --->   "%tmp_V_14 = trunc i64 %p_Val2_s to i52" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:478->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:479->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:630->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 30 'trunc' 'tmp_V_14' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 31 [1/1] (0.00ns)   --->   "%trunc_ln368 = trunc i64 %p_Val2_s to i63" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:495->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:512->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:526->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:633->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 31 'trunc' 'trunc_ln368' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 32 [1/1] (0.00ns)   --->   "%p_Result_44 = call i64 @_ssdm_op_BitConcatenate.i64.i1.i63(i1 false, i63 %trunc_ln368)" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:495->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:512->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:526->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:633->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 32 'bitconcatenate' 'p_Result_44' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 33 [1/1] (0.00ns)   --->   "%absx = bitcast i64 %p_Result_44 to double" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:512->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:526->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:633->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 33 'bitcast' 'absx' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 34 [1/1] (1.07ns)   --->   "%icmp_ln833 = icmp eq i11 %tmp_V, -1" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:638->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 34 'icmp' 'icmp_ln833' <Predicate = true> <Delay = 1.07> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 35 [1/1] (0.00ns)   --->   "br i1 %icmp_ln833, label %1, label %2" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:638->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 35 'br' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 36 [2/2] (2.81ns)   --->   "%tmp_4 = fcmp oeq double %absx, 1.000000e+00" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:644->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 36 'dcmp' 'tmp_4' <Predicate = (!icmp_ln833)> <Delay = 2.81> <Core = "DCmp">   --->   Core 120 'DCmp' <Latency = 1> <II = 1> <Delay = 2.81> <FuncUnit> <Opcode : 'dcmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 37 [1/1] (1.36ns)   --->   "%icmp_ln833_3 = icmp eq i52 %tmp_V_14, 0" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:639->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 37 'icmp' 'icmp_ln833_3' <Predicate = (icmp_ln833)> <Delay = 1.36> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_1 : Operation 38 [1/1] (0.61ns)   --->   "%select_ln639 = select i1 %icmp_ln833_3, double 0x3FF921FB54442D18, double 0x7FFFFFFFFFFFFFFF" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:639->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 38 'select' 'select_ln639' <Predicate = (icmp_ln833)> <Delay = 0.61> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_1 : Operation 39 [1/1] (0.94ns)   --->   "br label %"atan_cordic<double>.exit"" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:639->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 39 'br' <Predicate = (icmp_ln833)> <Delay = 0.94>
 
-State 2 <SV = 1> <Delay = 7.32>
-ST_2 : Operation 56 [1/2] (5.46ns)   --->   "%tmp_4 = fcmp oeq double %absx, 1.000000e+00" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:644->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 56 'dcmp' 'tmp_4' <Predicate = true> <Delay = 5.46> <Core = "DCmp">   --->   Core 120 'DCmp' <Latency = 1> <II = 1> <Delay = 5.46> <FuncUnit> <Opcode : 'dcmp'> <InPorts = 2> <OutPorts = 1>
-ST_2 : Operation 57 [1/1] (1.86ns)   --->   "br i1 %tmp_4, label %"atan_cordic<double>.exit", label %3" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:644->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 57 'br' <Predicate = true> <Delay = 1.86>
-ST_2 : Operation 58 [1/1] (1.88ns)   --->   "%octant1 = icmp ugt i11 %tmp_V, 1022" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:649->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 58 'icmp' 'octant1' <Predicate = (!tmp_4)> <Delay = 1.88> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.88> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+State 2 <SV = 1> <Delay = 3.75>
+ST_2 : Operation 40 [1/2] (2.81ns)   --->   "%tmp_4 = fcmp oeq double %absx, 1.000000e+00" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:644->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 40 'dcmp' 'tmp_4' <Predicate = true> <Delay = 2.81> <Core = "DCmp">   --->   Core 120 'DCmp' <Latency = 1> <II = 1> <Delay = 2.81> <FuncUnit> <Opcode : 'dcmp'> <InPorts = 2> <OutPorts = 1>
+ST_2 : Operation 41 [1/1] (0.94ns)   --->   "br i1 %tmp_4, label %"atan_cordic<double>.exit", label %3" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:644->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 41 'br' <Predicate = true> <Delay = 0.94>
+ST_2 : Operation 42 [1/1] (1.07ns)   --->   "%octant1 = icmp ugt i11 %tmp_V, 1022" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:649->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 42 'icmp' 'octant1' <Predicate = (!tmp_4)> <Delay = 1.07> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.07> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
 
-State 3 <SV = 2> <Delay = 8.62>
-ST_3 : Operation 59 [31/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 59 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 3 <SV = 2> <Delay = 7.99>
+ST_3 : Operation 43 [17/17] (7.99ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 43 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
 
-State 4 <SV = 3> <Delay = 8.62>
-ST_4 : Operation 60 [30/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 60 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 4 <SV = 3> <Delay = 7.99>
+ST_4 : Operation 44 [16/17] (7.99ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 44 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
 
-State 5 <SV = 4> <Delay = 8.62>
-ST_5 : Operation 61 [29/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 61 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 5 <SV = 4> <Delay = 7.99>
+ST_5 : Operation 45 [15/17] (7.99ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 45 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
 
-State 6 <SV = 5> <Delay = 8.62>
-ST_6 : Operation 62 [28/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 62 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 6 <SV = 5> <Delay = 7.99>
+ST_6 : Operation 46 [14/17] (7.99ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 46 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
 
-State 7 <SV = 6> <Delay = 8.62>
-ST_7 : Operation 63 [27/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 63 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 7 <SV = 6> <Delay = 7.99>
+ST_7 : Operation 47 [13/17] (7.99ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 47 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
 
-State 8 <SV = 7> <Delay = 8.62>
-ST_8 : Operation 64 [26/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 64 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 8 <SV = 7> <Delay = 7.99>
+ST_8 : Operation 48 [12/17] (7.99ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 48 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
 
-State 9 <SV = 8> <Delay = 8.62>
-ST_9 : Operation 65 [25/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 65 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 9 <SV = 8> <Delay = 7.99>
+ST_9 : Operation 49 [11/17] (7.99ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 49 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
 
-State 10 <SV = 9> <Delay = 8.62>
-ST_10 : Operation 66 [24/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 66 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 10 <SV = 9> <Delay = 7.99>
+ST_10 : Operation 50 [10/17] (7.99ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 50 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
 
-State 11 <SV = 10> <Delay = 8.62>
-ST_11 : Operation 67 [23/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 67 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 11 <SV = 10> <Delay = 7.99>
+ST_11 : Operation 51 [9/17] (7.99ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 51 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
 
-State 12 <SV = 11> <Delay = 8.62>
-ST_12 : Operation 68 [22/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 68 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 12 <SV = 11> <Delay = 7.99>
+ST_12 : Operation 52 [8/17] (7.99ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 52 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
 
-State 13 <SV = 12> <Delay = 8.62>
-ST_13 : Operation 69 [21/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 69 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 13 <SV = 12> <Delay = 7.99>
+ST_13 : Operation 53 [7/17] (7.99ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 53 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
 
-State 14 <SV = 13> <Delay = 8.62>
-ST_14 : Operation 70 [20/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 70 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 14 <SV = 13> <Delay = 7.99>
+ST_14 : Operation 54 [6/17] (7.99ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 54 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
 
-State 15 <SV = 14> <Delay = 8.62>
-ST_15 : Operation 71 [19/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 71 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 15 <SV = 14> <Delay = 7.99>
+ST_15 : Operation 55 [5/17] (7.99ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 55 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
 
-State 16 <SV = 15> <Delay = 8.62>
-ST_16 : Operation 72 [18/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 72 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 16 <SV = 15> <Delay = 7.99>
+ST_16 : Operation 56 [4/17] (7.99ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 56 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
 
-State 17 <SV = 16> <Delay = 8.62>
-ST_17 : Operation 73 [17/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 73 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 17 <SV = 16> <Delay = 7.99>
+ST_17 : Operation 57 [3/17] (7.99ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 57 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
 
-State 18 <SV = 17> <Delay = 8.62>
-ST_18 : Operation 74 [16/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 74 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 18 <SV = 17> <Delay = 7.99>
+ST_18 : Operation 58 [2/17] (7.99ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 58 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
 
-State 19 <SV = 18> <Delay = 8.62>
-ST_19 : Operation 75 [15/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 75 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 19 <SV = 18> <Delay = 8.61>
+ST_19 : Operation 59 [1/17] (7.99ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 59 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 60 [1/1] (0.61ns)   --->   "%din = select i1 %octant1, double %one_over_x, double %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:652->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 60 'select' 'din' <Predicate = true> <Delay = 0.61> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.61> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 
-State 20 <SV = 19> <Delay = 8.62>
-ST_20 : Operation 76 [14/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 76 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 20 <SV = 19> <Delay = 5.41>
+ST_20 : Operation 61 [2/2] (5.41ns)   --->   "%res = call fastcc double @"atan_generic<double>"(double %din) nounwind" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:653->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 61 'call' 'res' <Predicate = true> <Delay = 5.41> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
 
-State 21 <SV = 20> <Delay = 8.62>
-ST_21 : Operation 77 [13/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 77 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 21 <SV = 20> <Delay = 5.97>
+ST_21 : Operation 62 [1/2] (0.90ns)   --->   "%res = call fastcc double @"atan_generic<double>"(double %din) nounwind" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:653->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 62 'call' 'res' <Predicate = true> <Delay = 0.90> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_21 : Operation 63 [1/1] (0.94ns)   --->   "br i1 %octant1, label %4, label %"atan_cordic<double>.exit"" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:654->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 63 'br' <Predicate = true> <Delay = 0.94>
+ST_21 : Operation 64 [5/5] (5.06ns)   --->   "%res_1 = fsub double 0x3FF921FB54442D18, %res" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:659->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 64 'dsub' 'res_1' <Predicate = (octant1)> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 22 <SV = 21> <Delay = 8.62>
-ST_22 : Operation 78 [12/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 78 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 22 <SV = 21> <Delay = 5.06>
+ST_22 : Operation 65 [4/5] (5.06ns)   --->   "%res_1 = fsub double 0x3FF921FB54442D18, %res" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:659->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 65 'dsub' 'res_1' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 23 <SV = 22> <Delay = 8.62>
-ST_23 : Operation 79 [11/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 79 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 23 <SV = 22> <Delay = 5.06>
+ST_23 : Operation 66 [3/5] (5.06ns)   --->   "%res_1 = fsub double 0x3FF921FB54442D18, %res" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:659->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 66 'dsub' 'res_1' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 24 <SV = 23> <Delay = 8.62>
-ST_24 : Operation 80 [10/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 80 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+State 24 <SV = 23> <Delay = 5.06>
+ST_24 : Operation 67 [2/5] (5.06ns)   --->   "%res_1 = fsub double 0x3FF921FB54442D18, %res" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:659->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 67 'dsub' 'res_1' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
 
-State 25 <SV = 24> <Delay = 8.62>
-ST_25 : Operation 81 [9/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 81 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
-
-State 26 <SV = 25> <Delay = 8.62>
-ST_26 : Operation 82 [8/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 82 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
-
-State 27 <SV = 26> <Delay = 8.62>
-ST_27 : Operation 83 [7/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 83 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
-
-State 28 <SV = 27> <Delay = 8.62>
-ST_28 : Operation 84 [6/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 84 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
-
-State 29 <SV = 28> <Delay = 8.62>
-ST_29 : Operation 85 [5/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 85 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
-
-State 30 <SV = 29> <Delay = 8.62>
-ST_30 : Operation 86 [4/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 86 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
-
-State 31 <SV = 30> <Delay = 8.62>
-ST_31 : Operation 87 [3/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 87 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
-
-State 32 <SV = 31> <Delay = 8.62>
-ST_32 : Operation 88 [2/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 88 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
-
-State 33 <SV = 32> <Delay = 8.62>
-ST_33 : Operation 89 [1/31] (8.62ns)   --->   "%one_over_x = fdiv double 1.000000e+00, %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:651->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 89 'ddiv' 'one_over_x' <Predicate = (octant1)> <Delay = 8.62> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 30> <II = 1> <Delay = 8.62> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
-
-State 34 <SV = 33> <Delay = 5.17>
-ST_34 : Operation 90 [1/1] (1.48ns)   --->   "%din = select i1 %octant1, double %one_over_x, double %absx" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:652->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 90 'select' 'din' <Predicate = true> <Delay = 1.48> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 1.48> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_34 : Operation 91 [2/2] (3.69ns)   --->   "%res = call fastcc double @"atan_generic<double>"(double %din) nounwind" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:653->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 91 'call' 'res' <Predicate = true> <Delay = 3.69> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-
-State 35 <SV = 34> <Delay = 6.26>
-ST_35 : Operation 92 [1/2] (6.26ns)   --->   "%res = call fastcc double @"atan_generic<double>"(double %din) nounwind" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:653->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 92 'call' 'res' <Predicate = true> <Delay = 6.26> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
-ST_35 : Operation 93 [1/1] (1.86ns)   --->   "br i1 %octant1, label %4, label %"atan_cordic<double>.exit"" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:654->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 93 'br' <Predicate = true> <Delay = 1.86>
-
-State 36 <SV = 35> <Delay = 8.23>
-ST_36 : Operation 94 [5/5] (8.23ns)   --->   "%res_1 = fsub double 0x3FF921FB54442D18, %res" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:659->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 94 'dsub' 'res_1' <Predicate = true> <Delay = 8.23> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 8.23> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
-
-State 37 <SV = 36> <Delay = 8.23>
-ST_37 : Operation 95 [4/5] (8.23ns)   --->   "%res_1 = fsub double 0x3FF921FB54442D18, %res" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:659->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 95 'dsub' 'res_1' <Predicate = true> <Delay = 8.23> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 8.23> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
-
-State 38 <SV = 37> <Delay = 8.23>
-ST_38 : Operation 96 [3/5] (8.23ns)   --->   "%res_1 = fsub double 0x3FF921FB54442D18, %res" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:659->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 96 'dsub' 'res_1' <Predicate = true> <Delay = 8.23> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 8.23> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
-
-State 39 <SV = 38> <Delay = 8.23>
-ST_39 : Operation 97 [2/5] (8.23ns)   --->   "%res_1 = fsub double 0x3FF921FB54442D18, %res" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:659->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 97 'dsub' 'res_1' <Predicate = true> <Delay = 8.23> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 8.23> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
-
-State 40 <SV = 39> <Delay = 8.23>
-ST_40 : Operation 98 [1/5] (8.23ns)   --->   "%res_1 = fsub double 0x3FF921FB54442D18, %res" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:659->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 98 'dsub' 'res_1' <Predicate = true> <Delay = 8.23> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 8.23> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
-
-State 41 <SV = 40> <Delay = 1.86>
-ST_41 : Operation 99 [1/1] (1.86ns)   --->   "br label %"atan_cordic<double>.exit"" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:660->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 99 'br' <Predicate = (!icmp_ln833 & !tmp_4 & octant1)> <Delay = 1.86>
-ST_41 : Operation 100 [1/1] (0.00ns)   --->   "%f_assign = phi double [ %res_1, %4 ], [ 0x3FE921FB54442D18, %2 ], [ %res, %3 ], [ %select_ln639, %1 ]"   --->   Operation 100 'phi' 'f_assign' <Predicate = true> <Delay = 0.00>
-ST_41 : Operation 101 [1/1] (0.00ns)   --->   "%p_Val2_56 = bitcast double %f_assign to i64" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:475->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:479->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:667->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 101 'bitcast' 'p_Val2_56' <Predicate = true> <Delay = 0.00>
-ST_41 : Operation 102 [1/1] (0.00ns)   --->   "%trunc_ln368_1 = trunc i64 %p_Val2_56 to i63" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:495->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:512->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:526->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:669->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 102 'trunc' 'trunc_ln368_1' <Predicate = true> <Delay = 0.00>
-ST_41 : Operation 103 [1/1] (0.00ns)   --->   "%p_Result_45 = call i64 @_ssdm_op_BitConcatenate.i64.i1.i63(i1 %p_Result_s, i63 %trunc_ln368_1)" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:495->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:512->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:526->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:669->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 103 'bitconcatenate' 'p_Result_45' <Predicate = true> <Delay = 0.00>
-ST_41 : Operation 104 [1/1] (0.00ns)   --->   "%bitcast_ln512 = bitcast i64 %p_Result_45 to double" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:512->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:526->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:669->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 104 'bitcast' 'bitcast_ln512' <Predicate = true> <Delay = 0.00>
-ST_41 : Operation 105 [1/1] (0.00ns)   --->   "ret double %bitcast_ln512" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 105 'ret' <Predicate = true> <Delay = 0.00>
+State 25 <SV = 24> <Delay = 6.01>
+ST_25 : Operation 68 [1/5] (5.06ns)   --->   "%res_1 = fsub double 0x3FF921FB54442D18, %res" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:659->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 68 'dsub' 'res_1' <Predicate = (!icmp_ln833 & !tmp_4 & octant1)> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 69 [1/1] (0.94ns)   --->   "br label %"atan_cordic<double>.exit"" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:660->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 69 'br' <Predicate = (!icmp_ln833 & !tmp_4 & octant1)> <Delay = 0.94>
+ST_25 : Operation 70 [1/1] (0.00ns)   --->   "%f_assign = phi double [ %res_1, %4 ], [ 0x3FE921FB54442D18, %2 ], [ %res, %3 ], [ %select_ln639, %1 ]"   --->   Operation 70 'phi' 'f_assign' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 71 [1/1] (0.00ns)   --->   "%p_Val2_56 = bitcast double %f_assign to i64" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:475->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:479->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:667->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 71 'bitcast' 'p_Val2_56' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 72 [1/1] (0.00ns)   --->   "%trunc_ln368_1 = trunc i64 %p_Val2_56 to i63" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:495->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:512->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:526->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:669->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 72 'trunc' 'trunc_ln368_1' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 73 [1/1] (0.00ns)   --->   "%p_Result_45 = call i64 @_ssdm_op_BitConcatenate.i64.i1.i63(i1 %p_Result_s, i63 %trunc_ln368_1)" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:495->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:512->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:526->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:669->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 73 'bitconcatenate' 'p_Result_45' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 74 [1/1] (0.00ns)   --->   "%bitcast_ln512 = bitcast i64 %p_Result_45 to double" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:512->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:526->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:669->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 74 'bitcast' 'bitcast_ln512' <Predicate = true> <Delay = 0.00>
+ST_25 : Operation 75 [1/1] (0.00ns)   --->   "ret double %bitcast_ln512" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/atandouble.cpp:8]   --->   Operation 75 'ret' <Predicate = true> <Delay = 0.00>
 
 
 ============================================================
@@ -285,34 +223,34 @@ Port [ cordic_ctab_table_12]:  wired=0; compound=1; hidden=1; nouse=1; global=1;
 
 <LifeTime>
 <method=bitvector/>
-x_read        (read          ) [ 000000000000000000000000000000000000000000]
-p_Val2_s      (bitcast       ) [ 000000000000000000000000000000000000000000]
-p_Result_s    (bitselect     ) [ 001111111111111111111111111111111111111111]
-tmp_V         (partselect    ) [ 001000000000000000000000000000000000000000]
-tmp_V_14      (trunc         ) [ 000000000000000000000000000000000000000000]
-trunc_ln368   (trunc         ) [ 000000000000000000000000000000000000000000]
-p_Result_44   (bitconcatenate) [ 000000000000000000000000000000000000000000]
-absx          (bitcast       ) [ 001111111111111111111111111111111110000000]
-icmp_ln833    (icmp          ) [ 011111111111111111111111111111111111111111]
-br_ln638      (br            ) [ 000000000000000000000000000000000000000000]
-icmp_ln833_3  (icmp          ) [ 000000000000000000000000000000000000000000]
-select_ln639  (select        ) [ 011111111111111111111111111111111111111111]
-br_ln639      (br            ) [ 011111111111111111111111111111111111111111]
-tmp_4         (dcmp          ) [ 001111111111111111111111111111111111111111]
-br_ln644      (br            ) [ 011111111111111111111111111111111111111111]
-octant1       (icmp          ) [ 000111111111111111111111111111111111111111]
-one_over_x    (ddiv          ) [ 000000000000000000000000000000000010000000]
-din           (select        ) [ 000000000000000000000000000000000001000000]
-res           (call          ) [ 011000000000000000000000000000000001111111]
-br_ln654      (br            ) [ 011000000000000000000000000000000001111111]
-res_1         (dsub          ) [ 011000000000000000000000000000000001000001]
-br_ln660      (br            ) [ 000000000000000000000000000000000000000000]
-f_assign      (phi           ) [ 000000000000000000000000000000000000000001]
-p_Val2_56     (bitcast       ) [ 000000000000000000000000000000000000000000]
-trunc_ln368_1 (trunc         ) [ 000000000000000000000000000000000000000000]
-p_Result_45   (bitconcatenate) [ 000000000000000000000000000000000000000000]
-bitcast_ln512 (bitcast       ) [ 000000000000000000000000000000000000000000]
-ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
+x_read        (read          ) [ 00000000000000000000000000]
+p_Val2_s      (bitcast       ) [ 00000000000000000000000000]
+p_Result_s    (bitselect     ) [ 00111111111111111111111111]
+tmp_V         (partselect    ) [ 00100000000000000000000000]
+tmp_V_14      (trunc         ) [ 00000000000000000000000000]
+trunc_ln368   (trunc         ) [ 00000000000000000000000000]
+p_Result_44   (bitconcatenate) [ 00000000000000000000000000]
+absx          (bitcast       ) [ 00111111111111111111000000]
+icmp_ln833    (icmp          ) [ 01111111111111111111111111]
+br_ln638      (br            ) [ 00000000000000000000000000]
+icmp_ln833_3  (icmp          ) [ 00000000000000000000000000]
+select_ln639  (select        ) [ 01111111111111111111111111]
+br_ln639      (br            ) [ 01111111111111111111111111]
+tmp_4         (dcmp          ) [ 00111111111111111111111111]
+br_ln644      (br            ) [ 01111111111111111111111111]
+octant1       (icmp          ) [ 00011111111111111111111111]
+one_over_x    (ddiv          ) [ 00000000000000000000000000]
+din           (select        ) [ 00000000000000000000110000]
+res           (call          ) [ 01100000000000000000011111]
+br_ln654      (br            ) [ 01100000000000000000011111]
+res_1         (dsub          ) [ 00000000000000000000000000]
+br_ln660      (br            ) [ 00000000000000000000000000]
+f_assign      (phi           ) [ 00000000000000000000000001]
+p_Val2_56     (bitcast       ) [ 00000000000000000000000000]
+trunc_ln368_1 (trunc         ) [ 00000000000000000000000000]
+p_Result_45   (bitconcatenate) [ 00000000000000000000000000]
+bitcast_ln512 (bitcast       ) [ 00000000000000000000000000]
+ret_ln8       (ret           ) [ 00000000000000000000000000]
 </LifeTime>
 
 <model>
@@ -474,7 +412,7 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
 
 <comp id="34" class="1001" name="const_34">
 <pin_list>
-<pin id="35" dir="1" index="0" bw="1" slack="39"/>
+<pin id="35" dir="1" index="0" bw="1" slack="23"/>
 </pin_list>
 <bind>
 <StgValue><ssdm name=""/></StgValue>
@@ -495,8 +433,8 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
 
 <comp id="42" class="1005" name="f_assign_reg_42">
 <pin_list>
-<pin id="43" dir="0" index="0" bw="64" slack="39"/>
-<pin id="44" dir="1" index="1" bw="64" slack="39"/>
+<pin id="43" dir="0" index="0" bw="64" slack="23"/>
+<pin id="44" dir="1" index="1" bw="64" slack="23"/>
 </pin_list>
 <bind>
 <opset="f_assign (phireg) "/>
@@ -505,52 +443,52 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
 
 <comp id="46" class="1004" name="f_assign_phi_fu_46">
 <pin_list>
-<pin id="47" dir="0" index="0" bw="64" slack="1"/>
+<pin id="47" dir="0" index="0" bw="64" slack="0"/>
 <pin id="48" dir="0" index="1" bw="0" slack="2147483647"/>
-<pin id="49" dir="0" index="2" bw="64" slack="39"/>
+<pin id="49" dir="0" index="2" bw="64" slack="23"/>
 <pin id="50" dir="0" index="3" bw="0" slack="2147483647"/>
-<pin id="51" dir="0" index="4" bw="64" slack="6"/>
+<pin id="51" dir="0" index="4" bw="64" slack="4"/>
 <pin id="52" dir="0" index="5" bw="0" slack="2147483647"/>
-<pin id="53" dir="0" index="6" bw="64" slack="40"/>
+<pin id="53" dir="0" index="6" bw="64" slack="24"/>
 <pin id="54" dir="0" index="7" bw="0" slack="2147483647"/>
 <pin id="55" dir="1" index="8" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="phi(47) " fcode="phi"/>
-<opset="f_assign/41 "/>
+<opset="f_assign/25 "/>
 </bind>
 </comp>
 
 <comp id="57" class="1004" name="grp_atan_generic_double_s_fu_57">
 <pin_list>
 <pin id="58" dir="0" index="0" bw="64" slack="0"/>
-<pin id="59" dir="0" index="1" bw="64" slack="0"/>
+<pin id="59" dir="0" index="1" bw="64" slack="1"/>
 <pin id="60" dir="0" index="2" bw="126" slack="0"/>
-<pin id="61" dir="1" index="3" bw="64" slack="1"/>
+<pin id="61" dir="1" index="3" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="call(48) " fcode="call"/>
-<opset="res/34 "/>
+<opset="res/20 "/>
 </bind>
 </comp>
 
 <comp id="64" class="1004" name="grp_fu_64">
 <pin_list>
 <pin id="65" dir="0" index="0" bw="64" slack="0"/>
-<pin id="66" dir="0" index="1" bw="64" slack="1"/>
-<pin id="67" dir="1" index="2" bw="64" slack="1"/>
+<pin id="66" dir="0" index="1" bw="64" slack="0"/>
+<pin id="67" dir="1" index="2" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="dsub(509) " fcode="dadd"/>
-<opset="res_1/36 "/>
+<opset="res_1/21 "/>
 </bind>
 </comp>
 
-<comp id="69" class="1004" name="grp_fu_69">
+<comp id="71" class="1004" name="grp_fu_71">
 <pin_list>
-<pin id="70" dir="0" index="0" bw="64" slack="0"/>
-<pin id="71" dir="0" index="1" bw="64" slack="2"/>
-<pin id="72" dir="1" index="2" bw="64" slack="1"/>
+<pin id="72" dir="0" index="0" bw="64" slack="0"/>
+<pin id="73" dir="0" index="1" bw="64" slack="2"/>
+<pin id="74" dir="1" index="2" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="ddiv(511) " fcode="ddiv"/>
@@ -558,11 +496,11 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="74" class="1004" name="grp_fu_74">
+<comp id="76" class="1004" name="grp_fu_76">
 <pin_list>
-<pin id="75" dir="0" index="0" bw="64" slack="0"/>
-<pin id="76" dir="0" index="1" bw="64" slack="0"/>
-<pin id="77" dir="1" index="2" bw="1" slack="39"/>
+<pin id="77" dir="0" index="0" bw="64" slack="0"/>
+<pin id="78" dir="0" index="1" bw="64" slack="0"/>
+<pin id="79" dir="1" index="2" bw="1" slack="23"/>
 </pin_list>
 <bind>
 <opcode="dcmp(513) " fcode="dcmp"/>
@@ -570,10 +508,10 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="79" class="1004" name="p_Val2_s_fu_79">
+<comp id="81" class="1004" name="p_Val2_s_fu_81">
 <pin_list>
-<pin id="80" dir="0" index="0" bw="64" slack="0"/>
-<pin id="81" dir="1" index="1" bw="64" slack="0"/>
+<pin id="82" dir="0" index="0" bw="64" slack="0"/>
+<pin id="83" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="bitcast(44) " fcode="bitcast"/>
@@ -581,12 +519,12 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="83" class="1004" name="p_Result_s_fu_83">
+<comp id="85" class="1004" name="p_Result_s_fu_85">
 <pin_list>
-<pin id="84" dir="0" index="0" bw="1" slack="0"/>
-<pin id="85" dir="0" index="1" bw="64" slack="0"/>
-<pin id="86" dir="0" index="2" bw="7" slack="0"/>
-<pin id="87" dir="1" index="3" bw="1" slack="40"/>
+<pin id="86" dir="0" index="0" bw="1" slack="0"/>
+<pin id="87" dir="0" index="1" bw="64" slack="0"/>
+<pin id="88" dir="0" index="2" bw="7" slack="0"/>
+<pin id="89" dir="1" index="3" bw="1" slack="24"/>
 </pin_list>
 <bind>
 <opcode="bitselect(1000) " fcode="bitselect"/>
@@ -594,13 +532,13 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="91" class="1004" name="tmp_V_fu_91">
+<comp id="93" class="1004" name="tmp_V_fu_93">
 <pin_list>
-<pin id="92" dir="0" index="0" bw="11" slack="0"/>
-<pin id="93" dir="0" index="1" bw="64" slack="0"/>
-<pin id="94" dir="0" index="2" bw="7" slack="0"/>
-<pin id="95" dir="0" index="3" bw="7" slack="0"/>
-<pin id="96" dir="1" index="4" bw="11" slack="0"/>
+<pin id="94" dir="0" index="0" bw="11" slack="0"/>
+<pin id="95" dir="0" index="1" bw="64" slack="0"/>
+<pin id="96" dir="0" index="2" bw="7" slack="0"/>
+<pin id="97" dir="0" index="3" bw="7" slack="0"/>
+<pin id="98" dir="1" index="4" bw="11" slack="0"/>
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
@@ -608,10 +546,10 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="101" class="1004" name="tmp_V_14_fu_101">
+<comp id="103" class="1004" name="tmp_V_14_fu_103">
 <pin_list>
-<pin id="102" dir="0" index="0" bw="64" slack="0"/>
-<pin id="103" dir="1" index="1" bw="52" slack="0"/>
+<pin id="104" dir="0" index="0" bw="64" slack="0"/>
+<pin id="105" dir="1" index="1" bw="52" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
@@ -619,10 +557,10 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="105" class="1004" name="trunc_ln368_fu_105">
+<comp id="107" class="1004" name="trunc_ln368_fu_107">
 <pin_list>
-<pin id="106" dir="0" index="0" bw="64" slack="0"/>
-<pin id="107" dir="1" index="1" bw="63" slack="0"/>
+<pin id="108" dir="0" index="0" bw="64" slack="0"/>
+<pin id="109" dir="1" index="1" bw="63" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
@@ -630,12 +568,12 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="109" class="1004" name="p_Result_44_fu_109">
+<comp id="111" class="1004" name="p_Result_44_fu_111">
 <pin_list>
-<pin id="110" dir="0" index="0" bw="64" slack="0"/>
-<pin id="111" dir="0" index="1" bw="1" slack="0"/>
-<pin id="112" dir="0" index="2" bw="63" slack="0"/>
-<pin id="113" dir="1" index="3" bw="64" slack="0"/>
+<pin id="112" dir="0" index="0" bw="64" slack="0"/>
+<pin id="113" dir="0" index="1" bw="1" slack="0"/>
+<pin id="114" dir="0" index="2" bw="63" slack="0"/>
+<pin id="115" dir="1" index="3" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
@@ -643,10 +581,10 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="117" class="1004" name="absx_fu_117">
+<comp id="119" class="1004" name="absx_fu_119">
 <pin_list>
-<pin id="118" dir="0" index="0" bw="64" slack="0"/>
-<pin id="119" dir="1" index="1" bw="64" slack="0"/>
+<pin id="120" dir="0" index="0" bw="64" slack="0"/>
+<pin id="121" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="bitcast(44) " fcode="bitcast"/>
@@ -654,11 +592,11 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="122" class="1004" name="icmp_ln833_fu_122">
+<comp id="124" class="1004" name="icmp_ln833_fu_124">
 <pin_list>
-<pin id="123" dir="0" index="0" bw="11" slack="0"/>
-<pin id="124" dir="0" index="1" bw="1" slack="0"/>
-<pin id="125" dir="1" index="2" bw="1" slack="40"/>
+<pin id="125" dir="0" index="0" bw="11" slack="0"/>
+<pin id="126" dir="0" index="1" bw="1" slack="0"/>
+<pin id="127" dir="1" index="2" bw="1" slack="24"/>
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
@@ -666,11 +604,11 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="128" class="1004" name="icmp_ln833_3_fu_128">
+<comp id="130" class="1004" name="icmp_ln833_3_fu_130">
 <pin_list>
-<pin id="129" dir="0" index="0" bw="52" slack="0"/>
-<pin id="130" dir="0" index="1" bw="1" slack="0"/>
-<pin id="131" dir="1" index="2" bw="1" slack="0"/>
+<pin id="131" dir="0" index="0" bw="52" slack="0"/>
+<pin id="132" dir="0" index="1" bw="1" slack="0"/>
+<pin id="133" dir="1" index="2" bw="1" slack="0"/>
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
@@ -678,12 +616,12 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="134" class="1004" name="select_ln639_fu_134">
+<comp id="136" class="1004" name="select_ln639_fu_136">
 <pin_list>
-<pin id="135" dir="0" index="0" bw="1" slack="0"/>
-<pin id="136" dir="0" index="1" bw="64" slack="0"/>
-<pin id="137" dir="0" index="2" bw="64" slack="0"/>
-<pin id="138" dir="1" index="3" bw="64" slack="40"/>
+<pin id="137" dir="0" index="0" bw="1" slack="0"/>
+<pin id="138" dir="0" index="1" bw="64" slack="0"/>
+<pin id="139" dir="0" index="2" bw="64" slack="0"/>
+<pin id="140" dir="1" index="3" bw="64" slack="24"/>
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
@@ -691,11 +629,11 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="142" class="1004" name="octant1_fu_142">
+<comp id="144" class="1004" name="octant1_fu_144">
 <pin_list>
-<pin id="143" dir="0" index="0" bw="11" slack="1"/>
-<pin id="144" dir="0" index="1" bw="11" slack="0"/>
-<pin id="145" dir="1" index="2" bw="1" slack="1"/>
+<pin id="145" dir="0" index="0" bw="11" slack="1"/>
+<pin id="146" dir="0" index="1" bw="11" slack="0"/>
+<pin id="147" dir="1" index="2" bw="1" slack="1"/>
 </pin_list>
 <bind>
 <opcode="icmp(45) " fcode="icmp"/>
@@ -703,172 +641,152 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
 </bind>
 </comp>
 
-<comp id="147" class="1004" name="din_fu_147">
+<comp id="149" class="1004" name="din_fu_149">
 <pin_list>
-<pin id="148" dir="0" index="0" bw="1" slack="32"/>
-<pin id="149" dir="0" index="1" bw="64" slack="1"/>
-<pin id="150" dir="0" index="2" bw="64" slack="33"/>
-<pin id="151" dir="1" index="3" bw="64" slack="0"/>
+<pin id="150" dir="0" index="0" bw="1" slack="17"/>
+<pin id="151" dir="0" index="1" bw="64" slack="0"/>
+<pin id="152" dir="0" index="2" bw="64" slack="18"/>
+<pin id="153" dir="1" index="3" bw="64" slack="1"/>
 </pin_list>
 <bind>
 <opcode="select(49) " fcode="select"/>
-<opset="din/34 "/>
+<opset="din/19 "/>
 </bind>
 </comp>
 
-<comp id="153" class="1004" name="p_Val2_56_fu_153">
+<comp id="155" class="1004" name="p_Val2_56_fu_155">
 <pin_list>
-<pin id="154" dir="0" index="0" bw="64" slack="0"/>
-<pin id="155" dir="1" index="1" bw="64" slack="0"/>
+<pin id="156" dir="0" index="0" bw="64" slack="0"/>
+<pin id="157" dir="1" index="1" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="bitcast(44) " fcode="bitcast"/>
-<opset="p_Val2_56/41 "/>
+<opset="p_Val2_56/25 "/>
 </bind>
 </comp>
 
-<comp id="157" class="1004" name="trunc_ln368_1_fu_157">
+<comp id="159" class="1004" name="trunc_ln368_1_fu_159">
 <pin_list>
-<pin id="158" dir="0" index="0" bw="64" slack="0"/>
-<pin id="159" dir="1" index="1" bw="63" slack="0"/>
+<pin id="160" dir="0" index="0" bw="64" slack="0"/>
+<pin id="161" dir="1" index="1" bw="63" slack="0"/>
 </pin_list>
 <bind>
 <opcode="trunc(33) " fcode="trunc"/>
-<opset="trunc_ln368_1/41 "/>
+<opset="trunc_ln368_1/25 "/>
 </bind>
 </comp>
 
-<comp id="161" class="1004" name="p_Result_45_fu_161">
+<comp id="163" class="1004" name="p_Result_45_fu_163">
 <pin_list>
-<pin id="162" dir="0" index="0" bw="64" slack="0"/>
-<pin id="163" dir="0" index="1" bw="1" slack="40"/>
-<pin id="164" dir="0" index="2" bw="63" slack="0"/>
-<pin id="165" dir="1" index="3" bw="64" slack="0"/>
+<pin id="164" dir="0" index="0" bw="64" slack="0"/>
+<pin id="165" dir="0" index="1" bw="1" slack="24"/>
+<pin id="166" dir="0" index="2" bw="63" slack="0"/>
+<pin id="167" dir="1" index="3" bw="64" slack="0"/>
 </pin_list>
 <bind>
 <opcode="bitconcatenate(1004) " fcode="bitconcatenate"/>
-<opset="p_Result_45/41 "/>
+<opset="p_Result_45/25 "/>
 </bind>
 </comp>
 
-<comp id="168" class="1004" name="bitcast_ln512_fu_168">
+<comp id="170" class="1004" name="bitcast_ln512_fu_170">
 <pin_list>
-<pin id="169" dir="0" index="0" bw="64" slack="0"/>
-<pin id="170" dir="1" index="1" bw="64" slack="2147483647"/>
+<pin id="171" dir="0" index="0" bw="64" slack="0"/>
+<pin id="172" dir="1" index="1" bw="64" slack="2147483647"/>
 </pin_list>
 <bind>
 <opcode="bitcast(44) " fcode="bitcast"/>
-<opset="bitcast_ln512/41 "/>
+<opset="bitcast_ln512/25 "/>
 </bind>
 </comp>
 
-<comp id="172" class="1005" name="p_Result_s_reg_172">
+<comp id="174" class="1005" name="p_Result_s_reg_174">
 <pin_list>
-<pin id="173" dir="0" index="0" bw="1" slack="40"/>
-<pin id="174" dir="1" index="1" bw="1" slack="40"/>
+<pin id="175" dir="0" index="0" bw="1" slack="24"/>
+<pin id="176" dir="1" index="1" bw="1" slack="24"/>
 </pin_list>
 <bind>
 <opset="p_Result_s "/>
 </bind>
 </comp>
 
-<comp id="177" class="1005" name="tmp_V_reg_177">
+<comp id="179" class="1005" name="tmp_V_reg_179">
 <pin_list>
-<pin id="178" dir="0" index="0" bw="11" slack="1"/>
-<pin id="179" dir="1" index="1" bw="11" slack="1"/>
+<pin id="180" dir="0" index="0" bw="11" slack="1"/>
+<pin id="181" dir="1" index="1" bw="11" slack="1"/>
 </pin_list>
 <bind>
 <opset="tmp_V "/>
 </bind>
 </comp>
 
-<comp id="182" class="1005" name="absx_reg_182">
+<comp id="184" class="1005" name="absx_reg_184">
 <pin_list>
-<pin id="183" dir="0" index="0" bw="64" slack="1"/>
-<pin id="184" dir="1" index="1" bw="64" slack="1"/>
+<pin id="185" dir="0" index="0" bw="64" slack="1"/>
+<pin id="186" dir="1" index="1" bw="64" slack="1"/>
 </pin_list>
 <bind>
 <opset="absx "/>
 </bind>
 </comp>
 
-<comp id="189" class="1005" name="icmp_ln833_reg_189">
+<comp id="191" class="1005" name="icmp_ln833_reg_191">
 <pin_list>
-<pin id="190" dir="0" index="0" bw="1" slack="40"/>
-<pin id="191" dir="1" index="1" bw="1" slack="2147483647"/>
+<pin id="192" dir="0" index="0" bw="1" slack="24"/>
+<pin id="193" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
 <opset="icmp_ln833 "/>
 </bind>
 </comp>
 
-<comp id="193" class="1005" name="select_ln639_reg_193">
+<comp id="195" class="1005" name="select_ln639_reg_195">
 <pin_list>
-<pin id="194" dir="0" index="0" bw="64" slack="40"/>
-<pin id="195" dir="1" index="1" bw="64" slack="40"/>
+<pin id="196" dir="0" index="0" bw="64" slack="24"/>
+<pin id="197" dir="1" index="1" bw="64" slack="24"/>
 </pin_list>
 <bind>
 <opset="select_ln639 "/>
 </bind>
 </comp>
 
-<comp id="198" class="1005" name="tmp_4_reg_198">
+<comp id="200" class="1005" name="tmp_4_reg_200">
 <pin_list>
-<pin id="199" dir="0" index="0" bw="1" slack="39"/>
-<pin id="200" dir="1" index="1" bw="1" slack="2147483647"/>
+<pin id="201" dir="0" index="0" bw="1" slack="23"/>
+<pin id="202" dir="1" index="1" bw="1" slack="2147483647"/>
 </pin_list>
 <bind>
 <opset="tmp_4 "/>
 </bind>
 </comp>
 
-<comp id="202" class="1005" name="octant1_reg_202">
+<comp id="204" class="1005" name="octant1_reg_204">
 <pin_list>
-<pin id="203" dir="0" index="0" bw="1" slack="1"/>
-<pin id="204" dir="1" index="1" bw="1" slack="32"/>
+<pin id="205" dir="0" index="0" bw="1" slack="1"/>
+<pin id="206" dir="1" index="1" bw="1" slack="17"/>
 </pin_list>
 <bind>
 <opset="octant1 "/>
 </bind>
 </comp>
 
-<comp id="207" class="1005" name="one_over_x_reg_207">
+<comp id="209" class="1005" name="din_reg_209">
 <pin_list>
-<pin id="208" dir="0" index="0" bw="64" slack="1"/>
-<pin id="209" dir="1" index="1" bw="64" slack="1"/>
-</pin_list>
-<bind>
-<opset="one_over_x "/>
-</bind>
-</comp>
-
-<comp id="212" class="1005" name="din_reg_212">
-<pin_list>
-<pin id="213" dir="0" index="0" bw="64" slack="1"/>
-<pin id="214" dir="1" index="1" bw="64" slack="1"/>
+<pin id="210" dir="0" index="0" bw="64" slack="1"/>
+<pin id="211" dir="1" index="1" bw="64" slack="1"/>
 </pin_list>
 <bind>
 <opset="din "/>
 </bind>
 </comp>
 
-<comp id="217" class="1005" name="res_reg_217">
+<comp id="214" class="1005" name="res_reg_214">
 <pin_list>
-<pin id="218" dir="0" index="0" bw="64" slack="1"/>
-<pin id="219" dir="1" index="1" bw="64" slack="1"/>
+<pin id="215" dir="0" index="0" bw="64" slack="1"/>
+<pin id="216" dir="1" index="1" bw="64" slack="1"/>
 </pin_list>
 <bind>
 <opset="res "/>
-</bind>
-</comp>
-
-<comp id="223" class="1005" name="res_1_reg_223">
-<pin_list>
-<pin id="224" dir="0" index="0" bw="64" slack="1"/>
-<pin id="225" dir="1" index="1" bw="64" slack="1"/>
-</pin_list>
-<bind>
-<opset="res_1 "/>
 </bind>
 </comp>
 
@@ -887,115 +805,111 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
 
 <net id="63"><net_src comp="2" pin="0"/><net_sink comp="57" pin=2"/></net>
 
-<net id="68"><net_src comp="26" pin="0"/><net_sink comp="64" pin=0"/></net>
+<net id="68"><net_src comp="64" pin="2"/><net_sink comp="46" pin=0"/></net>
 
-<net id="73"><net_src comp="22" pin="0"/><net_sink comp="69" pin=0"/></net>
+<net id="69"><net_src comp="26" pin="0"/><net_sink comp="64" pin=0"/></net>
 
-<net id="78"><net_src comp="22" pin="0"/><net_sink comp="74" pin=1"/></net>
+<net id="70"><net_src comp="57" pin="3"/><net_sink comp="64" pin=1"/></net>
 
-<net id="82"><net_src comp="36" pin="2"/><net_sink comp="79" pin=0"/></net>
+<net id="75"><net_src comp="22" pin="0"/><net_sink comp="71" pin=0"/></net>
 
-<net id="88"><net_src comp="6" pin="0"/><net_sink comp="83" pin=0"/></net>
+<net id="80"><net_src comp="22" pin="0"/><net_sink comp="76" pin=1"/></net>
 
-<net id="89"><net_src comp="79" pin="1"/><net_sink comp="83" pin=1"/></net>
+<net id="84"><net_src comp="36" pin="2"/><net_sink comp="81" pin=0"/></net>
 
-<net id="90"><net_src comp="8" pin="0"/><net_sink comp="83" pin=2"/></net>
+<net id="90"><net_src comp="6" pin="0"/><net_sink comp="85" pin=0"/></net>
 
-<net id="97"><net_src comp="10" pin="0"/><net_sink comp="91" pin=0"/></net>
+<net id="91"><net_src comp="81" pin="1"/><net_sink comp="85" pin=1"/></net>
 
-<net id="98"><net_src comp="79" pin="1"/><net_sink comp="91" pin=1"/></net>
+<net id="92"><net_src comp="8" pin="0"/><net_sink comp="85" pin=2"/></net>
 
-<net id="99"><net_src comp="12" pin="0"/><net_sink comp="91" pin=2"/></net>
+<net id="99"><net_src comp="10" pin="0"/><net_sink comp="93" pin=0"/></net>
 
-<net id="100"><net_src comp="14" pin="0"/><net_sink comp="91" pin=3"/></net>
+<net id="100"><net_src comp="81" pin="1"/><net_sink comp="93" pin=1"/></net>
 
-<net id="104"><net_src comp="79" pin="1"/><net_sink comp="101" pin=0"/></net>
+<net id="101"><net_src comp="12" pin="0"/><net_sink comp="93" pin=2"/></net>
 
-<net id="108"><net_src comp="79" pin="1"/><net_sink comp="105" pin=0"/></net>
+<net id="102"><net_src comp="14" pin="0"/><net_sink comp="93" pin=3"/></net>
 
-<net id="114"><net_src comp="16" pin="0"/><net_sink comp="109" pin=0"/></net>
+<net id="106"><net_src comp="81" pin="1"/><net_sink comp="103" pin=0"/></net>
 
-<net id="115"><net_src comp="18" pin="0"/><net_sink comp="109" pin=1"/></net>
+<net id="110"><net_src comp="81" pin="1"/><net_sink comp="107" pin=0"/></net>
 
-<net id="116"><net_src comp="105" pin="1"/><net_sink comp="109" pin=2"/></net>
+<net id="116"><net_src comp="16" pin="0"/><net_sink comp="111" pin=0"/></net>
 
-<net id="120"><net_src comp="109" pin="3"/><net_sink comp="117" pin=0"/></net>
+<net id="117"><net_src comp="18" pin="0"/><net_sink comp="111" pin=1"/></net>
 
-<net id="121"><net_src comp="117" pin="1"/><net_sink comp="74" pin=0"/></net>
+<net id="118"><net_src comp="107" pin="1"/><net_sink comp="111" pin=2"/></net>
 
-<net id="126"><net_src comp="91" pin="4"/><net_sink comp="122" pin=0"/></net>
+<net id="122"><net_src comp="111" pin="3"/><net_sink comp="119" pin=0"/></net>
 
-<net id="127"><net_src comp="20" pin="0"/><net_sink comp="122" pin=1"/></net>
+<net id="123"><net_src comp="119" pin="1"/><net_sink comp="76" pin=0"/></net>
 
-<net id="132"><net_src comp="101" pin="1"/><net_sink comp="128" pin=0"/></net>
+<net id="128"><net_src comp="93" pin="4"/><net_sink comp="124" pin=0"/></net>
 
-<net id="133"><net_src comp="24" pin="0"/><net_sink comp="128" pin=1"/></net>
+<net id="129"><net_src comp="20" pin="0"/><net_sink comp="124" pin=1"/></net>
 
-<net id="139"><net_src comp="128" pin="2"/><net_sink comp="134" pin=0"/></net>
+<net id="134"><net_src comp="103" pin="1"/><net_sink comp="130" pin=0"/></net>
 
-<net id="140"><net_src comp="26" pin="0"/><net_sink comp="134" pin=1"/></net>
+<net id="135"><net_src comp="24" pin="0"/><net_sink comp="130" pin=1"/></net>
 
-<net id="141"><net_src comp="28" pin="0"/><net_sink comp="134" pin=2"/></net>
+<net id="141"><net_src comp="130" pin="2"/><net_sink comp="136" pin=0"/></net>
 
-<net id="146"><net_src comp="30" pin="0"/><net_sink comp="142" pin=1"/></net>
+<net id="142"><net_src comp="26" pin="0"/><net_sink comp="136" pin=1"/></net>
 
-<net id="152"><net_src comp="147" pin="3"/><net_sink comp="57" pin=1"/></net>
+<net id="143"><net_src comp="28" pin="0"/><net_sink comp="136" pin=2"/></net>
 
-<net id="156"><net_src comp="46" pin="8"/><net_sink comp="153" pin=0"/></net>
+<net id="148"><net_src comp="30" pin="0"/><net_sink comp="144" pin=1"/></net>
 
-<net id="160"><net_src comp="153" pin="1"/><net_sink comp="157" pin=0"/></net>
+<net id="154"><net_src comp="71" pin="2"/><net_sink comp="149" pin=1"/></net>
 
-<net id="166"><net_src comp="16" pin="0"/><net_sink comp="161" pin=0"/></net>
+<net id="158"><net_src comp="46" pin="8"/><net_sink comp="155" pin=0"/></net>
 
-<net id="167"><net_src comp="157" pin="1"/><net_sink comp="161" pin=2"/></net>
+<net id="162"><net_src comp="155" pin="1"/><net_sink comp="159" pin=0"/></net>
 
-<net id="171"><net_src comp="161" pin="3"/><net_sink comp="168" pin=0"/></net>
+<net id="168"><net_src comp="16" pin="0"/><net_sink comp="163" pin=0"/></net>
 
-<net id="175"><net_src comp="83" pin="3"/><net_sink comp="172" pin=0"/></net>
+<net id="169"><net_src comp="159" pin="1"/><net_sink comp="163" pin=2"/></net>
 
-<net id="176"><net_src comp="172" pin="1"/><net_sink comp="161" pin=1"/></net>
+<net id="173"><net_src comp="163" pin="3"/><net_sink comp="170" pin=0"/></net>
 
-<net id="180"><net_src comp="91" pin="4"/><net_sink comp="177" pin=0"/></net>
+<net id="177"><net_src comp="85" pin="3"/><net_sink comp="174" pin=0"/></net>
 
-<net id="181"><net_src comp="177" pin="1"/><net_sink comp="142" pin=0"/></net>
+<net id="178"><net_src comp="174" pin="1"/><net_sink comp="163" pin=1"/></net>
 
-<net id="185"><net_src comp="117" pin="1"/><net_sink comp="182" pin=0"/></net>
+<net id="182"><net_src comp="93" pin="4"/><net_sink comp="179" pin=0"/></net>
 
-<net id="186"><net_src comp="182" pin="1"/><net_sink comp="74" pin=0"/></net>
+<net id="183"><net_src comp="179" pin="1"/><net_sink comp="144" pin=0"/></net>
 
-<net id="187"><net_src comp="182" pin="1"/><net_sink comp="69" pin=1"/></net>
+<net id="187"><net_src comp="119" pin="1"/><net_sink comp="184" pin=0"/></net>
 
-<net id="188"><net_src comp="182" pin="1"/><net_sink comp="147" pin=2"/></net>
+<net id="188"><net_src comp="184" pin="1"/><net_sink comp="76" pin=0"/></net>
 
-<net id="192"><net_src comp="122" pin="2"/><net_sink comp="189" pin=0"/></net>
+<net id="189"><net_src comp="184" pin="1"/><net_sink comp="71" pin=1"/></net>
 
-<net id="196"><net_src comp="134" pin="3"/><net_sink comp="193" pin=0"/></net>
+<net id="190"><net_src comp="184" pin="1"/><net_sink comp="149" pin=2"/></net>
 
-<net id="197"><net_src comp="193" pin="1"/><net_sink comp="46" pin=6"/></net>
+<net id="194"><net_src comp="124" pin="2"/><net_sink comp="191" pin=0"/></net>
 
-<net id="201"><net_src comp="74" pin="2"/><net_sink comp="198" pin=0"/></net>
+<net id="198"><net_src comp="136" pin="3"/><net_sink comp="195" pin=0"/></net>
 
-<net id="205"><net_src comp="142" pin="2"/><net_sink comp="202" pin=0"/></net>
+<net id="199"><net_src comp="195" pin="1"/><net_sink comp="46" pin=6"/></net>
 
-<net id="206"><net_src comp="202" pin="1"/><net_sink comp="147" pin=0"/></net>
+<net id="203"><net_src comp="76" pin="2"/><net_sink comp="200" pin=0"/></net>
 
-<net id="210"><net_src comp="69" pin="2"/><net_sink comp="207" pin=0"/></net>
+<net id="207"><net_src comp="144" pin="2"/><net_sink comp="204" pin=0"/></net>
 
-<net id="211"><net_src comp="207" pin="1"/><net_sink comp="147" pin=1"/></net>
+<net id="208"><net_src comp="204" pin="1"/><net_sink comp="149" pin=0"/></net>
 
-<net id="215"><net_src comp="147" pin="3"/><net_sink comp="212" pin=0"/></net>
+<net id="212"><net_src comp="149" pin="3"/><net_sink comp="209" pin=0"/></net>
 
-<net id="216"><net_src comp="212" pin="1"/><net_sink comp="57" pin=1"/></net>
+<net id="213"><net_src comp="209" pin="1"/><net_sink comp="57" pin=1"/></net>
 
-<net id="220"><net_src comp="57" pin="3"/><net_sink comp="217" pin=0"/></net>
+<net id="217"><net_src comp="57" pin="3"/><net_sink comp="214" pin=0"/></net>
 
-<net id="221"><net_src comp="217" pin="1"/><net_sink comp="64" pin=1"/></net>
+<net id="218"><net_src comp="214" pin="1"/><net_sink comp="64" pin=1"/></net>
 
-<net id="222"><net_src comp="217" pin="1"/><net_sink comp="46" pin=4"/></net>
-
-<net id="226"><net_src comp="64" pin="2"/><net_sink comp="223" pin=0"/></net>
-
-<net id="227"><net_src comp="223" pin="1"/><net_sink comp="46" pin=0"/></net>
+<net id="219"><net_src comp="214" pin="1"/><net_sink comp="46" pin=4"/></net>
 
 </net_list>
 
@@ -1006,7 +920,7 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
   - Output states:
  - Input state : 
 	Port: atan : x | {1 }
-	Port: atan : cordic_ctab_table_12 | {34 35 }
+	Port: atan : cordic_ctab_table_12 | {20 21 }
   - Chain level:
 	State 1
 		p_Result_s : 1
@@ -1039,29 +953,14 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
 	State 17
 	State 18
 	State 19
+		din : 1
 	State 20
 	State 21
+		res_1 : 1
 	State 22
 	State 23
 	State 24
 	State 25
-	State 26
-	State 27
-	State 28
-	State 29
-	State 30
-	State 31
-	State 32
-	State 33
-	State 34
-		res : 1
-	State 35
-	State 36
-	State 37
-	State 38
-	State 39
-	State 40
-	State 41
 		f_assign : 1
 		p_Val2_56 : 2
 		trunc_ln368_1 : 3
@@ -1078,35 +977,35 @@ ret_ln8       (ret           ) [ 000000000000000000000000000000000000000000]
 |----------|---------------------------------|---------|---------|---------|---------|
 | Operation|         Functional Unit         |  DSP48E |  Delay  |    FF   |   LUT   |
 |----------|---------------------------------|---------|---------|---------|---------|
-|   ddiv   |            grp_fu_69            |    0    |    0    |   3211  |   3658  |
+|   ddiv   |            grp_fu_71            |    0    |    0    |   1710  |   3253  |
 |----------|---------------------------------|---------|---------|---------|---------|
-|   call   | grp_atan_generic_double_s_fu_57 |    0    |  5.307  |   1581  |   3759  |
+|   call   | grp_atan_generic_double_s_fu_57 |    0    |  1.744  |   1111  |   3760  |
 |----------|---------------------------------|---------|---------|---------|---------|
-|   dadd   |            grp_fu_64            |    3    |    0    |   445   |   1149  |
+|   dadd   |            grp_fu_64            |    3    |    0    |   445   |   782   |
 |----------|---------------------------------|---------|---------|---------|---------|
-|   dcmp   |            grp_fu_74            |    0    |    0    |   130   |   469   |
+|   dcmp   |            grp_fu_76            |    0    |    0    |   130   |   118   |
 |----------|---------------------------------|---------|---------|---------|---------|
-|  select  |       select_ln639_fu_134       |    0    |    0    |    0    |    64   |
-|          |            din_fu_147           |    0    |    0    |    0    |    64   |
+|  select  |       select_ln639_fu_136       |    0    |    0    |    0    |    64   |
+|          |            din_fu_149           |    0    |    0    |    0    |    64   |
 |----------|---------------------------------|---------|---------|---------|---------|
-|          |        icmp_ln833_fu_122        |    0    |    0    |    0    |    13   |
-|   icmp   |       icmp_ln833_3_fu_128       |    0    |    0    |    0    |    29   |
-|          |          octant1_fu_142         |    0    |    0    |    0    |    13   |
+|          |        icmp_ln833_fu_124        |    0    |    0    |    0    |    13   |
+|   icmp   |       icmp_ln833_3_fu_130       |    0    |    0    |    0    |    29   |
+|          |          octant1_fu_144         |    0    |    0    |    0    |    13   |
 |----------|---------------------------------|---------|---------|---------|---------|
 |   read   |        x_read_read_fu_36        |    0    |    0    |    0    |    0    |
 |----------|---------------------------------|---------|---------|---------|---------|
-| bitselect|         p_Result_s_fu_83        |    0    |    0    |    0    |    0    |
+| bitselect|         p_Result_s_fu_85        |    0    |    0    |    0    |    0    |
 |----------|---------------------------------|---------|---------|---------|---------|
-|partselect|           tmp_V_fu_91           |    0    |    0    |    0    |    0    |
+|partselect|           tmp_V_fu_93           |    0    |    0    |    0    |    0    |
 |----------|---------------------------------|---------|---------|---------|---------|
-|          |         tmp_V_14_fu_101         |    0    |    0    |    0    |    0    |
-|   trunc  |        trunc_ln368_fu_105       |    0    |    0    |    0    |    0    |
-|          |       trunc_ln368_1_fu_157      |    0    |    0    |    0    |    0    |
+|          |         tmp_V_14_fu_103         |    0    |    0    |    0    |    0    |
+|   trunc  |        trunc_ln368_fu_107       |    0    |    0    |    0    |    0    |
+|          |       trunc_ln368_1_fu_159      |    0    |    0    |    0    |    0    |
 |----------|---------------------------------|---------|---------|---------|---------|
-|bitconcatenate|        p_Result_44_fu_109       |    0    |    0    |    0    |    0    |
-|          |        p_Result_45_fu_161       |    0    |    0    |    0    |    0    |
+|bitconcatenate|        p_Result_44_fu_111       |    0    |    0    |    0    |    0    |
+|          |        p_Result_45_fu_163       |    0    |    0    |    0    |    0    |
 |----------|---------------------------------|---------|---------|---------|---------|
-|   Total  |                                 |    3    |  5.307  |   5367  |   9218  |
+|   Total  |                                 |    3    |  1.744  |   3396  |   8096  |
 |----------|---------------------------------|---------|---------|---------|---------|
 
 Memories:
@@ -1116,31 +1015,29 @@ N/A
 +--------------------+--------+
 |                    |   FF   |
 +--------------------+--------+
-|    absx_reg_182    |   64   |
-|     din_reg_212    |   64   |
+|    absx_reg_184    |   64   |
+|     din_reg_209    |   64   |
 |   f_assign_reg_42  |   64   |
-| icmp_ln833_reg_189 |    1   |
-|   octant1_reg_202  |    1   |
-| one_over_x_reg_207 |   64   |
-| p_Result_s_reg_172 |    1   |
-|    res_1_reg_223   |   64   |
-|     res_reg_217    |   64   |
-|select_ln639_reg_193|   64   |
-|    tmp_4_reg_198   |    1   |
-|    tmp_V_reg_177   |   11   |
+| icmp_ln833_reg_191 |    1   |
+|   octant1_reg_204  |    1   |
+| p_Result_s_reg_174 |    1   |
+|     res_reg_214    |   64   |
+|select_ln639_reg_195|   64   |
+|    tmp_4_reg_200   |    1   |
+|    tmp_V_reg_179   |   11   |
 +--------------------+--------+
-|        Total       |   463  |
+|        Total       |   335  |
 +--------------------+--------+
 
 * Multiplexer (MUX) list: 
-|---------------------------------|------|------|------|--------||---------||---------|
-|               Comp              |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
-|---------------------------------|------|------|------|--------||---------||---------|
-| grp_atan_generic_double_s_fu_57 |  p1  |   2  |  64  |   128  ||    9    |
-|            grp_fu_74            |  p0  |   2  |  64  |   128  ||    9    |
-|---------------------------------|------|------|------|--------||---------||---------|
-|              Total              |      |      |      |   256  ||  3.538  ||    18   |
-|---------------------------------|------|------|------|--------||---------||---------|
+|-----------|------|------|------|--------||---------||---------|
+|    Comp   |  Pin | Size |  BW  | S x BW ||  Delay  ||   LUT   |
+|-----------|------|------|------|--------||---------||---------|
+| grp_fu_64 |  p1  |   2  |  64  |   128  ||    9    |
+| grp_fu_76 |  p0  |   2  |  64  |   128  ||    9    |
+|-----------|------|------|------|--------||---------||---------|
+|   Total   |      |      |      |   256  ||  1.744  ||    18   |
+|-----------|------|------|------|--------||---------||---------|
 
 
 
@@ -1148,10 +1045,10 @@ N/A
 +-----------+--------+--------+--------+--------+
 |           | DSP48E |  Delay |   FF   |   LUT  |
 +-----------+--------+--------+--------+--------+
-|  Function |    3   |    5   |  5367  |  9218  |
+|  Function |    3   |    1   |  3396  |  8096  |
 |   Memory  |    -   |    -   |    -   |    -   |
-|Multiplexer|    -   |    3   |    -   |   18   |
-|  Register |    -   |    -   |   463  |    -   |
+|Multiplexer|    -   |    1   |    -   |   18   |
+|  Register |    -   |    -   |   335  |    -   |
 +-----------+--------+--------+--------+--------+
-|   Total   |    3   |    8   |  5830  |  9236  |
+|   Total   |    3   |    3   |  3731  |  8114  |
 +-----------+--------+--------+--------+--------+

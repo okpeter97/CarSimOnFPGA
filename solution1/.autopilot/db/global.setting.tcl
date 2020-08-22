@@ -1,5 +1,5 @@
 
-set TopModule "top_level"
+set TopModule "top_level_wheelSimWithMass"
 set ClockPeriod 10
 set ClockList ap_clk
 set HasVivadoClockPeriod 0
@@ -39,9 +39,9 @@ set ExportMCPathFlag 0
 set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
-set TargetInfo xc7z010:-clg400:-1
-set SourceFiles {sc {} c {../top_level.cpp ../Wheel.cpp ../Chassis.cpp ../Car.cpp}}
-set SourceFlags {sc {} c {{} {} {} {}}}
+set TargetInfo xc7k325t:-ffg900:-2
+set SourceFiles {sc {} c {../top_level.cpp ../WheelWithMass.cpp ../Wheel.cpp ../Chassis.cpp ../Car.cpp}}
+set SourceFlags {sc {} c {{} {} {} {} {}}}
 set DirectiveFile D:/Dev/Repos/CarSimOnFPGA/solution1/solution1.directive
 set TBFiles {verilog ../main.cpp bc ../main.cpp vhdl ../main.cpp sc ../main.cpp cas ../main.cpp c {}}
 set SpecLanguage C
@@ -59,5 +59,5 @@ set DefaultPlatform DefaultPlatform
 set multiClockList {}
 set SCPortClockMap {}
 set intNbAccess 0
-set PlatformFiles {{DefaultPlatform {xilinx/zynq/zynq xilinx/zynq/zynq_fpv6}}}
+set PlatformFiles {{DefaultPlatform {xilinx/kintex7/kintex7 xilinx/kintex7/kintex7_fpv6}}}
 set HPFPO 0

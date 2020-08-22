@@ -1,4 +1,4 @@
-/*#include "Chassis.h"
+#include "Chassis.h"
 #include "hls_math.h"
 
 Chassis::Chassis()
@@ -32,18 +32,19 @@ Chassis::Chassis()
 	wRR = 0;
 }
 
-void Chassis::update(float deltaTime, float force_x, float force_z, float torque, )
+void Chassis::update(float deltaTime, float force_x, float force_z, float torque)
 {
 	float wF = (c / L) * mass * 10 - (h / L) * mass * accel_x;
 	float wR = (b / L) * mass * 10 + (h / L) * mass * accel_x;
 
 	wFL = wF + accel_z * mass * h / 2;
 	wFR = wF - accel_z * mass * h / 2;
+
 	wRL = wR + accel_z * mass * h / 2;
 	wRR = wR - accel_z * mass * h / 2;
 
 	accel_x = force_x / mass;
-	accel_z = force_z / mass;*
+	accel_z = force_z / mass;
 	vel_x = vel_x + accel_x * deltaTime;
 	vel_z = vel_z + accel_z * deltaTime;
 
@@ -55,4 +56,4 @@ void Chassis::update(float deltaTime, float force_x, float force_z, float torque
 	angularAccel = torque / inertia;
 	angularVel = angularVel + torque * deltaTime;
 	orientation = orientation + angularVel * deltaTime;
-}*/
+}

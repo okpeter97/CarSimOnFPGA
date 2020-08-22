@@ -1,13 +1,13 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'atan'" level="0">
-<item name = "Date">Sat Jun  6 18:25:18 2020
+<item name = "Date">Sat Aug 22 16:35:18 2020
 </item>
 <item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">CarSimOnFPGA</item>
 <item name = "Solution">solution1</item>
-<item name = "Product family">zynq</item>
-<item name = "Target device">xc7z010-clg400-1</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k325t-ffg900-2</item>
 </section>
 
 <section name = "Performance Estimates" level="0">
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 8.621, 1.25</column>
+<column name="ap_clk">10.00, 8.610, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,14 +24,14 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">1, 310, 1, 310, none</column>
+<column name="">2, 204, 2, 204, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_atan_generic_double_s_fu_57">atan_generic_double_s, 1, 270, 1, 270, none</column>
+<column name="grp_atan_generic_double_s_fu_57">atan_generic_double_s, 1, 179, 1, 179, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
@@ -50,22 +50,22 @@
 <column name="DSP">-, -, -, -, -</column>
 <column name="Expression">-, -, 0, 182, -</column>
 <column name="FIFO">-, -, -, -, -</column>
-<column name="Instance">4, 3, 5164, 9376, -</column>
+<column name="Instance">4, 3, 3220, 8241, -</column>
 <column name="Memory">-, -, -, -, -</column>
-<column name="Multiplexer">-, -, -, 224, -</column>
-<column name="Register">-, -, 504, -, -</column>
-<specialColumn name="Available">120, 80, 35200, 17600, 0</specialColumn>
-<specialColumn name="Utilization (%)">3, 3, 16, 55, 0</specialColumn>
+<column name="Multiplexer">-, -, -, 156, -</column>
+<column name="Register">-, -, 360, -, -</column>
+<specialColumn name="Available">890, 840, 407600, 203800, 0</specialColumn>
+<specialColumn name="Utilization (%)">~0, ~0, ~0, 4, 0</specialColumn>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
-<column name="grp_atan_generic_double_s_fu_57">atan_generic_double_s, 4, 0, 1378, 4100, 0</column>
-<column name="top_level_dcmp_64tde_U38">top_level_dcmp_64tde, 0, 0, 130, 469, 0</column>
-<column name="top_level_ddiv_64sc4_U37">top_level_ddiv_64sc4, 0, 0, 3211, 3658, 0</column>
-<column name="top_level_dsub_64rcU_U36">top_level_dsub_64rcU, 0, 3, 445, 1149, 0</column>
+<column name="grp_atan_generic_double_s_fu_57">atan_generic_double_s, 4, 0, 935, 4088, 0</column>
+<column name="top_level_wheelSimb6_U24">top_level_wheelSimb6, 0, 3, 445, 782, 0</column>
+<column name="top_level_wheelSincg_U25">top_level_wheelSincg, 0, 0, 1710, 3253, 0</column>
+<column name="top_level_wheelSiocq_U26">top_level_wheelSiocq, 0, 0, 130, 118, 0</column>
 </table>
 </item>
 <item name = "DSP48E"><table name="" hasTotal="0">
@@ -82,37 +82,35 @@
 </item>
 <item name = "Expression"><table name="" hasTotal="1">
 <keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
-<column name="icmp_ln833_3_fu_128_p2">icmp, 0, 0, 29, 52, 1</column>
-<column name="icmp_ln833_fu_122_p2">icmp, 0, 0, 13, 11, 2</column>
-<column name="octant1_fu_142_p2">icmp, 0, 0, 13, 11, 10</column>
-<column name="din_fu_147_p3">select, 0, 0, 64, 1, 64</column>
-<column name="select_ln639_fu_134_p3">select, 0, 0, 63, 1, 62</column>
+<column name="icmp_ln833_3_fu_130_p2">icmp, 0, 0, 29, 52, 1</column>
+<column name="icmp_ln833_fu_124_p2">icmp, 0, 0, 13, 11, 2</column>
+<column name="octant1_fu_144_p2">icmp, 0, 0, 13, 11, 10</column>
+<column name="din_fu_149_p3">select, 0, 0, 64, 1, 64</column>
+<column name="select_ln639_fu_136_p3">select, 0, 0, 63, 1, 62</column>
 </table>
 </item>
 <item name = "Multiplexer"><table name="" hasTotal="1">
 <keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
-<column name="ap_NS_fsm">185, 42, 1, 42</column>
+<column name="ap_NS_fsm">121, 26, 1, 26</column>
 <column name="ap_phi_mux_f_assign_phi_fu_46_p8">9, 2, 64, 128</column>
 <column name="ap_return">9, 2, 64, 128</column>
-<column name="f_assign_reg_42">21, 4, 64, 256</column>
+<column name="f_assign_reg_42">17, 4, 64, 256</column>
 </table>
 </item>
 <item name = "Register"><table name="" hasTotal="1">
 <keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
-<column name="absx_reg_182">63, 0, 64, 1</column>
-<column name="ap_CS_fsm">41, 0, 41, 0</column>
+<column name="absx_reg_184">63, 0, 64, 1</column>
+<column name="ap_CS_fsm">25, 0, 25, 0</column>
+<column name="ap_return">64, 0, 64, 0</column>
 <column name="ap_return_preg">64, 0, 64, 0</column>
-<column name="din_reg_212">64, 0, 64, 0</column>
+<column name="din_reg_209">64, 0, 64, 0</column>
 <column name="f_assign_reg_42">64, 0, 64, 0</column>
 <column name="grp_atan_generic_double_s_fu_57_ap_start_reg">1, 0, 1, 0</column>
-<column name="icmp_ln833_reg_189">1, 0, 1, 0</column>
-<column name="octant1_reg_202">1, 0, 1, 0</column>
-<column name="one_over_x_reg_207">64, 0, 64, 0</column>
-<column name="p_Result_s_reg_172">1, 0, 1, 0</column>
-<column name="res_1_reg_223">64, 0, 64, 0</column>
-<column name="res_reg_217">64, 0, 64, 0</column>
-<column name="tmp_4_reg_198">1, 0, 1, 0</column>
-<column name="tmp_V_reg_177">11, 0, 11, 0</column>
+<column name="icmp_ln833_reg_191">1, 0, 1, 0</column>
+<column name="octant1_reg_204">1, 0, 1, 0</column>
+<column name="p_Result_s_reg_174">1, 0, 1, 0</column>
+<column name="tmp_4_reg_200">1, 0, 1, 0</column>
+<column name="tmp_V_reg_179">11, 0, 11, 0</column>
 </table>
 </item>
 </section>

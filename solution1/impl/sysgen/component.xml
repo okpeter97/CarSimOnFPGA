@@ -2,7 +2,7 @@
 <spirit:component xmlns:xilinx="http://www.xilinx.com" xmlns:spirit="http://www.spiritconsortium.org/XMLSchema/SPIRIT/1685-2009" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance">
   <spirit:vendor>xilinx.com</spirit:vendor>
   <spirit:library>hls</spirit:library>
-  <spirit:name>top_level</spirit:name>
+  <spirit:name>top_level_wheelSimWithMass</spirit:name>
   <spirit:version>1.0</spirit:version>
   <spirit:busInterfaces>
     <spirit:busInterface>
@@ -42,25 +42,13 @@
       <spirit:slave/>
     </spirit:busInterface>
     <spirit:busInterface>
+      <spirit:name>initVel</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:slave/>
+    </spirit:busInterface>
+    <spirit:busInterface>
       <spirit:name>torque</spirit:name>
-      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
-      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
-      <spirit:slave/>
-    </spirit:busInterface>
-    <spirit:busInterface>
-      <spirit:name>velocity_x</spirit:name>
-      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
-      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
-      <spirit:slave/>
-    </spirit:busInterface>
-    <spirit:busInterface>
-      <spirit:name>velocity_z</spirit:name>
-      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
-      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
-      <spirit:slave/>
-    </spirit:busInterface>
-    <spirit:busInterface>
-      <spirit:name>load</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
       <spirit:slave/>
@@ -72,13 +60,31 @@
       <spirit:slave/>
     </spirit:busInterface>
     <spirit:busInterface>
+      <spirit:name>slipRatio</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>slipAngle</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+    </spirit:busInterface>
+    <spirit:busInterface>
       <spirit:name>force_x</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
       <spirit:master/>
     </spirit:busInterface>
     <spirit:busInterface>
-      <spirit:name>force_z</spirit:name>
+      <spirit:name>force_y</spirit:name>
+      <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
+      <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
+      <spirit:master/>
+    </spirit:busInterface>
+    <spirit:busInterface>
+      <spirit:name>vel_x</spirit:name>
       <spirit:busType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data" spirit:version="1.0"/>
       <spirit:abstractionType spirit:vendor="xilinx.com" spirit:library="signal" spirit:name="data_rtl" spirit:version="1.0"/>
       <spirit:master/>
@@ -97,28 +103,28 @@
         <spirit:displayName>VHDL Synthesis</spirit:displayName>
         <spirit:envIdentifier>vhdlSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
         <spirit:language>vhdl</spirit:language>
-        <spirit:modelName>top_level</spirit:modelName>
+        <spirit:modelName>top_level_wheelSimWithMass</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlsynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>2e59b34a</spirit:value>
+            <spirit:value>0e2f5515</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
       <spirit:view>
         <spirit:name>xilinx_vhdlsimulation</spirit:name>
         <spirit:envIdentifier>:xilinx.com:unknown</spirit:envIdentifier>
-        <spirit:modelName>top_level</spirit:modelName>
+        <spirit:modelName>top_level_wheelSimWithMass</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_vhdlsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>2e59b34a</spirit:value>
+            <spirit:value>0e2f5515</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -127,28 +133,28 @@
         <spirit:displayName>Verilog Synthesis</spirit:displayName>
         <spirit:envIdentifier>verilogSource:vivado.xilinx.com:synthesis</spirit:envIdentifier>
         <spirit:language>verilog</spirit:language>
-        <spirit:modelName>top_level</spirit:modelName>
+        <spirit:modelName>top_level_wheelSimWithMass</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogsynthesis_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>dcd1faaf</spirit:value>
+            <spirit:value>854b6f3f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
       <spirit:view>
         <spirit:name>xilinx_verilogsimulation</spirit:name>
         <spirit:envIdentifier>:xilinx.com:unknown</spirit:envIdentifier>
-        <spirit:modelName>top_level</spirit:modelName>
+        <spirit:modelName>top_level_wheelSimWithMass</spirit:modelName>
         <spirit:fileSetRef>
           <spirit:localName>xilinx_verilogsimulation_view_fileset</spirit:localName>
         </spirit:fileSetRef>
         <spirit:parameters>
           <spirit:parameter>
             <spirit:name>viewChecksum</spirit:name>
-            <spirit:value>dcd1faaf</spirit:value>
+            <spirit:value>854b6f3f</spirit:value>
           </spirit:parameter>
         </spirit:parameters>
       </spirit:view>
@@ -243,55 +249,23 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
+        <spirit:name>initVel</spirit:name>
+        <spirit:wire>
+          <spirit:direction>in</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
         <spirit:name>torque</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long">31</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>velocity_x</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long">31</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>velocity_z</spirit:name>
-        <spirit:wire>
-          <spirit:direction>in</spirit:direction>
-          <spirit:vector>
-            <spirit:left spirit:format="long">31</spirit:left>
-            <spirit:right spirit:format="long">0</spirit:right>
-          </spirit:vector>
-          <spirit:wireTypeDefs>
-            <spirit:wireTypeDef>
-              <spirit:typeName>std_logic_vector</spirit:typeName>
-              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
-            </spirit:wireTypeDef>
-          </spirit:wireTypeDefs>
-        </spirit:wire>
-      </spirit:port>
-      <spirit:port>
-        <spirit:name>load</spirit:name>
         <spirit:wire>
           <spirit:direction>in</spirit:direction>
           <spirit:vector>
@@ -317,6 +291,62 @@
           <spirit:wireTypeDefs>
             <spirit:wireTypeDef>
               <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>slipRatio</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>slipRatio_ap_vld</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>slipAngle</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>slipAngle_ap_vld</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
               <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
             </spirit:wireTypeDef>
           </spirit:wireTypeDefs>
@@ -351,7 +381,7 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>force_z</spirit:name>
+        <spirit:name>force_y</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:vector>
@@ -367,7 +397,35 @@
         </spirit:wire>
       </spirit:port>
       <spirit:port>
-        <spirit:name>force_z_ap_vld</spirit:name>
+        <spirit:name>force_y_ap_vld</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>vel_x</spirit:name>
+        <spirit:wire>
+          <spirit:direction>out</spirit:direction>
+          <spirit:vector>
+            <spirit:left spirit:format="long">31</spirit:left>
+            <spirit:right spirit:format="long">0</spirit:right>
+          </spirit:vector>
+          <spirit:wireTypeDefs>
+            <spirit:wireTypeDef>
+              <spirit:typeName>std_logic_vector</spirit:typeName>
+              <spirit:viewNameRef>xilinx_vhdlsynthesis</spirit:viewNameRef>
+            </spirit:wireTypeDef>
+          </spirit:wireTypeDefs>
+        </spirit:wire>
+      </spirit:port>
+      <spirit:port>
+        <spirit:name>vel_x_ap_vld</spirit:name>
         <spirit:wire>
           <spirit:direction>out</spirit:direction>
           <spirit:wireTypeDefs>
@@ -417,12 +475,12 @@
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/atan_generic_double_s.vhd</spirit:name>
+        <spirit:name>vhdl_impl/atan_generic_doublbW.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/atan_generic_doubqcK.vhd</spirit:name>
+        <spirit:name>vhdl_impl/atan_generic_double_s.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
@@ -467,199 +525,174 @@
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level.vhd</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSibkb.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_ap_dadd_3_full_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSiibs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>vhdl_impl/top_level_wheelSijbC.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>vhdl_impl/top_level_wheelSikbM.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>vhdl_impl/top_level_wheelSimWithMass.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>vhdl_impl/top_level_wheelSimWithMass_ap_dadddsub_3_full_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_ap_dcmp_0_no_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSimWithMass_ap_dcmp_0_no_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_ap_ddiv_29_no_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSimWithMass_ap_ddiv_15_no_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_ap_dmul_4_max_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSimWithMass_ap_dmul_3_max_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_ap_dsub_3_full_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSimWithMass_ap_dsub_3_full_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_ap_fadd_3_full_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSimWithMass_ap_fadd_2_full_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_ap_faddfsub_3_full_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSimWithMass_ap_faddfsub_2_full_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_ap_fcmp_0_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSimWithMass_ap_fcmp_0_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_ap_fdiv_14_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSimWithMass_ap_fdiv_6_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_ap_fmul_2_max_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSimWithMass_ap_fmul_0_max_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_ap_fpext_0_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSimWithMass_ap_fpext_0_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_ap_fptrunc_0_no_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSimWithMass_ap_fptrunc_0_no_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_ap_fsqrt_10_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSimWithMass_ap_fsqrt_5_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_ap_sitofp_4_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSimWithMass_ap_sitofp_1_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_dadd_64DeQ.vhd</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSimb6.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_dcmp_64tde.vhd</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSincg.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_ddiv_64sc4.vhd</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSiocq.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_dmul_64Ee0.vhd</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSipcA.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_dsub_64rcU.vhd</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSiqcK.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_fadd_32vdy.vhd</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSircU.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_faddfsuudo.vhd</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSisc4.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_fcmp_32Bew.vhd</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSitde.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_fdiv_32xdS.vhd</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSiudo.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_fmul_32wdI.vhd</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSivdy.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_fpext_3Aem.vhd</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSiwdI.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_fptrunczec.vhd</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSixdS.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_fsqrt_3CeG.vhd</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSiyd2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_impl/top_level_mul_170ibs.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>vhdl_impl/top_level_mul_42nncg.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>vhdl_impl/top_level_mul_49nkbM.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>vhdl_impl/top_level_mul_49nmb6.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>vhdl_impl/top_level_mul_56nlbW.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>vhdl_impl/top_level_mul_64socq.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>vhdl_impl/top_level_mux_164pcA.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>vhdl_impl/top_level_mux_42_bkb.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>vhdl_impl/top_level_mux_83_jbC.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>vhdl_impl/top_level_sitofp_yd2.vhd</spirit:name>
+        <spirit:name>vhdl_impl/top_level_wheelSizec.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
         <spirit:name>vhdl_impl/update.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:userFileType>CHECKSUM_ce165cdf</spirit:userFileType>
+        <spirit:userFileType>CHECKSUM_a796b2c7</spirit:userFileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
     </spirit:fileSet>
@@ -671,12 +704,12 @@
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/atan_generic_double_s.vhd</spirit:name>
+        <spirit:name>vhdl_sim/atan_generic_doublbW.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/atan_generic_doubqcK.vhd</spirit:name>
+        <spirit:name>vhdl_sim/atan_generic_double_s.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
@@ -721,192 +754,167 @@
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level.vhd</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSibkb.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_ap_dadd_3_full_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSiibs.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>vhdl_sim/top_level_wheelSijbC.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>vhdl_sim/top_level_wheelSikbM.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>vhdl_sim/top_level_wheelSimWithMass.vhd</spirit:name>
+        <spirit:fileType>vhdlSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>vhdl_sim/top_level_wheelSimWithMass_ap_dadddsub_3_full_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_ap_dcmp_0_no_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSimWithMass_ap_dcmp_0_no_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_ap_ddiv_29_no_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSimWithMass_ap_ddiv_15_no_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_ap_dmul_4_max_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSimWithMass_ap_dmul_3_max_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_ap_dsub_3_full_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSimWithMass_ap_dsub_3_full_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_ap_fadd_3_full_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSimWithMass_ap_fadd_2_full_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_ap_faddfsub_3_full_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSimWithMass_ap_faddfsub_2_full_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_ap_fcmp_0_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSimWithMass_ap_fcmp_0_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_ap_fdiv_14_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSimWithMass_ap_fdiv_6_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_ap_fmul_2_max_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSimWithMass_ap_fmul_0_max_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_ap_fpext_0_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSimWithMass_ap_fpext_0_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_ap_fptrunc_0_no_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSimWithMass_ap_fptrunc_0_no_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_ap_fsqrt_10_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSimWithMass_ap_fsqrt_5_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_ap_sitofp_4_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSimWithMass_ap_sitofp_1_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_dadd_64DeQ.vhd</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSimb6.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_dcmp_64tde.vhd</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSincg.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_ddiv_64sc4.vhd</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSiocq.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_dmul_64Ee0.vhd</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSipcA.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_dsub_64rcU.vhd</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSiqcK.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_fadd_32vdy.vhd</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSircU.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_faddfsuudo.vhd</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSisc4.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_fcmp_32Bew.vhd</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSitde.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_fdiv_32xdS.vhd</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSiudo.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_fmul_32wdI.vhd</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSivdy.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_fpext_3Aem.vhd</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSiwdI.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_fptrunczec.vhd</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSixdS.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_fsqrt_3CeG.vhd</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSiyd2.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>vhdl_sim/top_level_mul_170ibs.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>vhdl_sim/top_level_mul_42nncg.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>vhdl_sim/top_level_mul_49nkbM.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>vhdl_sim/top_level_mul_49nmb6.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>vhdl_sim/top_level_mul_56nlbW.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>vhdl_sim/top_level_mul_64socq.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>vhdl_sim/top_level_mux_164pcA.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>vhdl_sim/top_level_mux_42_bkb.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>vhdl_sim/top_level_mux_83_jbC.vhd</spirit:name>
-        <spirit:fileType>vhdlSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>vhdl_sim/top_level_sitofp_yd2.vhd</spirit:name>
+        <spirit:name>vhdl_sim/top_level_wheelSizec.vhd</spirit:name>
         <spirit:fileType>vhdlSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
@@ -924,18 +932,18 @@
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
+        <spirit:name>verilog_impl/atan_generic_doublbW.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog_impl/atan_generic_doublbW_rom.dat</spirit:name>
+        <spirit:userFileType>mif</spirit:userFileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>verilog_impl/atan_generic_double_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_impl/atan_generic_doubqcK.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_impl/atan_generic_doubqcK_rom.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
@@ -1009,192 +1017,167 @@
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level.v</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSibkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_ap_dadd_3_full_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSiibs.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog_impl/top_level_wheelSijbC.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog_impl/top_level_wheelSikbM.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog_impl/top_level_wheelSimWithMass.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog_impl/top_level_wheelSimWithMass_ap_dadddsub_3_full_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_ap_dcmp_0_no_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSimWithMass_ap_dcmp_0_no_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_ap_ddiv_29_no_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSimWithMass_ap_ddiv_15_no_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_ap_dmul_4_max_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSimWithMass_ap_dmul_3_max_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_ap_dsub_3_full_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSimWithMass_ap_dsub_3_full_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_ap_fadd_3_full_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSimWithMass_ap_fadd_2_full_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_ap_faddfsub_3_full_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSimWithMass_ap_faddfsub_2_full_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_ap_fcmp_0_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSimWithMass_ap_fcmp_0_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_ap_fdiv_14_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSimWithMass_ap_fdiv_6_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_ap_fmul_2_max_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSimWithMass_ap_fmul_0_max_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_ap_fpext_0_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSimWithMass_ap_fpext_0_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_ap_fptrunc_0_no_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSimWithMass_ap_fptrunc_0_no_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_ap_fsqrt_10_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSimWithMass_ap_fsqrt_5_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_ap_sitofp_4_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSimWithMass_ap_sitofp_1_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_dadd_64DeQ.v</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSimb6.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_dcmp_64tde.v</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSincg.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_ddiv_64sc4.v</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSiocq.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_dmul_64Ee0.v</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSipcA.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_dsub_64rcU.v</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSiqcK.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_fadd_32vdy.v</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSircU.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_faddfsuudo.v</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSisc4.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_fcmp_32Bew.v</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSitde.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_fdiv_32xdS.v</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSiudo.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_fmul_32wdI.v</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSivdy.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_fpext_3Aem.v</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSiwdI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_fptrunczec.v</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSixdS.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_fsqrt_3CeG.v</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSiyd2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_impl/top_level_mul_170ibs.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_impl/top_level_mul_42nncg.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_impl/top_level_mul_49nkbM.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_impl/top_level_mul_49nmb6.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_impl/top_level_mul_56nlbW.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_impl/top_level_mul_64socq.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_impl/top_level_mux_164pcA.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_impl/top_level_mux_42_bkb.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_impl/top_level_mux_83_jbC.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_impl/top_level_sitofp_yd2.v</spirit:name>
+        <spirit:name>verilog_impl/top_level_wheelSizec.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
@@ -1212,18 +1195,18 @@
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
+        <spirit:name>verilog_sim/atan_generic_doublbW.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog_sim/atan_generic_doublbW_rom.dat</spirit:name>
+        <spirit:userFileType>mif</spirit:userFileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
         <spirit:name>verilog_sim/atan_generic_double_s.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_sim/atan_generic_doubqcK.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_sim/atan_generic_doubqcK_rom.dat</spirit:name>
-        <spirit:userFileType>mif</spirit:userFileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
@@ -1297,192 +1280,167 @@
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level.v</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSibkb.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_ap_dadd_3_full_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSiibs.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog_sim/top_level_wheelSijbC.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog_sim/top_level_wheelSikbM.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog_sim/top_level_wheelSimWithMass.v</spirit:name>
+        <spirit:fileType>verilogSource</spirit:fileType>
+        <spirit:logicalName>work</spirit:logicalName>
+      </spirit:file>
+      <spirit:file>
+        <spirit:name>verilog_sim/top_level_wheelSimWithMass_ap_dadddsub_3_full_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_ap_dcmp_0_no_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSimWithMass_ap_dcmp_0_no_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_ap_ddiv_29_no_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSimWithMass_ap_ddiv_15_no_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_ap_dmul_4_max_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSimWithMass_ap_dmul_3_max_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_ap_dsub_3_full_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSimWithMass_ap_dsub_3_full_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_ap_fadd_3_full_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSimWithMass_ap_fadd_2_full_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_ap_faddfsub_3_full_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSimWithMass_ap_faddfsub_2_full_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_ap_fcmp_0_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSimWithMass_ap_fcmp_0_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_ap_fdiv_14_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSimWithMass_ap_fdiv_6_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_ap_fmul_2_max_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSimWithMass_ap_fmul_0_max_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_ap_fpext_0_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSimWithMass_ap_fpext_0_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_ap_fptrunc_0_no_dsp_64_ip.tcl</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSimWithMass_ap_fptrunc_0_no_dsp_64_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_ap_fsqrt_10_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSimWithMass_ap_fsqrt_5_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_ap_sitofp_4_no_dsp_32_ip.tcl</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSimWithMass_ap_sitofp_1_no_dsp_32_ip.tcl</spirit:name>
         <spirit:fileType>tclSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_dadd_64DeQ.v</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSimb6.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_dcmp_64tde.v</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSincg.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_ddiv_64sc4.v</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSiocq.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_dmul_64Ee0.v</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSipcA.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_dsub_64rcU.v</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSiqcK.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_fadd_32vdy.v</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSircU.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_faddfsuudo.v</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSisc4.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_fcmp_32Bew.v</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSitde.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_fdiv_32xdS.v</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSiudo.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_fmul_32wdI.v</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSivdy.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_fpext_3Aem.v</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSiwdI.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_fptrunczec.v</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSixdS.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_fsqrt_3CeG.v</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSiyd2.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
       <spirit:file>
-        <spirit:name>verilog_sim/top_level_mul_170ibs.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_sim/top_level_mul_42nncg.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_sim/top_level_mul_49nkbM.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_sim/top_level_mul_49nmb6.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_sim/top_level_mul_56nlbW.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_sim/top_level_mul_64socq.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_sim/top_level_mux_164pcA.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_sim/top_level_mux_42_bkb.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_sim/top_level_mux_83_jbC.v</spirit:name>
-        <spirit:fileType>verilogSource</spirit:fileType>
-        <spirit:logicalName>work</spirit:logicalName>
-      </spirit:file>
-      <spirit:file>
-        <spirit:name>verilog_sim/top_level_sitofp_yd2.v</spirit:name>
+        <spirit:name>verilog_sim/top_level_wheelSizec.v</spirit:name>
         <spirit:fileType>verilogSource</spirit:fileType>
         <spirit:logicalName>work</spirit:logicalName>
       </spirit:file>
@@ -1509,7 +1467,7 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>latency</spirit:name>
-      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">240</spirit:value>
+      <spirit:value spirit:id="PARAM_VALUE.latency" spirit:order="5">196</spirit:value>
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>II</spirit:name>
@@ -1517,28 +1475,28 @@
     </spirit:parameter>
     <spirit:parameter>
       <spirit:name>Component_Name</spirit:name>
-      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">top_level_v1_0</spirit:value>
+      <spirit:value spirit:resolve="user" spirit:id="PARAM_VALUE.Component_Name" spirit:order="1">top_level_wheelSimWithMass_v1_0</spirit:value>
     </spirit:parameter>
   </spirit:parameters>
   <spirit:vendorExtensions>
     <xilinx:coreExtensions>
       <xilinx:supportedFamilies>
-        <xilinx:family xilinx:lifeCycle="Pre-Production">zynq</xilinx:family>
+        <xilinx:family xilinx:lifeCycle="Pre-Production">kintex7</xilinx:family>
       </xilinx:supportedFamilies>
       <xilinx:taxonomies>
         <xilinx:taxonomy>/VIVADO_HLS_IP</xilinx:taxonomy>
       </xilinx:taxonomies>
-      <xilinx:displayName>Top_level</xilinx:displayName>
+      <xilinx:displayName>Top_level_wheelsimwithmass</xilinx:displayName>
       <xilinx:definitionSource>HLS</xilinx:definitionSource>
-      <xilinx:coreRevision>2006061830</xilinx:coreRevision>
-      <xilinx:coreCreationDateTime>2020-06-06T15:30:48Z</xilinx:coreCreationDateTime>
+      <xilinx:coreRevision>2008221636</xilinx:coreRevision>
+      <xilinx:coreCreationDateTime>2020-08-22T13:37:16Z</xilinx:coreCreationDateTime>
     </xilinx:coreExtensions>
     <xilinx:packagingInfo>
       <xilinx:xilinxVersion>2019.1</xilinx:xilinxVersion>
-      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="71c29851"/>
-      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="ba4f3471"/>
-      <xilinx:checksum xilinx:scope="ports" xilinx:value="28b9ed0a"/>
-      <xilinx:checksum xilinx:scope="parameters" xilinx:value="8b5b5f78"/>
+      <xilinx:checksum xilinx:scope="busInterfaces" xilinx:value="979e18eb"/>
+      <xilinx:checksum xilinx:scope="fileGroups" xilinx:value="584c0a26"/>
+      <xilinx:checksum xilinx:scope="ports" xilinx:value="a02f654d"/>
+      <xilinx:checksum xilinx:scope="parameters" xilinx:value="796e2c49"/>
     </xilinx:packagingInfo>
   </spirit:vendorExtensions>
 </spirit:component>

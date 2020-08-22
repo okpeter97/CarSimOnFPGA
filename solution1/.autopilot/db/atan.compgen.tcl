@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
-set id 36
-set name top_level_dsub_64rcU
+set id 24
+set name top_level_wheelSimb6
 set corename simcore_dsub
 set op dsub
 set stage_num 5
@@ -91,11 +91,11 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 37
-set name top_level_ddiv_64sc4
+set id 25
+set name top_level_wheelSincg
 set corename simcore_ddiv
 set op ddiv
-set stage_num 31
+set stage_num 17
 set max_latency -1
 set registered_input 1
 set Futype4reduceCEFanout 1
@@ -179,8 +179,8 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 }
 
 
-set id 38
-set name top_level_dcmp_64tde
+set id 26
+set name top_level_wheelSiocq
 set corename simcore_dcmp
 set op dcmp
 set stage_num 2
@@ -283,7 +283,7 @@ if {${::AESL::PGuard_autoexp_gen}} {
 # Direct connection:
 if {${::AESL::PGuard_autoexp_gen}} {
 eval "cg_default_interface_gen_dc { \
-    id 42 \
+    id 30 \
     name x \
     type other \
     dir I \

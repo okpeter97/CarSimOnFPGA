@@ -1,0 +1,1506 @@
+
+
+================================================================
+== Vivado HLS Report for 'update'
+================================================================
+* Date:           Tue Aug 11 15:45:47 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CarSimOnFPGA
+* Solution:       solution2
+* Product family: kintex7
+* Target device:  xc7k325t-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.610|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+------+-----+------+---------+
+    |   Latency  |  Interval  | Pipeline|
+    | min |  max | min |  max |   Type  |
+    +-----+------+-----+------+---------+
+    |  197|  1241|  197|  1241|   none  |
+    +-----+------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        N/A
+
+        * Loop: 
+        N/A
+
+============================================================
++ Verbose Summary: Synthesis Manager
+============================================================
+InlineROM: 1
+ExposeGlobal: 0
+============================================================
++ Verbose Summary: CDFG Model
+============================================================
+IsTopModel: 0
+ResetActiveHigh: 1
+IsCombinational: 0
+IsDatapathOnly: 0
+HasWiredReturn: 1
+HasMFsm: 0
+HasVarLatency: 1
+IsPipeline: 0
+IsRtlPipelined: 0
+IsInstanceOverlapped: 0
+IsDontTouch: 0
+HasImplIP: 0
+IsGatedGlobalClock: 0
+
+
+============================================================
++ Verbose Summary: Schedule
+============================================================
+* Number of FSM states : 130
+* Pipeline : 0
+* Dataflow Pipeline: 0
+
+* FSM state transitions: 
+1 --> 2 
+2 --> 3 
+3 --> 4 
+4 --> 5 
+5 --> 6 
+6 --> 7 
+7 --> 8 
+8 --> 9 
+9 --> 10 
+10 --> 11 
+11 --> 12 
+12 --> 13 27 
+13 --> 14 
+14 --> 15 
+15 --> 16 
+16 --> 17 
+17 --> 18 
+18 --> 19 
+19 --> 20 
+20 --> 21 
+21 --> 22 
+22 --> 23 
+23 --> 24 
+24 --> 25 
+25 --> 26 
+26 --> 28 
+27 --> 26 
+28 --> 29 
+29 --> 30 
+30 --> 31 
+31 --> 32 
+32 --> 33 
+33 --> 34 
+34 --> 35 
+35 --> 36 
+36 --> 37 
+37 --> 38 
+38 --> 39 
+39 --> 40 
+40 --> 41 
+41 --> 42 
+42 --> 43 
+43 --> 44 
+44 --> 45 
+45 --> 46 
+46 --> 47 
+47 --> 48 
+48 --> 49 
+49 --> 50 
+50 --> 51 
+51 --> 52 
+52 --> 53 
+53 --> 54 
+54 --> 55 
+55 --> 56 
+56 --> 57 
+57 --> 58 
+58 --> 59 
+59 --> 60 
+60 --> 61 
+61 --> 62 
+62 --> 63 
+63 --> 64 
+64 --> 65 
+65 --> 66 
+66 --> 67 
+67 --> 68 
+68 --> 69 
+69 --> 70 
+70 --> 71 
+71 --> 72 
+72 --> 73 
+73 --> 74 
+74 --> 75 
+75 --> 76 
+76 --> 77 
+77 --> 78 
+78 --> 79 
+79 --> 80 
+80 --> 81 
+81 --> 82 
+82 --> 83 
+83 --> 84 
+84 --> 85 
+85 --> 86 
+86 --> 87 
+87 --> 88 
+88 --> 89 
+89 --> 90 
+90 --> 91 
+91 --> 92 
+92 --> 93 
+93 --> 94 
+94 --> 95 
+95 --> 96 
+96 --> 97 
+97 --> 98 
+98 --> 99 110 
+99 --> 100 
+100 --> 101 
+101 --> 102 
+102 --> 103 
+103 --> 104 
+104 --> 105 
+105 --> 106 
+106 --> 107 
+107 --> 108 
+108 --> 109 
+109 --> 110 
+110 --> 111 
+111 --> 112 
+112 --> 113 
+113 --> 114 
+114 --> 115 
+115 --> 116 
+116 --> 117 
+117 --> 118 
+118 --> 119 
+119 --> 120 
+120 --> 121 
+121 --> 122 
+122 --> 123 
+123 --> 124 
+124 --> 125 
+125 --> 126 
+126 --> 127 
+127 --> 128 
+128 --> 129 
+129 --> 130 
+130 --> 
+
+* FSM state operations: 
+
+State 1 <SV = 0> <Delay = 2.30>
+ST_1 : Operation 131 [1/1] (0.00ns)   --->   "%steeringAngle_read = call float @_ssdm_op_Read.ap_auto.float(float %steeringAngle)" [CarSimOnFPGA/Wheel.cpp:14]   --->   Operation 131 'read' 'steeringAngle_read' <Predicate = true> <Delay = 0.00>
+ST_1 : Operation 132 [2/2] (2.30ns)   --->   "%x_assign = fpext float %steeringAngle_read to double" [CarSimOnFPGA/Wheel.cpp:21]   --->   Operation 132 'fpext' 'x_assign' <Predicate = true> <Delay = 2.30> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 2 <SV = 1> <Delay = 7.33>
+ST_2 : Operation 133 [1/2] (2.30ns)   --->   "%x_assign = fpext float %steeringAngle_read to double" [CarSimOnFPGA/Wheel.cpp:21]   --->   Operation 133 'fpext' 'x_assign' <Predicate = true> <Delay = 2.30> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+ST_2 : Operation 134 [2/2] (4.11ns)   --->   "%tmp_i_i = call fastcc double @"sin_or_cos<double>"(double %x_assign, i1 zeroext true) nounwind" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:144->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/sincosdouble.cpp:13->CarSimOnFPGA/Wheel.cpp:21]   --->   Operation 134 'call' 'tmp_i_i' <Predicate = true> <Delay = 4.11> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_2 : Operation 135 [2/2] (5.02ns)   --->   "%tmp_s = call fastcc double @sin(double %x_assign) nounwind readnone" [CarSimOnFPGA/Wheel.cpp:22]   --->   Operation 135 'call' 'tmp_s' <Predicate = true> <Delay = 5.02> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 3 <SV = 2> <Delay = 8.29>
+ST_3 : Operation 136 [1/2] (5.40ns)   --->   "%tmp_i_i = call fastcc double @"sin_or_cos<double>"(double %x_assign, i1 zeroext true) nounwind" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:144->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/sincosdouble.cpp:13->CarSimOnFPGA/Wheel.cpp:21]   --->   Operation 136 'call' 'tmp_i_i' <Predicate = true> <Delay = 5.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 137 [2/2] (2.89ns)   --->   "%cos_steer = fptrunc double %tmp_i_i to float" [CarSimOnFPGA/Wheel.cpp:21]   --->   Operation 137 'fptrunc' 'cos_steer' <Predicate = true> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_3 : Operation 138 [1/2] (5.40ns)   --->   "%tmp_s = call fastcc double @sin(double %x_assign) nounwind readnone" [CarSimOnFPGA/Wheel.cpp:22]   --->   Operation 138 'call' 'tmp_s' <Predicate = true> <Delay = 5.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_3 : Operation 139 [2/2] (2.89ns)   --->   "%sin_steer = fptrunc double %tmp_s to float" [CarSimOnFPGA/Wheel.cpp:22]   --->   Operation 139 'fptrunc' 'sin_steer' <Predicate = true> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+
+State 4 <SV = 3> <Delay = 2.89>
+ST_4 : Operation 140 [1/1] (0.00ns)   --->   "%Wheel_angularVelocit_1 = call float @_ssdm_op_Read.ap_auto.float(float %Wheel_angularVelocity_read)" [CarSimOnFPGA/Wheel.cpp:14]   --->   Operation 140 'read' 'Wheel_angularVelocit_1' <Predicate = true> <Delay = 0.00>
+ST_4 : Operation 141 [1/2] (2.89ns)   --->   "%cos_steer = fptrunc double %tmp_i_i to float" [CarSimOnFPGA/Wheel.cpp:21]   --->   Operation 141 'fptrunc' 'cos_steer' <Predicate = true> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 142 [1/2] (2.89ns)   --->   "%sin_steer = fptrunc double %tmp_s to float" [CarSimOnFPGA/Wheel.cpp:22]   --->   Operation 142 'fptrunc' 'sin_steer' <Predicate = true> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_4 : Operation 143 [2/2] (2.30ns)   --->   "%tmp_5 = fpext float %Wheel_angularVelocit_1 to double" [CarSimOnFPGA/Wheel.cpp:27]   --->   Operation 143 'fpext' 'tmp_5' <Predicate = true> <Delay = 2.30> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 5 <SV = 4> <Delay = 8.41>
+ST_5 : Operation 144 [1/1] (0.00ns)   --->   "%velocity_z_read = call float @_ssdm_op_Read.ap_auto.float(float %velocity_z)" [CarSimOnFPGA/Wheel.cpp:14]   --->   Operation 144 'read' 'velocity_z_read' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 145 [1/1] (0.00ns)   --->   "%velocity_x_read = call float @_ssdm_op_Read.ap_auto.float(float %velocity_x)" [CarSimOnFPGA/Wheel.cpp:14]   --->   Operation 145 'read' 'velocity_x_read' <Predicate = true> <Delay = 0.00>
+ST_5 : Operation 146 [2/2] (8.41ns)   --->   "%tmp_1 = fmul float %cos_steer, %velocity_x_read" [CarSimOnFPGA/Wheel.cpp:24]   --->   Operation 146 'fmul' 'tmp_1' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 147 [2/2] (8.41ns)   --->   "%tmp_2 = fmul float %sin_steer, %velocity_z_read" [CarSimOnFPGA/Wheel.cpp:24]   --->   Operation 147 'fmul' 'tmp_2' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 148 [2/2] (8.41ns)   --->   "%tmp_3 = fmul float %sin_steer, %velocity_x_read" [CarSimOnFPGA/Wheel.cpp:25]   --->   Operation 148 'fmul' 'tmp_3' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 149 [2/2] (8.41ns)   --->   "%tmp_4 = fmul float %cos_steer, %velocity_z_read" [CarSimOnFPGA/Wheel.cpp:25]   --->   Operation 149 'fmul' 'tmp_4' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_5 : Operation 150 [1/2] (2.30ns)   --->   "%tmp_5 = fpext float %Wheel_angularVelocit_1 to double" [CarSimOnFPGA/Wheel.cpp:27]   --->   Operation 150 'fpext' 'tmp_5' <Predicate = true> <Delay = 2.30> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 6 <SV = 5> <Delay = 8.41>
+ST_6 : Operation 151 [1/2] (8.41ns)   --->   "%tmp_1 = fmul float %cos_steer, %velocity_x_read" [CarSimOnFPGA/Wheel.cpp:24]   --->   Operation 151 'fmul' 'tmp_1' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 152 [1/2] (8.41ns)   --->   "%tmp_2 = fmul float %sin_steer, %velocity_z_read" [CarSimOnFPGA/Wheel.cpp:24]   --->   Operation 152 'fmul' 'tmp_2' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 153 [1/2] (8.41ns)   --->   "%tmp_3 = fmul float %sin_steer, %velocity_x_read" [CarSimOnFPGA/Wheel.cpp:25]   --->   Operation 153 'fmul' 'tmp_3' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 154 [1/2] (8.41ns)   --->   "%tmp_4 = fmul float %cos_steer, %velocity_z_read" [CarSimOnFPGA/Wheel.cpp:25]   --->   Operation 154 'fmul' 'tmp_4' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_6 : Operation 155 [5/5] (7.04ns)   --->   "%tmp_6 = fmul double %tmp_5, 1.000000e-04" [CarSimOnFPGA/Wheel.cpp:27]   --->   Operation 155 'dmul' 'tmp_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 7 <SV = 6> <Delay = 7.04>
+ST_7 : Operation 156 [4/4] (6.43ns)   --->   "%vel_x_local = fsub float %tmp_1, %tmp_2" [CarSimOnFPGA/Wheel.cpp:24]   --->   Operation 156 'fsub' 'vel_x_local' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 157 [4/4] (6.43ns)   --->   "%vel_z_local = fadd float %tmp_3, %tmp_4" [CarSimOnFPGA/Wheel.cpp:25]   --->   Operation 157 'fadd' 'vel_z_local' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_7 : Operation 158 [4/5] (7.04ns)   --->   "%tmp_6 = fmul double %tmp_5, 1.000000e-04" [CarSimOnFPGA/Wheel.cpp:27]   --->   Operation 158 'dmul' 'tmp_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 8 <SV = 7> <Delay = 7.04>
+ST_8 : Operation 159 [3/4] (6.43ns)   --->   "%vel_x_local = fsub float %tmp_1, %tmp_2" [CarSimOnFPGA/Wheel.cpp:24]   --->   Operation 159 'fsub' 'vel_x_local' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 160 [3/4] (6.43ns)   --->   "%vel_z_local = fadd float %tmp_3, %tmp_4" [CarSimOnFPGA/Wheel.cpp:25]   --->   Operation 160 'fadd' 'vel_z_local' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_8 : Operation 161 [3/5] (7.04ns)   --->   "%tmp_6 = fmul double %tmp_5, 1.000000e-04" [CarSimOnFPGA/Wheel.cpp:27]   --->   Operation 161 'dmul' 'tmp_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 9 <SV = 8> <Delay = 7.04>
+ST_9 : Operation 162 [2/4] (6.43ns)   --->   "%vel_x_local = fsub float %tmp_1, %tmp_2" [CarSimOnFPGA/Wheel.cpp:24]   --->   Operation 162 'fsub' 'vel_x_local' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 163 [2/4] (6.43ns)   --->   "%vel_z_local = fadd float %tmp_3, %tmp_4" [CarSimOnFPGA/Wheel.cpp:25]   --->   Operation 163 'fadd' 'vel_z_local' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_9 : Operation 164 [2/5] (7.04ns)   --->   "%tmp_6 = fmul double %tmp_5, 1.000000e-04" [CarSimOnFPGA/Wheel.cpp:27]   --->   Operation 164 'dmul' 'tmp_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 10 <SV = 9> <Delay = 7.04>
+ST_10 : Operation 165 [1/4] (6.43ns)   --->   "%vel_x_local = fsub float %tmp_1, %tmp_2" [CarSimOnFPGA/Wheel.cpp:24]   --->   Operation 165 'fsub' 'vel_x_local' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 166 [1/4] (6.43ns)   --->   "%vel_z_local = fadd float %tmp_3, %tmp_4" [CarSimOnFPGA/Wheel.cpp:25]   --->   Operation 166 'fadd' 'vel_z_local' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_10 : Operation 167 [1/5] (7.04ns)   --->   "%tmp_6 = fmul double %tmp_5, 1.000000e-04" [CarSimOnFPGA/Wheel.cpp:27]   --->   Operation 167 'dmul' 'tmp_6' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 11 <SV = 10> <Delay = 2.89>
+ST_11 : Operation 168 [2/2] (2.89ns)   --->   "%slipRatio = fptrunc double %tmp_6 to float" [CarSimOnFPGA/Wheel.cpp:27]   --->   Operation 168 'fptrunc' 'slipRatio' <Predicate = true> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_11 : Operation 169 [2/2] (2.78ns)   --->   "%tmp_7 = fcmp oeq float %vel_x_local, 0.000000e+00" [CarSimOnFPGA/Wheel.cpp:30]   --->   Operation 169 'fcmp' 'tmp_7' <Predicate = true> <Delay = 2.78> <Core = "FCmp">   --->   Core 111 'FCmp' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 12 <SV = 11> <Delay = 8.41>
+ST_12 : Operation 170 [1/1] (0.00ns)   --->   "%load_read = call float @_ssdm_op_Read.ap_auto.float(float %load)" [CarSimOnFPGA/Wheel.cpp:14]   --->   Operation 170 'read' 'load_read' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 171 [1/1] (0.00ns)   --->   "%torque_read = call float @_ssdm_op_Read.ap_auto.float(float %torque)" [CarSimOnFPGA/Wheel.cpp:14]   --->   Operation 171 'read' 'torque_read' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 172 [1/1] (0.00ns)   --->   "%deltaTime_read = call float @_ssdm_op_Read.ap_auto.float(float %deltaTime)" [CarSimOnFPGA/Wheel.cpp:14]   --->   Operation 172 'read' 'deltaTime_read' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 173 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [5 x i8]* @p_str1, [1 x i8]* @p_str) nounwind" [CarSimOnFPGA/Wheel.cpp:21]   --->   Operation 173 'specresourcelimit' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 174 [1/1] (0.00ns)   --->   "call void (...)* @_ssdm_op_SpecResourceLimit(i32 1, [1 x i8]* @p_str, [1 x i8]* @p_str, [4 x i8]* @p_str2, [1 x i8]* @p_str) nounwind" [CarSimOnFPGA/Wheel.cpp:21]   --->   Operation 174 'specresourcelimit' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 175 [1/2] (2.89ns)   --->   "%slipRatio = fptrunc double %tmp_6 to float" [CarSimOnFPGA/Wheel.cpp:27]   --->   Operation 175 'fptrunc' 'slipRatio' <Predicate = true> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_12 : Operation 176 [1/1] (0.00ns)   --->   "%p_Val2_s = bitcast float %vel_x_local to i32" [CarSimOnFPGA/Wheel.cpp:30]   --->   Operation 176 'bitcast' 'p_Val2_s' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 177 [1/1] (0.00ns)   --->   "%tmp_V = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %p_Val2_s, i32 23, i32 30)" [CarSimOnFPGA/Wheel.cpp:30]   --->   Operation 177 'partselect' 'tmp_V' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 178 [1/1] (0.00ns)   --->   "%tmp_V_1 = trunc i32 %p_Val2_s to i23" [CarSimOnFPGA/Wheel.cpp:30]   --->   Operation 178 'trunc' 'tmp_V_1' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 179 [1/1] (0.94ns)   --->   "%icmp_ln30 = icmp ne i8 %tmp_V, -1" [CarSimOnFPGA/Wheel.cpp:30]   --->   Operation 179 'icmp' 'icmp_ln30' <Predicate = true> <Delay = 0.94> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 180 [1/1] (1.28ns)   --->   "%icmp_ln30_1 = icmp eq i23 %tmp_V_1, 0" [CarSimOnFPGA/Wheel.cpp:30]   --->   Operation 180 'icmp' 'icmp_ln30_1' <Predicate = true> <Delay = 1.28> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 181 [1/1] (0.00ns) (grouped into LUT with out node and_ln30)   --->   "%or_ln30 = or i1 %icmp_ln30_1, %icmp_ln30" [CarSimOnFPGA/Wheel.cpp:30]   --->   Operation 181 'or' 'or_ln30' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 182 [1/2] (2.78ns)   --->   "%tmp_7 = fcmp oeq float %vel_x_local, 0.000000e+00" [CarSimOnFPGA/Wheel.cpp:30]   --->   Operation 182 'fcmp' 'tmp_7' <Predicate = true> <Delay = 2.78> <Core = "FCmp">   --->   Core 111 'FCmp' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 183 [1/1] (0.47ns) (out node of the LUT)   --->   "%and_ln30 = and i1 %or_ln30, %tmp_7" [CarSimOnFPGA/Wheel.cpp:30]   --->   Operation 183 'and' 'and_ln30' <Predicate = true> <Delay = 0.47> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 184 [1/1] (0.00ns)   --->   "br i1 %and_ln30, label %2, label %1" [CarSimOnFPGA/Wheel.cpp:30]   --->   Operation 184 'br' <Predicate = true> <Delay = 0.00>
+ST_12 : Operation 185 [2/2] (8.41ns)   --->   "%tmp_8 = fmul float %Wheel_angularVelocit_1, 0x3FD3333340000000" [CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 185 'fmul' 'tmp_8' <Predicate = (!and_ln30)> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 186 [1/1] (0.00ns)   --->   "%p_Result_s = call i1 @_ssdm_op_BitSelect.i1.i32.i32(i32 %p_Val2_s, i32 31)" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:316->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:319->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:13->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 186 'bitselect' 'p_Result_s' <Predicate = (!and_ln30)> <Delay = 0.00>
+ST_12 : Operation 187 [2/2] (2.78ns)   --->   "%tmp_15 = fcmp olt float %vel_z_local, 0.000000e+00" [CarSimOnFPGA/Wheel.cpp:41]   --->   Operation 187 'fcmp' 'tmp_15' <Predicate = (and_ln30)> <Delay = 2.78> <Core = "FCmp">   --->   Core 111 'FCmp' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 188 [2/2] (2.78ns)   --->   "%3 = fcmp uno float %vel_z_local, 0.000000e+00" [CarSimOnFPGA/Wheel.cpp:41]   --->   Operation 188 'fcmp' <Predicate = (and_ln30)> <Delay = 2.78> <Core = "FCmp">   --->   Core 111 'FCmp' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_12 : Operation 189 [2/2] (2.78ns)   --->   "%4 = fcmp oeq float %vel_z_local, 0.000000e+00" [CarSimOnFPGA/Wheel.cpp:41]   --->   Operation 189 'fcmp' <Predicate = (and_ln30)> <Delay = 2.78> <Core = "FCmp">   --->   Core 111 'FCmp' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 13 <SV = 12> <Delay = 8.41>
+ST_13 : Operation 190 [1/2] (8.41ns)   --->   "%tmp_8 = fmul float %Wheel_angularVelocit_1, 0x3FD3333340000000" [CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 190 'fmul' 'tmp_8' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 14 <SV = 13> <Delay = 8.27>
+ST_14 : Operation 191 [4/4] (6.43ns)   --->   "%tmp_9 = fsub float %tmp_8, %vel_x_local" [CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 191 'fsub' 'tmp_9' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 192 [1/1] (0.00ns)   --->   "%mantissa_V = call i25 @_ssdm_op_BitConcatenate.i25.i1.i23.i1(i1 true, i23 %tmp_V_1, i1 false)" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 192 'bitconcatenate' 'mantissa_V' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 193 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_5)   --->   "%zext_ln682 = zext i25 %mantissa_V to i79" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:15->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 193 'zext' 'zext_ln682' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 194 [1/1] (0.00ns)   --->   "%zext_ln339 = zext i8 %tmp_V to i9" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:339->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 194 'zext' 'zext_ln339' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 195 [1/1] (1.35ns)   --->   "%add_ln339 = add i9 %zext_ln339, -127" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:339->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 195 'add' 'add_ln339' <Predicate = true> <Delay = 1.35> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.51> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 196 [1/1] (0.00ns)   --->   "%isNeg = call i1 @_ssdm_op_BitSelect.i1.i9.i32(i9 %add_ln339, i32 8)" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 196 'bitselect' 'isNeg' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 197 [1/1] (1.35ns)   --->   "%sub_ln1311 = sub i8 127, %tmp_V" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 197 'sub' 'sub_ln1311' <Predicate = true> <Delay = 1.35> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.51> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 198 [1/1] (0.00ns)   --->   "%sext_ln1311 = sext i8 %sub_ln1311 to i9" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 198 'sext' 'sext_ln1311' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 199 [1/1] (0.37ns)   --->   "%ush = select i1 %isNeg, i9 %sext_ln1311, i9 %add_ln339" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 199 'select' 'ush' <Predicate = true> <Delay = 0.37> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.49> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_14 : Operation 200 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_5)   --->   "%sext_ln1311_1 = sext i9 %ush to i32" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 200 'sext' 'sext_ln1311_1' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 201 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_5)   --->   "%sext_ln1311_2 = sext i9 %ush to i25" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 201 'sext' 'sext_ln1311_2' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 202 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_5)   --->   "%zext_ln1287 = zext i32 %sext_ln1311_1 to i79" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 202 'zext' 'zext_ln1287' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 203 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_5)   --->   "%r_V = lshr i25 %mantissa_V, %sext_ln1311_2" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 203 'lshr' 'r_V' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 2.00> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 204 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_5)   --->   "%r_V_1 = shl i79 %zext_ln682, %zext_ln1287" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 204 'shl' 'r_V_1' <Predicate = true> <Delay = 0.00> <Core = "Shift">   --->   Core 28 'Shift' <Latency = 0> <II = 1> <Delay = 2.00> <FuncUnit> <Opcode : 'shl' 'lshr' 'ashr'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 205 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_5)   --->   "%tmp = call i1 @_ssdm_op_BitSelect.i1.i25.i32(i25 %r_V, i32 24)" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:21->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 205 'bitselect' 'tmp' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 206 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_5)   --->   "%zext_ln662 = zext i1 %tmp to i32" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:21->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 206 'zext' 'zext_ln662' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 207 [1/1] (0.00ns) (grouped into LUT with out node p_Val2_5)   --->   "%tmp_58 = call i32 @_ssdm_op_PartSelect.i32.i79.i32.i32(i79 %r_V_1, i32 24, i32 55)" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:21->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 207 'partselect' 'tmp_58' <Predicate = true> <Delay = 0.00>
+ST_14 : Operation 208 [1/1] (2.05ns) (out node of the LUT)   --->   "%p_Val2_5 = select i1 %isNeg, i32 %zext_ln662, i32 %tmp_58" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:18->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 208 'select' 'p_Val2_5' <Predicate = true> <Delay = 2.05> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.49> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_14 : Operation 209 [1/1] (1.51ns)   --->   "%result_V_1 = sub i32 0, %p_Val2_5" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 209 'sub' 'result_V_1' <Predicate = (p_Result_s)> <Delay = 1.51> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.51> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 210 [1/1] (0.49ns)   --->   "%p_Val2_6 = select i1 %p_Result_s, i32 %result_V_1, i32 %p_Val2_5" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 210 'select' 'p_Val2_6' <Predicate = true> <Delay = 0.49> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.49> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_14 : Operation 211 [1/1] (1.51ns)   --->   "%neg = sub i32 0, %p_Val2_6" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 211 'sub' 'neg' <Predicate = true> <Delay = 1.51> <Core = "AddSub">   --->   Core 14 'AddSub' <Latency = 0> <II = 1> <Delay = 1.51> <FuncUnit> <Opcode : 'add' 'sub'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 212 [1/1] (1.28ns)   --->   "%abscond = icmp sgt i32 %p_Val2_6, 0" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 212 'icmp' 'abscond' <Predicate = true> <Delay = 1.28> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_14 : Operation 213 [1/1] (0.49ns)   --->   "%abs = select i1 %abscond, i32 %p_Val2_6, i32 %neg" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:59->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_case_IEEE754.h:117->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/lib_floatconversion.cpp:51->CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 213 'select' 'abs' <Predicate = true> <Delay = 0.49> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.49> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_14 : Operation 214 [8/8] (8.27ns)   --->   "%tmp_11 = fdiv float %vel_z_local, %vel_x_local" [CarSimOnFPGA/Wheel.cpp:33]   --->   Operation 214 'fdiv' 'tmp_11' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 15 <SV = 14> <Delay = 8.27>
+ST_15 : Operation 215 [3/4] (6.43ns)   --->   "%tmp_9 = fsub float %tmp_8, %vel_x_local" [CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 215 'fsub' 'tmp_9' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_15 : Operation 216 [3/3] (7.89ns)   --->   "%tmp_10 = sitofp i32 %abs to float" [CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 216 'sitofp' 'tmp_10' <Predicate = true> <Delay = 7.89> <Core = "Int2Float">   --->   Core 112 'Int2Float' <Latency = 2> <II = 1> <Delay = 7.89> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_15 : Operation 217 [7/8] (8.27ns)   --->   "%tmp_11 = fdiv float %vel_z_local, %vel_x_local" [CarSimOnFPGA/Wheel.cpp:33]   --->   Operation 217 'fdiv' 'tmp_11' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 16 <SV = 15> <Delay = 8.27>
+ST_16 : Operation 218 [2/4] (6.43ns)   --->   "%tmp_9 = fsub float %tmp_8, %vel_x_local" [CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 218 'fsub' 'tmp_9' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_16 : Operation 219 [2/3] (7.89ns)   --->   "%tmp_10 = sitofp i32 %abs to float" [CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 219 'sitofp' 'tmp_10' <Predicate = true> <Delay = 7.89> <Core = "Int2Float">   --->   Core 112 'Int2Float' <Latency = 2> <II = 1> <Delay = 7.89> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_16 : Operation 220 [6/8] (8.27ns)   --->   "%tmp_11 = fdiv float %vel_z_local, %vel_x_local" [CarSimOnFPGA/Wheel.cpp:33]   --->   Operation 220 'fdiv' 'tmp_11' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 17 <SV = 16> <Delay = 8.27>
+ST_17 : Operation 221 [1/4] (6.43ns)   --->   "%tmp_9 = fsub float %tmp_8, %vel_x_local" [CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 221 'fsub' 'tmp_9' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_17 : Operation 222 [1/3] (7.89ns)   --->   "%tmp_10 = sitofp i32 %abs to float" [CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 222 'sitofp' 'tmp_10' <Predicate = true> <Delay = 7.89> <Core = "Int2Float">   --->   Core 112 'Int2Float' <Latency = 2> <II = 1> <Delay = 7.89> <FuncUnit> <Opcode : 'sitofp' 'uitofp'> <InPorts = 1> <OutPorts = 1>
+ST_17 : Operation 223 [5/8] (8.27ns)   --->   "%tmp_11 = fdiv float %vel_z_local, %vel_x_local" [CarSimOnFPGA/Wheel.cpp:33]   --->   Operation 223 'fdiv' 'tmp_11' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 18 <SV = 17> <Delay = 8.27>
+ST_18 : Operation 224 [8/8] (8.27ns)   --->   "%slipRatio_1 = fdiv float %tmp_9, %tmp_10" [CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 224 'fdiv' 'slipRatio_1' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_18 : Operation 225 [4/8] (8.27ns)   --->   "%tmp_11 = fdiv float %vel_z_local, %vel_x_local" [CarSimOnFPGA/Wheel.cpp:33]   --->   Operation 225 'fdiv' 'tmp_11' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 19 <SV = 18> <Delay = 8.27>
+ST_19 : Operation 226 [7/8] (8.27ns)   --->   "%slipRatio_1 = fdiv float %tmp_9, %tmp_10" [CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 226 'fdiv' 'slipRatio_1' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_19 : Operation 227 [3/8] (8.27ns)   --->   "%tmp_11 = fdiv float %vel_z_local, %vel_x_local" [CarSimOnFPGA/Wheel.cpp:33]   --->   Operation 227 'fdiv' 'tmp_11' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 20 <SV = 19> <Delay = 8.27>
+ST_20 : Operation 228 [6/8] (8.27ns)   --->   "%slipRatio_1 = fdiv float %tmp_9, %tmp_10" [CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 228 'fdiv' 'slipRatio_1' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_20 : Operation 229 [2/8] (8.27ns)   --->   "%tmp_11 = fdiv float %vel_z_local, %vel_x_local" [CarSimOnFPGA/Wheel.cpp:33]   --->   Operation 229 'fdiv' 'tmp_11' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 21 <SV = 20> <Delay = 8.27>
+ST_21 : Operation 230 [5/8] (8.27ns)   --->   "%slipRatio_1 = fdiv float %tmp_9, %tmp_10" [CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 230 'fdiv' 'slipRatio_1' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_21 : Operation 231 [1/8] (8.27ns)   --->   "%tmp_11 = fdiv float %vel_z_local, %vel_x_local" [CarSimOnFPGA/Wheel.cpp:33]   --->   Operation 231 'fdiv' 'tmp_11' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 22 <SV = 21> <Delay = 8.27>
+ST_22 : Operation 232 [4/8] (8.27ns)   --->   "%slipRatio_1 = fdiv float %tmp_9, %tmp_10" [CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 232 'fdiv' 'slipRatio_1' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_22 : Operation 233 [2/2] (2.30ns)   --->   "%tmp_12 = fpext float %tmp_11 to double" [CarSimOnFPGA/Wheel.cpp:33]   --->   Operation 233 'fpext' 'tmp_12' <Predicate = true> <Delay = 2.30> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 23 <SV = 22> <Delay = 8.27>
+ST_23 : Operation 234 [3/8] (8.27ns)   --->   "%slipRatio_1 = fdiv float %tmp_9, %tmp_10" [CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 234 'fdiv' 'slipRatio_1' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_23 : Operation 235 [1/2] (2.30ns)   --->   "%tmp_12 = fpext float %tmp_11 to double" [CarSimOnFPGA/Wheel.cpp:33]   --->   Operation 235 'fpext' 'tmp_12' <Predicate = true> <Delay = 2.30> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+ST_23 : Operation 236 [2/2] (3.90ns)   --->   "%tmp_13 = call fastcc double @atan(double %tmp_12)" [CarSimOnFPGA/Wheel.cpp:33]   --->   Operation 236 'call' 'tmp_13' <Predicate = true> <Delay = 3.90> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 24 <SV = 23> <Delay = 8.27>
+ST_24 : Operation 237 [2/8] (8.27ns)   --->   "%slipRatio_1 = fdiv float %tmp_9, %tmp_10" [CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 237 'fdiv' 'slipRatio_1' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_24 : Operation 238 [1/2] (6.01ns)   --->   "%tmp_13 = call fastcc double @atan(double %tmp_12)" [CarSimOnFPGA/Wheel.cpp:33]   --->   Operation 238 'call' 'tmp_13' <Predicate = true> <Delay = 6.01> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 25 <SV = 24> <Delay = 8.27>
+ST_25 : Operation 239 [1/8] (8.27ns)   --->   "%slipRatio_1 = fdiv float %tmp_9, %tmp_10" [CarSimOnFPGA/Wheel.cpp:32]   --->   Operation 239 'fdiv' 'slipRatio_1' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_25 : Operation 240 [2/2] (2.89ns)   --->   "%slipAngle = fptrunc double %tmp_13 to float" [CarSimOnFPGA/Wheel.cpp:33]   --->   Operation 240 'fptrunc' 'slipAngle' <Predicate = true> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+
+State 26 <SV = 25> <Delay = 6.06>
+ST_26 : Operation 241 [1/2] (2.89ns)   --->   "%slipAngle = fptrunc double %tmp_13 to float" [CarSimOnFPGA/Wheel.cpp:33]   --->   Operation 241 'fptrunc' 'slipAngle' <Predicate = (!and_ln30)> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_26 : Operation 242 [1/1] (0.87ns)   --->   "br label %8" [CarSimOnFPGA/Wheel.cpp:34]   --->   Operation 242 'br' <Predicate = (!and_ln30)> <Delay = 0.87>
+ST_26 : Operation 243 [1/1] (0.00ns)   --->   "%slipRatio_0 = phi float [ %slipRatio_1, %1 ], [ %slipRatio, %2 ]"   --->   Operation 243 'phi' 'slipRatio_0' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 244 [1/1] (0.00ns)   --->   "%slipAngle_2 = phi float [ %slipAngle, %1 ], [ %select_ln41, %2 ]"   --->   Operation 244 'phi' 'slipAngle_2' <Predicate = true> <Delay = 0.00>
+ST_26 : Operation 245 [2/2] (2.30ns)   --->   "%tmp_16 = fpext float %slipRatio_0 to double" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 245 'fpext' 'tmp_16' <Predicate = true> <Delay = 2.30> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+ST_26 : Operation 246 [2/2] (2.30ns)   --->   "%tmp_18 = fpext float %slipAngle_2 to double" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 246 'fpext' 'tmp_18' <Predicate = true> <Delay = 2.30> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 27 <SV = 12> <Delay = 3.27>
+ST_27 : Operation 247 [1/1] (0.00ns)   --->   "%bitcast_ln41 = bitcast float %vel_z_local to i32" [CarSimOnFPGA/Wheel.cpp:41]   --->   Operation 247 'bitcast' 'bitcast_ln41' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 248 [1/1] (0.00ns)   --->   "%tmp_14 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %bitcast_ln41, i32 23, i32 30)" [CarSimOnFPGA/Wheel.cpp:41]   --->   Operation 248 'partselect' 'tmp_14' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 249 [1/1] (0.00ns)   --->   "%trunc_ln41 = trunc i32 %bitcast_ln41 to i23" [CarSimOnFPGA/Wheel.cpp:41]   --->   Operation 249 'trunc' 'trunc_ln41' <Predicate = true> <Delay = 0.00>
+ST_27 : Operation 250 [1/1] (0.94ns)   --->   "%icmp_ln41 = icmp ne i8 %tmp_14, -1" [CarSimOnFPGA/Wheel.cpp:41]   --->   Operation 250 'icmp' 'icmp_ln41' <Predicate = true> <Delay = 0.94> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 251 [1/1] (1.28ns)   --->   "%icmp_ln41_1 = icmp eq i23 %trunc_ln41, 0" [CarSimOnFPGA/Wheel.cpp:41]   --->   Operation 251 'icmp' 'icmp_ln41_1' <Predicate = true> <Delay = 1.28> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 252 [1/1] (0.47ns)   --->   "%or_ln41 = or i1 %icmp_ln41_1, %icmp_ln41" [CarSimOnFPGA/Wheel.cpp:41]   --->   Operation 252 'or' 'or_ln41' <Predicate = true> <Delay = 0.47> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 253 [1/2] (2.78ns)   --->   "%tmp_15 = fcmp olt float %vel_z_local, 0.000000e+00" [CarSimOnFPGA/Wheel.cpp:41]   --->   Operation 253 'fcmp' 'tmp_15' <Predicate = true> <Delay = 2.78> <Core = "FCmp">   --->   Core 111 'FCmp' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 254 [1/1] (0.00ns) (grouped into LUT with out node select_ln41)   --->   "%and_ln41 = and i1 %or_ln41, %tmp_15" [CarSimOnFPGA/Wheel.cpp:41]   --->   Operation 254 'and' 'and_ln41' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 255 [1/1] (0.00ns) (grouped into LUT with out node select_ln41)   --->   "%select_ln41_1 = select i1 %and_ln41, float -9.000000e+01, float 9.000000e+01" [CarSimOnFPGA/Wheel.cpp:41]   --->   Operation 255 'select' 'select_ln41_1' <Predicate = true> <Delay = 0.00> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.49> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_27 : Operation 256 [1/2] (2.78ns)   --->   "%3 = fcmp uno float %vel_z_local, 0.000000e+00" [CarSimOnFPGA/Wheel.cpp:41]   --->   Operation 256 'fcmp' <Predicate = true> <Delay = 2.78> <Core = "FCmp">   --->   Core 111 'FCmp' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 257 [1/2] (2.78ns)   --->   "%4 = fcmp oeq float %vel_z_local, 0.000000e+00" [CarSimOnFPGA/Wheel.cpp:41]   --->   Operation 257 'fcmp' <Predicate = true> <Delay = 2.78> <Core = "FCmp">   --->   Core 111 'FCmp' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 258 [1/1] (0.00ns) (grouped into LUT with out node select_ln41)   --->   "%5 = xor i1 %3, true" [CarSimOnFPGA/Wheel.cpp:41]   --->   Operation 258 'xor' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 259 [1/1] (0.00ns) (grouped into LUT with out node select_ln41)   --->   "%6 = xor i1 %4, true" [CarSimOnFPGA/Wheel.cpp:41]   --->   Operation 259 'xor' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 260 [1/1] (0.00ns) (grouped into LUT with out node select_ln41)   --->   "%7 = and i1 %5, %6" [CarSimOnFPGA/Wheel.cpp:41]   --->   Operation 260 'and' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 261 [1/1] (0.00ns) (grouped into LUT with out node select_ln41)   --->   "%and_ln41_1 = and i1 %or_ln41, %7" [CarSimOnFPGA/Wheel.cpp:41]   --->   Operation 261 'and' 'and_ln41_1' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_27 : Operation 262 [1/1] (0.49ns) (out node of the LUT)   --->   "%select_ln41 = select i1 %and_ln41_1, float %select_ln41_1, float 0.000000e+00" [CarSimOnFPGA/Wheel.cpp:41]   --->   Operation 262 'select' 'select_ln41' <Predicate = true> <Delay = 0.49> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.49> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
+ST_27 : Operation 263 [1/1] (0.87ns)   --->   "br label %8"   --->   Operation 263 'br' <Predicate = true> <Delay = 0.87>
+
+State 28 <SV = 26> <Delay = 2.30>
+ST_28 : Operation 264 [1/2] (2.30ns)   --->   "%tmp_16 = fpext float %slipRatio_0 to double" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 264 'fpext' 'tmp_16' <Predicate = true> <Delay = 2.30> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+ST_28 : Operation 265 [1/2] (2.30ns)   --->   "%tmp_18 = fpext float %slipAngle_2 to double" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 265 'fpext' 'tmp_18' <Predicate = true> <Delay = 2.30> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 29 <SV = 27> <Delay = 7.99>
+ST_29 : Operation 266 [17/17] (7.99ns)   --->   "%tmp_17 = fdiv double %tmp_16, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 266 'ddiv' 'tmp_17' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_29 : Operation 267 [17/17] (7.99ns)   --->   "%tmp_19 = fdiv double %tmp_18, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 267 'ddiv' 'tmp_19' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 30 <SV = 28> <Delay = 7.99>
+ST_30 : Operation 268 [16/17] (7.99ns)   --->   "%tmp_17 = fdiv double %tmp_16, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 268 'ddiv' 'tmp_17' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_30 : Operation 269 [16/17] (7.99ns)   --->   "%tmp_19 = fdiv double %tmp_18, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 269 'ddiv' 'tmp_19' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 31 <SV = 29> <Delay = 7.99>
+ST_31 : Operation 270 [15/17] (7.99ns)   --->   "%tmp_17 = fdiv double %tmp_16, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 270 'ddiv' 'tmp_17' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_31 : Operation 271 [15/17] (7.99ns)   --->   "%tmp_19 = fdiv double %tmp_18, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 271 'ddiv' 'tmp_19' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 32 <SV = 30> <Delay = 7.99>
+ST_32 : Operation 272 [14/17] (7.99ns)   --->   "%tmp_17 = fdiv double %tmp_16, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 272 'ddiv' 'tmp_17' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_32 : Operation 273 [14/17] (7.99ns)   --->   "%tmp_19 = fdiv double %tmp_18, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 273 'ddiv' 'tmp_19' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 33 <SV = 31> <Delay = 7.99>
+ST_33 : Operation 274 [13/17] (7.99ns)   --->   "%tmp_17 = fdiv double %tmp_16, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 274 'ddiv' 'tmp_17' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_33 : Operation 275 [13/17] (7.99ns)   --->   "%tmp_19 = fdiv double %tmp_18, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 275 'ddiv' 'tmp_19' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 34 <SV = 32> <Delay = 7.99>
+ST_34 : Operation 276 [12/17] (7.99ns)   --->   "%tmp_17 = fdiv double %tmp_16, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 276 'ddiv' 'tmp_17' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_34 : Operation 277 [12/17] (7.99ns)   --->   "%tmp_19 = fdiv double %tmp_18, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 277 'ddiv' 'tmp_19' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 35 <SV = 33> <Delay = 7.99>
+ST_35 : Operation 278 [11/17] (7.99ns)   --->   "%tmp_17 = fdiv double %tmp_16, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 278 'ddiv' 'tmp_17' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_35 : Operation 279 [11/17] (7.99ns)   --->   "%tmp_19 = fdiv double %tmp_18, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 279 'ddiv' 'tmp_19' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 36 <SV = 34> <Delay = 7.99>
+ST_36 : Operation 280 [10/17] (7.99ns)   --->   "%tmp_17 = fdiv double %tmp_16, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 280 'ddiv' 'tmp_17' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_36 : Operation 281 [10/17] (7.99ns)   --->   "%tmp_19 = fdiv double %tmp_18, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 281 'ddiv' 'tmp_19' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 37 <SV = 35> <Delay = 7.99>
+ST_37 : Operation 282 [9/17] (7.99ns)   --->   "%tmp_17 = fdiv double %tmp_16, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 282 'ddiv' 'tmp_17' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_37 : Operation 283 [9/17] (7.99ns)   --->   "%tmp_19 = fdiv double %tmp_18, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 283 'ddiv' 'tmp_19' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 38 <SV = 36> <Delay = 7.99>
+ST_38 : Operation 284 [8/17] (7.99ns)   --->   "%tmp_17 = fdiv double %tmp_16, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 284 'ddiv' 'tmp_17' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_38 : Operation 285 [8/17] (7.99ns)   --->   "%tmp_19 = fdiv double %tmp_18, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 285 'ddiv' 'tmp_19' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 39 <SV = 37> <Delay = 7.99>
+ST_39 : Operation 286 [7/17] (7.99ns)   --->   "%tmp_17 = fdiv double %tmp_16, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 286 'ddiv' 'tmp_17' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_39 : Operation 287 [7/17] (7.99ns)   --->   "%tmp_19 = fdiv double %tmp_18, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 287 'ddiv' 'tmp_19' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 40 <SV = 38> <Delay = 7.99>
+ST_40 : Operation 288 [6/17] (7.99ns)   --->   "%tmp_17 = fdiv double %tmp_16, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 288 'ddiv' 'tmp_17' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_40 : Operation 289 [6/17] (7.99ns)   --->   "%tmp_19 = fdiv double %tmp_18, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 289 'ddiv' 'tmp_19' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 41 <SV = 39> <Delay = 7.99>
+ST_41 : Operation 290 [5/17] (7.99ns)   --->   "%tmp_17 = fdiv double %tmp_16, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 290 'ddiv' 'tmp_17' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_41 : Operation 291 [5/17] (7.99ns)   --->   "%tmp_19 = fdiv double %tmp_18, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 291 'ddiv' 'tmp_19' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 42 <SV = 40> <Delay = 7.99>
+ST_42 : Operation 292 [4/17] (7.99ns)   --->   "%tmp_17 = fdiv double %tmp_16, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 292 'ddiv' 'tmp_17' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_42 : Operation 293 [4/17] (7.99ns)   --->   "%tmp_19 = fdiv double %tmp_18, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 293 'ddiv' 'tmp_19' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 43 <SV = 41> <Delay = 7.99>
+ST_43 : Operation 294 [3/17] (7.99ns)   --->   "%tmp_17 = fdiv double %tmp_16, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 294 'ddiv' 'tmp_17' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_43 : Operation 295 [3/17] (7.99ns)   --->   "%tmp_19 = fdiv double %tmp_18, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 295 'ddiv' 'tmp_19' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 44 <SV = 42> <Delay = 7.99>
+ST_44 : Operation 296 [2/17] (7.99ns)   --->   "%tmp_17 = fdiv double %tmp_16, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 296 'ddiv' 'tmp_17' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_44 : Operation 297 [2/17] (7.99ns)   --->   "%tmp_19 = fdiv double %tmp_18, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 297 'ddiv' 'tmp_19' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 45 <SV = 43> <Delay = 7.99>
+ST_45 : Operation 298 [1/17] (7.99ns)   --->   "%tmp_17 = fdiv double %tmp_16, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 298 'ddiv' 'tmp_17' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+ST_45 : Operation 299 [1/17] (7.99ns)   --->   "%tmp_19 = fdiv double %tmp_18, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 299 'ddiv' 'tmp_19' <Predicate = true> <Delay = 7.99> <Core = "DDiv">   --->   Core 117 'DDiv' <Latency = 16> <II = 1> <Delay = 7.99> <FuncUnit> <Opcode : 'ddiv' 'drem'> <InPorts = 2> <OutPorts = 1>
+
+State 46 <SV = 44> <Delay = 2.89>
+ST_46 : Operation 300 [2/2] (2.89ns)   --->   "%r = fptrunc double %tmp_17 to float" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 300 'fptrunc' 'r' <Predicate = true> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_46 : Operation 301 [2/2] (2.89ns)   --->   "%a = fptrunc double %tmp_19 to float" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 301 'fptrunc' 'a' <Predicate = true> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+
+State 47 <SV = 45> <Delay = 2.89>
+ST_47 : Operation 302 [1/2] (2.89ns)   --->   "%r = fptrunc double %tmp_17 to float" [CarSimOnFPGA/Wheel.cpp:47]   --->   Operation 302 'fptrunc' 'r' <Predicate = true> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_47 : Operation 303 [1/2] (2.89ns)   --->   "%a = fptrunc double %tmp_19 to float" [CarSimOnFPGA/Wheel.cpp:48]   --->   Operation 303 'fptrunc' 'a' <Predicate = true> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+
+State 48 <SV = 46> <Delay = 8.41>
+ST_48 : Operation 304 [2/2] (8.41ns)   --->   "%tmp_20 = fmul float %r, %r" [CarSimOnFPGA/Wheel.cpp:49]   --->   Operation 304 'fmul' 'tmp_20' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_48 : Operation 305 [2/2] (8.41ns)   --->   "%tmp_21 = fmul float %a, %a" [CarSimOnFPGA/Wheel.cpp:49]   --->   Operation 305 'fmul' 'tmp_21' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 49 <SV = 47> <Delay = 8.41>
+ST_49 : Operation 306 [1/2] (8.41ns)   --->   "%tmp_20 = fmul float %r, %r" [CarSimOnFPGA/Wheel.cpp:49]   --->   Operation 306 'fmul' 'tmp_20' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_49 : Operation 307 [1/2] (8.41ns)   --->   "%tmp_21 = fmul float %a, %a" [CarSimOnFPGA/Wheel.cpp:49]   --->   Operation 307 'fmul' 'tmp_21' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 50 <SV = 48> <Delay = 6.43>
+ST_50 : Operation 308 [4/4] (6.43ns)   --->   "%tmp_22 = fadd float %tmp_20, %tmp_21" [CarSimOnFPGA/Wheel.cpp:49]   --->   Operation 308 'fadd' 'tmp_22' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 51 <SV = 49> <Delay = 6.43>
+ST_51 : Operation 309 [3/4] (6.43ns)   --->   "%tmp_22 = fadd float %tmp_20, %tmp_21" [CarSimOnFPGA/Wheel.cpp:49]   --->   Operation 309 'fadd' 'tmp_22' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 52 <SV = 50> <Delay = 6.43>
+ST_52 : Operation 310 [2/4] (6.43ns)   --->   "%tmp_22 = fadd float %tmp_20, %tmp_21" [CarSimOnFPGA/Wheel.cpp:49]   --->   Operation 310 'fadd' 'tmp_22' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 53 <SV = 51> <Delay = 6.43>
+ST_53 : Operation 311 [1/4] (6.43ns)   --->   "%tmp_22 = fadd float %tmp_20, %tmp_21" [CarSimOnFPGA/Wheel.cpp:49]   --->   Operation 311 'fadd' 'tmp_22' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 54 <SV = 52> <Delay = 8.41>
+ST_54 : Operation 312 [7/7] (8.41ns)   --->   "%s = call float @llvm.sqrt.f32(float %tmp_22)" [CarSimOnFPGA/Wheel.cpp:49]   --->   Operation 312 'fsqrt' 's' <Predicate = true> <Delay = 8.41> <Core = "FSqrt">   --->   Core 108 'FSqrt' <Latency = 6> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 55 <SV = 53> <Delay = 8.41>
+ST_55 : Operation 313 [6/7] (8.41ns)   --->   "%s = call float @llvm.sqrt.f32(float %tmp_22)" [CarSimOnFPGA/Wheel.cpp:49]   --->   Operation 313 'fsqrt' 's' <Predicate = true> <Delay = 8.41> <Core = "FSqrt">   --->   Core 108 'FSqrt' <Latency = 6> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 56 <SV = 54> <Delay = 8.41>
+ST_56 : Operation 314 [5/7] (8.41ns)   --->   "%s = call float @llvm.sqrt.f32(float %tmp_22)" [CarSimOnFPGA/Wheel.cpp:49]   --->   Operation 314 'fsqrt' 's' <Predicate = true> <Delay = 8.41> <Core = "FSqrt">   --->   Core 108 'FSqrt' <Latency = 6> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 57 <SV = 55> <Delay = 8.41>
+ST_57 : Operation 315 [4/7] (8.41ns)   --->   "%s = call float @llvm.sqrt.f32(float %tmp_22)" [CarSimOnFPGA/Wheel.cpp:49]   --->   Operation 315 'fsqrt' 's' <Predicate = true> <Delay = 8.41> <Core = "FSqrt">   --->   Core 108 'FSqrt' <Latency = 6> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 58 <SV = 56> <Delay = 8.41>
+ST_58 : Operation 316 [3/7] (8.41ns)   --->   "%s = call float @llvm.sqrt.f32(float %tmp_22)" [CarSimOnFPGA/Wheel.cpp:49]   --->   Operation 316 'fsqrt' 's' <Predicate = true> <Delay = 8.41> <Core = "FSqrt">   --->   Core 108 'FSqrt' <Latency = 6> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 59 <SV = 57> <Delay = 8.41>
+ST_59 : Operation 317 [2/7] (8.41ns)   --->   "%s = call float @llvm.sqrt.f32(float %tmp_22)" [CarSimOnFPGA/Wheel.cpp:49]   --->   Operation 317 'fsqrt' 's' <Predicate = true> <Delay = 8.41> <Core = "FSqrt">   --->   Core 108 'FSqrt' <Latency = 6> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 60 <SV = 58> <Delay = 8.41>
+ST_60 : Operation 318 [1/7] (8.41ns)   --->   "%s = call float @llvm.sqrt.f32(float %tmp_22)" [CarSimOnFPGA/Wheel.cpp:49]   --->   Operation 318 'fsqrt' 's' <Predicate = true> <Delay = 8.41> <Core = "FSqrt">   --->   Core 108 'FSqrt' <Latency = 6> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fsqrt'> <InPorts = 1> <OutPorts = 1>
+
+State 61 <SV = 59> <Delay = 8.41>
+ST_61 : Operation 319 [2/2] (8.41ns)   --->   "%tmp_23 = fmul float %s, 1.000000e+01" [CarSimOnFPGA/Wheel.cpp:51]   --->   Operation 319 'fmul' 'tmp_23' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 62 <SV = 60> <Delay = 8.41>
+ST_62 : Operation 320 [1/2] (8.41ns)   --->   "%tmp_23 = fmul float %s, 1.000000e+01" [CarSimOnFPGA/Wheel.cpp:51]   --->   Operation 320 'fmul' 'tmp_23' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_62 : Operation 321 [2/2] (2.30ns)   --->   "%tmp_26 = fpext float %s to double" [CarSimOnFPGA/Wheel.cpp:52]   --->   Operation 321 'fpext' 'tmp_26' <Predicate = true> <Delay = 2.30> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 63 <SV = 61> <Delay = 2.30>
+ST_63 : Operation 322 [2/2] (2.30ns)   --->   "%tmp_24 = fpext float %tmp_23 to double" [CarSimOnFPGA/Wheel.cpp:51]   --->   Operation 322 'fpext' 'tmp_24' <Predicate = true> <Delay = 2.30> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+ST_63 : Operation 323 [1/2] (2.30ns)   --->   "%tmp_26 = fpext float %s to double" [CarSimOnFPGA/Wheel.cpp:52]   --->   Operation 323 'fpext' 'tmp_26' <Predicate = true> <Delay = 2.30> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 64 <SV = 62> <Delay = 7.04>
+ST_64 : Operation 324 [1/2] (2.30ns)   --->   "%tmp_24 = fpext float %tmp_23 to double" [CarSimOnFPGA/Wheel.cpp:51]   --->   Operation 324 'fpext' 'tmp_24' <Predicate = true> <Delay = 2.30> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+ST_64 : Operation 325 [5/5] (7.04ns)   --->   "%tmp_27 = fmul double %tmp_26, 7.140000e-01" [CarSimOnFPGA/Wheel.cpp:52]   --->   Operation 325 'dmul' 'tmp_27' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 65 <SV = 63> <Delay = 7.04>
+ST_65 : Operation 326 [5/5] (7.04ns)   --->   "%tmp_25 = fmul double %tmp_24, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:51]   --->   Operation 326 'dmul' 'tmp_25' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_65 : Operation 327 [4/5] (7.04ns)   --->   "%tmp_27 = fmul double %tmp_26, 7.140000e-01" [CarSimOnFPGA/Wheel.cpp:52]   --->   Operation 327 'dmul' 'tmp_27' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 66 <SV = 64> <Delay = 7.04>
+ST_66 : Operation 328 [4/5] (7.04ns)   --->   "%tmp_25 = fmul double %tmp_24, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:51]   --->   Operation 328 'dmul' 'tmp_25' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_66 : Operation 329 [3/5] (7.04ns)   --->   "%tmp_27 = fmul double %tmp_26, 7.140000e-01" [CarSimOnFPGA/Wheel.cpp:52]   --->   Operation 329 'dmul' 'tmp_27' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 67 <SV = 65> <Delay = 7.04>
+ST_67 : Operation 330 [3/5] (7.04ns)   --->   "%tmp_25 = fmul double %tmp_24, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:51]   --->   Operation 330 'dmul' 'tmp_25' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_67 : Operation 331 [2/5] (7.04ns)   --->   "%tmp_27 = fmul double %tmp_26, 7.140000e-01" [CarSimOnFPGA/Wheel.cpp:52]   --->   Operation 331 'dmul' 'tmp_27' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 68 <SV = 66> <Delay = 7.04>
+ST_68 : Operation 332 [2/5] (7.04ns)   --->   "%tmp_25 = fmul double %tmp_24, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:51]   --->   Operation 332 'dmul' 'tmp_25' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_68 : Operation 333 [1/5] (7.04ns)   --->   "%tmp_27 = fmul double %tmp_26, 7.140000e-01" [CarSimOnFPGA/Wheel.cpp:52]   --->   Operation 333 'dmul' 'tmp_27' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 69 <SV = 67> <Delay = 7.04>
+ST_69 : Operation 334 [1/5] (7.04ns)   --->   "%tmp_25 = fmul double %tmp_24, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:51]   --->   Operation 334 'dmul' 'tmp_25' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_69 : Operation 335 [5/5] (7.04ns)   --->   "%tmp_28 = fmul double %tmp_27, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:52]   --->   Operation 335 'dmul' 'tmp_28' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 70 <SV = 68> <Delay = 7.04>
+ST_70 : Operation 336 [2/2] (2.89ns)   --->   "%long_input = fptrunc double %tmp_25 to float" [CarSimOnFPGA/Wheel.cpp:51]   --->   Operation 336 'fptrunc' 'long_input' <Predicate = true> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_70 : Operation 337 [4/5] (7.04ns)   --->   "%tmp_28 = fmul double %tmp_27, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:52]   --->   Operation 337 'dmul' 'tmp_28' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 71 <SV = 69> <Delay = 7.04>
+ST_71 : Operation 338 [1/2] (2.89ns)   --->   "%long_input = fptrunc double %tmp_25 to float" [CarSimOnFPGA/Wheel.cpp:51]   --->   Operation 338 'fptrunc' 'long_input' <Predicate = true> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_71 : Operation 339 [3/5] (7.04ns)   --->   "%tmp_28 = fmul double %tmp_27, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:52]   --->   Operation 339 'dmul' 'tmp_28' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_71 : Operation 340 [2/2] (2.30ns)   --->   "%tmp_29 = fpext float %long_input to double" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 340 'fpext' 'tmp_29' <Predicate = true> <Delay = 2.30> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 72 <SV = 70> <Delay = 7.04>
+ST_72 : Operation 341 [2/5] (7.04ns)   --->   "%tmp_28 = fmul double %tmp_27, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:52]   --->   Operation 341 'dmul' 'tmp_28' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_72 : Operation 342 [1/2] (2.30ns)   --->   "%tmp_29 = fpext float %long_input to double" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 342 'fpext' 'tmp_29' <Predicate = true> <Delay = 2.30> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+ST_72 : Operation 343 [2/2] (3.90ns)   --->   "%tmp_30 = call fastcc double @atan(double %tmp_29)" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 343 'call' 'tmp_30' <Predicate = true> <Delay = 3.90> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 73 <SV = 71> <Delay = 7.04>
+ST_73 : Operation 344 [1/5] (7.04ns)   --->   "%tmp_28 = fmul double %tmp_27, 2.700000e+00" [CarSimOnFPGA/Wheel.cpp:52]   --->   Operation 344 'dmul' 'tmp_28' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_73 : Operation 345 [1/2] (6.01ns)   --->   "%tmp_30 = call fastcc double @atan(double %tmp_29)" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 345 'call' 'tmp_30' <Predicate = true> <Delay = 6.01> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 74 <SV = 72> <Delay = 5.06>
+ST_74 : Operation 346 [2/2] (2.89ns)   --->   "%lat_input = fptrunc double %tmp_28 to float" [CarSimOnFPGA/Wheel.cpp:52]   --->   Operation 346 'fptrunc' 'lat_input' <Predicate = true> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_74 : Operation 347 [5/5] (5.06ns)   --->   "%tmp_31 = fsub double %tmp_29, %tmp_30" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 347 'dsub' 'tmp_31' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 75 <SV = 73> <Delay = 5.19>
+ST_75 : Operation 348 [1/2] (2.89ns)   --->   "%lat_input = fptrunc double %tmp_28 to float" [CarSimOnFPGA/Wheel.cpp:52]   --->   Operation 348 'fptrunc' 'lat_input' <Predicate = true> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_75 : Operation 349 [4/5] (5.06ns)   --->   "%tmp_31 = fsub double %tmp_29, %tmp_30" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 349 'dsub' 'tmp_31' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_75 : Operation 350 [2/2] (2.30ns)   --->   "%tmp_37 = fpext float %lat_input to double" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 350 'fpext' 'tmp_37' <Predicate = true> <Delay = 2.30> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+
+State 76 <SV = 74> <Delay = 6.20>
+ST_76 : Operation 351 [3/5] (5.06ns)   --->   "%tmp_31 = fsub double %tmp_29, %tmp_30" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 351 'dsub' 'tmp_31' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_76 : Operation 352 [1/2] (2.30ns)   --->   "%tmp_37 = fpext float %lat_input to double" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 352 'fpext' 'tmp_37' <Predicate = true> <Delay = 2.30> <Core = "Float2Double">   --->   Core 114 'Float2Double' <Latency = 1> <II = 1> <Delay = 2.30> <FuncUnit> <Opcode : 'fpext'> <InPorts = 1> <OutPorts = 1>
+ST_76 : Operation 353 [2/2] (3.90ns)   --->   "%tmp_39 = call fastcc double @atan(double %tmp_37)" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 353 'call' 'tmp_39' <Predicate = true> <Delay = 3.90> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 77 <SV = 75> <Delay = 6.01>
+ST_77 : Operation 354 [2/5] (5.06ns)   --->   "%tmp_31 = fsub double %tmp_29, %tmp_30" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 354 'dsub' 'tmp_31' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_77 : Operation 355 [1/2] (6.01ns)   --->   "%tmp_39 = call fastcc double @atan(double %tmp_37)" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 355 'call' 'tmp_39' <Predicate = true> <Delay = 6.01> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 78 <SV = 76> <Delay = 7.04>
+ST_78 : Operation 356 [1/5] (5.06ns)   --->   "%tmp_31 = fsub double %tmp_29, %tmp_30" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 356 'dsub' 'tmp_31' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_78 : Operation 357 [5/5] (7.04ns)   --->   "%tmp_38 = fmul double %tmp_37, 1.200000e+00" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 357 'dmul' 'tmp_38' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_78 : Operation 358 [5/5] (7.04ns)   --->   "%tmp_40 = fmul double %tmp_39, -2.000000e-01" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 358 'dmul' 'tmp_40' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 79 <SV = 77> <Delay = 7.04>
+ST_79 : Operation 359 [5/5] (7.04ns)   --->   "%tmp_32 = fmul double %tmp_31, 9.700000e-01" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 359 'dmul' 'tmp_32' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_79 : Operation 360 [4/5] (7.04ns)   --->   "%tmp_38 = fmul double %tmp_37, 1.200000e+00" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 360 'dmul' 'tmp_38' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_79 : Operation 361 [4/5] (7.04ns)   --->   "%tmp_40 = fmul double %tmp_39, -2.000000e-01" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 361 'dmul' 'tmp_40' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 80 <SV = 78> <Delay = 7.04>
+ST_80 : Operation 362 [4/5] (7.04ns)   --->   "%tmp_32 = fmul double %tmp_31, 9.700000e-01" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 362 'dmul' 'tmp_32' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_80 : Operation 363 [3/5] (7.04ns)   --->   "%tmp_38 = fmul double %tmp_37, 1.200000e+00" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 363 'dmul' 'tmp_38' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_80 : Operation 364 [3/5] (7.04ns)   --->   "%tmp_40 = fmul double %tmp_39, -2.000000e-01" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 364 'dmul' 'tmp_40' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 81 <SV = 79> <Delay = 7.04>
+ST_81 : Operation 365 [3/5] (7.04ns)   --->   "%tmp_32 = fmul double %tmp_31, 9.700000e-01" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 365 'dmul' 'tmp_32' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_81 : Operation 366 [2/5] (7.04ns)   --->   "%tmp_38 = fmul double %tmp_37, 1.200000e+00" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 366 'dmul' 'tmp_38' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_81 : Operation 367 [2/5] (7.04ns)   --->   "%tmp_40 = fmul double %tmp_39, -2.000000e-01" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 367 'dmul' 'tmp_40' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 82 <SV = 80> <Delay = 7.04>
+ST_82 : Operation 368 [2/5] (7.04ns)   --->   "%tmp_32 = fmul double %tmp_31, 9.700000e-01" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 368 'dmul' 'tmp_32' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_82 : Operation 369 [1/5] (7.04ns)   --->   "%tmp_38 = fmul double %tmp_37, 1.200000e+00" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 369 'dmul' 'tmp_38' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_82 : Operation 370 [1/5] (7.04ns)   --->   "%tmp_40 = fmul double %tmp_39, -2.000000e-01" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 370 'dmul' 'tmp_40' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 83 <SV = 81> <Delay = 7.04>
+ST_83 : Operation 371 [1/5] (7.04ns)   --->   "%tmp_32 = fmul double %tmp_31, 9.700000e-01" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 371 'dmul' 'tmp_32' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_83 : Operation 372 [5/5] (5.06ns)   --->   "%tmp_41 = fadd double %tmp_38, %tmp_40" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 372 'dadd' 'tmp_41' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 84 <SV = 82> <Delay = 5.06>
+ST_84 : Operation 373 [5/5] (5.06ns)   --->   "%tmp_33 = fsub double %tmp_29, %tmp_32" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 373 'dsub' 'tmp_33' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_84 : Operation 374 [4/5] (5.06ns)   --->   "%tmp_41 = fadd double %tmp_38, %tmp_40" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 374 'dadd' 'tmp_41' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 85 <SV = 83> <Delay = 5.06>
+ST_85 : Operation 375 [4/5] (5.06ns)   --->   "%tmp_33 = fsub double %tmp_29, %tmp_32" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 375 'dsub' 'tmp_33' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_85 : Operation 376 [3/5] (5.06ns)   --->   "%tmp_41 = fadd double %tmp_38, %tmp_40" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 376 'dadd' 'tmp_41' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 86 <SV = 84> <Delay = 5.06>
+ST_86 : Operation 377 [3/5] (5.06ns)   --->   "%tmp_33 = fsub double %tmp_29, %tmp_32" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 377 'dsub' 'tmp_33' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_86 : Operation 378 [2/5] (5.06ns)   --->   "%tmp_41 = fadd double %tmp_38, %tmp_40" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 378 'dadd' 'tmp_41' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 87 <SV = 85> <Delay = 5.06>
+ST_87 : Operation 379 [2/5] (5.06ns)   --->   "%tmp_33 = fsub double %tmp_29, %tmp_32" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 379 'dsub' 'tmp_33' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_87 : Operation 380 [1/5] (5.06ns)   --->   "%tmp_41 = fadd double %tmp_38, %tmp_40" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 380 'dadd' 'tmp_41' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+
+State 88 <SV = 86> <Delay = 5.06>
+ST_88 : Operation 381 [1/5] (5.06ns)   --->   "%tmp_33 = fsub double %tmp_29, %tmp_32" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 381 'dsub' 'tmp_33' <Predicate = true> <Delay = 5.06> <Core = "DAddSub">   --->   Core 115 'DAddSub' <Latency = 4> <II = 1> <Delay = 5.06> <FuncUnit> <Opcode : 'dadd' 'dsub'> <InPorts = 2> <OutPorts = 1>
+ST_88 : Operation 382 [2/2] (3.90ns)   --->   "%tmp_42 = call fastcc double @atan(double %tmp_41)" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 382 'call' 'tmp_42' <Predicate = true> <Delay = 3.90> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 89 <SV = 87> <Delay = 6.01>
+ST_89 : Operation 383 [2/2] (3.90ns)   --->   "%tmp_34 = call fastcc double @atan(double %tmp_33)" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 383 'call' 'tmp_34' <Predicate = true> <Delay = 3.90> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_89 : Operation 384 [1/2] (6.01ns)   --->   "%tmp_42 = call fastcc double @atan(double %tmp_41)" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 384 'call' 'tmp_42' <Predicate = true> <Delay = 6.01> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 90 <SV = 88> <Delay = 7.04>
+ST_90 : Operation 385 [1/2] (6.01ns)   --->   "%tmp_34 = call fastcc double @atan(double %tmp_33)" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 385 'call' 'tmp_34' <Predicate = true> <Delay = 6.01> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_90 : Operation 386 [5/5] (7.04ns)   --->   "%tmp_43 = fmul double %tmp_42, 1.400000e+00" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 386 'dmul' 'tmp_43' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 91 <SV = 89> <Delay = 7.04>
+ST_91 : Operation 387 [5/5] (7.04ns)   --->   "%tmp_35 = fmul double %tmp_34, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 387 'dmul' 'tmp_35' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_91 : Operation 388 [4/5] (7.04ns)   --->   "%tmp_43 = fmul double %tmp_42, 1.400000e+00" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 388 'dmul' 'tmp_43' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 92 <SV = 90> <Delay = 7.04>
+ST_92 : Operation 389 [4/5] (7.04ns)   --->   "%tmp_35 = fmul double %tmp_34, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 389 'dmul' 'tmp_35' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_92 : Operation 390 [3/5] (7.04ns)   --->   "%tmp_43 = fmul double %tmp_42, 1.400000e+00" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 390 'dmul' 'tmp_43' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 93 <SV = 91> <Delay = 7.04>
+ST_93 : Operation 391 [3/5] (7.04ns)   --->   "%tmp_35 = fmul double %tmp_34, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 391 'dmul' 'tmp_35' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_93 : Operation 392 [2/5] (7.04ns)   --->   "%tmp_43 = fmul double %tmp_42, 1.400000e+00" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 392 'dmul' 'tmp_43' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 94 <SV = 92> <Delay = 7.04>
+ST_94 : Operation 393 [2/5] (7.04ns)   --->   "%tmp_35 = fmul double %tmp_34, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 393 'dmul' 'tmp_35' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_94 : Operation 394 [1/5] (7.04ns)   --->   "%tmp_43 = fmul double %tmp_42, 1.400000e+00" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 394 'dmul' 'tmp_43' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+
+State 95 <SV = 93> <Delay = 7.04>
+ST_95 : Operation 395 [1/5] (7.04ns)   --->   "%tmp_35 = fmul double %tmp_34, 1.900000e+00" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 395 'dmul' 'tmp_35' <Predicate = true> <Delay = 7.04> <Core = "DMul">   --->   Core 116 'DMul' <Latency = 4> <II = 1> <Delay = 7.04> <FuncUnit> <Opcode : 'dmul'> <InPorts = 2> <OutPorts = 1>
+ST_95 : Operation 396 [2/2] (5.02ns)   --->   "%tmp_44 = call fastcc double @sin(double %tmp_43) nounwind readnone" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 396 'call' 'tmp_44' <Predicate = true> <Delay = 5.02> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 96 <SV = 94> <Delay = 5.40>
+ST_96 : Operation 397 [2/2] (5.02ns)   --->   "%tmp_36 = call fastcc double @sin(double %tmp_35) nounwind readnone" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 397 'call' 'tmp_36' <Predicate = true> <Delay = 5.02> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_96 : Operation 398 [1/2] (5.40ns)   --->   "%tmp_44 = call fastcc double @sin(double %tmp_43) nounwind readnone" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 398 'call' 'tmp_44' <Predicate = true> <Delay = 5.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+
+State 97 <SV = 95> <Delay = 8.29>
+ST_97 : Operation 399 [1/2] (5.40ns)   --->   "%tmp_36 = call fastcc double @sin(double %tmp_35) nounwind readnone" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 399 'call' 'tmp_36' <Predicate = true> <Delay = 5.40> <CoreType = "Generic">   --->   Core 0 '' <Latency = 0> <II = 1> <Delay = 1.00> <Generic> <Opcode : >
+ST_97 : Operation 400 [2/2] (2.89ns)   --->   "%longForce = fptrunc double %tmp_36 to float" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 400 'fptrunc' 'longForce' <Predicate = true> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_97 : Operation 401 [1/1] (0.00ns)   --->   "%bitcast_ln54 = bitcast double %tmp_44 to i64" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 401 'bitcast' 'bitcast_ln54' <Predicate = true> <Delay = 0.00>
+ST_97 : Operation 402 [1/1] (0.54ns)   --->   "%xor_ln54 = xor i64 %bitcast_ln54, -9223372036854775808" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 402 'xor' 'xor_ln54' <Predicate = true> <Delay = 0.54> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_97 : Operation 403 [1/1] (0.00ns)   --->   "%bitcast_ln54_1 = bitcast i64 %xor_ln54 to double" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 403 'bitcast' 'bitcast_ln54_1' <Predicate = true> <Delay = 0.00>
+ST_97 : Operation 404 [2/2] (2.89ns)   --->   "%latForce = fptrunc double %bitcast_ln54_1 to float" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 404 'fptrunc' 'latForce' <Predicate = true> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_97 : Operation 405 [2/2] (2.78ns)   --->   "%tmp_60 = fcmp oeq float %s, 0.000000e+00" [CarSimOnFPGA/Wheel.cpp:57]   --->   Operation 405 'fcmp' 'tmp_60' <Predicate = true> <Delay = 2.78> <Core = "FCmp">   --->   Core 111 'FCmp' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+
+State 98 <SV = 96> <Delay = 8.27>
+ST_98 : Operation 406 [1/2] (2.89ns)   --->   "%longForce = fptrunc double %tmp_36 to float" [CarSimOnFPGA/Wheel.cpp:53]   --->   Operation 406 'fptrunc' 'longForce' <Predicate = true> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_98 : Operation 407 [1/2] (2.89ns)   --->   "%latForce = fptrunc double %bitcast_ln54_1 to float" [CarSimOnFPGA/Wheel.cpp:54]   --->   Operation 407 'fptrunc' 'latForce' <Predicate = true> <Delay = 2.89> <Core = "Double2Float">   --->   Core 123 'Double2Float' <Latency = 1> <II = 1> <Delay = 2.89> <FuncUnit> <Opcode : 'fptrunc'> <InPorts = 1> <OutPorts = 1>
+ST_98 : Operation 408 [1/1] (0.00ns)   --->   "%bitcast_ln57 = bitcast float %s to i32" [CarSimOnFPGA/Wheel.cpp:57]   --->   Operation 408 'bitcast' 'bitcast_ln57' <Predicate = true> <Delay = 0.00>
+ST_98 : Operation 409 [1/1] (0.00ns)   --->   "%tmp_59 = call i8 @_ssdm_op_PartSelect.i8.i32.i32.i32(i32 %bitcast_ln57, i32 23, i32 30)" [CarSimOnFPGA/Wheel.cpp:57]   --->   Operation 409 'partselect' 'tmp_59' <Predicate = true> <Delay = 0.00>
+ST_98 : Operation 410 [1/1] (0.00ns)   --->   "%trunc_ln57 = trunc i32 %bitcast_ln57 to i23" [CarSimOnFPGA/Wheel.cpp:57]   --->   Operation 410 'trunc' 'trunc_ln57' <Predicate = true> <Delay = 0.00>
+ST_98 : Operation 411 [1/1] (0.94ns)   --->   "%icmp_ln57 = icmp ne i8 %tmp_59, -1" [CarSimOnFPGA/Wheel.cpp:57]   --->   Operation 411 'icmp' 'icmp_ln57' <Predicate = true> <Delay = 0.94> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_98 : Operation 412 [1/1] (1.28ns)   --->   "%icmp_ln57_1 = icmp eq i23 %trunc_ln57, 0" [CarSimOnFPGA/Wheel.cpp:57]   --->   Operation 412 'icmp' 'icmp_ln57_1' <Predicate = true> <Delay = 1.28> <Core = "Cmp">   --->   Core 25 'Cmp' <Latency = 0> <II = 1> <Delay = 1.28> <FuncUnit> <Opcode : 'icmp'> <InPorts = 2> <OutPorts = 1>
+ST_98 : Operation 413 [1/1] (0.00ns) (grouped into LUT with out node and_ln57)   --->   "%or_ln57 = or i1 %icmp_ln57_1, %icmp_ln57" [CarSimOnFPGA/Wheel.cpp:57]   --->   Operation 413 'or' 'or_ln57' <Predicate = true> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_98 : Operation 414 [1/2] (2.78ns)   --->   "%tmp_60 = fcmp oeq float %s, 0.000000e+00" [CarSimOnFPGA/Wheel.cpp:57]   --->   Operation 414 'fcmp' 'tmp_60' <Predicate = true> <Delay = 2.78> <Core = "FCmp">   --->   Core 111 'FCmp' <Latency = 1> <II = 1> <Delay = 2.78> <FuncUnit> <Opcode : 'fcmp'> <InPorts = 2> <OutPorts = 1>
+ST_98 : Operation 415 [1/1] (0.47ns) (out node of the LUT)   --->   "%and_ln57 = and i1 %or_ln57, %tmp_60" [CarSimOnFPGA/Wheel.cpp:57]   --->   Operation 415 'and' 'and_ln57' <Predicate = true> <Delay = 0.47> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+ST_98 : Operation 416 [1/1] (0.87ns)   --->   "br i1 %and_ln57, label %._crit_edge, label %9" [CarSimOnFPGA/Wheel.cpp:57]   --->   Operation 416 'br' <Predicate = true> <Delay = 0.87>
+ST_98 : Operation 417 [8/8] (8.27ns)   --->   "%tmp_46 = fdiv float %r, %s" [CarSimOnFPGA/Wheel.cpp:59]   --->   Operation 417 'fdiv' 'tmp_46' <Predicate = (!and_ln57)> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_98 : Operation 418 [8/8] (8.27ns)   --->   "%tmp_48 = fdiv float %a, %s" [CarSimOnFPGA/Wheel.cpp:60]   --->   Operation 418 'fdiv' 'tmp_48' <Predicate = (!and_ln57)> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 99 <SV = 97> <Delay = 8.27>
+ST_99 : Operation 419 [7/8] (8.27ns)   --->   "%tmp_46 = fdiv float %r, %s" [CarSimOnFPGA/Wheel.cpp:59]   --->   Operation 419 'fdiv' 'tmp_46' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_99 : Operation 420 [7/8] (8.27ns)   --->   "%tmp_48 = fdiv float %a, %s" [CarSimOnFPGA/Wheel.cpp:60]   --->   Operation 420 'fdiv' 'tmp_48' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 100 <SV = 98> <Delay = 8.27>
+ST_100 : Operation 421 [6/8] (8.27ns)   --->   "%tmp_46 = fdiv float %r, %s" [CarSimOnFPGA/Wheel.cpp:59]   --->   Operation 421 'fdiv' 'tmp_46' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_100 : Operation 422 [6/8] (8.27ns)   --->   "%tmp_48 = fdiv float %a, %s" [CarSimOnFPGA/Wheel.cpp:60]   --->   Operation 422 'fdiv' 'tmp_48' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 101 <SV = 99> <Delay = 8.27>
+ST_101 : Operation 423 [5/8] (8.27ns)   --->   "%tmp_46 = fdiv float %r, %s" [CarSimOnFPGA/Wheel.cpp:59]   --->   Operation 423 'fdiv' 'tmp_46' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_101 : Operation 424 [5/8] (8.27ns)   --->   "%tmp_48 = fdiv float %a, %s" [CarSimOnFPGA/Wheel.cpp:60]   --->   Operation 424 'fdiv' 'tmp_48' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 102 <SV = 100> <Delay = 8.27>
+ST_102 : Operation 425 [4/8] (8.27ns)   --->   "%tmp_46 = fdiv float %r, %s" [CarSimOnFPGA/Wheel.cpp:59]   --->   Operation 425 'fdiv' 'tmp_46' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_102 : Operation 426 [4/8] (8.27ns)   --->   "%tmp_48 = fdiv float %a, %s" [CarSimOnFPGA/Wheel.cpp:60]   --->   Operation 426 'fdiv' 'tmp_48' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 103 <SV = 101> <Delay = 8.27>
+ST_103 : Operation 427 [3/8] (8.27ns)   --->   "%tmp_46 = fdiv float %r, %s" [CarSimOnFPGA/Wheel.cpp:59]   --->   Operation 427 'fdiv' 'tmp_46' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_103 : Operation 428 [3/8] (8.27ns)   --->   "%tmp_48 = fdiv float %a, %s" [CarSimOnFPGA/Wheel.cpp:60]   --->   Operation 428 'fdiv' 'tmp_48' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 104 <SV = 102> <Delay = 8.27>
+ST_104 : Operation 429 [2/8] (8.27ns)   --->   "%tmp_46 = fdiv float %r, %s" [CarSimOnFPGA/Wheel.cpp:59]   --->   Operation 429 'fdiv' 'tmp_46' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_104 : Operation 430 [2/8] (8.27ns)   --->   "%tmp_48 = fdiv float %a, %s" [CarSimOnFPGA/Wheel.cpp:60]   --->   Operation 430 'fdiv' 'tmp_48' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 105 <SV = 103> <Delay = 8.27>
+ST_105 : Operation 431 [1/8] (8.27ns)   --->   "%tmp_46 = fdiv float %r, %s" [CarSimOnFPGA/Wheel.cpp:59]   --->   Operation 431 'fdiv' 'tmp_46' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+ST_105 : Operation 432 [1/8] (8.27ns)   --->   "%tmp_48 = fdiv float %a, %s" [CarSimOnFPGA/Wheel.cpp:60]   --->   Operation 432 'fdiv' 'tmp_48' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 106 <SV = 104> <Delay = 8.41>
+ST_106 : Operation 433 [2/2] (8.41ns)   --->   "%tmp_47 = fmul float %tmp_46, %load_read" [CarSimOnFPGA/Wheel.cpp:59]   --->   Operation 433 'fmul' 'tmp_47' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_106 : Operation 434 [2/2] (8.41ns)   --->   "%tmp_49 = fmul float %tmp_48, %load_read" [CarSimOnFPGA/Wheel.cpp:60]   --->   Operation 434 'fmul' 'tmp_49' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 107 <SV = 105> <Delay = 8.41>
+ST_107 : Operation 435 [1/2] (8.41ns)   --->   "%tmp_47 = fmul float %tmp_46, %load_read" [CarSimOnFPGA/Wheel.cpp:59]   --->   Operation 435 'fmul' 'tmp_47' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_107 : Operation 436 [1/2] (8.41ns)   --->   "%tmp_49 = fmul float %tmp_48, %load_read" [CarSimOnFPGA/Wheel.cpp:60]   --->   Operation 436 'fmul' 'tmp_49' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 108 <SV = 106> <Delay = 8.41>
+ST_108 : Operation 437 [2/2] (8.41ns)   --->   "%x = fmul float %tmp_47, %longForce" [CarSimOnFPGA/Wheel.cpp:59]   --->   Operation 437 'fmul' 'x' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_108 : Operation 438 [2/2] (8.41ns)   --->   "%z = fmul float %tmp_49, %latForce" [CarSimOnFPGA/Wheel.cpp:60]   --->   Operation 438 'fmul' 'z' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 109 <SV = 107> <Delay = 8.41>
+ST_109 : Operation 439 [1/2] (8.41ns)   --->   "%x = fmul float %tmp_47, %longForce" [CarSimOnFPGA/Wheel.cpp:59]   --->   Operation 439 'fmul' 'x' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_109 : Operation 440 [1/2] (8.41ns)   --->   "%z = fmul float %tmp_49, %latForce" [CarSimOnFPGA/Wheel.cpp:60]   --->   Operation 440 'fmul' 'z' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 110 <SV = 108> <Delay = 0.87>
+ST_110 : Operation 441 [1/1] (0.87ns)   --->   "br label %._crit_edge" [CarSimOnFPGA/Wheel.cpp:61]   --->   Operation 441 'br' <Predicate = (!and_ln57)> <Delay = 0.87>
+ST_110 : Operation 442 [1/1] (0.00ns)   --->   "%bitcast_ln66 = bitcast float %sin_steer to i32" [CarSimOnFPGA/Wheel.cpp:66]   --->   Operation 442 'bitcast' 'bitcast_ln66' <Predicate = true> <Delay = 0.00>
+ST_110 : Operation 443 [1/1] (0.51ns)   --->   "%xor_ln66 = xor i32 %bitcast_ln66, -2147483648" [CarSimOnFPGA/Wheel.cpp:66]   --->   Operation 443 'xor' 'xor_ln66' <Predicate = true> <Delay = 0.51> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.51> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
+
+State 111 <SV = 109> <Delay = 8.41>
+ST_111 : Operation 444 [1/1] (0.00ns)   --->   "%x_0 = phi float [ %x, %9 ], [ 0.000000e+00, %8 ]"   --->   Operation 444 'phi' 'x_0' <Predicate = true> <Delay = 0.00>
+ST_111 : Operation 445 [1/1] (0.00ns)   --->   "%z_0 = phi float [ %z, %9 ], [ 0.000000e+00, %8 ]"   --->   Operation 445 'phi' 'z_0' <Predicate = true> <Delay = 0.00>
+ST_111 : Operation 446 [2/2] (8.41ns)   --->   "%tmp_50 = fmul float %x_0, 0x3FD3333340000000" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 446 'fmul' 'tmp_50' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_111 : Operation 447 [2/2] (8.41ns)   --->   "%tmp_54 = fmul float %cos_steer, %x_0" [CarSimOnFPGA/Wheel.cpp:65]   --->   Operation 447 'fmul' 'tmp_54' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_111 : Operation 448 [2/2] (8.41ns)   --->   "%tmp_55 = fmul float %sin_steer, %z_0" [CarSimOnFPGA/Wheel.cpp:65]   --->   Operation 448 'fmul' 'tmp_55' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_111 : Operation 449 [1/1] (0.00ns)   --->   "%bitcast_ln66_1 = bitcast i32 %xor_ln66 to float" [CarSimOnFPGA/Wheel.cpp:66]   --->   Operation 449 'bitcast' 'bitcast_ln66_1' <Predicate = true> <Delay = 0.00>
+ST_111 : Operation 450 [2/2] (8.41ns)   --->   "%tmp_56 = fmul float %x_0, %bitcast_ln66_1" [CarSimOnFPGA/Wheel.cpp:66]   --->   Operation 450 'fmul' 'tmp_56' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_111 : Operation 451 [2/2] (8.41ns)   --->   "%tmp_57 = fmul float %cos_steer, %z_0" [CarSimOnFPGA/Wheel.cpp:66]   --->   Operation 451 'fmul' 'tmp_57' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 112 <SV = 110> <Delay = 8.41>
+ST_112 : Operation 452 [1/2] (8.41ns)   --->   "%tmp_50 = fmul float %x_0, 0x3FD3333340000000" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 452 'fmul' 'tmp_50' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_112 : Operation 453 [1/2] (8.41ns)   --->   "%tmp_54 = fmul float %cos_steer, %x_0" [CarSimOnFPGA/Wheel.cpp:65]   --->   Operation 453 'fmul' 'tmp_54' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_112 : Operation 454 [1/2] (8.41ns)   --->   "%tmp_55 = fmul float %sin_steer, %z_0" [CarSimOnFPGA/Wheel.cpp:65]   --->   Operation 454 'fmul' 'tmp_55' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_112 : Operation 455 [1/2] (8.41ns)   --->   "%tmp_56 = fmul float %x_0, %bitcast_ln66_1" [CarSimOnFPGA/Wheel.cpp:66]   --->   Operation 455 'fmul' 'tmp_56' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+ST_112 : Operation 456 [1/2] (8.41ns)   --->   "%tmp_57 = fmul float %cos_steer, %z_0" [CarSimOnFPGA/Wheel.cpp:66]   --->   Operation 456 'fmul' 'tmp_57' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 113 <SV = 111> <Delay = 6.43>
+ST_113 : Operation 457 [4/4] (6.43ns)   --->   "%tmp_51 = fsub float %torque_read, %tmp_50" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 457 'fsub' 'tmp_51' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_113 : Operation 458 [4/4] (6.43ns)   --->   "%Wheel_force_x_write_s = fadd float %tmp_54, %tmp_55" [CarSimOnFPGA/Wheel.cpp:65]   --->   Operation 458 'fadd' 'Wheel_force_x_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_113 : Operation 459 [4/4] (6.43ns)   --->   "%Wheel_force_z_write_s = fadd float %tmp_56, %tmp_57" [CarSimOnFPGA/Wheel.cpp:66]   --->   Operation 459 'fadd' 'Wheel_force_z_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 114 <SV = 112> <Delay = 6.43>
+ST_114 : Operation 460 [3/4] (6.43ns)   --->   "%tmp_51 = fsub float %torque_read, %tmp_50" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 460 'fsub' 'tmp_51' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_114 : Operation 461 [3/4] (6.43ns)   --->   "%Wheel_force_x_write_s = fadd float %tmp_54, %tmp_55" [CarSimOnFPGA/Wheel.cpp:65]   --->   Operation 461 'fadd' 'Wheel_force_x_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_114 : Operation 462 [3/4] (6.43ns)   --->   "%Wheel_force_z_write_s = fadd float %tmp_56, %tmp_57" [CarSimOnFPGA/Wheel.cpp:66]   --->   Operation 462 'fadd' 'Wheel_force_z_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 115 <SV = 113> <Delay = 6.43>
+ST_115 : Operation 463 [2/4] (6.43ns)   --->   "%tmp_51 = fsub float %torque_read, %tmp_50" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 463 'fsub' 'tmp_51' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_115 : Operation 464 [2/4] (6.43ns)   --->   "%Wheel_force_x_write_s = fadd float %tmp_54, %tmp_55" [CarSimOnFPGA/Wheel.cpp:65]   --->   Operation 464 'fadd' 'Wheel_force_x_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_115 : Operation 465 [2/4] (6.43ns)   --->   "%Wheel_force_z_write_s = fadd float %tmp_56, %tmp_57" [CarSimOnFPGA/Wheel.cpp:66]   --->   Operation 465 'fadd' 'Wheel_force_z_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 116 <SV = 114> <Delay = 6.43>
+ST_116 : Operation 466 [1/4] (6.43ns)   --->   "%tmp_51 = fsub float %torque_read, %tmp_50" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 466 'fsub' 'tmp_51' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_116 : Operation 467 [1/4] (6.43ns)   --->   "%Wheel_force_x_write_s = fadd float %tmp_54, %tmp_55" [CarSimOnFPGA/Wheel.cpp:65]   --->   Operation 467 'fadd' 'Wheel_force_x_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_116 : Operation 468 [1/4] (6.43ns)   --->   "%Wheel_force_z_write_s = fadd float %tmp_56, %tmp_57" [CarSimOnFPGA/Wheel.cpp:66]   --->   Operation 468 'fadd' 'Wheel_force_z_write_s' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 117 <SV = 115> <Delay = 8.27>
+ST_117 : Operation 469 [8/8] (8.27ns)   --->   "%tmp_52 = fdiv float %tmp_51, 5.000000e+00" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 469 'fdiv' 'tmp_52' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 118 <SV = 116> <Delay = 8.27>
+ST_118 : Operation 470 [7/8] (8.27ns)   --->   "%tmp_52 = fdiv float %tmp_51, 5.000000e+00" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 470 'fdiv' 'tmp_52' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 119 <SV = 117> <Delay = 8.27>
+ST_119 : Operation 471 [6/8] (8.27ns)   --->   "%tmp_52 = fdiv float %tmp_51, 5.000000e+00" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 471 'fdiv' 'tmp_52' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 120 <SV = 118> <Delay = 8.27>
+ST_120 : Operation 472 [5/8] (8.27ns)   --->   "%tmp_52 = fdiv float %tmp_51, 5.000000e+00" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 472 'fdiv' 'tmp_52' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 121 <SV = 119> <Delay = 8.27>
+ST_121 : Operation 473 [4/8] (8.27ns)   --->   "%tmp_52 = fdiv float %tmp_51, 5.000000e+00" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 473 'fdiv' 'tmp_52' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 122 <SV = 120> <Delay = 8.27>
+ST_122 : Operation 474 [3/8] (8.27ns)   --->   "%tmp_52 = fdiv float %tmp_51, 5.000000e+00" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 474 'fdiv' 'tmp_52' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 123 <SV = 121> <Delay = 8.27>
+ST_123 : Operation 475 [2/8] (8.27ns)   --->   "%tmp_52 = fdiv float %tmp_51, 5.000000e+00" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 475 'fdiv' 'tmp_52' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 124 <SV = 122> <Delay = 8.27>
+ST_124 : Operation 476 [1/8] (8.27ns)   --->   "%tmp_52 = fdiv float %tmp_51, 5.000000e+00" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 476 'fdiv' 'tmp_52' <Predicate = true> <Delay = 8.27> <Core = "FDiv">   --->   Core 107 'FDiv' <Latency = 7> <II = 1> <Delay = 8.27> <FuncUnit> <Opcode : 'fdiv' 'frem'> <InPorts = 2> <OutPorts = 1>
+
+State 125 <SV = 123> <Delay = 8.41>
+ST_125 : Operation 477 [2/2] (8.41ns)   --->   "%tmp_53 = fmul float %tmp_52, %deltaTime_read" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 477 'fmul' 'tmp_53' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 126 <SV = 124> <Delay = 8.41>
+ST_126 : Operation 478 [1/2] (8.41ns)   --->   "%tmp_53 = fmul float %tmp_52, %deltaTime_read" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 478 'fmul' 'tmp_53' <Predicate = true> <Delay = 8.41> <Core = "FMul">   --->   Core 106 'FMul' <Latency = 1> <II = 1> <Delay = 8.41> <FuncUnit> <Opcode : 'fmul'> <InPorts = 2> <OutPorts = 1>
+
+State 127 <SV = 125> <Delay = 6.43>
+ST_127 : Operation 479 [4/4] (6.43ns)   --->   "%Wheel_angularVelocit = fadd float %tmp_53, %Wheel_angularVelocit_1" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 479 'fadd' 'Wheel_angularVelocit' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 128 <SV = 126> <Delay = 6.43>
+ST_128 : Operation 480 [3/4] (6.43ns)   --->   "%Wheel_angularVelocit = fadd float %tmp_53, %Wheel_angularVelocit_1" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 480 'fadd' 'Wheel_angularVelocit' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 129 <SV = 127> <Delay = 6.43>
+ST_129 : Operation 481 [2/4] (6.43ns)   --->   "%Wheel_angularVelocit = fadd float %tmp_53, %Wheel_angularVelocit_1" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 481 'fadd' 'Wheel_angularVelocit' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+
+State 130 <SV = 128> <Delay = 6.43>
+ST_130 : Operation 482 [1/4] (6.43ns)   --->   "%Wheel_angularVelocit = fadd float %tmp_53, %Wheel_angularVelocit_1" [CarSimOnFPGA/Wheel.cpp:63]   --->   Operation 482 'fadd' 'Wheel_angularVelocit' <Predicate = true> <Delay = 6.43> <Core = "FAddSub">   --->   Core 105 'FAddSub' <Latency = 3> <II = 1> <Delay = 6.43> <FuncUnit> <Opcode : 'fadd' 'fsub'> <InPorts = 2> <OutPorts = 1>
+ST_130 : Operation 483 [1/1] (0.00ns)   --->   "%mrv_s = insertvalue { float, float, float } undef, float %Wheel_force_x_write_s, 0" [CarSimOnFPGA/Wheel.cpp:67]   --->   Operation 483 'insertvalue' 'mrv_s' <Predicate = true> <Delay = 0.00>
+ST_130 : Operation 484 [1/1] (0.00ns)   --->   "%mrv_1 = insertvalue { float, float, float } %mrv_s, float %Wheel_force_z_write_s, 1" [CarSimOnFPGA/Wheel.cpp:67]   --->   Operation 484 'insertvalue' 'mrv_1' <Predicate = true> <Delay = 0.00>
+ST_130 : Operation 485 [1/1] (0.00ns)   --->   "%mrv_2 = insertvalue { float, float, float } %mrv_1, float %Wheel_angularVelocit, 2" [CarSimOnFPGA/Wheel.cpp:67]   --->   Operation 485 'insertvalue' 'mrv_2' <Predicate = true> <Delay = 0.00>
+ST_130 : Operation 486 [1/1] (0.00ns)   --->   "ret { float, float, float } %mrv_2" [CarSimOnFPGA/Wheel.cpp:67]   --->   Operation 486 'ret' <Predicate = true> <Delay = 0.00>
+
+
+============================================================
++ Verbose Summary: Timing violations
+============================================================
+Target clock period: 10ns, clock uncertainty: 1.25ns.
+
+ <State 1>: 2.31ns
+The critical path consists of the following:
+	wire read on port 'steeringAngle' (CarSimOnFPGA/Wheel.cpp:14) [15]  (0 ns)
+	'fpext' operation ('x', CarSimOnFPGA/Wheel.cpp:21) [24]  (2.31 ns)
+
+ <State 2>: 7.33ns
+The critical path consists of the following:
+	'fpext' operation ('x', CarSimOnFPGA/Wheel.cpp:21) [24]  (2.31 ns)
+	'call' operation ('tmp_s', CarSimOnFPGA/Wheel.cpp:22) to 'sin' [27]  (5.02 ns)
+
+ <State 3>: 8.29ns
+The critical path consists of the following:
+	'call' operation ('tmp_i_i', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:144->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/c/sincosdouble.cpp:13->CarSimOnFPGA/Wheel.cpp:21) to 'sin_or_cos<double>' [25]  (5.4 ns)
+	'fptrunc' operation ('cos_steer', CarSimOnFPGA/Wheel.cpp:21) [26]  (2.89 ns)
+
+ <State 4>: 2.89ns
+The critical path consists of the following:
+	'fptrunc' operation ('cos_steer', CarSimOnFPGA/Wheel.cpp:21) [26]  (2.89 ns)
+
+ <State 5>: 8.42ns
+The critical path consists of the following:
+	wire read on port 'velocity_z' (CarSimOnFPGA/Wheel.cpp:14) [17]  (0 ns)
+	'fmul' operation ('tmp_2', CarSimOnFPGA/Wheel.cpp:24) [30]  (8.42 ns)
+
+ <State 6>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_1', CarSimOnFPGA/Wheel.cpp:24) [29]  (8.42 ns)
+
+ <State 7>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_6', CarSimOnFPGA/Wheel.cpp:27) [36]  (7.04 ns)
+
+ <State 8>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_6', CarSimOnFPGA/Wheel.cpp:27) [36]  (7.04 ns)
+
+ <State 9>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_6', CarSimOnFPGA/Wheel.cpp:27) [36]  (7.04 ns)
+
+ <State 10>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_6', CarSimOnFPGA/Wheel.cpp:27) [36]  (7.04 ns)
+
+ <State 11>: 2.89ns
+The critical path consists of the following:
+	'fptrunc' operation ('slipRatio', CarSimOnFPGA/Wheel.cpp:27) [37]  (2.89 ns)
+
+ <State 12>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_8', CarSimOnFPGA/Wheel.cpp:32) [48]  (8.42 ns)
+
+ <State 13>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_8', CarSimOnFPGA/Wheel.cpp:32) [48]  (8.42 ns)
+
+ <State 14>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_11', CarSimOnFPGA/Wheel.cpp:33) [75]  (8.27 ns)
+
+ <State 15>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_11', CarSimOnFPGA/Wheel.cpp:33) [75]  (8.27 ns)
+
+ <State 16>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_11', CarSimOnFPGA/Wheel.cpp:33) [75]  (8.27 ns)
+
+ <State 17>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_11', CarSimOnFPGA/Wheel.cpp:33) [75]  (8.27 ns)
+
+ <State 18>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('slipRatio', CarSimOnFPGA/Wheel.cpp:32) [74]  (8.27 ns)
+
+ <State 19>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('slipRatio', CarSimOnFPGA/Wheel.cpp:32) [74]  (8.27 ns)
+
+ <State 20>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('slipRatio', CarSimOnFPGA/Wheel.cpp:32) [74]  (8.27 ns)
+
+ <State 21>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('slipRatio', CarSimOnFPGA/Wheel.cpp:32) [74]  (8.27 ns)
+
+ <State 22>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('slipRatio', CarSimOnFPGA/Wheel.cpp:32) [74]  (8.27 ns)
+
+ <State 23>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('slipRatio', CarSimOnFPGA/Wheel.cpp:32) [74]  (8.27 ns)
+
+ <State 24>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('slipRatio', CarSimOnFPGA/Wheel.cpp:32) [74]  (8.27 ns)
+
+ <State 25>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('slipRatio', CarSimOnFPGA/Wheel.cpp:32) [74]  (8.27 ns)
+
+ <State 26>: 6.07ns
+The critical path consists of the following:
+	'fptrunc' operation ('slipAngle', CarSimOnFPGA/Wheel.cpp:33) [78]  (2.89 ns)
+	multiplexor before 'phi' operation ('slipAngle') with incoming values : ('slipAngle', CarSimOnFPGA/Wheel.cpp:33) ('select_ln41', CarSimOnFPGA/Wheel.cpp:41) [100]  (0.872 ns)
+	'phi' operation ('slipAngle') with incoming values : ('slipAngle', CarSimOnFPGA/Wheel.cpp:33) ('select_ln41', CarSimOnFPGA/Wheel.cpp:41) [100]  (0 ns)
+	'fpext' operation ('tmp_18', CarSimOnFPGA/Wheel.cpp:48) [104]  (2.31 ns)
+
+ <State 27>: 3.27ns
+The critical path consists of the following:
+	'fcmp' operation ('tmp_15', CarSimOnFPGA/Wheel.cpp:41) [87]  (2.78 ns)
+	'and' operation ('and_ln41', CarSimOnFPGA/Wheel.cpp:41) [88]  (0 ns)
+	'select' operation ('select_ln41_1', CarSimOnFPGA/Wheel.cpp:41) [89]  (0 ns)
+	'select' operation ('select_ln41', CarSimOnFPGA/Wheel.cpp:41) [96]  (0.492 ns)
+
+ <State 28>: 2.31ns
+The critical path consists of the following:
+	'fpext' operation ('tmp_16', CarSimOnFPGA/Wheel.cpp:47) [101]  (2.31 ns)
+
+ <State 29>: 8ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_17', CarSimOnFPGA/Wheel.cpp:47) [102]  (8 ns)
+
+ <State 30>: 8ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_17', CarSimOnFPGA/Wheel.cpp:47) [102]  (8 ns)
+
+ <State 31>: 8ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_17', CarSimOnFPGA/Wheel.cpp:47) [102]  (8 ns)
+
+ <State 32>: 8ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_17', CarSimOnFPGA/Wheel.cpp:47) [102]  (8 ns)
+
+ <State 33>: 8ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_17', CarSimOnFPGA/Wheel.cpp:47) [102]  (8 ns)
+
+ <State 34>: 8ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_17', CarSimOnFPGA/Wheel.cpp:47) [102]  (8 ns)
+
+ <State 35>: 8ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_17', CarSimOnFPGA/Wheel.cpp:47) [102]  (8 ns)
+
+ <State 36>: 8ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_17', CarSimOnFPGA/Wheel.cpp:47) [102]  (8 ns)
+
+ <State 37>: 8ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_17', CarSimOnFPGA/Wheel.cpp:47) [102]  (8 ns)
+
+ <State 38>: 8ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_17', CarSimOnFPGA/Wheel.cpp:47) [102]  (8 ns)
+
+ <State 39>: 8ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_17', CarSimOnFPGA/Wheel.cpp:47) [102]  (8 ns)
+
+ <State 40>: 8ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_17', CarSimOnFPGA/Wheel.cpp:47) [102]  (8 ns)
+
+ <State 41>: 8ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_17', CarSimOnFPGA/Wheel.cpp:47) [102]  (8 ns)
+
+ <State 42>: 8ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_17', CarSimOnFPGA/Wheel.cpp:47) [102]  (8 ns)
+
+ <State 43>: 8ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_17', CarSimOnFPGA/Wheel.cpp:47) [102]  (8 ns)
+
+ <State 44>: 8ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_17', CarSimOnFPGA/Wheel.cpp:47) [102]  (8 ns)
+
+ <State 45>: 8ns
+The critical path consists of the following:
+	'ddiv' operation ('tmp_17', CarSimOnFPGA/Wheel.cpp:47) [102]  (8 ns)
+
+ <State 46>: 2.89ns
+The critical path consists of the following:
+	'fptrunc' operation ('r', CarSimOnFPGA/Wheel.cpp:47) [103]  (2.89 ns)
+
+ <State 47>: 2.89ns
+The critical path consists of the following:
+	'fptrunc' operation ('r', CarSimOnFPGA/Wheel.cpp:47) [103]  (2.89 ns)
+
+ <State 48>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_20', CarSimOnFPGA/Wheel.cpp:49) [107]  (8.42 ns)
+
+ <State 49>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_20', CarSimOnFPGA/Wheel.cpp:49) [107]  (8.42 ns)
+
+ <State 50>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_22', CarSimOnFPGA/Wheel.cpp:49) [109]  (6.44 ns)
+
+ <State 51>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_22', CarSimOnFPGA/Wheel.cpp:49) [109]  (6.44 ns)
+
+ <State 52>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_22', CarSimOnFPGA/Wheel.cpp:49) [109]  (6.44 ns)
+
+ <State 53>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('tmp_22', CarSimOnFPGA/Wheel.cpp:49) [109]  (6.44 ns)
+
+ <State 54>: 8.41ns
+The critical path consists of the following:
+	'fsqrt' operation ('s', CarSimOnFPGA/Wheel.cpp:49) [110]  (8.41 ns)
+
+ <State 55>: 8.41ns
+The critical path consists of the following:
+	'fsqrt' operation ('s', CarSimOnFPGA/Wheel.cpp:49) [110]  (8.41 ns)
+
+ <State 56>: 8.41ns
+The critical path consists of the following:
+	'fsqrt' operation ('s', CarSimOnFPGA/Wheel.cpp:49) [110]  (8.41 ns)
+
+ <State 57>: 8.41ns
+The critical path consists of the following:
+	'fsqrt' operation ('s', CarSimOnFPGA/Wheel.cpp:49) [110]  (8.41 ns)
+
+ <State 58>: 8.41ns
+The critical path consists of the following:
+	'fsqrt' operation ('s', CarSimOnFPGA/Wheel.cpp:49) [110]  (8.41 ns)
+
+ <State 59>: 8.41ns
+The critical path consists of the following:
+	'fsqrt' operation ('s', CarSimOnFPGA/Wheel.cpp:49) [110]  (8.41 ns)
+
+ <State 60>: 8.41ns
+The critical path consists of the following:
+	'fsqrt' operation ('s', CarSimOnFPGA/Wheel.cpp:49) [110]  (8.41 ns)
+
+ <State 61>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_23', CarSimOnFPGA/Wheel.cpp:51) [111]  (8.42 ns)
+
+ <State 62>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_23', CarSimOnFPGA/Wheel.cpp:51) [111]  (8.42 ns)
+
+ <State 63>: 2.31ns
+The critical path consists of the following:
+	'fpext' operation ('tmp_24', CarSimOnFPGA/Wheel.cpp:51) [112]  (2.31 ns)
+
+ <State 64>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_27', CarSimOnFPGA/Wheel.cpp:52) [116]  (7.04 ns)
+
+ <State 65>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_25', CarSimOnFPGA/Wheel.cpp:51) [113]  (7.04 ns)
+
+ <State 66>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_25', CarSimOnFPGA/Wheel.cpp:51) [113]  (7.04 ns)
+
+ <State 67>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_25', CarSimOnFPGA/Wheel.cpp:51) [113]  (7.04 ns)
+
+ <State 68>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_25', CarSimOnFPGA/Wheel.cpp:51) [113]  (7.04 ns)
+
+ <State 69>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_25', CarSimOnFPGA/Wheel.cpp:51) [113]  (7.04 ns)
+
+ <State 70>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_28', CarSimOnFPGA/Wheel.cpp:52) [117]  (7.04 ns)
+
+ <State 71>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_28', CarSimOnFPGA/Wheel.cpp:52) [117]  (7.04 ns)
+
+ <State 72>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_28', CarSimOnFPGA/Wheel.cpp:52) [117]  (7.04 ns)
+
+ <State 73>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_28', CarSimOnFPGA/Wheel.cpp:52) [117]  (7.04 ns)
+
+ <State 74>: 5.07ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_31', CarSimOnFPGA/Wheel.cpp:53) [121]  (5.07 ns)
+
+ <State 75>: 5.2ns
+The critical path consists of the following:
+	'fptrunc' operation ('lat_input', CarSimOnFPGA/Wheel.cpp:52) [118]  (2.89 ns)
+	'fpext' operation ('tmp_37', CarSimOnFPGA/Wheel.cpp:54) [128]  (2.31 ns)
+
+ <State 76>: 6.21ns
+The critical path consists of the following:
+	'fpext' operation ('tmp_37', CarSimOnFPGA/Wheel.cpp:54) [128]  (2.31 ns)
+	'call' operation ('tmp_39', CarSimOnFPGA/Wheel.cpp:54) to 'atan' [130]  (3.9 ns)
+
+ <State 77>: 6.01ns
+The critical path consists of the following:
+	'call' operation ('tmp_39', CarSimOnFPGA/Wheel.cpp:54) to 'atan' [130]  (6.01 ns)
+
+ <State 78>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_38', CarSimOnFPGA/Wheel.cpp:54) [129]  (7.04 ns)
+
+ <State 79>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_32', CarSimOnFPGA/Wheel.cpp:53) [122]  (7.04 ns)
+
+ <State 80>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_32', CarSimOnFPGA/Wheel.cpp:53) [122]  (7.04 ns)
+
+ <State 81>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_32', CarSimOnFPGA/Wheel.cpp:53) [122]  (7.04 ns)
+
+ <State 82>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_32', CarSimOnFPGA/Wheel.cpp:53) [122]  (7.04 ns)
+
+ <State 83>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_32', CarSimOnFPGA/Wheel.cpp:53) [122]  (7.04 ns)
+
+ <State 84>: 5.07ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_33', CarSimOnFPGA/Wheel.cpp:53) [123]  (5.07 ns)
+
+ <State 85>: 5.07ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_33', CarSimOnFPGA/Wheel.cpp:53) [123]  (5.07 ns)
+
+ <State 86>: 5.07ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_33', CarSimOnFPGA/Wheel.cpp:53) [123]  (5.07 ns)
+
+ <State 87>: 5.07ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_33', CarSimOnFPGA/Wheel.cpp:53) [123]  (5.07 ns)
+
+ <State 88>: 5.07ns
+The critical path consists of the following:
+	'dsub' operation ('tmp_33', CarSimOnFPGA/Wheel.cpp:53) [123]  (5.07 ns)
+
+ <State 89>: 6.01ns
+The critical path consists of the following:
+	'call' operation ('tmp_42', CarSimOnFPGA/Wheel.cpp:54) to 'atan' [133]  (6.01 ns)
+
+ <State 90>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_43', CarSimOnFPGA/Wheel.cpp:54) [134]  (7.04 ns)
+
+ <State 91>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_35', CarSimOnFPGA/Wheel.cpp:53) [125]  (7.04 ns)
+
+ <State 92>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_35', CarSimOnFPGA/Wheel.cpp:53) [125]  (7.04 ns)
+
+ <State 93>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_35', CarSimOnFPGA/Wheel.cpp:53) [125]  (7.04 ns)
+
+ <State 94>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_35', CarSimOnFPGA/Wheel.cpp:53) [125]  (7.04 ns)
+
+ <State 95>: 7.04ns
+The critical path consists of the following:
+	'dmul' operation ('tmp_35', CarSimOnFPGA/Wheel.cpp:53) [125]  (7.04 ns)
+
+ <State 96>: 5.4ns
+The critical path consists of the following:
+	'call' operation ('tmp_44', CarSimOnFPGA/Wheel.cpp:54) to 'sin' [135]  (5.4 ns)
+
+ <State 97>: 8.29ns
+The critical path consists of the following:
+	'call' operation ('tmp_36', CarSimOnFPGA/Wheel.cpp:53) to 'sin' [126]  (5.4 ns)
+	'fptrunc' operation ('longForce', CarSimOnFPGA/Wheel.cpp:53) [127]  (2.89 ns)
+
+ <State 98>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_46', CarSimOnFPGA/Wheel.cpp:59) [150]  (8.27 ns)
+
+ <State 99>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_46', CarSimOnFPGA/Wheel.cpp:59) [150]  (8.27 ns)
+
+ <State 100>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_46', CarSimOnFPGA/Wheel.cpp:59) [150]  (8.27 ns)
+
+ <State 101>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_46', CarSimOnFPGA/Wheel.cpp:59) [150]  (8.27 ns)
+
+ <State 102>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_46', CarSimOnFPGA/Wheel.cpp:59) [150]  (8.27 ns)
+
+ <State 103>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_46', CarSimOnFPGA/Wheel.cpp:59) [150]  (8.27 ns)
+
+ <State 104>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_46', CarSimOnFPGA/Wheel.cpp:59) [150]  (8.27 ns)
+
+ <State 105>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_46', CarSimOnFPGA/Wheel.cpp:59) [150]  (8.27 ns)
+
+ <State 106>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_47', CarSimOnFPGA/Wheel.cpp:59) [151]  (8.42 ns)
+
+ <State 107>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_47', CarSimOnFPGA/Wheel.cpp:59) [151]  (8.42 ns)
+
+ <State 108>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('x', CarSimOnFPGA/Wheel.cpp:59) [152]  (8.42 ns)
+
+ <State 109>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('x', CarSimOnFPGA/Wheel.cpp:59) [152]  (8.42 ns)
+
+ <State 110>: 0.872ns
+The critical path consists of the following:
+	multiplexor before 'phi' operation ('x') with incoming values : ('x', CarSimOnFPGA/Wheel.cpp:59) [158]  (0.872 ns)
+
+ <State 111>: 8.42ns
+The critical path consists of the following:
+	'phi' operation ('x') with incoming values : ('x', CarSimOnFPGA/Wheel.cpp:59) [158]  (0 ns)
+	'fmul' operation ('tmp_50', CarSimOnFPGA/Wheel.cpp:63) [160]  (8.42 ns)
+
+ <State 112>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_50', CarSimOnFPGA/Wheel.cpp:63) [160]  (8.42 ns)
+
+ <State 113>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_51', CarSimOnFPGA/Wheel.cpp:63) [161]  (6.44 ns)
+
+ <State 114>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_51', CarSimOnFPGA/Wheel.cpp:63) [161]  (6.44 ns)
+
+ <State 115>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_51', CarSimOnFPGA/Wheel.cpp:63) [161]  (6.44 ns)
+
+ <State 116>: 6.44ns
+The critical path consists of the following:
+	'fsub' operation ('tmp_51', CarSimOnFPGA/Wheel.cpp:63) [161]  (6.44 ns)
+
+ <State 117>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_52', CarSimOnFPGA/Wheel.cpp:63) [162]  (8.27 ns)
+
+ <State 118>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_52', CarSimOnFPGA/Wheel.cpp:63) [162]  (8.27 ns)
+
+ <State 119>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_52', CarSimOnFPGA/Wheel.cpp:63) [162]  (8.27 ns)
+
+ <State 120>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_52', CarSimOnFPGA/Wheel.cpp:63) [162]  (8.27 ns)
+
+ <State 121>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_52', CarSimOnFPGA/Wheel.cpp:63) [162]  (8.27 ns)
+
+ <State 122>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_52', CarSimOnFPGA/Wheel.cpp:63) [162]  (8.27 ns)
+
+ <State 123>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_52', CarSimOnFPGA/Wheel.cpp:63) [162]  (8.27 ns)
+
+ <State 124>: 8.27ns
+The critical path consists of the following:
+	'fdiv' operation ('tmp_52', CarSimOnFPGA/Wheel.cpp:63) [162]  (8.27 ns)
+
+ <State 125>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_53', CarSimOnFPGA/Wheel.cpp:63) [163]  (8.42 ns)
+
+ <State 126>: 8.42ns
+The critical path consists of the following:
+	'fmul' operation ('tmp_53', CarSimOnFPGA/Wheel.cpp:63) [163]  (8.42 ns)
+
+ <State 127>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('Wheel.angularVelocity', CarSimOnFPGA/Wheel.cpp:63) [164]  (6.44 ns)
+
+ <State 128>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('Wheel.angularVelocity', CarSimOnFPGA/Wheel.cpp:63) [164]  (6.44 ns)
+
+ <State 129>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('Wheel.angularVelocity', CarSimOnFPGA/Wheel.cpp:63) [164]  (6.44 ns)
+
+ <State 130>: 6.44ns
+The critical path consists of the following:
+	'fadd' operation ('Wheel.angularVelocity', CarSimOnFPGA/Wheel.cpp:63) [164]  (6.44 ns)
+
+
+============================================================
++ Verbose Summary: Binding
+============================================================
+N/A
+* FSMD analyzer results:
+  - Output states:
+ - Input state : 
+  - Chain level:
+	State 1
+	State 2
+	State 3
+	State 4
+	State 5
+	State 6
+	State 7
+	State 8
+	State 9
+	State 10
+	State 11
+	State 12
+	State 13
+	State 14
+	State 15
+	State 16
+	State 17
+	State 18
+	State 19
+	State 20
+	State 21
+	State 22
+	State 23
+	State 24
+	State 25
+	State 26
+	State 27
+	State 28
+	State 29
+	State 30
+	State 31
+	State 32
+	State 33
+	State 34
+	State 35
+	State 36
+	State 37
+	State 38
+	State 39
+	State 40
+	State 41
+	State 42
+	State 43
+	State 44
+	State 45
+	State 46
+	State 47
+	State 48
+	State 49
+	State 50
+	State 51
+	State 52
+	State 53
+	State 54
+	State 55
+	State 56
+	State 57
+	State 58
+	State 59
+	State 60
+	State 61
+	State 62
+	State 63
+	State 64
+	State 65
+	State 66
+	State 67
+	State 68
+	State 69
+	State 70
+	State 71
+	State 72
+	State 73
+	State 74
+	State 75
+	State 76
+	State 77
+	State 78
+	State 79
+	State 80
+	State 81
+	State 82
+	State 83
+	State 84
+	State 85
+	State 86
+	State 87
+	State 88
+	State 89
+	State 90
+	State 91
+	State 92
+	State 93
+	State 94
+	State 95
+	State 96
+	State 97
+	State 98
+	State 99
+	State 100
+	State 101
+	State 102
+	State 103
+	State 104
+	State 105
+	State 106
+	State 107
+	State 108
+	State 109
+	State 110
+	State 111
+	State 112
+	State 113
+	State 114
+	State 115
+	State 116
+	State 117
+	State 118
+	State 119
+	State 120
+	State 121
+	State 122
+	State 123
+	State 124
+	State 125
+	State 126
+	State 127
+	State 128
+	State 129
+	State 130
+
+
+============================================================
++ Verbose Summary: Datapath Resource usage 
+============================================================
+N/A

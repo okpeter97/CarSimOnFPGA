@@ -1,16 +1,62 @@
 #include "top_level.h"
-#include "Wheel.h"
+#include "Car.h"
+#include "WheelWithMass.h"
 
-void top_level(float deltaTime,
+//wheelsim
+void top_level_wheel(float deltaTime,
 		float torque,
 		float velocity_x,
-		float velocity_z,
+		float velocity_y,
 		float load,
 		float steeringAngle,
+		float* slipRatio,
+		float* slipAngle,
 		float* force_x,
-		float* force_z,
+		float* force_y,
 		float* angularVel)
 {
 		static Wheel wheel;
-		wheel.update(deltaTime, torque, velocity_x, velocity_z, load, steeringAngle, force_x, force_z, angularVel);
+		wheel.update(deltaTime, torque, velocity_x, velocity_y, load, steeringAngle);
+		*slipRatio = wheel.slipRatio;
+		*slipAngle = wheel.slipAngle;
+		*force_x = wheel.force_x;
+		*force_y = wheel.force_z;
+		*angularVel = wheel.angularVelocity;
+}
+
+void top_level_wheelSimWithMass(float deltaTime,
+		float initVel,
+		float torque,
+		float steeringAngle,
+		float * slipRatio,
+		float * slipAngle,
+		float * force_x,
+		float * force_y,
+		float * vel_x,
+		float * angularVel)
+{
+	static WheelWithMass wheel(initVel);
+	wheel.update(deltaTime, torque, steeringAngle);
+			*slipRatio = wheel.slipRatio;
+			*slipAngle = wheel.slipAngle;
+			*force_x = wheel.fx;
+			*force_y = wheel.fz;
+			*vel_x = wheel.vel_x;
+			*angularVel = wheel.angularVelocity;
+}
+
+
+//carsim
+void top_level_car(float deltaTime,
+		float torque,
+		float steeringAngle,
+		float* pos_x,
+		float* pos_y,
+		float* vel_x,
+		float* vel_y,
+		float* orientation)
+{
+		static Car car;
+		car.update(deltaTime, torque, steeringAngle);
+		*vel_x = car.chassis.vel_x;
 }

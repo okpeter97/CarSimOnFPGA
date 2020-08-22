@@ -1,13 +1,13 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'update'" level="0">
-<item name = "Date">Sat Jun  6 18:25:10 2020
+<item name = "Date">Sat Aug 22 16:35:10 2020
 </item>
 <item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">CarSimOnFPGA</item>
 <item name = "Solution">solution1</item>
-<item name = "Product family">zynq</item>
-<item name = "Target device">xc7z010-clg400-1</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k325t-ffg900-2</item>
 </section>
 
 <section name = "Performance Estimates" level="0">
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 8.933, 1.25</column>
+<column name="ap_clk">10.00, 9.006, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,17 +24,16 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">239, 1537, 239, 1537, none</column>
+<column name="">193, 1238, 193, 1238, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_atan_fu_188">atan, 1, 310, 1, 310, none</column>
-<column name="grp_atan_fu_195">atan, 1, 310, 1, 310, none</column>
-<column name="grp_sin_or_cos_double_s_fu_202">sin_or_cos_double_s, 43, 51, 43, 51, none</column>
-<column name="grp_sin_or_cos_double_s_fu_221">sin_or_cos_double_s, 43, 51, 43, 51, none</column>
+<column name="grp_atan_fu_175">atan, 2, 204, 2, 204, none</column>
+<column name="grp_sin_or_cos_double_s_fu_182">sin_or_cos_double_s, 27, 30, 27, 30, none</column>
+<column name="grp_sin_or_cos_double_s_fu_201">sin_or_cos_double_s, 27, 30, 27, 30, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
