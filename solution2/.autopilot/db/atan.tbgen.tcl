@@ -79,9 +79,9 @@ set RtlHierarchyInfo {[
 			{"Name" : "t_in", "Type" : "None", "Direction" : "I"},
 			{"Name" : "cordic_ctab_table_12", "Type" : "Memory", "Direction" : "I"}]},
 	{"ID" : "2", "Level" : "2", "Path" : "`AUTOTB_DUT_INST.grp_atan_generic_double_s_fu_57.cordic_ctab_table_12_U", "Parent" : "1"},
-	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.top_level_dsub_64mb6_U25", "Parent" : "0"},
-	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.top_level_ddiv_64ncg_U26", "Parent" : "0"},
-	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.top_level_dcmp_64ocq_U27", "Parent" : "0"}]}
+	{"ID" : "3", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.top_level_wheel_dmb6_U25", "Parent" : "0"},
+	{"ID" : "4", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.top_level_wheel_dncg_U26", "Parent" : "0"},
+	{"ID" : "5", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.top_level_wheel_docq_U27", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {

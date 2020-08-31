@@ -62,8 +62,8 @@ set RtlHierarchyInfo {[
 		"Port" : [
 			{"Name" : "in_V", "Type" : "None", "Direction" : "I"},
 			{"Name" : "prescale", "Type" : "None", "Direction" : "I"}]},
-	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.top_level_mux_42_bkb_U1", "Parent" : "0"},
-	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.top_level_mux_42_bkb_U2", "Parent" : "0"}]}
+	{"ID" : "1", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.top_level_wheel_mbkb_U1", "Parent" : "0"},
+	{"ID" : "2", "Level" : "1", "Path" : "`AUTOTB_DUT_INST.top_level_wheel_mbkb_U2", "Parent" : "0"}]}
 
 
 set ArgLastReadFirstWriteLatency {

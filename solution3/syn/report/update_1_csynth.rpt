@@ -1,0 +1,249 @@
+
+
+================================================================
+== Vivado HLS Report for 'update_1'
+================================================================
+* Date:           Thu Aug 27 01:20:34 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CarSimOnFPGA
+* Solution:       solution3
+* Product family: kintex7
+* Target device:  xc7k325t-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.466|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+------+-----+------+---------+
+    |   Latency  |  Interval  | Pipeline|
+    | min |  max | min |  max |   Type  |
+    +-----+------+-----+------+---------+
+    |  447|  2541|  447|  2541|   none  |
+    +-----+------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        +--------------------------------+---------------------+-----+------+-----+------+---------+
+        |                                |                     |   Latency  |  Interval  | Pipeline|
+        |            Instance            |        Module       | min |  max | min |  max |   Type  |
+        +--------------------------------+---------------------+-----+------+-----+------+---------+
+        |grp_update_fu_108               |update               |  197|  1244|  197|  1244|   none  |
+        |grp_update_fu_136               |update               |  197|  1244|  197|  1244|   none  |
+        |grp_sin_or_cos_double_s_fu_166  |sin_or_cos_double_s  |   26|    29|   26|    29|   none  |
+        |grp_sin_or_cos_double_s_fu_185  |sin_or_cos_double_s  |   26|    29|   26|    29|   none  |
+        +--------------------------------+---------------------+-----+------+-----+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       0|       4|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |       56|    750|   47670|   85312|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|     778|    -|
+|Register         |        -|      -|    1530|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |       56|    750|   49200|   86094|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |      890|    840|  407600|  203800|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        6|     89|      12|      42|    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +--------------------------------+----------------------+---------+-------+-------+-------+-----+
+    |            Instance            |        Module        | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
+    +--------------------------------+----------------------+---------+-------+-------+-------+-----+
+    |grp_sin_or_cos_double_s_fu_166  |sin_or_cos_double_s   |        8|     97|   2783|   5684|    0|
+    |grp_sin_or_cos_double_s_fu_185  |sin_or_cos_double_s   |        8|     97|   2783|   5684|    0|
+    |top_level_car_dadAem_U88        |top_level_car_dadAem  |        0|      3|    445|    782|    0|
+    |top_level_car_dmuzec_U89        |top_level_car_dmuzec  |        0|     11|    299|    203|    0|
+    |top_level_car_dmuzec_U90        |top_level_car_dmuzec  |        0|     11|    299|    203|    0|
+    |top_level_car_dmuzec_U91        |top_level_car_dmuzec  |        0|     11|    299|    203|    0|
+    |top_level_car_dmuzec_U92        |top_level_car_dmuzec  |        0|     11|    299|    203|    0|
+    |top_level_car_dsumb6_U87        |top_level_car_dsumb6  |        0|      3|    445|    782|    0|
+    |top_level_car_fadpcA_U73        |top_level_car_fadpcA  |        0|      2|    227|    214|    0|
+    |top_level_car_fadpcA_U74        |top_level_car_fadpcA  |        0|      2|    227|    214|    0|
+    |top_level_car_fadpcA_U75        |top_level_car_fadpcA  |        0|      2|    227|    214|    0|
+    |top_level_car_fadpcA_U76        |top_level_car_fadpcA  |        0|      2|    227|    214|    0|
+    |top_level_car_fdisc4_U81        |top_level_car_fdisc4  |        0|      0|    363|    802|    0|
+    |top_level_car_fdisc4_U82        |top_level_car_fdisc4  |        0|      0|    363|    802|    0|
+    |top_level_car_fmurcU_U77        |top_level_car_fmurcU  |        0|      3|    128|    135|    0|
+    |top_level_car_fmurcU_U78        |top_level_car_fmurcU  |        0|      3|    128|    135|    0|
+    |top_level_car_fmurcU_U79        |top_level_car_fmurcU  |        0|      3|    128|    135|    0|
+    |top_level_car_fmurcU_U80        |top_level_car_fmurcU  |        0|      3|    128|    135|    0|
+    |top_level_car_fpevdy_U85        |top_level_car_fpevdy  |        0|      0|    100|    138|    0|
+    |top_level_car_fpevdy_U86        |top_level_car_fpevdy  |        0|      0|    100|    138|    0|
+    |top_level_car_fptudo_U83        |top_level_car_fptudo  |        0|      0|    128|     94|    0|
+    |top_level_car_fptudo_U84        |top_level_car_fptudo  |        0|      0|    128|     94|    0|
+    |grp_update_fu_108               |update                |       20|    243|  18708|  34052|    0|
+    |grp_update_fu_136               |update                |       20|    243|  18708|  34052|    0|
+    +--------------------------------+----------------------+---------+-------+-------+-------+-----+
+    |Total                           |                      |       56|    750|  47670|  85312|    0|
+    +--------------------------------+----------------------+---------+-------+-------+-------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |           Variable Name          | Operation| DSP48E| FF| LUT| Bitwidth P0| Bitwidth P1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |ap_block_state10_on_subcall_done  |    or    |      0|  0|   2|           1|           1|
+    |ap_block_state14_on_subcall_done  |    or    |      0|  0|   2|           1|           1|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+    |Total                             |          |      0|  0|   4|           2|           2|
+    +----------------------------------+----------+-------+---+----+------------+------------+
+
+    * Multiplexer: 
+    +----------------------------------------------+-----+-----------+-----+-----------+
+    |                     Name                     | LUT | Input Size| Bits| Total Bits|
+    +----------------------------------------------+-----+-----------+-----+-----------+
+    |ap_NS_fsm                                     |  237|         55|    1|         55|
+    |car_chassis_orientat_o                        |    9|          2|   32|         64|
+    |car_chassis_pos_x_o                           |    9|          2|   32|         64|
+    |car_chassis_pos_z_o                           |    9|          2|   32|         64|
+    |car_chassis_vel_x_o                           |    9|          2|   32|         64|
+    |car_chassis_vel_z_o                           |    9|          2|   32|         64|
+    |grp_fu_204_opcode                             |   13|          3|    2|          6|
+    |grp_fu_204_p0                                 |   37|          9|   32|        288|
+    |grp_fu_204_p1                                 |   33|          8|   32|        256|
+    |grp_fu_208_opcode                             |   13|          3|    2|          6|
+    |grp_fu_208_p0                                 |   29|          7|   32|        224|
+    |grp_fu_208_p1                                 |   25|          6|   32|        192|
+    |grp_fu_212_opcode                             |   13|          3|    2|          6|
+    |grp_fu_212_p0                                 |   29|          7|   32|        224|
+    |grp_fu_212_p1                                 |   21|          5|   32|        160|
+    |grp_fu_218_opcode                             |   13|          3|    2|          6|
+    |grp_fu_218_p0                                 |   13|          3|   32|         96|
+    |grp_fu_218_p1                                 |   13|          3|   32|         96|
+    |grp_fu_222_p0                                 |   49|         12|   32|        384|
+    |grp_fu_222_p1                                 |   45|         11|   32|        352|
+    |grp_fu_228_p0                                 |   25|          6|   32|        192|
+    |grp_fu_228_p1                                 |   21|          5|   32|        160|
+    |grp_fu_240_p0                                 |   13|          3|   32|         96|
+    |grp_fu_266_p0                                 |   13|          3|   32|         96|
+    |grp_update_fu_108_Wheel_angularVelocity_read  |   13|          3|   32|         96|
+    |grp_update_fu_108_load                        |   13|          3|   32|         96|
+    |grp_update_fu_108_steeringAngle               |   13|          3|   32|         96|
+    |grp_update_fu_136_Wheel_angularVelocity_read  |   13|          3|   32|         96|
+    |grp_update_fu_136_load                        |   13|          3|   32|         96|
+    |grp_update_fu_136_steeringAngle               |   13|          3|   32|         96|
+    +----------------------------------------------+-----+-----------+-----+-----------+
+    |Total                                         |  778|        183|  809|       3791|
+    +----------------------------------------------+-----+-----------+-----+-----------+
+
+    * Register: 
+    +---------------------------------------------+----+----+-----+-----------+
+    |                     Name                    | FF | LUT| Bits| Const Bits|
+    +---------------------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                                    |  54|   0|   54|          0|
+    |car_chassis_accel_x                          |  32|   0|   32|          0|
+    |car_chassis_accel_z                          |  32|   0|   32|          0|
+    |car_chassis_angularV                         |  32|   0|   32|          0|
+    |car_chassis_wFL                              |  32|   0|   32|          0|
+    |car_chassis_wFR                              |  32|   0|   32|          0|
+    |car_chassis_wRL                              |  32|   0|   32|          0|
+    |car_chassis_wRR                              |  32|   0|   32|          0|
+    |car_frontLeft_angula                         |  32|   0|   32|          0|
+    |car_frontRight_angul                         |  32|   0|   32|          0|
+    |car_rearLeft_angular                         |  32|   0|   32|          0|
+    |car_rearRight_angula                         |  32|   0|   32|          0|
+    |grp_sin_or_cos_double_s_fu_166_ap_start_reg  |   1|   0|    1|          0|
+    |grp_sin_or_cos_double_s_fu_185_ap_start_reg  |   1|   0|    1|          0|
+    |grp_update_fu_108_ap_start_reg               |   1|   0|    1|          0|
+    |grp_update_fu_136_ap_start_reg               |   1|   0|    1|          0|
+    |newret10_reg_705                             |  32|   0|   32|          0|
+    |newret3_reg_655                              |  32|   0|   32|          0|
+    |newret4_reg_661                              |  32|   0|   32|          0|
+    |newret9_reg_699                              |  32|   0|   32|          0|
+    |reg_326                                      |  32|   0|   32|          0|
+    |reg_335                                      |  32|   0|   32|          0|
+    |reg_344                                      |  32|   0|   32|          0|
+    |reg_352                                      |  32|   0|   32|          0|
+    |reg_362                                      |  32|   0|   32|          0|
+    |reg_371                                      |  32|   0|   32|          0|
+    |reg_379                                      |  64|   0|   64|          0|
+    |reg_387                                      |  32|   0|   32|          0|
+    |reg_394                                      |  32|   0|   32|          0|
+    |reg_401                                      |  32|   0|   32|          0|
+    |reg_407                                      |  32|   0|   32|          0|
+    |tmp_69_i_reg_711                             |  32|   0|   32|          0|
+    |tmp_70_i_reg_717                             |  32|   0|   32|          0|
+    |tmp_72_i_reg_733                             |  32|   0|   32|          0|
+    |tmp_76_i_reg_749                             |  64|   0|   64|          0|
+    |tmp_78_i_reg_743                             |  64|   0|   64|          0|
+    |tmp_79_i_reg_754                             |  64|   0|   64|          0|
+    |tmp_81_i_reg_759                             |  64|   0|   64|          0|
+    |tmp_82_i_reg_764                             |  64|   0|   64|          0|
+    |tmp_i_i1_i_reg_673                           |  64|   0|   64|          0|
+    |tmp_i_i_i_reg_667                            |  64|   0|   64|          0|
+    |vel_x_temp_reg_779                           |  32|   0|   32|          0|
+    |vel_z_temp_reg_784                           |  32|   0|   32|          0|
+    +---------------------------------------------+----+----+-----+-----------+
+    |Total                                        |1530|   0| 1530|          0|
+    +---------------------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------------------+-----+-----+------------+----------------------+--------------+
+|           RTL Ports           | Dir | Bits|  Protocol  |     Source Object    |    C Type    |
++-------------------------------+-----+-----+------------+----------------------+--------------+
+|ap_clk                         |  in |    1| ap_ctrl_hs |       update.1       | return value |
+|ap_rst                         |  in |    1| ap_ctrl_hs |       update.1       | return value |
+|ap_start                       |  in |    1| ap_ctrl_hs |       update.1       | return value |
+|ap_done                        | out |    1| ap_ctrl_hs |       update.1       | return value |
+|ap_idle                        | out |    1| ap_ctrl_hs |       update.1       | return value |
+|ap_ready                       | out |    1| ap_ctrl_hs |       update.1       | return value |
+|deltaTime                      |  in |   32|   ap_none  |       deltaTime      |    scalar    |
+|engine_torque                  |  in |   32|   ap_none  |     engine_torque    |    scalar    |
+|steeringAngle                  |  in |   32|   ap_none  |     steeringAngle    |    scalar    |
+|car_chassis_vel_z_i            |  in |   32|   ap_ovld  |   car_chassis_vel_z  |    pointer   |
+|car_chassis_vel_z_o            | out |   32|   ap_ovld  |   car_chassis_vel_z  |    pointer   |
+|car_chassis_vel_z_o_ap_vld     | out |    1|   ap_ovld  |   car_chassis_vel_z  |    pointer   |
+|car_chassis_vel_x_i            |  in |   32|   ap_ovld  |   car_chassis_vel_x  |    pointer   |
+|car_chassis_vel_x_o            | out |   32|   ap_ovld  |   car_chassis_vel_x  |    pointer   |
+|car_chassis_vel_x_o_ap_vld     | out |    1|   ap_ovld  |   car_chassis_vel_x  |    pointer   |
+|car_chassis_orientat_i         |  in |   32|   ap_ovld  | car_chassis_orientat |    pointer   |
+|car_chassis_orientat_o         | out |   32|   ap_ovld  | car_chassis_orientat |    pointer   |
+|car_chassis_orientat_o_ap_vld  | out |    1|   ap_ovld  | car_chassis_orientat |    pointer   |
+|car_chassis_pos_x_i            |  in |   32|   ap_ovld  |   car_chassis_pos_x  |    pointer   |
+|car_chassis_pos_x_o            | out |   32|   ap_ovld  |   car_chassis_pos_x  |    pointer   |
+|car_chassis_pos_x_o_ap_vld     | out |    1|   ap_ovld  |   car_chassis_pos_x  |    pointer   |
+|car_chassis_pos_z_i            |  in |   32|   ap_ovld  |   car_chassis_pos_z  |    pointer   |
+|car_chassis_pos_z_o            | out |   32|   ap_ovld  |   car_chassis_pos_z  |    pointer   |
+|car_chassis_pos_z_o_ap_vld     | out |    1|   ap_ovld  |   car_chassis_pos_z  |    pointer   |
++-------------------------------+-----+-----+------------+----------------------+--------------+
+

@@ -1,0 +1,713 @@
+<stg><name>top_level_car</name>
+
+
+<trans_list>
+
+<trans id="29" from="1" to="2">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+
+<trans id="30" from="2" to="3">
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+</trans>
+</trans_list>
+
+
+
+<state_list>
+
+<state id="1" st_id="1">
+
+<operation id="4" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="41" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+codeRepl:9  %steeringAngle_read = call float @_ssdm_op_Read.ap_auto.float(float %steeringAngle) nounwind
+
+]]></Node>
+<StgValue><ssdm name="steeringAngle_read"/></StgValue>
+</operation>
+
+<operation id="5" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="42" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+codeRepl:10  %torque_read = call float @_ssdm_op_Read.ap_auto.float(float %torque) nounwind
+
+]]></Node>
+<StgValue><ssdm name="torque_read"/></StgValue>
+</operation>
+
+<operation id="6" st_id="1" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="43" bw="32" op_0_bw="32" op_1_bw="32">
+<![CDATA[
+codeRepl:11  %deltaTime_read = call float @_ssdm_op_Read.ap_auto.float(float %deltaTime) nounwind
+
+]]></Node>
+<StgValue><ssdm name="deltaTime_read"/></StgValue>
+</operation>
+
+<operation id="7" st_id="1" stage="2" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="44" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="256" op_10_bw="59" op_11_bw="52" op_12_bw="44" op_13_bw="33" op_14_bw="25" op_15_bw="126" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32">
+<![CDATA[
+codeRepl:12  call fastcc void @update.1(float %deltaTime_read, float %torque_read, float %steeringAngle_read)
+
+]]></Node>
+<StgValue><ssdm name="call_ln60"/></StgValue>
+</operation>
+</state>
+
+<state id="2" st_id="2">
+
+<operation id="8" st_id="2" stage="1" lat="2">
+<core></core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="44" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32" op_3_bw="32" op_4_bw="32" op_5_bw="32" op_6_bw="32" op_7_bw="32" op_8_bw="32" op_9_bw="256" op_10_bw="59" op_11_bw="52" op_12_bw="44" op_13_bw="33" op_14_bw="25" op_15_bw="126" op_16_bw="32" op_17_bw="32" op_18_bw="32" op_19_bw="32" op_20_bw="32" op_21_bw="32" op_22_bw="32" op_23_bw="32" op_24_bw="32" op_25_bw="32" op_26_bw="32">
+<![CDATA[
+codeRepl:12  call fastcc void @update.1(float %deltaTime_read, float %torque_read, float %steeringAngle_read)
+
+]]></Node>
+<StgValue><ssdm name="call_ln60"/></StgValue>
+</operation>
+</state>
+
+<state id="3" st_id="3">
+
+<operation id="9" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="32" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+codeRepl:0  call void (...)* @_ssdm_op_SpecBitsMap(float %deltaTime) nounwind, !map !58
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="10" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="33" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+codeRepl:1  call void (...)* @_ssdm_op_SpecBitsMap(float %torque) nounwind, !map !64
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="11" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="34" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+codeRepl:2  call void (...)* @_ssdm_op_SpecBitsMap(float %steeringAngle) nounwind, !map !68
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="12" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="35" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+codeRepl:3  call void (...)* @_ssdm_op_SpecBitsMap(float* %pos_x) nounwind, !map !72
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="13" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="36" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+codeRepl:4  call void (...)* @_ssdm_op_SpecBitsMap(float* %pos_y) nounwind, !map !78
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="14" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="37" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+codeRepl:5  call void (...)* @_ssdm_op_SpecBitsMap(float* %vel_x) nounwind, !map !82
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="15" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="38" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+codeRepl:6  call void (...)* @_ssdm_op_SpecBitsMap(float* %vel_y) nounwind, !map !86
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="16" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="39" bw="0" op_0_bw="0" op_1_bw="32">
+<![CDATA[
+codeRepl:7  call void (...)* @_ssdm_op_SpecBitsMap(float* %orientation) nounwind, !map !90
+
+]]></Node>
+<StgValue><ssdm name="specbitsmap_ln0"/></StgValue>
+</operation>
+
+<operation id="17" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="40" bw="0" op_0_bw="0" op_1_bw="0">
+<![CDATA[
+codeRepl:8  call void (...)* @_ssdm_op_SpecTopModule([14 x i8]* @top_level_car_str) nounwind
+
+]]></Node>
+<StgValue><ssdm name="spectopmodule_ln0"/></StgValue>
+</operation>
+
+<operation id="18" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="45" bw="32" op_0_bw="32" op_1_bw="0">
+<![CDATA[
+codeRepl:13  %car_chassis_pos_x_lo = load float* @car_chassis_pos_x, align 4
+
+]]></Node>
+<StgValue><ssdm name="car_chassis_pos_x_lo"/></StgValue>
+</operation>
+
+<operation id="19" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="46" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+codeRepl:14  call void @_ssdm_op_Write.ap_auto.floatP(float* %pos_x, float %car_chassis_pos_x_lo) nounwind
+
+]]></Node>
+<StgValue><ssdm name="write_ln61"/></StgValue>
+</operation>
+
+<operation id="20" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="47" bw="32" op_0_bw="32" op_1_bw="0">
+<![CDATA[
+codeRepl:15  %car_chassis_pos_z_lo = load float* @car_chassis_pos_z, align 4
+
+]]></Node>
+<StgValue><ssdm name="car_chassis_pos_z_lo"/></StgValue>
+</operation>
+
+<operation id="21" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="48" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+codeRepl:16  call void @_ssdm_op_Write.ap_auto.floatP(float* %pos_y, float %car_chassis_pos_z_lo) nounwind
+
+]]></Node>
+<StgValue><ssdm name="write_ln62"/></StgValue>
+</operation>
+
+<operation id="22" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="49" bw="32" op_0_bw="32" op_1_bw="0">
+<![CDATA[
+codeRepl:17  %car_chassis_vel_x_lo = load float* @car_chassis_vel_x, align 4
+
+]]></Node>
+<StgValue><ssdm name="car_chassis_vel_x_lo"/></StgValue>
+</operation>
+
+<operation id="23" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="50" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+codeRepl:18  call void @_ssdm_op_Write.ap_auto.floatP(float* %vel_x, float %car_chassis_vel_x_lo) nounwind
+
+]]></Node>
+<StgValue><ssdm name="write_ln63"/></StgValue>
+</operation>
+
+<operation id="24" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="51" bw="32" op_0_bw="32" op_1_bw="0">
+<![CDATA[
+codeRepl:19  %car_chassis_vel_z_lo = load float* @car_chassis_vel_z, align 4
+
+]]></Node>
+<StgValue><ssdm name="car_chassis_vel_z_lo"/></StgValue>
+</operation>
+
+<operation id="25" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="52" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+codeRepl:20  call void @_ssdm_op_Write.ap_auto.floatP(float* %vel_y, float %car_chassis_vel_z_lo) nounwind
+
+]]></Node>
+<StgValue><ssdm name="write_ln64"/></StgValue>
+</operation>
+
+<operation id="26" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="53" bw="32" op_0_bw="32" op_1_bw="0">
+<![CDATA[
+codeRepl:21  %car_chassis_orientat_2 = load float* @car_chassis_orientat, align 4
+
+]]></Node>
+<StgValue><ssdm name="car_chassis_orientat_2"/></StgValue>
+</operation>
+
+<operation id="27" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="54" bw="0" op_0_bw="0" op_1_bw="32" op_2_bw="32">
+<![CDATA[
+codeRepl:22  call void @_ssdm_op_Write.ap_auto.floatP(float* %orientation, float %car_chassis_orientat_2) nounwind
+
+]]></Node>
+<StgValue><ssdm name="write_ln65"/></StgValue>
+</operation>
+
+<operation id="28" st_id="3" stage="1" lat="1">
+<core>NULL</core>
+<MemPortIdVec></MemPortIdVec>
+<condition id="-1">
+<or_exp><and_exp></and_exp></or_exp>
+</condition>
+
+<Node id="55" bw="0">
+<![CDATA[
+codeRepl:23  ret void
+
+]]></Node>
+<StgValue><ssdm name="ret_ln66"/></StgValue>
+</operation>
+</state>
+</state_list>
+
+
+<ports>
+<port id="31" name="deltaTime" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="deltaTime"/></StgValue>
+</port>
+<port id="32" name="torque" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="torque"/></StgValue>
+</port>
+<port id="33" name="steeringAngle" dir="0" iftype="0">
+<core>NULL</core><StgValue><ssdm name="steeringAngle"/></StgValue>
+</port>
+<port id="34" name="pos_x" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="pos_x"/></StgValue>
+</port>
+<port id="35" name="pos_y" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="pos_y"/></StgValue>
+</port>
+<port id="36" name="vel_x" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="vel_x"/></StgValue>
+</port>
+<port id="37" name="vel_y" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="vel_y"/></StgValue>
+</port>
+<port id="38" name="orientation" dir="1" iftype="0">
+<core>NULL</core><StgValue><ssdm name="orientation"/></StgValue>
+</port>
+<port id="39" name="car_chassis_vel_z" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="car_chassis_vel_z"/></StgValue>
+</port>
+<port id="40" name="car_chassis_angularV" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="car_chassis_angularV"/></StgValue>
+</port>
+<port id="41" name="car_chassis_vel_x" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="car_chassis_vel_x"/></StgValue>
+</port>
+<port id="42" name="car_chassis_wFL" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="car_chassis_wFL"/></StgValue>
+</port>
+<port id="43" name="car_frontLeft_angula" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="car_frontLeft_angula"/></StgValue>
+</port>
+<port id="44" name="ref_4oPi_table_256_V" dir="0" iftype="1">
+<core>ROM_nP</core><StgValue><ssdm name="ref_4oPi_table_256_V"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="45" name="fourth_order_double_4" dir="0" iftype="1">
+<core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_4"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="46" name="fourth_order_double_5" dir="0" iftype="1">
+<core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_5"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="47" name="fourth_order_double_6" dir="0" iftype="1">
+<core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_6"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="48" name="fourth_order_double_7" dir="0" iftype="1">
+<core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_7"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="49" name="fourth_order_double_s" dir="0" iftype="1">
+<core>ROM_1P_LUTRAM</core><StgValue><ssdm name="fourth_order_double_s"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="50" name="cordic_ctab_table_12" dir="0" iftype="1">
+<core>ROM_nP</core><StgValue><ssdm name="cordic_ctab_table_12"/><MemPortTyVec>1 </MemPortTyVec>
+</StgValue>
+</port>
+<port id="51" name="car_chassis_wFR" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="car_chassis_wFR"/></StgValue>
+</port>
+<port id="52" name="car_frontRight_angul" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="car_frontRight_angul"/></StgValue>
+</port>
+<port id="53" name="car_chassis_wRL" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="car_chassis_wRL"/></StgValue>
+</port>
+<port id="54" name="car_rearLeft_angular" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="car_rearLeft_angular"/></StgValue>
+</port>
+<port id="55" name="car_chassis_wRR" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="car_chassis_wRR"/></StgValue>
+</port>
+<port id="56" name="car_rearRight_angula" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="car_rearRight_angula"/></StgValue>
+</port>
+<port id="57" name="car_chassis_accel_x" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="car_chassis_accel_x"/></StgValue>
+</port>
+<port id="58" name="car_chassis_accel_z" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="car_chassis_accel_z"/></StgValue>
+</port>
+<port id="59" name="car_chassis_orientat" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="car_chassis_orientat"/></StgValue>
+</port>
+<port id="60" name="car_chassis_pos_x" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="car_chassis_pos_x"/></StgValue>
+</port>
+<port id="61" name="car_chassis_pos_z" dir="2" iftype="0">
+<core>NULL</core><StgValue><ssdm name="car_chassis_pos_z"/></StgValue>
+</port>
+</ports>
+
+
+<dataflows>
+<dataflow id="63" from="_ssdm_op_Read.ap_auto.float" to="steeringAngle_read" fromId="62" toId="4">
+</dataflow>
+<dataflow id="64" from="steeringAngle" to="steeringAngle_read" fromId="33" toId="4">
+</dataflow>
+<dataflow id="65" from="_ssdm_op_Read.ap_auto.float" to="torque_read" fromId="62" toId="5">
+</dataflow>
+<dataflow id="66" from="torque" to="torque_read" fromId="32" toId="5">
+</dataflow>
+<dataflow id="67" from="_ssdm_op_Read.ap_auto.float" to="deltaTime_read" fromId="62" toId="6">
+</dataflow>
+<dataflow id="68" from="deltaTime" to="deltaTime_read" fromId="31" toId="6">
+</dataflow>
+<dataflow id="70" from="update.1" to="call_ln60" fromId="69" toId="7">
+</dataflow>
+<dataflow id="71" from="deltaTime_read" to="call_ln60" fromId="6" toId="7">
+</dataflow>
+<dataflow id="72" from="torque_read" to="call_ln60" fromId="5" toId="7">
+</dataflow>
+<dataflow id="73" from="steeringAngle_read" to="call_ln60" fromId="4" toId="7">
+</dataflow>
+<dataflow id="74" from="car_chassis_vel_z" to="call_ln60" fromId="39" toId="7">
+</dataflow>
+<dataflow id="75" from="car_chassis_angularV" to="call_ln60" fromId="40" toId="7">
+</dataflow>
+<dataflow id="76" from="car_chassis_vel_x" to="call_ln60" fromId="41" toId="7">
+</dataflow>
+<dataflow id="77" from="car_chassis_wFL" to="call_ln60" fromId="42" toId="7">
+</dataflow>
+<dataflow id="78" from="car_frontLeft_angula" to="call_ln60" fromId="43" toId="7">
+</dataflow>
+<dataflow id="79" from="ref_4oPi_table_256_V" to="call_ln60" fromId="44" toId="7">
+</dataflow>
+<dataflow id="80" from="fourth_order_double_4" to="call_ln60" fromId="45" toId="7">
+</dataflow>
+<dataflow id="81" from="fourth_order_double_5" to="call_ln60" fromId="46" toId="7">
+</dataflow>
+<dataflow id="82" from="fourth_order_double_6" to="call_ln60" fromId="47" toId="7">
+</dataflow>
+<dataflow id="83" from="fourth_order_double_7" to="call_ln60" fromId="48" toId="7">
+</dataflow>
+<dataflow id="84" from="fourth_order_double_s" to="call_ln60" fromId="49" toId="7">
+</dataflow>
+<dataflow id="85" from="cordic_ctab_table_12" to="call_ln60" fromId="50" toId="7">
+</dataflow>
+<dataflow id="86" from="car_chassis_wFR" to="call_ln60" fromId="51" toId="7">
+</dataflow>
+<dataflow id="87" from="car_frontRight_angul" to="call_ln60" fromId="52" toId="7">
+</dataflow>
+<dataflow id="88" from="car_chassis_wRL" to="call_ln60" fromId="53" toId="7">
+</dataflow>
+<dataflow id="89" from="car_rearLeft_angular" to="call_ln60" fromId="54" toId="7">
+</dataflow>
+<dataflow id="90" from="car_chassis_wRR" to="call_ln60" fromId="55" toId="7">
+</dataflow>
+<dataflow id="91" from="car_rearRight_angula" to="call_ln60" fromId="56" toId="7">
+</dataflow>
+<dataflow id="92" from="car_chassis_accel_x" to="call_ln60" fromId="57" toId="7">
+</dataflow>
+<dataflow id="93" from="car_chassis_accel_z" to="call_ln60" fromId="58" toId="7">
+</dataflow>
+<dataflow id="94" from="car_chassis_orientat" to="call_ln60" fromId="59" toId="7">
+</dataflow>
+<dataflow id="95" from="car_chassis_pos_x" to="call_ln60" fromId="60" toId="7">
+</dataflow>
+<dataflow id="96" from="car_chassis_pos_z" to="call_ln60" fromId="61" toId="7">
+</dataflow>
+<dataflow id="97" from="update.1" to="call_ln60" fromId="69" toId="8">
+</dataflow>
+<dataflow id="98" from="deltaTime_read" to="call_ln60" fromId="6" toId="8">
+</dataflow>
+<dataflow id="99" from="torque_read" to="call_ln60" fromId="5" toId="8">
+</dataflow>
+<dataflow id="100" from="steeringAngle_read" to="call_ln60" fromId="4" toId="8">
+</dataflow>
+<dataflow id="101" from="car_chassis_vel_z" to="call_ln60" fromId="39" toId="8">
+</dataflow>
+<dataflow id="102" from="car_chassis_angularV" to="call_ln60" fromId="40" toId="8">
+</dataflow>
+<dataflow id="103" from="car_chassis_vel_x" to="call_ln60" fromId="41" toId="8">
+</dataflow>
+<dataflow id="104" from="car_chassis_wFL" to="call_ln60" fromId="42" toId="8">
+</dataflow>
+<dataflow id="105" from="car_frontLeft_angula" to="call_ln60" fromId="43" toId="8">
+</dataflow>
+<dataflow id="106" from="ref_4oPi_table_256_V" to="call_ln60" fromId="44" toId="8">
+</dataflow>
+<dataflow id="107" from="fourth_order_double_4" to="call_ln60" fromId="45" toId="8">
+</dataflow>
+<dataflow id="108" from="fourth_order_double_5" to="call_ln60" fromId="46" toId="8">
+</dataflow>
+<dataflow id="109" from="fourth_order_double_6" to="call_ln60" fromId="47" toId="8">
+</dataflow>
+<dataflow id="110" from="fourth_order_double_7" to="call_ln60" fromId="48" toId="8">
+</dataflow>
+<dataflow id="111" from="fourth_order_double_s" to="call_ln60" fromId="49" toId="8">
+</dataflow>
+<dataflow id="112" from="cordic_ctab_table_12" to="call_ln60" fromId="50" toId="8">
+</dataflow>
+<dataflow id="113" from="car_chassis_wFR" to="call_ln60" fromId="51" toId="8">
+</dataflow>
+<dataflow id="114" from="car_frontRight_angul" to="call_ln60" fromId="52" toId="8">
+</dataflow>
+<dataflow id="115" from="car_chassis_wRL" to="call_ln60" fromId="53" toId="8">
+</dataflow>
+<dataflow id="116" from="car_rearLeft_angular" to="call_ln60" fromId="54" toId="8">
+</dataflow>
+<dataflow id="117" from="car_chassis_wRR" to="call_ln60" fromId="55" toId="8">
+</dataflow>
+<dataflow id="118" from="car_rearRight_angula" to="call_ln60" fromId="56" toId="8">
+</dataflow>
+<dataflow id="119" from="car_chassis_accel_x" to="call_ln60" fromId="57" toId="8">
+</dataflow>
+<dataflow id="120" from="car_chassis_accel_z" to="call_ln60" fromId="58" toId="8">
+</dataflow>
+<dataflow id="121" from="car_chassis_orientat" to="call_ln60" fromId="59" toId="8">
+</dataflow>
+<dataflow id="122" from="car_chassis_pos_x" to="call_ln60" fromId="60" toId="8">
+</dataflow>
+<dataflow id="123" from="car_chassis_pos_z" to="call_ln60" fromId="61" toId="8">
+</dataflow>
+<dataflow id="125" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="124" toId="9">
+</dataflow>
+<dataflow id="126" from="deltaTime" to="specbitsmap_ln0" fromId="31" toId="9">
+</dataflow>
+<dataflow id="127" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="124" toId="10">
+</dataflow>
+<dataflow id="128" from="torque" to="specbitsmap_ln0" fromId="32" toId="10">
+</dataflow>
+<dataflow id="129" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="124" toId="11">
+</dataflow>
+<dataflow id="130" from="steeringAngle" to="specbitsmap_ln0" fromId="33" toId="11">
+</dataflow>
+<dataflow id="131" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="124" toId="12">
+</dataflow>
+<dataflow id="132" from="pos_x" to="specbitsmap_ln0" fromId="34" toId="12">
+</dataflow>
+<dataflow id="133" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="124" toId="13">
+</dataflow>
+<dataflow id="134" from="pos_y" to="specbitsmap_ln0" fromId="35" toId="13">
+</dataflow>
+<dataflow id="135" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="124" toId="14">
+</dataflow>
+<dataflow id="136" from="vel_x" to="specbitsmap_ln0" fromId="36" toId="14">
+</dataflow>
+<dataflow id="137" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="124" toId="15">
+</dataflow>
+<dataflow id="138" from="vel_y" to="specbitsmap_ln0" fromId="37" toId="15">
+</dataflow>
+<dataflow id="139" from="_ssdm_op_SpecBitsMap" to="specbitsmap_ln0" fromId="124" toId="16">
+</dataflow>
+<dataflow id="140" from="orientation" to="specbitsmap_ln0" fromId="38" toId="16">
+</dataflow>
+<dataflow id="142" from="_ssdm_op_SpecTopModule" to="spectopmodule_ln0" fromId="141" toId="17">
+</dataflow>
+<dataflow id="144" from="top_level_car_str" to="spectopmodule_ln0" fromId="143" toId="17">
+</dataflow>
+<dataflow id="145" from="car_chassis_pos_x" to="car_chassis_pos_x_lo" fromId="60" toId="18">
+</dataflow>
+<dataflow id="147" from="_ssdm_op_Write.ap_auto.floatP" to="write_ln61" fromId="146" toId="19">
+</dataflow>
+<dataflow id="148" from="pos_x" to="write_ln61" fromId="34" toId="19">
+</dataflow>
+<dataflow id="149" from="car_chassis_pos_x_lo" to="write_ln61" fromId="18" toId="19">
+</dataflow>
+<dataflow id="150" from="car_chassis_pos_z" to="car_chassis_pos_z_lo" fromId="61" toId="20">
+</dataflow>
+<dataflow id="151" from="_ssdm_op_Write.ap_auto.floatP" to="write_ln62" fromId="146" toId="21">
+</dataflow>
+<dataflow id="152" from="pos_y" to="write_ln62" fromId="35" toId="21">
+</dataflow>
+<dataflow id="153" from="car_chassis_pos_z_lo" to="write_ln62" fromId="20" toId="21">
+</dataflow>
+<dataflow id="154" from="car_chassis_vel_x" to="car_chassis_vel_x_lo" fromId="41" toId="22">
+</dataflow>
+<dataflow id="155" from="_ssdm_op_Write.ap_auto.floatP" to="write_ln63" fromId="146" toId="23">
+</dataflow>
+<dataflow id="156" from="vel_x" to="write_ln63" fromId="36" toId="23">
+</dataflow>
+<dataflow id="157" from="car_chassis_vel_x_lo" to="write_ln63" fromId="22" toId="23">
+</dataflow>
+<dataflow id="158" from="car_chassis_vel_z" to="car_chassis_vel_z_lo" fromId="39" toId="24">
+</dataflow>
+<dataflow id="159" from="_ssdm_op_Write.ap_auto.floatP" to="write_ln64" fromId="146" toId="25">
+</dataflow>
+<dataflow id="160" from="vel_y" to="write_ln64" fromId="37" toId="25">
+</dataflow>
+<dataflow id="161" from="car_chassis_vel_z_lo" to="write_ln64" fromId="24" toId="25">
+</dataflow>
+<dataflow id="162" from="car_chassis_orientat" to="car_chassis_orientat_2" fromId="59" toId="26">
+</dataflow>
+<dataflow id="163" from="_ssdm_op_Write.ap_auto.floatP" to="write_ln65" fromId="146" toId="27">
+</dataflow>
+<dataflow id="164" from="orientation" to="write_ln65" fromId="38" toId="27">
+</dataflow>
+<dataflow id="165" from="car_chassis_orientat_2" to="write_ln65" fromId="26" toId="27">
+</dataflow>
+</dataflows>
+
+
+</stg>

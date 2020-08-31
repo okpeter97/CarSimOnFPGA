@@ -1397,7 +1397,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>ret.V</originalName>
-              <rtlName>top_level_mul_170ibs_U6</rtlName>
+              <rtlName>top_level_wheel_mibs_U6</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>223</bitwidth>
@@ -2948,7 +2948,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>top_level_mux_83_jbC_U7</rtlName>
+              <rtlName>top_level_wheel_mjbC_U7</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -5146,7 +5146,7 @@
             <Obj>
               <type>0</type>
               <id>103</id>
-              <name>tmp_59</name>
+              <name>tmp_61</name>
               <fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
               <fileDirectory>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products</fileDirectory>
               <lineNumber>35</lineNumber>
@@ -5177,7 +5177,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_59_reg_1316</rtlName>
+              <rtlName>tmp_61_reg_1316</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>37</bitwidth>
@@ -5482,7 +5482,7 @@
             <Obj>
               <type>0</type>
               <id>109</id>
-              <name>tmp_60</name>
+              <name>tmp_62</name>
               <fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
               <fileDirectory>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products</fileDirectory>
               <lineNumber>36</lineNumber>
@@ -5513,7 +5513,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>tmp_60_reg_1321</rtlName>
+              <rtlName>tmp_62_reg_1321</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>29</bitwidth>
@@ -6709,7 +6709,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>top_level_mux_164kbM_U8</rtlName>
+              <rtlName>top_level_wheel_mkbM_U8</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -6774,7 +6774,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>top_level_mux_164kbM_U9</rtlName>
+              <rtlName>top_level_wheel_mkbM_U9</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -12373,7 +12373,7 @@
           </second>
         </item>
         <item>
-          <first>top_level_mul_170ibs_U6 (top_level_mul_170ibs)</first>
+          <first>top_level_wheel_mibs_U6 (top_level_wheel_mibs)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -12392,7 +12392,7 @@
           </second>
         </item>
         <item>
-          <first>top_level_mux_164kbM_U8 (top_level_mux_164kbM)</first>
+          <first>top_level_wheel_mjbC_U7 (top_level_wheel_mjbC)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -12407,7 +12407,7 @@
           </second>
         </item>
         <item>
-          <first>top_level_mux_164kbM_U9 (top_level_mux_164kbM)</first>
+          <first>top_level_wheel_mkbM_U8 (top_level_wheel_mkbM)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -12422,7 +12422,7 @@
           </second>
         </item>
         <item>
-          <first>top_level_mux_83_jbC_U7 (top_level_mux_83_jbC)</first>
+          <first>top_level_wheel_mkbM_U9 (top_level_wheel_mkbM)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -14582,7 +14582,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_59_reg_1316</first>
+          <first>tmp_61_reg_1316</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -14601,7 +14601,7 @@
           </second>
         </item>
         <item>
-          <first>tmp_60_reg_1321</first>
+          <first>tmp_62_reg_1321</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -14802,28 +14802,28 @@
           </second>
         </item>
         <item>
-          <first>top_level_mul_170ibs_U6</first>
+          <first>top_level_wheel_mibs_U6</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>top_level_mux_164kbM_U8</first>
+          <first>top_level_wheel_mjbC_U7</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>top_level_mux_164kbM_U9</first>
+          <first>top_level_wheel_mkbM_U8</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>top_level_mux_83_jbC_U7</first>
+          <first>top_level_wheel_mkbM_U9</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -14842,7 +14842,7 @@
           </second>
         </item>
         <item>
-          <first>top_level_mul_170ibs_U6 (top_level_mul_170ibs)</first>
+          <first>top_level_wheel_mibs_U6 (top_level_wheel_mibs)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -14850,7 +14850,15 @@
           </second>
         </item>
         <item>
-          <first>top_level_mux_164kbM_U8 (top_level_mux_164kbM)</first>
+          <first>top_level_wheel_mjbC_U7 (top_level_wheel_mjbC)</first>
+          <second>
+            <count>1</count>
+            <item_version>0</item_version>
+            <item>58</item>
+          </second>
+        </item>
+        <item>
+          <first>top_level_wheel_mkbM_U8 (top_level_wheel_mkbM)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -14858,19 +14866,11 @@
           </second>
         </item>
         <item>
-          <first>top_level_mux_164kbM_U9 (top_level_mux_164kbM)</first>
+          <first>top_level_wheel_mkbM_U9 (top_level_wheel_mkbM)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
             <item>132</item>
-          </second>
-        </item>
-        <item>
-          <first>top_level_mux_83_jbC_U7 (top_level_mux_83_jbC)</first>
-          <second>
-            <count>1</count>
-            <item_version>0</item_version>
-            <item>58</item>
           </second>
         </item>
       </dp_component_map>
@@ -18279,7 +18279,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_59_fu_764</first>
+        <first>tmp_61_fu_764</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -18287,7 +18287,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_60_fu_787</first>
+        <first>tmp_62_fu_787</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19298,7 +19298,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_59_reg_1316</first>
+        <first>tmp_61_reg_1316</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>
@@ -19306,7 +19306,7 @@
         </second>
       </item>
       <item>
-        <first>tmp_60_reg_1321</first>
+        <first>tmp_62_reg_1321</first>
         <second>
           <count>1</count>
           <item_version>0</item_version>

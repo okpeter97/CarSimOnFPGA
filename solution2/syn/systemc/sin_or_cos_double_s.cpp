@@ -128,65 +128,65 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     grp_scaled_fixed2ieee_fu_268->in_V(result_V_reg_1347);
     grp_scaled_fixed2ieee_fu_268->prescale(ret_V_reg_1352);
     grp_scaled_fixed2ieee_fu_268->ap_return(grp_scaled_fixed2ieee_fu_268_ap_return);
-    top_level_mul_170ibs_U6 = new top_level_mul_170ibs<1,2,170,53,223>("top_level_mul_170ibs_U6");
-    top_level_mul_170ibs_U6->clk(ap_clk);
-    top_level_mul_170ibs_U6->reset(ap_rst);
-    top_level_mul_170ibs_U6->din0(grp_fu_372_p0);
-    top_level_mul_170ibs_U6->din1(grp_fu_372_p1);
-    top_level_mul_170ibs_U6->ce(ap_var_for_const0);
-    top_level_mul_170ibs_U6->dout(grp_fu_372_p2);
-    top_level_mux_83_jbC_U7 = new top_level_mux_83_jbC<1,2,1,1,1,1,1,1,1,1,3,1>("top_level_mux_83_jbC_U7");
-    top_level_mux_83_jbC_U7->clk(ap_clk);
-    top_level_mux_83_jbC_U7->reset(ap_rst);
-    top_level_mux_83_jbC_U7->din0(ap_var_for_const1);
-    top_level_mux_83_jbC_U7->din1(ap_var_for_const2);
-    top_level_mux_83_jbC_U7->din2(ap_var_for_const2);
-    top_level_mux_83_jbC_U7->din3(ap_var_for_const1);
-    top_level_mux_83_jbC_U7->din4(ap_var_for_const1);
-    top_level_mux_83_jbC_U7->din5(ap_var_for_const2);
-    top_level_mux_83_jbC_U7->din6(ap_var_for_const2);
-    top_level_mux_83_jbC_U7->din7(ap_var_for_const1);
-    top_level_mux_83_jbC_U7->din8(p_Val2_37_fu_415_p3);
-    top_level_mux_83_jbC_U7->ce(ap_var_for_const0);
-    top_level_mux_83_jbC_U7->dout(grp_fu_523_p10);
-    top_level_mux_164kbM_U8 = new top_level_mux_164kbM<1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,1>("top_level_mux_164kbM_U8");
-    top_level_mux_164kbM_U8->din0(ap_var_for_const1);
-    top_level_mux_164kbM_U8->din1(ap_var_for_const1);
-    top_level_mux_164kbM_U8->din2(ap_var_for_const1);
-    top_level_mux_164kbM_U8->din3(ap_var_for_const2);
-    top_level_mux_164kbM_U8->din4(ap_var_for_const2);
-    top_level_mux_164kbM_U8->din5(ap_var_for_const2);
-    top_level_mux_164kbM_U8->din6(ap_var_for_const2);
-    top_level_mux_164kbM_U8->din7(ap_var_for_const1);
-    top_level_mux_164kbM_U8->din8(ap_var_for_const1);
-    top_level_mux_164kbM_U8->din9(ap_var_for_const2);
-    top_level_mux_164kbM_U8->din10(ap_var_for_const2);
-    top_level_mux_164kbM_U8->din11(ap_var_for_const2);
-    top_level_mux_164kbM_U8->din12(ap_var_for_const2);
-    top_level_mux_164kbM_U8->din13(ap_var_for_const1);
-    top_level_mux_164kbM_U8->din14(ap_var_for_const1);
-    top_level_mux_164kbM_U8->din15(ap_var_for_const1);
-    top_level_mux_164kbM_U8->din16(p_Result_27_fu_920_p3);
-    top_level_mux_164kbM_U8->dout(tmp_1_fu_926_p18);
-    top_level_mux_164kbM_U9 = new top_level_mux_164kbM<1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,1>("top_level_mux_164kbM_U9");
-    top_level_mux_164kbM_U9->din0(ap_var_for_const1);
-    top_level_mux_164kbM_U9->din1(ap_var_for_const1);
-    top_level_mux_164kbM_U9->din2(ap_var_for_const2);
-    top_level_mux_164kbM_U9->din3(ap_var_for_const1);
-    top_level_mux_164kbM_U9->din4(ap_var_for_const2);
-    top_level_mux_164kbM_U9->din5(ap_var_for_const2);
-    top_level_mux_164kbM_U9->din6(ap_var_for_const1);
-    top_level_mux_164kbM_U9->din7(ap_var_for_const2);
-    top_level_mux_164kbM_U9->din8(ap_var_for_const2);
-    top_level_mux_164kbM_U9->din9(ap_var_for_const1);
-    top_level_mux_164kbM_U9->din10(ap_var_for_const2);
-    top_level_mux_164kbM_U9->din11(ap_var_for_const2);
-    top_level_mux_164kbM_U9->din12(ap_var_for_const1);
-    top_level_mux_164kbM_U9->din13(ap_var_for_const2);
-    top_level_mux_164kbM_U9->din14(ap_var_for_const1);
-    top_level_mux_164kbM_U9->din15(ap_var_for_const1);
-    top_level_mux_164kbM_U9->din16(p_Result_27_fu_920_p3);
-    top_level_mux_164kbM_U9->dout(tmp_2_fu_964_p18);
+    top_level_wheel_mibs_U6 = new top_level_wheel_mibs<1,2,170,53,223>("top_level_wheel_mibs_U6");
+    top_level_wheel_mibs_U6->clk(ap_clk);
+    top_level_wheel_mibs_U6->reset(ap_rst);
+    top_level_wheel_mibs_U6->din0(grp_fu_372_p0);
+    top_level_wheel_mibs_U6->din1(grp_fu_372_p1);
+    top_level_wheel_mibs_U6->ce(ap_var_for_const0);
+    top_level_wheel_mibs_U6->dout(grp_fu_372_p2);
+    top_level_wheel_mjbC_U7 = new top_level_wheel_mjbC<1,2,1,1,1,1,1,1,1,1,3,1>("top_level_wheel_mjbC_U7");
+    top_level_wheel_mjbC_U7->clk(ap_clk);
+    top_level_wheel_mjbC_U7->reset(ap_rst);
+    top_level_wheel_mjbC_U7->din0(ap_var_for_const1);
+    top_level_wheel_mjbC_U7->din1(ap_var_for_const2);
+    top_level_wheel_mjbC_U7->din2(ap_var_for_const2);
+    top_level_wheel_mjbC_U7->din3(ap_var_for_const1);
+    top_level_wheel_mjbC_U7->din4(ap_var_for_const1);
+    top_level_wheel_mjbC_U7->din5(ap_var_for_const2);
+    top_level_wheel_mjbC_U7->din6(ap_var_for_const2);
+    top_level_wheel_mjbC_U7->din7(ap_var_for_const1);
+    top_level_wheel_mjbC_U7->din8(p_Val2_37_fu_415_p3);
+    top_level_wheel_mjbC_U7->ce(ap_var_for_const0);
+    top_level_wheel_mjbC_U7->dout(grp_fu_523_p10);
+    top_level_wheel_mkbM_U8 = new top_level_wheel_mkbM<1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,1>("top_level_wheel_mkbM_U8");
+    top_level_wheel_mkbM_U8->din0(ap_var_for_const1);
+    top_level_wheel_mkbM_U8->din1(ap_var_for_const1);
+    top_level_wheel_mkbM_U8->din2(ap_var_for_const1);
+    top_level_wheel_mkbM_U8->din3(ap_var_for_const2);
+    top_level_wheel_mkbM_U8->din4(ap_var_for_const2);
+    top_level_wheel_mkbM_U8->din5(ap_var_for_const2);
+    top_level_wheel_mkbM_U8->din6(ap_var_for_const2);
+    top_level_wheel_mkbM_U8->din7(ap_var_for_const1);
+    top_level_wheel_mkbM_U8->din8(ap_var_for_const1);
+    top_level_wheel_mkbM_U8->din9(ap_var_for_const2);
+    top_level_wheel_mkbM_U8->din10(ap_var_for_const2);
+    top_level_wheel_mkbM_U8->din11(ap_var_for_const2);
+    top_level_wheel_mkbM_U8->din12(ap_var_for_const2);
+    top_level_wheel_mkbM_U8->din13(ap_var_for_const1);
+    top_level_wheel_mkbM_U8->din14(ap_var_for_const1);
+    top_level_wheel_mkbM_U8->din15(ap_var_for_const1);
+    top_level_wheel_mkbM_U8->din16(p_Result_27_fu_920_p3);
+    top_level_wheel_mkbM_U8->dout(tmp_1_fu_926_p18);
+    top_level_wheel_mkbM_U9 = new top_level_wheel_mkbM<1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,1>("top_level_wheel_mkbM_U9");
+    top_level_wheel_mkbM_U9->din0(ap_var_for_const1);
+    top_level_wheel_mkbM_U9->din1(ap_var_for_const1);
+    top_level_wheel_mkbM_U9->din2(ap_var_for_const2);
+    top_level_wheel_mkbM_U9->din3(ap_var_for_const1);
+    top_level_wheel_mkbM_U9->din4(ap_var_for_const2);
+    top_level_wheel_mkbM_U9->din5(ap_var_for_const2);
+    top_level_wheel_mkbM_U9->din6(ap_var_for_const1);
+    top_level_wheel_mkbM_U9->din7(ap_var_for_const2);
+    top_level_wheel_mkbM_U9->din8(ap_var_for_const2);
+    top_level_wheel_mkbM_U9->din9(ap_var_for_const1);
+    top_level_wheel_mkbM_U9->din10(ap_var_for_const2);
+    top_level_wheel_mkbM_U9->din11(ap_var_for_const2);
+    top_level_wheel_mkbM_U9->din12(ap_var_for_const1);
+    top_level_wheel_mkbM_U9->din13(ap_var_for_const2);
+    top_level_wheel_mkbM_U9->din14(ap_var_for_const1);
+    top_level_wheel_mkbM_U9->din15(ap_var_for_const1);
+    top_level_wheel_mkbM_U9->din16(p_Result_27_fu_920_p3);
+    top_level_wheel_mkbM_U9->dout(tmp_2_fu_964_p18);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -724,10 +724,10 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sensitive << ( Mx_zeros_V_fu_481_p1 );
 
     SC_METHOD(thread_zext_ln657_1_fu_845_p1);
-    sensitive << ( tmp_60_reg_1321 );
+    sensitive << ( tmp_62_reg_1321 );
 
     SC_METHOD(thread_zext_ln657_fu_837_p1);
-    sensitive << ( tmp_59_reg_1316 );
+    sensitive << ( tmp_61_reg_1316 );
 
     SC_METHOD(thread_zext_ln744_fu_339_p1);
     sensitive << ( trunc_ln601_reg_1140 );
@@ -837,9 +837,9 @@ sin_or_cos_double_s::sin_or_cos_double_s(sc_module_name name) : sc_module(name),
     sc_trace(mVcdFile, B_fourth_power_V_reg_1286, "B_fourth_power_V_reg_1286");
     sc_trace(mVcdFile, trunc_ln3_reg_1296, "trunc_ln3_reg_1296");
     sc_trace(mVcdFile, trunc_ln662_1_reg_1301, "trunc_ln662_1_reg_1301");
-    sc_trace(mVcdFile, tmp_59_reg_1316, "tmp_59_reg_1316");
+    sc_trace(mVcdFile, tmp_61_reg_1316, "tmp_61_reg_1316");
     sc_trace(mVcdFile, ap_CS_fsm_state9, "ap_CS_fsm_state9");
-    sc_trace(mVcdFile, tmp_60_reg_1321, "tmp_60_reg_1321");
+    sc_trace(mVcdFile, tmp_62_reg_1321, "tmp_62_reg_1321");
     sc_trace(mVcdFile, ret_V_14_fu_813_p2, "ret_V_14_fu_813_p2");
     sc_trace(mVcdFile, ret_V_14_reg_1326, "ret_V_14_reg_1326");
     sc_trace(mVcdFile, cos_basis_fu_824_p3, "cos_basis_fu_824_p3");
@@ -984,10 +984,10 @@ sin_or_cos_double_s::~sin_or_cos_double_s() {
     delete fourth_order_double_7_U;
     delete fourth_order_double_s_U;
     delete grp_scaled_fixed2ieee_fu_268;
-    delete top_level_mul_170ibs_U6;
-    delete top_level_mux_83_jbC_U7;
-    delete top_level_mux_164kbM_U8;
-    delete top_level_mux_164kbM_U9;
+    delete top_level_wheel_mibs_U6;
+    delete top_level_wheel_mjbC_U7;
+    delete top_level_wheel_mkbM_U8;
+    delete top_level_wheel_mkbM_U9;
 }
 
 void sin_or_cos_double_s::thread_ap_var_for_const0() {
@@ -1080,8 +1080,8 @@ void sin_or_cos_double_s::thread_ap_clk_no_reset_() {
     }
     if (esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state9.read())) {
         ret_V_14_reg_1326 = ret_V_14_fu_813_p2.read();
-        tmp_59_reg_1316 = r_V_26_fu_758_p2.read().range(74, 38);
-        tmp_60_reg_1321 = r_V_27_fu_781_p2.read().range(59, 31);
+        tmp_61_reg_1316 = r_V_26_fu_758_p2.read().range(74, 38);
+        tmp_62_reg_1321 = r_V_27_fu_781_p2.read().range(59, 31);
     }
     if ((esl_seteq<1,1,1>(ap_const_logic_1, ap_CS_fsm_state4.read()) && esl_seteq<1,1,1>(closepath_reg_1129.read(), ap_const_lv1_0))) {
         trunc_ln_i_reg_1172 = grp_fu_372_p2.read().range(169, 167);
@@ -1724,11 +1724,11 @@ void sin_or_cos_double_s::thread_zext_ln655_fu_505_p1() {
 }
 
 void sin_or_cos_double_s::thread_zext_ln657_1_fu_845_p1() {
-    zext_ln657_1_fu_845_p1 = esl_zext<64,29>(tmp_60_reg_1321.read());
+    zext_ln657_1_fu_845_p1 = esl_zext<64,29>(tmp_62_reg_1321.read());
 }
 
 void sin_or_cos_double_s::thread_zext_ln657_fu_837_p1() {
-    zext_ln657_fu_837_p1 = esl_zext<64,37>(tmp_59_reg_1316.read());
+    zext_ln657_fu_837_p1 = esl_zext<64,37>(tmp_61_reg_1316.read());
 }
 
 void sin_or_cos_double_s::thread_zext_ln744_fu_339_p1() {

@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 25
-set name top_level_dsub_64mb6
+set name top_level_wheel_dmb6
 set corename simcore_dsub
 set op dsub
 set stage_num 5
@@ -92,7 +92,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 
 
 set id 26
-set name top_level_ddiv_64ncg
+set name top_level_wheel_dncg
 set corename simcore_ddiv
 set op ddiv
 set stage_num 17
@@ -180,7 +180,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_XILINX_FPV6::fpv6_gen, check your p
 
 
 set id 27
-set name top_level_dcmp_64ocq
+set name top_level_wheel_docq
 set corename simcore_dcmp
 set op dcmp
 set stage_num 2

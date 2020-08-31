@@ -12,9 +12,9 @@
 #include "AESL_pkg.h"
 
 #include "atan_generic_double_s.h"
-#include "top_level_dsub_64mb6.h"
-#include "top_level_ddiv_64ncg.h"
-#include "top_level_dcmp_64ocq.h"
+#include "top_level_wheel_dmb6.h"
+#include "top_level_wheel_dncg.h"
+#include "top_level_wheel_docq.h"
 
 namespace ap_rtl {
 
@@ -43,9 +43,9 @@ struct atan : public sc_module {
     sc_trace_file* mVcdFile;
 
     atan_generic_double_s* grp_atan_generic_double_s_fu_57;
-    top_level_dsub_64mb6<1,5,64,64,64>* top_level_dsub_64mb6_U25;
-    top_level_ddiv_64ncg<1,17,64,64,64>* top_level_ddiv_64ncg_U26;
-    top_level_dcmp_64ocq<1,2,64,64,1>* top_level_dcmp_64ocq_U27;
+    top_level_wheel_dmb6<1,5,64,64,64>* top_level_wheel_dmb6_U25;
+    top_level_wheel_dncg<1,17,64,64,64>* top_level_wheel_dncg_U26;
+    top_level_wheel_docq<1,2,64,64,1>* top_level_wheel_docq_U27;
     sc_signal< sc_lv<25> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
     sc_signal< sc_lv<1> > p_Result_s_reg_174;

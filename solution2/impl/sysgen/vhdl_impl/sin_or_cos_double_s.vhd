@@ -173,10 +173,10 @@ architecture behav of sin_or_cos_double_s is
     signal B_fourth_power_V_reg_1286 : STD_LOGIC_VECTOR (34 downto 0);
     signal trunc_ln3_reg_1296 : STD_LOGIC_VECTOR (55 downto 0);
     signal trunc_ln662_1_reg_1301 : STD_LOGIC_VECTOR (47 downto 0);
-    signal tmp_59_reg_1316 : STD_LOGIC_VECTOR (36 downto 0);
+    signal tmp_61_reg_1316 : STD_LOGIC_VECTOR (36 downto 0);
     signal ap_CS_fsm_state9 : STD_LOGIC;
     attribute fsm_encoding of ap_CS_fsm_state9 : signal is "none";
-    signal tmp_60_reg_1321 : STD_LOGIC_VECTOR (28 downto 0);
+    signal tmp_62_reg_1321 : STD_LOGIC_VECTOR (28 downto 0);
     signal ret_V_14_fu_813_p2 : STD_LOGIC_VECTOR (63 downto 0);
     signal ret_V_14_reg_1326 : STD_LOGIC_VECTOR (63 downto 0);
     signal cos_basis_fu_824_p3 : STD_LOGIC_VECTOR (0 downto 0);
@@ -323,7 +323,7 @@ architecture behav of sin_or_cos_double_s is
     end component;
 
 
-    component top_level_mul_170ibs IS
+    component top_level_wheel_mibs IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -340,7 +340,7 @@ architecture behav of sin_or_cos_double_s is
     end component;
 
 
-    component top_level_mux_83_jbC IS
+    component top_level_wheel_mjbC IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -371,7 +371,7 @@ architecture behav of sin_or_cos_double_s is
     end component;
 
 
-    component top_level_mux_164kbM IS
+    component top_level_wheel_mkbM IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -585,7 +585,7 @@ begin
         prescale => ret_V_reg_1352,
         ap_return => grp_scaled_fixed2ieee_fu_268_ap_return);
 
-    top_level_mul_170ibs_U6 : component top_level_mul_170ibs
+    top_level_wheel_mibs_U6 : component top_level_wheel_mibs
     generic map (
         ID => 1,
         NUM_STAGE => 2,
@@ -600,7 +600,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_372_p2);
 
-    top_level_mux_83_jbC_U7 : component top_level_mux_83_jbC
+    top_level_wheel_mjbC_U7 : component top_level_wheel_mjbC
     generic map (
         ID => 1,
         NUM_STAGE => 2,
@@ -629,7 +629,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_523_p10);
 
-    top_level_mux_164kbM_U8 : component top_level_mux_164kbM
+    top_level_wheel_mkbM_U8 : component top_level_wheel_mkbM
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -671,7 +671,7 @@ begin
         din16 => p_Result_27_fu_920_p3,
         dout => tmp_1_fu_926_p18);
 
-    top_level_mux_164kbM_U9 : component top_level_mux_164kbM
+    top_level_wheel_mkbM_U9 : component top_level_wheel_mkbM
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -866,8 +866,8 @@ begin
         if (ap_clk'event and ap_clk = '1') then
             if ((ap_const_logic_1 = ap_CS_fsm_state9)) then
                 ret_V_14_reg_1326 <= ret_V_14_fu_813_p2;
-                tmp_59_reg_1316 <= r_V_26_fu_758_p2(74 downto 38);
-                tmp_60_reg_1321 <= r_V_27_fu_781_p2(59 downto 31);
+                tmp_61_reg_1316 <= r_V_26_fu_758_p2(74 downto 38);
+                tmp_62_reg_1321 <= r_V_27_fu_781_p2(59 downto 31);
             end if;
         end if;
     end process;
@@ -1241,7 +1241,7 @@ begin
     zext_ln498_fu_640_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(p_Result_25_fu_632_p3),64));
     zext_ln635_fu_330_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(p_Result_i_i_fu_320_p4),64));
     zext_ln655_fu_505_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(Mx_zeros_V_fu_481_p1),11));
-    zext_ln657_1_fu_845_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_60_reg_1321),64));
-    zext_ln657_fu_837_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_59_reg_1316),64));
+    zext_ln657_1_fu_845_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_62_reg_1321),64));
+    zext_ln657_fu_837_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(tmp_61_reg_1316),64));
     zext_ln744_fu_339_p1 <= std_logic_vector(IEEE.numeric_std.resize(unsigned(trunc_ln601_reg_1140),256));
 end behav;

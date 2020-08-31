@@ -716,7 +716,7 @@
                 </item>
               </inlineStackInfo>
               <originalName/>
-              <rtlName>top_level_dcmp_64ocq_U27</rtlName>
+              <rtlName>top_level_wheel_docq_U27</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>1</bitwidth>
@@ -885,7 +885,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>one_over_x</originalName>
-              <rtlName>top_level_ddiv_64ncg_U26</rtlName>
+              <rtlName>top_level_wheel_dncg_U26</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -1112,7 +1112,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>res</originalName>
-              <rtlName>top_level_dsub_64mb6_U25</rtlName>
+              <rtlName>top_level_wheel_dmb6_U25</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>64</bitwidth>
@@ -3578,26 +3578,26 @@
           </second>
         </item>
         <item>
-          <first>top_level_dcmp_64ocq_U27 (top_level_dcmp_64ocq)</first>
+          <first>top_level_wheel_dmb6_U25 (top_level_wheel_dmb6)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
             <item>
               <first>DSP48E</first>
-              <second>0</second>
+              <second>3</second>
             </item>
             <item>
               <first>FF</first>
-              <second>130</second>
+              <second>445</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>118</second>
+              <second>782</second>
             </item>
           </second>
         </item>
         <item>
-          <first>top_level_ddiv_64ncg_U26 (top_level_ddiv_64ncg)</first>
+          <first>top_level_wheel_dncg_U26 (top_level_wheel_dncg)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
@@ -3616,21 +3616,21 @@
           </second>
         </item>
         <item>
-          <first>top_level_dsub_64mb6_U25 (top_level_dsub_64mb6)</first>
+          <first>top_level_wheel_docq_U27 (top_level_wheel_docq)</first>
           <second>
             <count>3</count>
             <item_version>0</item_version>
             <item>
               <first>DSP48E</first>
-              <second>3</second>
+              <second>0</second>
             </item>
             <item>
               <first>FF</first>
-              <second>445</second>
+              <second>130</second>
             </item>
             <item>
               <first>LUT</first>
-              <second>782</second>
+              <second>118</second>
             </item>
           </second>
         </item>
@@ -4109,21 +4109,21 @@
           </second>
         </item>
         <item>
-          <first>top_level_dcmp_64ocq_U27</first>
+          <first>top_level_wheel_dmb6_U25</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>top_level_ddiv_64ncg_U26</first>
+          <first>top_level_wheel_dncg_U26</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>top_level_dsub_64mb6_U25</first>
+          <first>top_level_wheel_docq_U27</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -4142,15 +4142,15 @@
           </second>
         </item>
         <item>
-          <first>top_level_dcmp_64ocq_U27 (top_level_dcmp_64ocq)</first>
+          <first>top_level_wheel_dmb6_U25 (top_level_wheel_dmb6)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>14</item>
+            <item>23</item>
           </second>
         </item>
         <item>
-          <first>top_level_ddiv_64ncg_U26 (top_level_ddiv_64ncg)</first>
+          <first>top_level_wheel_dncg_U26 (top_level_wheel_dncg)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -4158,11 +4158,11 @@
           </second>
         </item>
         <item>
-          <first>top_level_dsub_64mb6_U25 (top_level_dsub_64mb6)</first>
+          <first>top_level_wheel_docq_U27 (top_level_wheel_docq)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
-            <item>23</item>
+            <item>14</item>
           </second>
         </item>
       </dp_component_map>

@@ -1,0 +1,134 @@
+<profile>
+
+<section name = "Vivado HLS Report for 'atan'" level="0">
+<item name = "Date">Thu Aug 27 01:20:30 2020
+</item>
+<item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
+<item name = "Project">CarSimOnFPGA</item>
+<item name = "Solution">solution3</item>
+<item name = "Product family">kintex7</item>
+<item name = "Target device">xc7k325t-ffg900-2</item>
+</section>
+
+<section name = "Performance Estimates" level="0">
+<item name = "Timing (ns)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="4">Clock, Target, Estimated, Uncertainty</keys>
+<column name="ap_clk">10.00, 8.610, 1.25</column>
+</table>
+</item>
+</section>
+</item>
+<item name = "Latency (clock cycles)">
+<section name = "" level="1">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">, min, max, min, max, Type</keys>
+<column name="">2, 204, 2, 204, none</column>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="0">
+<keys size="7">Instance, Module, min, max, min, max, Type</keys>
+<column name="grp_atan_generic_double_s_fu_57">atan_generic_double_s, 1, 179, 1, 179, none</column>
+</table>
+</item>
+<item name = "Loop"><table name="" hasTotal="0">
+<keys size="8">Loop Name, min, max, Latency, achieved, target, Count, Pipelined</keys>
+</table>
+</item>
+</section>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Utilization Estimates" level="0">
+<item name = "Summary"><table name="" hasTotal="1">
+<keys size="6">Name, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="DSP">-, -, -, -, -</column>
+<column name="Expression">-, -, 0, 182, -</column>
+<column name="FIFO">-, -, -, -, -</column>
+<column name="Instance">4, 3, 3220, 8241, -</column>
+<column name="Memory">-, -, -, -, -</column>
+<column name="Multiplexer">-, -, -, 156, -</column>
+<column name="Register">-, -, 360, -, -</column>
+<specialColumn name="Available">890, 840, 407600, 203800, 0</specialColumn>
+<specialColumn name="Utilization (%)">~0, ~0, ~0, 4, 0</specialColumn>
+</table>
+</item>
+<item name = "Detail">
+<section name = "" level="1">
+<item name = "Instance"><table name="" hasTotal="1">
+<keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
+<column name="grp_atan_generic_double_s_fu_57">atan_generic_double_s, 4, 0, 935, 4088, 0</column>
+<column name="top_level_car_dcmocq_U27">top_level_car_dcmocq, 0, 0, 130, 118, 0</column>
+<column name="top_level_car_ddincg_U26">top_level_car_ddincg, 0, 0, 1710, 3253, 0</column>
+<column name="top_level_car_dsumb6_U25">top_level_car_dsumb6, 0, 3, 445, 782, 0</column>
+</table>
+</item>
+<item name = "DSP48E"><table name="" hasTotal="0">
+<keys size="3">Instance, Module, Expression</keys>
+</table>
+</item>
+<item name = "Memory"><table name="" hasTotal="1">
+<keys size="10">Memory, Module, BRAM_18K, FF, LUT, URAM, Words, Bits, Banks, W*Bits*Banks</keys>
+</table>
+</item>
+<item name = "FIFO"><table name="" hasTotal="1">
+<keys size="8">Name, BRAM_18K, FF, LUT, URAM, Depth, Bits, Size:D*B</keys>
+</table>
+</item>
+<item name = "Expression"><table name="" hasTotal="1">
+<keys size="7">Variable Name, Operation, DSP48E, FF, LUT, Bitwidth P0, Bitwidth P1</keys>
+<column name="icmp_ln833_3_fu_130_p2">icmp, 0, 0, 29, 52, 1</column>
+<column name="icmp_ln833_fu_124_p2">icmp, 0, 0, 13, 11, 2</column>
+<column name="octant1_fu_144_p2">icmp, 0, 0, 13, 11, 10</column>
+<column name="din_fu_149_p3">select, 0, 0, 64, 1, 64</column>
+<column name="select_ln639_fu_136_p3">select, 0, 0, 63, 1, 62</column>
+</table>
+</item>
+<item name = "Multiplexer"><table name="" hasTotal="1">
+<keys size="5">Name, LUT, Input Size, Bits, Total Bits</keys>
+<column name="ap_NS_fsm">121, 26, 1, 26</column>
+<column name="ap_phi_mux_f_assign_phi_fu_46_p8">9, 2, 64, 128</column>
+<column name="ap_return">9, 2, 64, 128</column>
+<column name="f_assign_reg_42">17, 4, 64, 256</column>
+</table>
+</item>
+<item name = "Register"><table name="" hasTotal="1">
+<keys size="5">Name, FF, LUT, Bits, Const Bits</keys>
+<column name="absx_reg_184">63, 0, 64, 1</column>
+<column name="ap_CS_fsm">25, 0, 25, 0</column>
+<column name="ap_return">64, 0, 64, 0</column>
+<column name="ap_return_preg">64, 0, 64, 0</column>
+<column name="din_reg_209">64, 0, 64, 0</column>
+<column name="f_assign_reg_42">64, 0, 64, 0</column>
+<column name="grp_atan_generic_double_s_fu_57_ap_start_reg">1, 0, 1, 0</column>
+<column name="icmp_ln833_reg_191">1, 0, 1, 0</column>
+<column name="octant1_reg_204">1, 0, 1, 0</column>
+<column name="p_Result_s_reg_174">1, 0, 1, 0</column>
+<column name="tmp_4_reg_200">1, 0, 1, 0</column>
+<column name="tmp_V_reg_179">11, 0, 11, 0</column>
+</table>
+</item>
+</section>
+</item>
+</section>
+
+<section name = "Interface" level="0">
+<item name = "Summary"><table name="" hasTotal="0">
+<keys size="6">RTL Ports, Dir, Bits, Protocol, Source Object, C Type</keys>
+<column name="ap_clk">in, 1, ap_ctrl_hs, atan, return value</column>
+<column name="ap_rst">in, 1, ap_ctrl_hs, atan, return value</column>
+<column name="ap_start">in, 1, ap_ctrl_hs, atan, return value</column>
+<column name="ap_done">out, 1, ap_ctrl_hs, atan, return value</column>
+<column name="ap_idle">out, 1, ap_ctrl_hs, atan, return value</column>
+<column name="ap_ready">out, 1, ap_ctrl_hs, atan, return value</column>
+<column name="ap_return">out, 64, ap_ctrl_hs, atan, return value</column>
+<column name="x">in, 64, ap_none, x, scalar</column>
+</table>
+</item>
+</section>
+</profile>

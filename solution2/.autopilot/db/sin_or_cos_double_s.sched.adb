@@ -5146,7 +5146,7 @@
 					<Obj>
 						<type>0</type>
 						<id>103</id>
-						<name>tmp_59</name>
+						<name>tmp_61</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>35</lineNumber>
@@ -5482,7 +5482,7 @@
 					<Obj>
 						<type>0</type>
 						<id>109</id>
-						<name>tmp_60</name>
+						<name>tmp_62</name>
 						<fileName>r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp</fileName>
 						<fileDirectory>r:\builds\2019.1\continuous\2019_05_24_2552052\src\products</fileDirectory>
 						<lineNumber>36</lineNumber>

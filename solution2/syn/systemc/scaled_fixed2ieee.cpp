@@ -53,20 +53,20 @@ const sc_lv<64> scaled_fixed2ieee::ap_const_lv64_0 = "00000000000000000000000000
 const bool scaled_fixed2ieee::ap_const_boolean_1 = true;
 
 scaled_fixed2ieee::scaled_fixed2ieee(sc_module_name name) : sc_module(name), mVcdFile(0) {
-    top_level_mux_42_bkb_U1 = new top_level_mux_42_bkb<1,1,32,32,32,32,2,32>("top_level_mux_42_bkb_U1");
-    top_level_mux_42_bkb_U1->din0(out_bits_2_V_load_reg_684);
-    top_level_mux_42_bkb_U1->din1(out_bits_2_V_1_load_reg_690);
-    top_level_mux_42_bkb_U1->din2(out_bits_2_V_2_load_reg_696);
-    top_level_mux_42_bkb_U1->din3(p_Result_29_reg_739);
-    top_level_mux_42_bkb_U1->din4(p_Val2_38_fu_427_p5);
-    top_level_mux_42_bkb_U1->dout(p_Val2_38_fu_427_p6);
-    top_level_mux_42_bkb_U2 = new top_level_mux_42_bkb<1,1,32,32,32,32,2,32>("top_level_mux_42_bkb_U2");
-    top_level_mux_42_bkb_U2->din0(c_3_1_fu_110);
-    top_level_mux_42_bkb_U2->din1(c_3_2_fu_114);
-    top_level_mux_42_bkb_U2->din2(c_3_3_fu_118);
-    top_level_mux_42_bkb_U2->din3(c_3_fu_106);
-    top_level_mux_42_bkb_U2->din4(sh_assign_fu_503_p5);
-    top_level_mux_42_bkb_U2->dout(sh_assign_fu_503_p6);
+    top_level_wheel_mbkb_U1 = new top_level_wheel_mbkb<1,1,32,32,32,32,2,32>("top_level_wheel_mbkb_U1");
+    top_level_wheel_mbkb_U1->din0(out_bits_2_V_load_reg_684);
+    top_level_wheel_mbkb_U1->din1(out_bits_2_V_1_load_reg_690);
+    top_level_wheel_mbkb_U1->din2(out_bits_2_V_2_load_reg_696);
+    top_level_wheel_mbkb_U1->din3(p_Result_29_reg_739);
+    top_level_wheel_mbkb_U1->din4(p_Val2_38_fu_427_p5);
+    top_level_wheel_mbkb_U1->dout(p_Val2_38_fu_427_p6);
+    top_level_wheel_mbkb_U2 = new top_level_wheel_mbkb<1,1,32,32,32,32,2,32>("top_level_wheel_mbkb_U2");
+    top_level_wheel_mbkb_U2->din0(c_3_1_fu_110);
+    top_level_wheel_mbkb_U2->din1(c_3_2_fu_114);
+    top_level_wheel_mbkb_U2->din2(c_3_3_fu_118);
+    top_level_wheel_mbkb_U2->din3(c_3_fu_106);
+    top_level_wheel_mbkb_U2->din4(sh_assign_fu_503_p5);
+    top_level_wheel_mbkb_U2->dout(sh_assign_fu_503_p6);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -444,8 +444,8 @@ scaled_fixed2ieee::~scaled_fixed2ieee() {
     if (mVcdFile) 
         sc_close_vcd_trace_file(mVcdFile);
 
-    delete top_level_mux_42_bkb_U1;
-    delete top_level_mux_42_bkb_U2;
+    delete top_level_wheel_mbkb_U1;
+    delete top_level_wheel_mbkb_U2;
 }
 
 void scaled_fixed2ieee::thread_ap_clk_no_reset_() {

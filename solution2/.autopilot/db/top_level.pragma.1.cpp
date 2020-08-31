@@ -152,15 +152,40 @@ extern "C" {
 # 1 "<built-in>" 2
 # 1 "CarSimOnFPGA/top_level.cpp" 2
 # 1 "CarSimOnFPGA/top_level.h" 1
-# 13 "CarSimOnFPGA/top_level.h"
-void top_level(float deltaTime,
+
+void top_level_wheel(float deltaTime,
+  float torque,
+  float velocity_x,
+  float velocity_z,
+  float load,
+  float steeringAngle,
+  float * slipRatio,
+  float * slipAngle,
+  float * force_x,
+  float * force_z,
+  float * angularVel);
+
+void top_level_wheelSimWithMass(float deltaTime,
+  float initVel,
+  float torque,
+  float steeringAngle,
+  float * slipRatio,
+  float * slipAngle,
+  float * force_x,
+  float * force_z,
+  float * vel_x,
+  float * angularVel);
+
+
+void top_level_car(float deltaTime,
   float torque,
   float steeringAngle,
   float * pos_x,
   float * pos_z,
-  float * vel_x);
+  float * vel_x,
+  float * vel_y,
+  float * orientation);
 # 2 "CarSimOnFPGA/top_level.cpp" 2
-
 # 1 "CarSimOnFPGA/Car.h" 1
 # 1 "CarSimOnFPGA/Wheel.h" 1
 class Wheel
@@ -173,6 +198,10 @@ public:
  float angularVelocity;
  float force_x;
  float force_z;
+ float slipRatio;
+ float slipAngle;
+ float fx;
+ float fz;
 
  Wheel();
 
@@ -235,23 +264,102 @@ public:
 
  Car();
 
- void update(float deltaTime, float engine_torque, float steeringAngle, float* pos_x, float* pos_z);
+ void update(float deltaTime, float engine_torque, float steeringAngle);
 
 private:
  float force_x;
  float force_z;
  float torque;
 };
+# 3 "CarSimOnFPGA/top_level.cpp" 2
+# 1 "CarSimOnFPGA/WheelWithMass.h" 1
+class WheelWithMass
+{
+private:
+ float mass;
+ float radius;
+ float inertia;
+
+public:
+ float angularVelocity;
+ float force_x;
+ float force_z;
+ float fx;
+ float fz;
+ float slipRatio;
+ float slipAngle;
+
+ float initVel;
+
+ float accel_x;
+ float pos_x;
+
+ float vel_x;
+ float vel_z;
+
+ WheelWithMass(float initVel);
+
+ void update(float deltaTime,
+   float torque,
+   float steeringAngle);
+};
 # 4 "CarSimOnFPGA/top_level.cpp" 2
-# 24 "CarSimOnFPGA/top_level.cpp"
-void top_level(float deltaTime,
+
+
+void top_level_wheel(float deltaTime,
+  float torque,
+  float velocity_x,
+  float velocity_y,
+  float load,
+  float steeringAngle,
+  float* slipRatio,
+  float* slipAngle,
+  float* force_x,
+  float* force_y,
+  float* angularVel)
+{
+  static Wheel wheel;
+  wheel.update(deltaTime, torque, velocity_x, velocity_y, load, steeringAngle);
+  *slipRatio = wheel.slipRatio;
+  *slipAngle = wheel.slipAngle;
+  *force_x = wheel.fx;
+  *force_y = wheel.fz;
+  *angularVel = wheel.angularVelocity;
+}
+
+void top_level_wheelSimWithMass(float deltaTime,
+  float initVel,
+  float torque,
+  float steeringAngle,
+  float * slipRatio,
+  float * slipAngle,
+  float * force_x,
+  float * force_y,
+  float * vel_x,
+  float * angularVel)
+{
+ static WheelWithMass wheel(initVel);
+ wheel.update(deltaTime, torque, steeringAngle);
+   *slipRatio = wheel.slipRatio;
+   *slipAngle = wheel.slipAngle;
+   *force_x = wheel.fx;
+   *force_y = wheel.fz;
+   *vel_x = wheel.vel_x;
+   *angularVel = wheel.angularVelocity;
+}
+
+
+
+void top_level_car(float deltaTime,
   float torque,
   float steeringAngle,
   float* pos_x,
-  float* pos_z,
-  float* vel_x)
+  float* pos_y,
+  float* vel_x,
+  float* vel_y,
+  float* orientation)
 {
   static Car car;
-  car.update(deltaTime, torque, steeringAngle, pos_x, pos_z);
+  car.update(deltaTime, torque, steeringAngle);
   *vel_x = car.chassis.vel_x;
 }

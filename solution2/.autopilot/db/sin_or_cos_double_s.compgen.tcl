@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 6
-set name top_level_mul_170ibs
+set name top_level_wheel_mibs
 set corename simcore_mul
 set op mul
 set stage_num 2
@@ -86,7 +86,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_multicycle_mul, che
 
 
 set id 7
-set name top_level_mux_83_jbC
+set name top_level_wheel_mjbC
 set corename simcore_mux
 set op mux
 set stage_num 2
@@ -213,7 +213,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipemux, check your
 
 
 set id 8
-set name top_level_mux_164kbM
+set name top_level_wheel_mkbM
 set corename simcore_mux
 set op mux
 set stage_num 1
@@ -370,7 +370,7 @@ puts "@W \[IMPL-101\] Cannot find ::AESL_LIB_VIRTEX::xil_gen_pipemux, check your
 
 
 set id 9
-set name top_level_mux_164kbM
+set name top_level_wheel_mkbM
 set corename simcore_mux
 set op mux
 set stage_num 1

@@ -2771,7 +2771,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>value</originalName>
-              <rtlName>top_level_mux_42_bkb_U1</rtlName>
+              <rtlName>top_level_wheel_mbkb_U1</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -3963,7 +3963,7 @@
                 </item>
               </inlineStackInfo>
               <originalName>sh</originalName>
-              <rtlName>top_level_mux_42_bkb_U2</rtlName>
+              <rtlName>top_level_wheel_mbkb_U2</rtlName>
               <coreName/>
             </Obj>
             <bitwidth>32</bitwidth>
@@ -9315,7 +9315,7 @@
         <count>2</count>
         <item_version>0</item_version>
         <item class_id="38" tracking_level="0" version="0">
-          <first>top_level_mux_42_bkb_U1 (top_level_mux_42_bkb)</first>
+          <first>top_level_wheel_mbkb_U1 (top_level_wheel_mbkb)</first>
           <second class_id="39" tracking_level="0" version="0">
             <count>2</count>
             <item_version>0</item_version>
@@ -9330,7 +9330,7 @@
           </second>
         </item>
         <item>
-          <first>top_level_mux_42_bkb_U2 (top_level_mux_42_bkb)</first>
+          <first>top_level_wheel_mbkb_U2 (top_level_wheel_mbkb)</first>
           <second>
             <count>2</count>
             <item_version>0</item_version>
@@ -10876,14 +10876,14 @@
         <count>2</count>
         <item_version>0</item_version>
         <item>
-          <first>top_level_mux_42_bkb_U1</first>
+          <first>top_level_wheel_mbkb_U1</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
           </second>
         </item>
         <item>
-          <first>top_level_mux_42_bkb_U2</first>
+          <first>top_level_wheel_mbkb_U2</first>
           <second>
             <count>0</count>
             <item_version>0</item_version>
@@ -10894,7 +10894,7 @@
         <count>2</count>
         <item_version>0</item_version>
         <item class_id="42" tracking_level="0" version="0">
-          <first>top_level_mux_42_bkb_U1 (top_level_mux_42_bkb)</first>
+          <first>top_level_wheel_mbkb_U1 (top_level_wheel_mbkb)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>
@@ -10902,7 +10902,7 @@
           </second>
         </item>
         <item>
-          <first>top_level_mux_42_bkb_U2 (top_level_mux_42_bkb)</first>
+          <first>top_level_wheel_mbkb_U2 (top_level_wheel_mbkb)</first>
           <second>
             <count>1</count>
             <item_version>0</item_version>

@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'sin_or_cos_double_s'
 ================================================================
-* Date:           Tue Aug 11 15:46:00 2020
+* Date:           Sun Aug 23 03:38:20 2020
 
 * Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
 * Project:        CarSimOnFPGA
@@ -74,10 +74,10 @@
     |           Instance           |        Module        | BRAM_18K| DSP48E|  FF |  LUT | URAM|
     +------------------------------+----------------------+---------+-------+-----+------+-----+
     |grp_scaled_fixed2ieee_fu_268  |scaled_fixed2ieee     |        0|      0|  785|  1642|    0|
-    |top_level_mul_170ibs_U6       |top_level_mul_170ibs  |        0|     30|  361|   179|    0|
-    |top_level_mux_164kbM_U8       |top_level_mux_164kbM  |        0|      0|    0|    65|    0|
-    |top_level_mux_164kbM_U9       |top_level_mux_164kbM  |        0|      0|    0|    65|    0|
-    |top_level_mux_83_jbC_U7       |top_level_mux_83_jbC  |        0|      0|    0|    65|    0|
+    |top_level_wheel_mibs_U6       |top_level_wheel_mibs  |        0|     30|  361|   179|    0|
+    |top_level_wheel_mjbC_U7       |top_level_wheel_mjbC  |        0|      0|    0|    65|    0|
+    |top_level_wheel_mkbM_U8       |top_level_wheel_mkbM  |        0|      0|    0|    65|    0|
+    |top_level_wheel_mkbM_U9       |top_level_wheel_mkbM  |        0|      0|    0|    65|    0|
     +------------------------------+----------------------+---------+-------+-----+------+-----+
     |Total                         |                      |        0|     30| 1146|  2016|    0|
     +------------------------------+----------------------+---------+-------+-----+------+-----+
@@ -207,8 +207,8 @@
     |ret_V_8_reg_1342                           |   64|   0|   64|          0|
     |ret_V_reg_1352                             |   12|   0|   12|          0|
     |select_ln272_1_reg_1337                    |   63|   0|   63|          0|
-    |tmp_59_reg_1316                            |   37|   0|   37|          0|
-    |tmp_60_reg_1321                            |   29|   0|   29|          0|
+    |tmp_61_reg_1316                            |   37|   0|   37|          0|
+    |tmp_62_reg_1321                            |   29|   0|   29|          0|
     |tmp_V_2_reg_1123                           |   52|   0|   52|          0|
     |tmp_V_reg_1116                             |   11|   0|   11|          0|
     |tmp_reg_1222                               |    1|   0|    1|          0|

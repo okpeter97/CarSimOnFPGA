@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'atan'" level="0">
-<item name = "Date">Tue Aug 11 15:46:03 2020
+<item name = "Date">Sun Aug 23 03:38:24 2020
 </item>
 <item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">CarSimOnFPGA</item>
@@ -63,9 +63,9 @@
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
 <column name="grp_atan_generic_double_s_fu_57">atan_generic_double_s, 4, 0, 935, 4088, 0</column>
-<column name="top_level_dcmp_64ocq_U27">top_level_dcmp_64ocq, 0, 0, 130, 118, 0</column>
-<column name="top_level_ddiv_64ncg_U26">top_level_ddiv_64ncg, 0, 0, 1710, 3253, 0</column>
-<column name="top_level_dsub_64mb6_U25">top_level_dsub_64mb6, 0, 3, 445, 782, 0</column>
+<column name="top_level_wheel_dmb6_U25">top_level_wheel_dmb6, 0, 3, 445, 782, 0</column>
+<column name="top_level_wheel_dncg_U26">top_level_wheel_dncg, 0, 0, 1710, 3253, 0</column>
+<column name="top_level_wheel_docq_U27">top_level_wheel_docq, 0, 0, 130, 118, 0</column>
 </table>
 </item>
 <item name = "DSP48E"><table name="" hasTotal="0">

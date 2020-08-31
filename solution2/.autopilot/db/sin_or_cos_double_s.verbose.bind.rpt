@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'sin_or_cos_double_s'
 ================================================================
-* Date:           Tue Aug 11 15:45:43 2020
+* Date:           Sun Aug 23 03:38:08 2020
 
 * Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
 * Project:        CarSimOnFPGA
@@ -204,12 +204,12 @@ ST_9 : Operation 106 [1/1] (0.00ns)   --->   "%zext_ln1070 = zext i42 %B_third_p
 ST_9 : Operation 107 [1/2] (2.26ns)   --->   "%fourth_order_double_14 = load i33* %fourth_order_double_13, align 8" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:35->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 107 'load' 'fourth_order_double_14' <Predicate = true> <Delay = 2.26> <Core = "ROM_1P_LUTRAM">   --->   Core 60 'ROM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 25> <Depth = 256> <ROM>
 ST_9 : Operation 108 [1/1] (0.00ns)   --->   "%zext_ln1072 = zext i33 %fourth_order_double_14 to i75" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:35->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 108 'zext' 'zext_ln1072' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 109 [1/1] (6.14ns)   --->   "%r_V_26 = mul i75 %zext_ln1070, %zext_ln1072" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:35->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 109 'mul' 'r_V_26' <Predicate = true> <Delay = 6.14> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.19> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 110 [1/1] (0.00ns)   --->   "%tmp_59 = call i37 @_ssdm_op_PartSelect.i37.i75.i32.i32(i75 %r_V_26, i32 38, i32 74)" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:35->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 110 'partselect' 'tmp_59' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 110 [1/1] (0.00ns)   --->   "%tmp_61 = call i37 @_ssdm_op_PartSelect.i37.i75.i32.i32(i75 %r_V_26, i32 38, i32 74)" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:35->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 110 'partselect' 'tmp_61' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 111 [1/1] (0.00ns)   --->   "%zext_ln1070_1 = zext i35 %B_fourth_power_V to i60" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:36->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 111 'zext' 'zext_ln1070_1' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 112 [1/2] (2.26ns)   --->   "%fourth_order_double_16 = load i25* %fourth_order_double_15, align 4" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:36->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 112 'load' 'fourth_order_double_16' <Predicate = true> <Delay = 2.26> <Core = "ROM_1P_LUTRAM">   --->   Core 60 'ROM_1P_LUTRAM' <Latency = 1> <II = 1> <Delay = 2.26> <Storage> <Opcode : 'load'> <Ports = 1> <Width = 25> <Depth = 256> <ROM>
 ST_9 : Operation 113 [1/1] (0.00ns)   --->   "%zext_ln1072_1 = zext i25 %fourth_order_double_16 to i60" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:36->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 113 'zext' 'zext_ln1072_1' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 114 [1/1] (5.52ns)   --->   "%r_V_27 = mul i60 %zext_ln1070_1, %zext_ln1072_1" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:36->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 114 'mul' 'r_V_27' <Predicate = true> <Delay = 5.52> <Core = "Mul">   --->   Core 16 'Mul' <Latency = 0> <II = 1> <Delay = 8.19> <FuncUnit> <Opcode : 'mul'> <InPorts = 2> <OutPorts = 1>
-ST_9 : Operation 115 [1/1] (0.00ns)   --->   "%tmp_60 = call i29 @_ssdm_op_PartSelect.i29.i60.i32.i32(i60 %r_V_27, i32 31, i32 59)" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:36->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 115 'partselect' 'tmp_60' <Predicate = true> <Delay = 0.00>
+ST_9 : Operation 115 [1/1] (0.00ns)   --->   "%tmp_62 = call i29 @_ssdm_op_PartSelect.i29.i60.i32.i32(i60 %r_V_27, i32 31, i32 59)" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:36->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 115 'partselect' 'tmp_62' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 116 [1/1] (0.00ns)   --->   "%lhs_V_1 = sext i63 %t1_V to i64" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:37->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 116 'sext' 'lhs_V_1' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 117 [1/1] (0.00ns)   --->   "%rhs_V_2 = sext i56 %trunc_ln3 to i64" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:37->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 117 'sext' 'rhs_V_2' <Predicate = true> <Delay = 0.00>
 ST_9 : Operation 118 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%ret_V_13 = add nsw i64 %lhs_V_1, %rhs_V_2" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:37->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 118 'add' 'ret_V_13' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
@@ -220,9 +220,9 @@ State 10 <SV = 9> <Delay = 2.68>
 ST_10 : Operation 121 [1/1] (0.00ns) (grouped into LUT with out node cos_basis)   --->   "%xor_ln271 = xor i1 %tmp, true" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:271]   --->   Operation 121 'xor' 'xor_ln271' <Predicate = (do_cos_read)> <Delay = 0.00> <Core = "LogicGate">   --->   Core 27 'LogicGate' <Latency = 0> <II = 1> <Delay = 0.47> <FuncUnit> <Opcode : 'and' 'or' 'xor'> <InPorts = 2> <OutPorts = 1>
 ST_10 : Operation 122 [1/1] (0.48ns) (out node of the LUT)   --->   "%cos_basis = select i1 %do_cos_read, i1 %xor_ln271, i1 %tmp" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:271]   --->   Operation 122 'select' 'cos_basis' <Predicate = true> <Delay = 0.48> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
 ST_10 : Operation 123 [1/1] (0.60ns)   --->   "%select_ln272_1 = select i1 %cos_basis, i63 -1, i63 %Mx_V" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:272]   --->   Operation 123 'select' 'select_ln272_1' <Predicate = true> <Delay = 0.60> <Core = "Sel">   --->   Core 26 'Sel' <Latency = 0> <II = 1> <Delay = 0.52> <FuncUnit> <Opcode : 'select'> <InPorts = 3> <OutPorts = 1>
-ST_10 : Operation 124 [1/1] (0.00ns)   --->   "%zext_ln657 = zext i37 %tmp_59 to i64" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:37->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 124 'zext' 'zext_ln657' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 124 [1/1] (0.00ns)   --->   "%zext_ln657 = zext i37 %tmp_61 to i64" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:37->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 124 'zext' 'zext_ln657' <Predicate = true> <Delay = 0.00>
 ST_10 : Operation 125 [1/1] (0.00ns) (grouped into TernaryAdder)   --->   "%ret_V_15 = add i64 %ret_V_14, %zext_ln657" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:37->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 125 'add' 'ret_V_15' <Predicate = true> <Delay = 0.00> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
-ST_10 : Operation 126 [1/1] (0.00ns)   --->   "%zext_ln657_1 = zext i29 %tmp_60 to i64" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:37->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 126 'zext' 'zext_ln657_1' <Predicate = true> <Delay = 0.00>
+ST_10 : Operation 126 [1/1] (0.00ns)   --->   "%zext_ln657_1 = zext i29 %tmp_62 to i64" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:37->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 126 'zext' 'zext_ln657_1' <Predicate = true> <Delay = 0.00>
 ST_10 : Operation 127 [1/1] (2.68ns) (root node of TernaryAdder)   --->   "%ret_V_8 = add i64 %ret_V_15, %zext_ln657_1" [r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/src/common/hls_hotbm_double.cpp:37->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_hotbm.h:279]   --->   Operation 127 'add' 'ret_V_8' <Predicate = true> <Delay = 2.68> <Core = "TAddSub">   --->   Core 83 'TAddSub' <Latency = 0> <II = 1> <Delay = 1.34> <IPBlock> <Opcode : 'add' 'sub'> <InPorts = 3> <OutPorts = 1> <Sync> <CReg>
 
 State 11 <SV = 10> <Delay = 8.19>
@@ -383,12 +383,12 @@ zext_ln1070            (zext          ) [ 0000000000000]
 fourth_order_double_14 (load          ) [ 0000000000000]
 zext_ln1072            (zext          ) [ 0000000000000]
 r_V_26                 (mul           ) [ 0000000000000]
-tmp_59                 (partselect    ) [ 0000000000100]
+tmp_61                 (partselect    ) [ 0000000000100]
 zext_ln1070_1          (zext          ) [ 0000000000000]
 fourth_order_double_16 (load          ) [ 0000000000000]
 zext_ln1072_1          (zext          ) [ 0000000000000]
 r_V_27                 (mul           ) [ 0000000000000]
-tmp_60                 (partselect    ) [ 0000000000100]
+tmp_62                 (partselect    ) [ 0000000000100]
 lhs_V_1                (sext          ) [ 0000000000000]
 rhs_V_2                (sext          ) [ 0000000000000]
 ret_V_13               (add           ) [ 0000000000000]
@@ -2384,7 +2384,7 @@ ret_ln316              (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="764" class="1004" name="tmp_59_fu_764">
+<comp id="764" class="1004" name="tmp_61_fu_764">
 <pin_list>
 <pin id="765" dir="0" index="0" bw="37" slack="0"/>
 <pin id="766" dir="0" index="1" bw="75" slack="0"/>
@@ -2394,7 +2394,7 @@ ret_ln316              (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_59/9 "/>
+<opset="tmp_61/9 "/>
 </bind>
 </comp>
 
@@ -2432,7 +2432,7 @@ ret_ln316              (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="787" class="1004" name="tmp_60_fu_787">
+<comp id="787" class="1004" name="tmp_62_fu_787">
 <pin_list>
 <pin id="788" dir="0" index="0" bw="29" slack="0"/>
 <pin id="789" dir="0" index="1" bw="60" slack="0"/>
@@ -2442,7 +2442,7 @@ ret_ln316              (ret           ) [ 0000000000000]
 </pin_list>
 <bind>
 <opcode="partselect(1002) " fcode="partselect"/>
-<opset="tmp_60/9 "/>
+<opset="tmp_62/9 "/>
 </bind>
 </comp>
 
@@ -3372,23 +3372,23 @@ ret_ln316              (ret           ) [ 0000000000000]
 </bind>
 </comp>
 
-<comp id="1316" class="1005" name="tmp_59_reg_1316">
+<comp id="1316" class="1005" name="tmp_61_reg_1316">
 <pin_list>
 <pin id="1317" dir="0" index="0" bw="37" slack="1"/>
 <pin id="1318" dir="1" index="1" bw="37" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_59 "/>
+<opset="tmp_61 "/>
 </bind>
 </comp>
 
-<comp id="1321" class="1005" name="tmp_60_reg_1321">
+<comp id="1321" class="1005" name="tmp_62_reg_1321">
 <pin_list>
 <pin id="1322" dir="0" index="0" bw="29" slack="1"/>
 <pin id="1323" dir="1" index="1" bw="29" slack="1"/>
 </pin_list>
 <bind>
-<opset="tmp_60 "/>
+<opset="tmp_62 "/>
 </bind>
 </comp>
 
@@ -4356,10 +4356,10 @@ ret_ln316              (ret           ) [ 0000000000000]
 		t1_V : 1
 		zext_ln1072 : 1
 		r_V_26 : 2
-		tmp_59 : 3
+		tmp_61 : 3
 		zext_ln1072_1 : 1
 		r_V_27 : 2
-		tmp_60 : 3
+		tmp_62 : 3
 		lhs_V_1 : 2
 		ret_V_13 : 3
 		ret_V_14 : 4
@@ -4494,8 +4494,8 @@ ret_ln316              (ret           ) [ 0000000000000]
 |          |    B_fourth_power_V_fu_689   |    0    |    0    |    0    |    0    |
 |          |       trunc_ln3_fu_711       |    0    |    0    |    0    |    0    |
 |          |     trunc_ln662_1_fu_733     |    0    |    0    |    0    |    0    |
-|          |         tmp_59_fu_764        |    0    |    0    |    0    |    0    |
-|          |         tmp_60_fu_787        |    0    |    0    |    0    |    0    |
+|          |         tmp_61_fu_764        |    0    |    0    |    0    |    0    |
+|          |         tmp_62_fu_787        |    0    |    0    |    0    |    0    |
 |          |        result_V_fu_872       |    0    |    0    |    0    |    0    |
 |          |        tmp_V_3_fu_906        |    0    |    0    |    0    |    0    |
 |----------|------------------------------|---------|---------|---------|---------|
@@ -4588,8 +4588,8 @@ N/A
 |         ret_V_reg_1352        |   12   |
 |        rhs_V_1_reg_1155       |   223  |
 |    select_ln272_1_reg_1337    |   63   |
-|        tmp_59_reg_1316        |   37   |
-|        tmp_60_reg_1321        |   29   |
+|        tmp_61_reg_1316        |   37   |
+|        tmp_62_reg_1321        |   29   |
 |        tmp_V_2_reg_1123       |   52   |
 |         tmp_V_reg_1116        |   11   |
 |          tmp_reg_1222         |    1   |

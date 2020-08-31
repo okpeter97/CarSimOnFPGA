@@ -1,5 +1,5 @@
 
-set TopModule "top_level"
+set TopModule "top_level_wheel"
 set ClockPeriod 10
 set ClockList ap_clk
 set HasVivadoClockPeriod 0
@@ -40,8 +40,8 @@ set SCTraceFileName mytrace
 set SCTraceFileFormat vcd
 set SCTraceOption all
 set TargetInfo xc7k325t:-ffg900:-2
-set SourceFiles {sc {} c {../Car.cpp ../Chassis.cpp ../Wheel.cpp ../top_level.cpp}}
-set SourceFlags {sc {} c {{} {} {} {}}}
+set SourceFiles {sc {} c {../top_level.cpp ../WheelWithMass.cpp ../Wheel.cpp ../Chassis.cpp ../Car.cpp}}
+set SourceFlags {sc {} c {{} {} {} {} {}}}
 set DirectiveFile D:/Dev/Repos/CarSimOnFPGA/solution2/solution2.directive
 set TBFiles {verilog ../main.cpp bc ../main.cpp vhdl ../main.cpp sc ../main.cpp cas ../main.cpp c {}}
 set SpecLanguage C

@@ -4,7 +4,7 @@
 ## Copyright (C) 1986-2019 Xilinx, Inc. All Rights Reserved.
 ############################################################
 open_project CarSimOnFPGA
-set_top top_level_wheelSimWithMass
+set_top top_level_car
 add_files CarSimOnFPGA/Car.cpp
 add_files CarSimOnFPGA/Chassis.cpp
 add_files CarSimOnFPGA/Wheel.cpp

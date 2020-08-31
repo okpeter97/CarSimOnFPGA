@@ -125,13 +125,13 @@ atan_generic_double_s grp_atan_generic_double_s_fu_57(
     .ap_return(grp_atan_generic_double_s_fu_57_ap_return)
 );
 
-top_level_dsub_64mb6 #(
+top_level_wheel_dmb6 #(
     .ID( 1 ),
     .NUM_STAGE( 5 ),
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 64 ))
-top_level_dsub_64mb6_U25(
+top_level_wheel_dmb6_U25(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(64'd4609753056924675352),
@@ -140,13 +140,13 @@ top_level_dsub_64mb6_U25(
     .dout(grp_fu_64_p2)
 );
 
-top_level_ddiv_64ncg #(
+top_level_wheel_dncg #(
     .ID( 1 ),
     .NUM_STAGE( 17 ),
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 64 ))
-top_level_ddiv_64ncg_U26(
+top_level_wheel_dncg_U26(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(64'd4607182418800017408),
@@ -155,13 +155,13 @@ top_level_ddiv_64ncg_U26(
     .dout(grp_fu_71_p2)
 );
 
-top_level_dcmp_64ocq #(
+top_level_wheel_docq #(
     .ID( 1 ),
     .NUM_STAGE( 2 ),
     .din0_WIDTH( 64 ),
     .din1_WIDTH( 64 ),
     .dout_WIDTH( 1 ))
-top_level_dcmp_64ocq_U27(
+top_level_wheel_docq_U27(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_76_p0),

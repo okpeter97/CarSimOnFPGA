@@ -11,7 +11,7 @@
 #include "systemc.h"
 #include "AESL_pkg.h"
 
-#include "top_level_mux_42_bkb.h"
+#include "top_level_wheel_mbkb.h"
 
 namespace ap_rtl {
 
@@ -36,8 +36,8 @@ struct scaled_fixed2ieee : public sc_module {
 
     sc_trace_file* mVcdFile;
 
-    top_level_mux_42_bkb<1,1,32,32,32,32,2,32>* top_level_mux_42_bkb_U1;
-    top_level_mux_42_bkb<1,1,32,32,32,32,2,32>* top_level_mux_42_bkb_U2;
+    top_level_wheel_mbkb<1,1,32,32,32,32,2,32>* top_level_wheel_mbkb_U1;
+    top_level_wheel_mbkb<1,1,32,32,32,32,2,32>* top_level_wheel_mbkb_U2;
     sc_signal< sc_lv<6> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
     sc_signal< sc_lv<12> > prescale_read_reg_670;

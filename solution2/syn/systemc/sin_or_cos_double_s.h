@@ -12,9 +12,9 @@
 #include "AESL_pkg.h"
 
 #include "scaled_fixed2ieee.h"
-#include "top_level_mul_170ibs.h"
-#include "top_level_mux_83_jbC.h"
-#include "top_level_mux_164kbM.h"
+#include "top_level_wheel_mibs.h"
+#include "top_level_wheel_mjbC.h"
+#include "top_level_wheel_mkbM.h"
 #include "sin_or_cos_doublecud.h"
 #include "sin_or_cos_doubledEe.h"
 #include "sin_or_cos_doubleeOg.h"
@@ -55,10 +55,10 @@ struct sin_or_cos_double_s : public sc_module {
     sin_or_cos_doubleg8j* fourth_order_double_7_U;
     sin_or_cos_doublehbi* fourth_order_double_s_U;
     scaled_fixed2ieee* grp_scaled_fixed2ieee_fu_268;
-    top_level_mul_170ibs<1,2,170,53,223>* top_level_mul_170ibs_U6;
-    top_level_mux_83_jbC<1,2,1,1,1,1,1,1,1,1,3,1>* top_level_mux_83_jbC_U7;
-    top_level_mux_164kbM<1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,1>* top_level_mux_164kbM_U8;
-    top_level_mux_164kbM<1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,1>* top_level_mux_164kbM_U9;
+    top_level_wheel_mibs<1,2,170,53,223>* top_level_wheel_mibs_U6;
+    top_level_wheel_mjbC<1,2,1,1,1,1,1,1,1,1,3,1>* top_level_wheel_mjbC_U7;
+    top_level_wheel_mkbM<1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,1>* top_level_wheel_mkbM_U8;
+    top_level_wheel_mkbM<1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,4,1>* top_level_wheel_mkbM_U9;
     sc_signal< sc_lv<12> > ap_CS_fsm;
     sc_signal< sc_logic > ap_CS_fsm_state1;
     sc_signal< sc_lv<4> > ref_4oPi_table_256_V_address0;
@@ -129,9 +129,9 @@ struct sin_or_cos_double_s : public sc_module {
     sc_signal< sc_lv<35> > B_fourth_power_V_reg_1286;
     sc_signal< sc_lv<56> > trunc_ln3_reg_1296;
     sc_signal< sc_lv<48> > trunc_ln662_1_reg_1301;
-    sc_signal< sc_lv<37> > tmp_59_reg_1316;
+    sc_signal< sc_lv<37> > tmp_61_reg_1316;
     sc_signal< sc_logic > ap_CS_fsm_state9;
-    sc_signal< sc_lv<29> > tmp_60_reg_1321;
+    sc_signal< sc_lv<29> > tmp_62_reg_1321;
     sc_signal< sc_lv<64> > ret_V_14_fu_813_p2;
     sc_signal< sc_lv<64> > ret_V_14_reg_1326;
     sc_signal< sc_lv<1> > cos_basis_fu_824_p3;

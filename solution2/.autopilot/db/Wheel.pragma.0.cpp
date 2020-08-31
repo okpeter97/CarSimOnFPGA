@@ -25464,6 +25464,10 @@ public:
  float angularVelocity;
  float force_x;
  float force_z;
+ float slipRatio;
+ float slipAngle;
+ float fx;
+ float fz;
 
  Wheel();
 
@@ -25482,8 +25486,12 @@ Wheel::Wheel()
  radius = 0.3;
  inertia = 5;
  angularVelocity = 0;
+ slipRatio = 0;
+ slipAngle = 0;
  force_x = 0;
  force_z = 0;
+ fx = 0;
+ fz = 0;
 }
 
 void Wheel::update(float deltaTime,
@@ -25494,10 +25502,10 @@ void Wheel::update(float deltaTime,
    float steeringAngle)
 {
 #pragma HLS ALLOCATION instances=atan limit=1 function
-# 20 "CarSimOnFPGA/Wheel.cpp"
+# 24 "CarSimOnFPGA/Wheel.cpp"
 
 #pragma HLS ALLOCATION instances=sin limit=1 function
-# 20 "CarSimOnFPGA/Wheel.cpp"
+# 24 "CarSimOnFPGA/Wheel.cpp"
 
  float cos_steer = cos(steeringAngle);
  float sin_steer = sin(steeringAngle);
@@ -25505,13 +25513,13 @@ void Wheel::update(float deltaTime,
  float vel_x_local = cos_steer * velocity_x - sin_steer * velocity_z;
  float vel_z_local = sin_steer * velocity_x + cos_steer * velocity_z;
 
- float slipRatio = angularVelocity * 0.0001;
- float slipAngle = 0;
+ slipRatio = angularVelocity * 0.0001;
+ slipAngle = 0;
 
  if (vel_x_local != 0)
  {
   slipRatio = (angularVelocity * radius - vel_x_local) / abs(vel_x_local);
-  slipAngle = atan(vel_z_local / vel_x_local);
+  slipAngle = atan(vel_z_local / vel_x_local) * 57.2957795131;
  }
  else
  {
@@ -25534,15 +25542,15 @@ void Wheel::update(float deltaTime,
  float longForce = sin(1.9 * atan(long_input - 0.97 * (long_input - atan(long_input))));
  float latForce = -sin(1.4 * atan((1 - -0.2) * lat_input + -0.2 * atan(lat_input)));
 
- float x = 0, z = 0;
+ fx = 0, fz = 0;
  if (s)
  {
-  x = load * (r / s) * longForce;
-  z = load * (a / s) * latForce;
+  fx = load * (r / s) * longForce;
+  fz = load * (a / s) * latForce;
  }
 
- angularVelocity = angularVelocity + ((torque - x * radius) / inertia) * deltaTime;
+ angularVelocity = angularVelocity + ((torque - fx * radius) / inertia) * deltaTime;
 
- force_x = cos_steer * x + sin_steer * z;
- force_z = -sin_steer * x + cos_steer * z;
+ force_x = cos_steer * fx + sin_steer * fz;
+ force_z = -sin_steer * fx + cos_steer * fz;
 }

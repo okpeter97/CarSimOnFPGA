@@ -10,6 +10,8 @@ public:
 	float force_z;
 	float slipRatio;
 	float slipAngle;
+	float fx;
+	float fz;
 
 	Wheel();
 

@@ -117,9 +117,9 @@ wire    ap_CS_fsm_state8;
 reg   [34:0] B_fourth_power_V_reg_1286;
 reg   [55:0] trunc_ln3_reg_1296;
 reg   [47:0] trunc_ln662_1_reg_1301;
-reg   [36:0] tmp_59_reg_1316;
+reg   [36:0] tmp_61_reg_1316;
 wire    ap_CS_fsm_state9;
-reg   [28:0] tmp_60_reg_1321;
+reg   [28:0] tmp_62_reg_1321;
 wire   [63:0] ret_V_14_fu_813_p2;
 reg   [63:0] ret_V_14_reg_1326;
 wire   [0:0] cos_basis_fu_824_p3;
@@ -340,13 +340,13 @@ scaled_fixed2ieee grp_scaled_fixed2ieee_fu_268(
     .ap_return(grp_scaled_fixed2ieee_fu_268_ap_return)
 );
 
-top_level_mul_170ibs #(
+top_level_wheel_mibs #(
     .ID( 1 ),
     .NUM_STAGE( 2 ),
     .din0_WIDTH( 170 ),
     .din1_WIDTH( 53 ),
     .dout_WIDTH( 223 ))
-top_level_mul_170ibs_U6(
+top_level_wheel_mibs_U6(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(grp_fu_372_p0),
@@ -355,7 +355,7 @@ top_level_mul_170ibs_U6(
     .dout(grp_fu_372_p2)
 );
 
-top_level_mux_83_jbC #(
+top_level_wheel_mjbC #(
     .ID( 1 ),
     .NUM_STAGE( 2 ),
     .din0_WIDTH( 1 ),
@@ -368,7 +368,7 @@ top_level_mux_83_jbC #(
     .din7_WIDTH( 1 ),
     .din8_WIDTH( 3 ),
     .dout_WIDTH( 1 ))
-top_level_mux_83_jbC_U7(
+top_level_wheel_mjbC_U7(
     .clk(ap_clk),
     .reset(ap_rst),
     .din0(1'd0),
@@ -384,7 +384,7 @@ top_level_mux_83_jbC_U7(
     .dout(grp_fu_523_p10)
 );
 
-top_level_mux_164kbM #(
+top_level_wheel_mkbM #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 1 ),
@@ -405,7 +405,7 @@ top_level_mux_164kbM #(
     .din15_WIDTH( 1 ),
     .din16_WIDTH( 4 ),
     .dout_WIDTH( 1 ))
-top_level_mux_164kbM_U8(
+top_level_wheel_mkbM_U8(
     .din0(1'd0),
     .din1(1'd0),
     .din2(1'd0),
@@ -426,7 +426,7 @@ top_level_mux_164kbM_U8(
     .dout(tmp_1_fu_926_p18)
 );
 
-top_level_mux_164kbM #(
+top_level_wheel_mkbM #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 1 ),
@@ -447,7 +447,7 @@ top_level_mux_164kbM #(
     .din15_WIDTH( 1 ),
     .din16_WIDTH( 4 ),
     .dout_WIDTH( 1 ))
-top_level_mux_164kbM_U9(
+top_level_wheel_mkbM_U9(
     .din0(1'd0),
     .din1(1'd0),
     .din2(1'd1),
@@ -584,8 +584,8 @@ end
 always @ (posedge ap_clk) begin
     if ((1'b1 == ap_CS_fsm_state9)) begin
         ret_V_14_reg_1326 <= ret_V_14_fu_813_p2;
-        tmp_59_reg_1316 <= {{r_V_26_fu_758_p2[74:38]}};
-        tmp_60_reg_1321 <= {{r_V_27_fu_781_p2[59:31]}};
+        tmp_61_reg_1316 <= {{r_V_26_fu_758_p2[74:38]}};
+        tmp_62_reg_1321 <= {{r_V_27_fu_781_p2[59:31]}};
     end
 end
 
@@ -1144,9 +1144,9 @@ assign zext_ln635_fu_330_p1 = p_Result_i_i_fu_320_p4;
 
 assign zext_ln655_fu_505_p1 = Mx_zeros_V_fu_481_p1;
 
-assign zext_ln657_1_fu_845_p1 = tmp_60_reg_1321;
+assign zext_ln657_1_fu_845_p1 = tmp_62_reg_1321;
 
-assign zext_ln657_fu_837_p1 = tmp_59_reg_1316;
+assign zext_ln657_fu_837_p1 = tmp_61_reg_1316;
 
 assign zext_ln744_fu_339_p1 = trunc_ln601_reg_1140;
 

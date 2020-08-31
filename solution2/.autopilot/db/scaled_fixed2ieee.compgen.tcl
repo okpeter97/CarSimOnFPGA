@@ -1,7 +1,7 @@
 # This script segment is generated automatically by AutoPilot
 
 set id 1
-set name top_level_mux_42_bkb
+set name top_level_wheel_mbkb
 set corename simcore_mux
 set op mux
 set stage_num 1

@@ -163,6 +163,10 @@ public:
  float angularVelocity;
  float force_x;
  float force_z;
+ float slipRatio;
+ float slipAngle;
+ float fx;
+ float fz;
 
  Wheel();
 
@@ -225,7 +229,7 @@ public:
 
  Car();
 
- void update(float deltaTime, float engine_torque, float steeringAngle, float* pos_x, float* pos_z);
+ void update(float deltaTime, float engine_torque, float steeringAngle);
 
 private:
  float force_x;
@@ -25543,10 +25547,11 @@ Car::Car()
  torque = 0;
 }
 
-void Car::update(float deltaTime, float engine_torque, float steeringAngle, float* pos_x, float* pos_z)
+void Car::update(float deltaTime, float engine_torque, float steeringAngle)
 {
  float fz = chassis.vel_z - chassis.angularVel * chassis.b;
  float rz = chassis.vel_z + chassis.angularVel * chassis.c;
+
 
  float flx = chassis.vel_x + chassis.angularVel * chassis.d / 2;
  float rlx = chassis.vel_x + chassis.angularVel * chassis.e / 2;
@@ -25567,7 +25572,4 @@ void Car::update(float deltaTime, float engine_torque, float steeringAngle, floa
    -chassis.c * rearRight.force_z - rearRight.force_x * -chassis.e / 2;
 
  chassis.update(deltaTime, force_x, force_z, torque);
-
- *pos_x = chassis.pos_x;
- *pos_z = chassis.pos_z;
 }

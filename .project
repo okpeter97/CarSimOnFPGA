@@ -47,6 +47,11 @@
 			<location>D:/Dev/Repos/CarSimOnFPGA/solution2/.tcls</location>
 		</link>
 		<link>
+			<name>solution3/constraints</name>
+			<type>2</type>
+			<location>D:/Dev/Repos/CarSimOnFPGA/solution3/.tcls</location>
+		</link>
+		<link>
 			<name>source/Car.cpp</name>
 			<type>1</type>
 			<location>D:/Dev/Repos/CarSimOnFPGA/Car.cpp</location>
@@ -105,6 +110,21 @@
 			<name>solution2/constraints/script.tcl</name>
 			<type>1</type>
 			<location>D:/Dev/Repos/CarSimOnFPGA/solution2/script.tcl</location>
+		</link>
+		<link>
+			<name>solution3/constraints/.xml.directive</name>
+			<type>1</type>
+			<location>D:/Dev/Repos/CarSimOnFPGA/solution3/solution3.directive</location>
+		</link>
+		<link>
+			<name>solution3/constraints/directives.tcl</name>
+			<type>1</type>
+			<location>D:/Dev/Repos/CarSimOnFPGA/solution3/directives.tcl</location>
+		</link>
+		<link>
+			<name>solution3/constraints/script.tcl</name>
+			<type>1</type>
+			<location>D:/Dev/Repos/CarSimOnFPGA/solution3/script.tcl</location>
 		</link>
 	</linkedResources>
 </projectDescription>

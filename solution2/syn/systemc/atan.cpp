@@ -75,28 +75,28 @@ atan::atan(sc_module_name name) : sc_module(name), mVcdFile(0) {
     grp_atan_generic_double_s_fu_57->ap_ready(grp_atan_generic_double_s_fu_57_ap_ready);
     grp_atan_generic_double_s_fu_57->t_in(din_reg_209);
     grp_atan_generic_double_s_fu_57->ap_return(grp_atan_generic_double_s_fu_57_ap_return);
-    top_level_dsub_64mb6_U25 = new top_level_dsub_64mb6<1,5,64,64,64>("top_level_dsub_64mb6_U25");
-    top_level_dsub_64mb6_U25->clk(ap_clk);
-    top_level_dsub_64mb6_U25->reset(ap_rst);
-    top_level_dsub_64mb6_U25->din0(ap_var_for_const0);
-    top_level_dsub_64mb6_U25->din1(grp_atan_generic_double_s_fu_57_ap_return);
-    top_level_dsub_64mb6_U25->ce(grp_fu_64_ce);
-    top_level_dsub_64mb6_U25->dout(grp_fu_64_p2);
-    top_level_ddiv_64ncg_U26 = new top_level_ddiv_64ncg<1,17,64,64,64>("top_level_ddiv_64ncg_U26");
-    top_level_ddiv_64ncg_U26->clk(ap_clk);
-    top_level_ddiv_64ncg_U26->reset(ap_rst);
-    top_level_ddiv_64ncg_U26->din0(ap_var_for_const1);
-    top_level_ddiv_64ncg_U26->din1(absx_reg_184);
-    top_level_ddiv_64ncg_U26->ce(ap_var_for_const2);
-    top_level_ddiv_64ncg_U26->dout(grp_fu_71_p2);
-    top_level_dcmp_64ocq_U27 = new top_level_dcmp_64ocq<1,2,64,64,1>("top_level_dcmp_64ocq_U27");
-    top_level_dcmp_64ocq_U27->clk(ap_clk);
-    top_level_dcmp_64ocq_U27->reset(ap_rst);
-    top_level_dcmp_64ocq_U27->din0(grp_fu_76_p0);
-    top_level_dcmp_64ocq_U27->din1(ap_var_for_const1);
-    top_level_dcmp_64ocq_U27->ce(ap_var_for_const2);
-    top_level_dcmp_64ocq_U27->opcode(ap_var_for_const3);
-    top_level_dcmp_64ocq_U27->dout(grp_fu_76_p2);
+    top_level_wheel_dmb6_U25 = new top_level_wheel_dmb6<1,5,64,64,64>("top_level_wheel_dmb6_U25");
+    top_level_wheel_dmb6_U25->clk(ap_clk);
+    top_level_wheel_dmb6_U25->reset(ap_rst);
+    top_level_wheel_dmb6_U25->din0(ap_var_for_const0);
+    top_level_wheel_dmb6_U25->din1(grp_atan_generic_double_s_fu_57_ap_return);
+    top_level_wheel_dmb6_U25->ce(grp_fu_64_ce);
+    top_level_wheel_dmb6_U25->dout(grp_fu_64_p2);
+    top_level_wheel_dncg_U26 = new top_level_wheel_dncg<1,17,64,64,64>("top_level_wheel_dncg_U26");
+    top_level_wheel_dncg_U26->clk(ap_clk);
+    top_level_wheel_dncg_U26->reset(ap_rst);
+    top_level_wheel_dncg_U26->din0(ap_var_for_const1);
+    top_level_wheel_dncg_U26->din1(absx_reg_184);
+    top_level_wheel_dncg_U26->ce(ap_var_for_const2);
+    top_level_wheel_dncg_U26->dout(grp_fu_71_p2);
+    top_level_wheel_docq_U27 = new top_level_wheel_docq<1,2,64,64,1>("top_level_wheel_docq_U27");
+    top_level_wheel_docq_U27->clk(ap_clk);
+    top_level_wheel_docq_U27->reset(ap_rst);
+    top_level_wheel_docq_U27->din0(grp_fu_76_p0);
+    top_level_wheel_docq_U27->din1(ap_var_for_const1);
+    top_level_wheel_docq_U27->ce(ap_var_for_const2);
+    top_level_wheel_docq_U27->opcode(ap_var_for_const3);
+    top_level_wheel_docq_U27->dout(grp_fu_76_p2);
 
     SC_METHOD(thread_ap_clk_no_reset_);
     dont_initialize();
@@ -319,9 +319,9 @@ atan::~atan() {
         sc_close_vcd_trace_file(mVcdFile);
 
     delete grp_atan_generic_double_s_fu_57;
-    delete top_level_dsub_64mb6_U25;
-    delete top_level_ddiv_64ncg_U26;
-    delete top_level_dcmp_64ocq_U27;
+    delete top_level_wheel_dmb6_U25;
+    delete top_level_wheel_dncg_U26;
+    delete top_level_wheel_docq_U27;
 }
 
 void atan::thread_ap_var_for_const2() {

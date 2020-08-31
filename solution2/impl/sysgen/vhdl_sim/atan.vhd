@@ -150,7 +150,7 @@ architecture behav of atan is
     end component;
 
 
-    component top_level_dsub_64mb6 IS
+    component top_level_wheel_dmb6 IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -167,7 +167,7 @@ architecture behav of atan is
     end component;
 
 
-    component top_level_ddiv_64ncg IS
+    component top_level_wheel_dncg IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -184,7 +184,7 @@ architecture behav of atan is
     end component;
 
 
-    component top_level_dcmp_64ocq IS
+    component top_level_wheel_docq IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -215,7 +215,7 @@ begin
         t_in => din_reg_209,
         ap_return => grp_atan_generic_double_s_fu_57_ap_return);
 
-    top_level_dsub_64mb6_U25 : component top_level_dsub_64mb6
+    top_level_wheel_dmb6_U25 : component top_level_wheel_dmb6
     generic map (
         ID => 1,
         NUM_STAGE => 5,
@@ -230,7 +230,7 @@ begin
         ce => grp_fu_64_ce,
         dout => grp_fu_64_p2);
 
-    top_level_ddiv_64ncg_U26 : component top_level_ddiv_64ncg
+    top_level_wheel_dncg_U26 : component top_level_wheel_dncg
     generic map (
         ID => 1,
         NUM_STAGE => 17,
@@ -245,7 +245,7 @@ begin
         ce => ap_const_logic_1,
         dout => grp_fu_71_p2);
 
-    top_level_dcmp_64ocq_U27 : component top_level_dcmp_64ocq
+    top_level_wheel_docq_U27 : component top_level_wheel_docq
     generic map (
         ID => 1,
         NUM_STAGE => 2,

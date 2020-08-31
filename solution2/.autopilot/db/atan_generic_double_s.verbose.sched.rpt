@@ -3,7 +3,7 @@
 ================================================================
 == Vivado HLS Report for 'atan_generic_double_s'
 ================================================================
-* Date:           Tue Aug 11 15:45:44 2020
+* Date:           Sun Aug 23 03:38:11 2020
 
 * Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
 * Project:        CarSimOnFPGA
@@ -220,9 +220,9 @@ Target clock period: 10ns, clock uncertainty: 1.25ns.
  <State 1>: 4.55ns
 The critical path consists of the following:
 	wire read on port 't_in' (r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:577) [3]  (0 ns)
-	'sub' operation ('sub_ln1311', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:609) [14]  (1.35 ns)
+	'add' operation ('exp', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/src/hls\utils/x_hls_utils.h:502->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:606) [11]  (1.35 ns)
 	'select' operation ('exp', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:609) [16]  (0.625 ns)
-	'shl' operation ('r.V', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:609) [20]  (0 ns)
+	'lshr' operation ('r.V', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:609) [19]  (0 ns)
 	'select' operation ('r.V', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:609) [21]  (2.57 ns)
 
  <State 2>: 8.41ns
@@ -230,7 +230,7 @@ The critical path consists of the following:
 	'phi' operation ('tz.V') with incoming values : ('tz.V', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:130->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:193->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:620) [25]  (0 ns)
 	'sub' operation ('tmp.V', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:622) [71]  (2.02 ns)
 	'select' operation ('tmp.V', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:622) [72]  (0.642 ns)
-	'ctlz' operation ('tmp_4', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:622) [74]  (2.23 ns)
+	'ctlz' operation ('tmp', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:622) [79]  (2.23 ns)
 	'add' operation ('NZeros', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:622) [81]  (1.51 ns)
 	'select' operation ('l', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:622) [82]  (0.492 ns)
 	'sub' operation ('sub_ln848', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:622) [83]  (1.51 ns)
@@ -239,7 +239,7 @@ The critical path consists of the following:
 The critical path consists of the following:
 	'load' operation ('__Val2__', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:192->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:620) on array 'cordic_ctab_table_12' [53]  (2.27 ns)
 	'add' operation ('__Val2__', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:192->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:620) [57]  (2 ns)
-	'sub' operation ('sub_ln130_2', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:130->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:193->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:620) [61]  (2.02 ns)
+	'add' operation ('add_ln130_2', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:130->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:193->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:620) [62]  (2.02 ns)
 	'select' operation ('tz.V', r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:130->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:193->r:/builds/2019.1/continuous/2019_05_24_2552052/src/products/hls/hls_lib/hlsmath/include/FloatingPoint\hls_cordic.h:620) [63]  (0.642 ns)
 
  <State 4>: 8.59ns

@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'scaled_fixed2ieee'" level="0">
-<item name = "Date">Tue Aug 11 15:45:59 2020
+<item name = "Date">Sun Aug 23 03:38:19 2020
 </item>
 <item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">CarSimOnFPGA</item>
@@ -64,8 +64,8 @@
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="1">
 <keys size="7">Instance, Module, BRAM_18K, DSP48E, FF, LUT, URAM</keys>
-<column name="top_level_mux_42_bkb_U1">top_level_mux_42_bkb, 0, 0, 0, 65, 0</column>
-<column name="top_level_mux_42_bkb_U2">top_level_mux_42_bkb, 0, 0, 0, 65, 0</column>
+<column name="top_level_wheel_mbkb_U1">top_level_wheel_mbkb, 0, 0, 0, 65, 0</column>
+<column name="top_level_wheel_mbkb_U2">top_level_wheel_mbkb, 0, 0, 0, 65, 0</column>
 </table>
 </item>
 <item name = "DSP48E"><table name="" hasTotal="0">

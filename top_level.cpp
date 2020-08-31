@@ -19,8 +19,8 @@ void top_level_wheel(float deltaTime,
 		wheel.update(deltaTime, torque, velocity_x, velocity_y, load, steeringAngle);
 		*slipRatio = wheel.slipRatio;
 		*slipAngle = wheel.slipAngle;
-		*force_x = wheel.force_x;
-		*force_y = wheel.force_z;
+		*force_x = wheel.fx;
+		*force_y = wheel.fz;
 		*angularVel = wheel.angularVelocity;
 }
 
@@ -58,5 +58,9 @@ void top_level_car(float deltaTime,
 {
 		static Car car;
 		car.update(deltaTime, torque, steeringAngle);
+		*pos_x = car.chassis.pos_x;
+		*pos_y = car.chassis.pos_z;
 		*vel_x = car.chassis.vel_x;
+		*vel_y = car.chassis.vel_z;
+		*orientation = car.chassis.orientation;
 }

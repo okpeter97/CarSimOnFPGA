@@ -164,7 +164,7 @@ architecture behav of scaled_fixed2ieee is
     signal ap_return_preg : STD_LOGIC_VECTOR (63 downto 0) := "0000000000000000000000000000000000000000000000000000000000000000";
     signal ap_NS_fsm : STD_LOGIC_VECTOR (5 downto 0);
 
-    component top_level_mux_42_bkb IS
+    component top_level_wheel_mbkb IS
     generic (
         ID : INTEGER;
         NUM_STAGE : INTEGER;
@@ -186,7 +186,7 @@ architecture behav of scaled_fixed2ieee is
 
 
 begin
-    top_level_mux_42_bkb_U1 : component top_level_mux_42_bkb
+    top_level_wheel_mbkb_U1 : component top_level_wheel_mbkb
     generic map (
         ID => 1,
         NUM_STAGE => 1,
@@ -204,7 +204,7 @@ begin
         din4 => p_Val2_38_fu_427_p5,
         dout => p_Val2_38_fu_427_p6);
 
-    top_level_mux_42_bkb_U2 : component top_level_mux_42_bkb
+    top_level_wheel_mbkb_U2 : component top_level_wheel_mbkb
     generic map (
         ID => 1,
         NUM_STAGE => 1,

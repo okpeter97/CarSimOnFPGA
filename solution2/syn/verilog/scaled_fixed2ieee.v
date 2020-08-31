@@ -140,7 +140,7 @@ initial begin
 #0 ap_return_preg = 64'd0;
 end
 
-top_level_mux_42_bkb #(
+top_level_wheel_mbkb #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 32 ),
@@ -149,7 +149,7 @@ top_level_mux_42_bkb #(
     .din3_WIDTH( 32 ),
     .din4_WIDTH( 2 ),
     .dout_WIDTH( 32 ))
-top_level_mux_42_bkb_U1(
+top_level_wheel_mbkb_U1(
     .din0(out_bits_2_V_load_reg_684),
     .din1(out_bits_2_V_1_load_reg_690),
     .din2(out_bits_2_V_2_load_reg_696),
@@ -158,7 +158,7 @@ top_level_mux_42_bkb_U1(
     .dout(p_Val2_38_fu_427_p6)
 );
 
-top_level_mux_42_bkb #(
+top_level_wheel_mbkb #(
     .ID( 1 ),
     .NUM_STAGE( 1 ),
     .din0_WIDTH( 32 ),
@@ -167,7 +167,7 @@ top_level_mux_42_bkb #(
     .din3_WIDTH( 32 ),
     .din4_WIDTH( 2 ),
     .dout_WIDTH( 32 ))
-top_level_mux_42_bkb_U2(
+top_level_wheel_mbkb_U2(
     .din0(c_3_1_fu_110),
     .din1(c_3_2_fu_114),
     .din2(c_3_3_fu_118),

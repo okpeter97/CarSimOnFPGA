@@ -25530,6 +25530,7 @@ void Chassis::update(float deltaTime, float force_x, float force_z, float torque
 
  wFL = wF + accel_z * mass * h / 2;
  wFR = wF - accel_z * mass * h / 2;
+
  wRL = wR + accel_z * mass * h / 2;
  wRR = wR - accel_z * mass * h / 2;
 

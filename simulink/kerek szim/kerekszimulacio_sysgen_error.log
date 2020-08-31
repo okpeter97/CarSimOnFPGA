@@ -5,7 +5,7 @@ Matlab 9.4.0.813654 (R2018a)            C:\Program Files\MATLAB\R2018a
 Vivado 2019.1                           C:/Xilinx/Vivado/2019.1
 --------------------------------------------------------------------------------
 Summary of Errors:
-Error 0001: "D:/Dev/Repos/CarSimOnFPGA/solution1" directory specified...
+Error 0001: Undriven input port
      Block: 'kerekszimulacio/Vivado HLS'
 --------------------------------------------------------------------------------
 
@@ -15,10 +15,5 @@ Reported by:
   'kerekszimulacio/Vivado HLS'
 
 Details:
-"D:/Dev/Repos/CarSimOnFPGA/solution1" directory specified in
-"Solution" parameter does not contain System Generator package
-created by Vivado HLS. To create System Generator package from
-Vivado HLS project select "Export RTL" for "System Generator for DSP".
-Error occurred during "Block Configuration".
-
+The input ports on this block must be driven by other Xilinx blocks
 --------------------------------------------------------------------------------

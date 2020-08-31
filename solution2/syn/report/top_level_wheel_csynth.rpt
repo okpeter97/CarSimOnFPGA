@@ -1,0 +1,149 @@
+
+
+================================================================
+== Vivado HLS Report for 'top_level_wheel'
+================================================================
+* Date:           Sun Aug 23 03:38:29 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CarSimOnFPGA
+* Solution:       solution2
+* Product family: kintex7
+* Target device:  xc7k325t-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     8.610|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+------+-----+------+---------+
+    |   Latency  |  Interval  | Pipeline|
+    | min |  max | min |  max |   Type  |
+    +-----+------+-----+------+---------+
+    |  196|  1245|  196|  1245|   none  |
+    +-----+------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        +-------------------+--------+-----+------+-----+------+---------+
+        |                   |        |   Latency  |  Interval  | Pipeline|
+        |      Instance     | Module | min |  max | min |  max |   Type  |
+        +-------------------+--------+-----+------+-----+------+---------+
+        |grp_update_fu_129  |update  |  194|  1243|  194|  1243|   none  |
+        +-------------------+--------+-----+------+-----+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       -|       -|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |       20|    238|   18192|   33585|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|      17|    -|
+|Register         |        -|      -|     164|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |       20|    238|   18356|   33602|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |      890|    840|  407600|  203800|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        2|     28|       4|      16|    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +-------------------+--------+---------+-------+-------+-------+-----+
+    |      Instance     | Module | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
+    +-------------------+--------+---------+-------+-------+-------+-----+
+    |grp_update_fu_129  |update  |       20|    238|  18192|  33585|    0|
+    +-------------------+--------+---------+-------+-------+-------+-----+
+    |Total              |        |       20|    238|  18192|  33585|    0|
+    +-------------------+--------+---------+-------+-------+-------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_NS_fsm  |  17|          4|    1|          4|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |  17|          4|    1|          4|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +--------------------------------+----+----+-----+-----------+
+    |              Name              | FF | LUT| Bits| Const Bits|
+    +--------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                       |   3|   0|    3|          0|
+    |grp_update_fu_129_ap_start_reg  |   1|   0|    1|          0|
+    |wheel_angularVelocit            |  32|   0|   32|          0|
+    |wheel_fx                        |  32|   0|   32|          0|
+    |wheel_fz                        |  32|   0|   32|          0|
+    |wheel_slipAngle                 |  32|   0|   32|          0|
+    |wheel_slipRatio                 |  32|   0|   32|          0|
+    +--------------------------------+----+----+-----+-----------+
+    |Total                           | 164|   0|  164|          0|
+    +--------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++-------------------+-----+-----+------------+-----------------+--------------+
+|     RTL Ports     | Dir | Bits|  Protocol  |  Source Object  |    C Type    |
++-------------------+-----+-----+------------+-----------------+--------------+
+|ap_clk             |  in |    1| ap_ctrl_hs | top_level_wheel | return value |
+|ap_rst             |  in |    1| ap_ctrl_hs | top_level_wheel | return value |
+|ap_start           |  in |    1| ap_ctrl_hs | top_level_wheel | return value |
+|ap_done            | out |    1| ap_ctrl_hs | top_level_wheel | return value |
+|ap_idle            | out |    1| ap_ctrl_hs | top_level_wheel | return value |
+|ap_ready           | out |    1| ap_ctrl_hs | top_level_wheel | return value |
+|deltaTime          |  in |   32|   ap_none  |    deltaTime    |    scalar    |
+|torque             |  in |   32|   ap_none  |      torque     |    scalar    |
+|velocity_x         |  in |   32|   ap_none  |    velocity_x   |    scalar    |
+|velocity_y         |  in |   32|   ap_none  |    velocity_y   |    scalar    |
+|load               |  in |   32|   ap_none  |       load      |    scalar    |
+|steeringAngle      |  in |   32|   ap_none  |  steeringAngle  |    scalar    |
+|slipRatio          | out |   32|   ap_vld   |    slipRatio    |    pointer   |
+|slipRatio_ap_vld   | out |    1|   ap_vld   |    slipRatio    |    pointer   |
+|slipAngle          | out |   32|   ap_vld   |    slipAngle    |    pointer   |
+|slipAngle_ap_vld   | out |    1|   ap_vld   |    slipAngle    |    pointer   |
+|force_x            | out |   32|   ap_vld   |     force_x     |    pointer   |
+|force_x_ap_vld     | out |    1|   ap_vld   |     force_x     |    pointer   |
+|force_y            | out |   32|   ap_vld   |     force_y     |    pointer   |
+|force_y_ap_vld     | out |    1|   ap_vld   |     force_y     |    pointer   |
+|angularVel         | out |   32|   ap_vld   |    angularVel   |    pointer   |
+|angularVel_ap_vld  | out |    1|   ap_vld   |    angularVel   |    pointer   |
++-------------------+-----+-----+------------+-----------------+--------------+
+

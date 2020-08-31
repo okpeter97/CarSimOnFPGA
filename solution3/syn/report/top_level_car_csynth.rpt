@@ -1,0 +1,146 @@
+
+
+================================================================
+== Vivado HLS Report for 'top_level_car'
+================================================================
+* Date:           Thu Aug 27 01:20:38 2020
+
+* Version:        2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)
+* Project:        CarSimOnFPGA
+* Solution:       solution3
+* Product family: kintex7
+* Target device:  xc7k325t-ffg900-2
+
+
+================================================================
+== Performance Estimates
+================================================================
++ Timing (ns): 
+    * Summary: 
+    +--------+-------+----------+------------+
+    |  Clock | Target| Estimated| Uncertainty|
+    +--------+-------+----------+------------+
+    |ap_clk  |  10.00|     9.466|        1.25|
+    +--------+-------+----------+------------+
+
++ Latency (clock cycles): 
+    * Summary: 
+    +-----+------+-----+------+---------+
+    |   Latency  |  Interval  | Pipeline|
+    | min |  max | min |  max |   Type  |
+    +-----+------+-----+------+---------+
+    |  449|  2543|  449|  2543|   none  |
+    +-----+------+-----+------+---------+
+
+    + Detail: 
+        * Instance: 
+        +---------------------+----------+-----+------+-----+------+---------+
+        |                     |          |   Latency  |  Interval  | Pipeline|
+        |       Instance      |  Module  | min |  max | min |  max |   Type  |
+        +---------------------+----------+-----+------+-----+------+---------+
+        |grp_update_1_fu_127  |update_1  |  447|  2541|  447|  2541|   none  |
+        +---------------------+----------+-----+------+-----+------+---------+
+
+        * Loop: 
+        N/A
+
+
+
+================================================================
+== Utilization Estimates
+================================================================
+* Summary: 
++-----------------+---------+-------+--------+--------+-----+
+|       Name      | BRAM_18K| DSP48E|   FF   |   LUT  | URAM|
++-----------------+---------+-------+--------+--------+-----+
+|DSP              |        -|      -|       -|       -|    -|
+|Expression       |        -|      -|       -|       -|    -|
+|FIFO             |        -|      -|       -|       -|    -|
+|Instance         |       56|    750|   49200|   86094|    -|
+|Memory           |        -|      -|       -|       -|    -|
+|Multiplexer      |        -|      -|       -|      17|    -|
+|Register         |        -|      -|     164|       -|    -|
++-----------------+---------+-------+--------+--------+-----+
+|Total            |       56|    750|   49364|   86111|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Available        |      890|    840|  407600|  203800|    0|
++-----------------+---------+-------+--------+--------+-----+
+|Utilization (%)  |        6|     89|      12|      42|    0|
++-----------------+---------+-------+--------+--------+-----+
+
++ Detail: 
+    * Instance: 
+    +---------------------+----------+---------+-------+-------+-------+-----+
+    |       Instance      |  Module  | BRAM_18K| DSP48E|   FF  |  LUT  | URAM|
+    +---------------------+----------+---------+-------+-------+-------+-----+
+    |grp_update_1_fu_127  |update_1  |       56|    750|  49200|  86094|    0|
+    +---------------------+----------+---------+-------+-------+-------+-----+
+    |Total                |          |       56|    750|  49200|  86094|    0|
+    +---------------------+----------+---------+-------+-------+-------+-----+
+
+    * DSP48E: 
+    N/A
+
+    * Memory: 
+    N/A
+
+    * FIFO: 
+    N/A
+
+    * Expression: 
+    N/A
+
+    * Multiplexer: 
+    +-----------+----+-----------+-----+-----------+
+    |    Name   | LUT| Input Size| Bits| Total Bits|
+    +-----------+----+-----------+-----+-----------+
+    |ap_NS_fsm  |  17|          4|    1|          4|
+    +-----------+----+-----------+-----+-----------+
+    |Total      |  17|          4|    1|          4|
+    +-----------+----+-----------+-----+-----------+
+
+    * Register: 
+    +----------------------------------+----+----+-----+-----------+
+    |               Name               | FF | LUT| Bits| Const Bits|
+    +----------------------------------+----+----+-----+-----------+
+    |ap_CS_fsm                         |   3|   0|    3|          0|
+    |car_chassis_orientat              |  32|   0|   32|          0|
+    |car_chassis_pos_x                 |  32|   0|   32|          0|
+    |car_chassis_pos_z                 |  32|   0|   32|          0|
+    |car_chassis_vel_x                 |  32|   0|   32|          0|
+    |car_chassis_vel_z                 |  32|   0|   32|          0|
+    |grp_update_1_fu_127_ap_start_reg  |   1|   0|    1|          0|
+    +----------------------------------+----+----+-----+-----------+
+    |Total                             | 164|   0|  164|          0|
+    +----------------------------------+----+----+-----+-----------+
+
+
+
+================================================================
+== Interface
+================================================================
+* Summary: 
++--------------------+-----+-----+------------+---------------+--------------+
+|      RTL Ports     | Dir | Bits|  Protocol  | Source Object |    C Type    |
++--------------------+-----+-----+------------+---------------+--------------+
+|ap_clk              |  in |    1| ap_ctrl_hs | top_level_car | return value |
+|ap_rst              |  in |    1| ap_ctrl_hs | top_level_car | return value |
+|ap_start            |  in |    1| ap_ctrl_hs | top_level_car | return value |
+|ap_done             | out |    1| ap_ctrl_hs | top_level_car | return value |
+|ap_idle             | out |    1| ap_ctrl_hs | top_level_car | return value |
+|ap_ready            | out |    1| ap_ctrl_hs | top_level_car | return value |
+|deltaTime           |  in |   32|   ap_none  |   deltaTime   |    scalar    |
+|torque              |  in |   32|   ap_none  |     torque    |    scalar    |
+|steeringAngle       |  in |   32|   ap_none  | steeringAngle |    scalar    |
+|pos_x               | out |   32|   ap_vld   |     pos_x     |    pointer   |
+|pos_x_ap_vld        | out |    1|   ap_vld   |     pos_x     |    pointer   |
+|pos_y               | out |   32|   ap_vld   |     pos_y     |    pointer   |
+|pos_y_ap_vld        | out |    1|   ap_vld   |     pos_y     |    pointer   |
+|vel_x               | out |   32|   ap_vld   |     vel_x     |    pointer   |
+|vel_x_ap_vld        | out |    1|   ap_vld   |     vel_x     |    pointer   |
+|vel_y               | out |   32|   ap_vld   |     vel_y     |    pointer   |
+|vel_y_ap_vld        | out |    1|   ap_vld   |     vel_y     |    pointer   |
+|orientation         | out |   32|   ap_vld   |  orientation  |    pointer   |
+|orientation_ap_vld  | out |    1|   ap_vld   |  orientation  |    pointer   |
++--------------------+-----+-----+------------+---------------+--------------+
+

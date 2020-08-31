@@ -1,7 +1,7 @@
 <profile>
 
 <section name = "Vivado HLS Report for 'update'" level="0">
-<item name = "Date">Tue Aug 11 15:45:48 2020
+<item name = "Date">Sun Aug 23 03:38:15 2020
 </item>
 <item name = "Version">2019.1 (Build 2552052 on Fri May 24 15:28:33 MDT 2019)</item>
 <item name = "Project">CarSimOnFPGA</item>
@@ -15,7 +15,7 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="4">Clock, Target, Estimated, Uncertainty</keys>
-<column name="ap_clk">10.00, 9.006, 1.25</column>
+<column name="ap_clk">10.00, 8.610, 1.25</column>
 </table>
 </item>
 </section>
@@ -24,16 +24,16 @@
 <section name = "" level="1">
 <item name = "Summary"><table name="" hasTotal="0">
 <keys size="6">, min, max, min, max, Type</keys>
-<column name="">197, 1241, 197, 1241, none</column>
+<column name="">194, 1243, 194, 1243, none</column>
 </table>
 </item>
 <item name = "Detail">
 <section name = "" level="1">
 <item name = "Instance"><table name="" hasTotal="0">
 <keys size="7">Instance, Module, min, max, min, max, Type</keys>
-<column name="grp_sin_fu_206">sin, 28, 31, 28, 31, none</column>
-<column name="grp_atan_fu_248">atan, 2, 204, 2, 204, none</column>
-<column name="grp_sin_or_cos_double_s_fu_277">sin_or_cos_double_s, 26, 29, 26, 29, none</column>
+<column name="grp_sin_fu_216">sin, 28, 31, 28, 31, none</column>
+<column name="grp_atan_fu_258">atan, 2, 204, 2, 204, none</column>
+<column name="grp_sin_or_cos_double_s_fu_287">sin_or_cos_double_s, 26, 29, 26, 29, none</column>
 </table>
 </item>
 <item name = "Loop"><table name="" hasTotal="0">
